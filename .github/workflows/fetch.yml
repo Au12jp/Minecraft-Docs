@@ -9,9 +9,6 @@ on:
 jobs:
   perform-fetch:
     runs-on: ubuntu-22.04
-    permissions:
-      contents: write
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -46,7 +43,3 @@ jobs:
           default_author: github_actions
           add: bedrock_server
           message: "Update BDS (linux)"
-
-      - name: Skip commit (large files)
-        if: ${{ steps.sizecheck.outputs.skip_commit == 'true' }}
-        run: echo "Commit skipped: >=100MB file present."
