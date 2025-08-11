@@ -1,14 +1,15 @@
 name: Scrape
-
 on:
   workflow_dispatch:
   schedule:
-    # JST 0:00（UTC+9）＝ UTC 15:00
-    - cron: "0 15 * * *"
+    - cron: "0 15 * * *"   # JST 0:00
 
 jobs:
   perform-fetch:
     runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -36,6 +37,23 @@ jobs:
             echo "skip_commit=false" >> "$GITHUB_OUTPUT"
           fi
 
+      # ★ 100MB超があるときは .gitignore にでかいバイナリを追加して小物だけコミット
+      - name: Ignore large binary and commit small files
+        if: ${{ steps.sizecheck.outputs.skip_commit == 'true' }}
+        run: |
+          set -e
+          touch .gitignore
+          grep -qxF 'bedrock_server/bedrock_server' .gitignore || echo 'bedrock_server/bedrock_server' >> .gitignore
+        # EndBugでコミット
+      - name: Commit small files only
+        if: ${{ steps.sizecheck.outputs.skip_commit == 'true' }}
+        uses: EndBug/add-and-commit@v9
+        with:
+          default_author: github_actions
+          add: bedrock_server
+          message: "Update BDS small files (large binary ignored)"
+
+      # ★ 100MB超が無いときは全部コミット
       - name: Commit downloaded files
         if: ${{ steps.sizecheck.outputs.skip_commit == 'false' }}
         uses: EndBug/add-and-commit@v9
