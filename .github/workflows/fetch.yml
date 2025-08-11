@@ -1,30 +1,38 @@
 name: Scrape
+
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 15 * * *"   # JST 0:00（UTC+9）
+    # JST 0:00（UTC+9）＝ UTC 15:00
+    - cron: "0 15 * * *"
 
 jobs:
   perform-fetch:
     runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v4
+    permissions:
+      contents: write
 
-      - uses: bedrock-apis/bds-download@v1
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download BDS (linux latest)
+        uses: bedrock-apis/bds-download@v1
         with:
           out_dir: bedrock_server
           version: latest
           use_preview: false
+
+      - name: List files
+        run: ls -la bedrock_server
 
       - name: Check GitHub 100MB limit
         id: sizecheck
         shell: bash
         run: |
           set -e
-          # 100MB超のファイルがあるかチェック（1件でもあればtrue）
           if find bedrock_server -type f -size +100M -print -quit | grep -q .; then
             echo ">=100MB files found. Skip commit."
-            # 参考出力（どれが大きいか知りたい場合）
             find bedrock_server -type f -size +100M -ls || true
             echo "skip_commit=true" >> "$GITHUB_OUTPUT"
           else
@@ -32,13 +40,13 @@ jobs:
           fi
 
       - name: Commit downloaded files
-        if: steps.sizecheck.outputs.skip_commit == 'false'
+        if: ${{ steps.sizecheck.outputs.skip_commit == 'false' }}
         uses: EndBug/add-and-commit@v9
         with:
           default_author: github_actions
-          add: "bedrock_server -f"
+          add: bedrock_server
           message: "Update BDS (linux)"
 
-      - name: Skip commit because of large files
-        if: steps.sizecheck.outputs.skip_commit == 'true'
-        run: echo "Commit skipped: at least one file is >= 100MB."
+      - name: Skip commit (large files)
+        if: ${{ steps.sizecheck.outputs.skip_commit == 'true' }}
+        run: echo "Commit skipped: >=100MB file present."
