@@ -20,21 +20,205 @@ jobs:
       - name: Install deps
         run: sudo apt-get update && sudo apt-get install -y jq unzip
 
-      - name: Make scripts executable
-        run: chmod +x update_channel.sh update_main.sh
+      - name: Create scripts
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p scripts
 
-      # 省リソースのため順番に（並列だとAPI/ネットワーク負荷↑）
+          cat > scripts/update_channel.sh <<'BASH'
+          #!/usr/bin/env bash
+          set -euo pipefail
+          CHANNEL="${1:?channel required: stable|preview}"
+          [[ "$CHANNEL" == "stable" || "$CHANNEL" == "preview" ]] || { echo "invalid channel"; exit 2; }
+          JSON_URL="https://raw.githubusercontent.com/Bedrock-OSS/BDS-Versions/main/versions.json"
+          SAMPLES_API="https://api.github.com/repos/Mojang/bedrock-samples/tags?per_page=200"
+          UA="Mozilla/5.0"
+          # トークンが無くても動くが、有ればレート制限に強い
+          if [[ -n "${GITHUB_TOKEN:-}" ]]; then
+            GH_HDR=(-H "Authorization: Bearer $GITHUB_TOKEN" -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28")
+          else
+            GH_HDR=()
+          fi
+          STRICT_SERIES="${STRICT_SERIES:-true}"
+          BRANCH="$CHANNEL"
+
+          git fetch origin --prune
+          if git ls-remote --heads origin "$BRANCH" | grep -q "$BRANCH"; then
+            git checkout "$BRANCH"
+            git merge --ff-only "origin/$BRANCH" || true
+          else
+            git checkout -b "$BRANCH"
+          fi
+
+          versions_json="$(curl -fsSL -A "$UA" "$JSON_URL")"
+          if [[ "$CHANNEL" == "preview" ]]; then
+            BDS_VER="$(jq -r '.linux.preview' <<<"$versions_json")"
+            WANT_PREV=true;  WANT_TAG="v${BDS_VER}-preview"
+          else
+            BDS_VER="$(jq -r '.linux.stable' <<<"$versions_json")"
+            WANT_PREV=false; WANT_TAG="v${BDS_VER}"
+          fi
+
+          META_FILE=".bds-meta.json"
+          OLD_VER=""; OLD_TAG=""
+          [[ -f "$META_FILE" ]] && { OLD_VER="$(jq -r '.bds_version // empty' "$META_FILE")"; OLD_TAG="$(jq -r '.samples_tag // empty' "$META_FILE")"; }
+
+          tags_json="$(curl -fsSL -A "$UA" "${GH_HDR[@]}" "$SAMPLES_API")"
+          if [[ "$(jq -r --arg T "$WANT_TAG" '[.[]|select(.name==$T)]|length' <<<"$tags_json")" -gt 0 ]]; then
+            SAMPLES_TAG="$WANT_TAG"; FALLBACK=false
+          else
+            read -r -d '' JQ_FILTER <<'JQ'
+              def parse:
+                map(select(.name | test("^v[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+(-preview)?$")))
+                | map({
+                    name: .name,
+                    is_preview: (.name | contains("-preview")),
+                    nums: (.name | sub("^v";"") | sub("-preview$";"") | split(".") | map(tonumber))
+                  });
+              def scalar(n): (n[0]*1000000000 + n[1]*1000000 + n[2]*1000 + n[3]);
+              parse
+              | map(select(.is_preview == $want_prev))
+              | ($ver | split(".") | map(tonumber)) as $w
+              | (if $strict then map(select(.nums[0]==$w[0] and .nums[1]==$w[1] and .nums[2]==$w[2])) else . end)
+              | if length==0 then [] else
+                  map(. + {dist: ((scalar(.nums) - scalar($w)) | if . < 0 then -. else . end)})
+                  | sort_by(.dist, .nums)
+                  | .[0:1] | .[0].name
+                end
+            JQ
+            strict_flag="${STRICT_SERIES}"
+            SAMPLES_TAG="$(jq -r --arg ver "$BDS_VER" --argjson want_prev "$WANT_PREV" --argjson strict "$strict_flag" "$JQ_FILTER" <<<"$tags_json" || true)"
+            [[ -n "${SAMPLES_TAG:-}" ]] || SAMPLES_TAG="$(jq -r --arg ver "$BDS_VER" --argjson want_prev "$WANT_PREV" --argjson strict false "$JQ_FILTER" <<<"$tags_json" || true)"
+            [[ -n "${SAMPLES_TAG:-}" ]] || { echo "::error::No nearest tag found for $CHANNEL"; exit 1; }
+            FALLBACK=true
+          fi
+
+          if [[ "$BDS_VER" == "$OLD_VER" && "$SAMPLES_TAG" == "$OLD_TAG" ]]; then
+            echo "No changes for $CHANNEL. Skip downloads/commit."
+            if ! git rev-parse --abbrev-ref --symbolic-full-name @{u} >/dev/null 2>&1; then
+              git push -u origin "$BRANCH" || true
+            fi
+            exit 0
+          fi
+
+          BDS_URL="https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-${BDS_VER}.zip"
+          echo "Downloading BDS: $BDS_URL"
+          rm -rf bedrock_server
+          mkdir -p bedrock_server
+          curl -fL "$BDS_URL" -o bds.zip
+          unzip -q bds.zip -d bedrock_server
+          rm -f bds.zip
+
+          touch .gitignore
+          grep -qxF 'bedrock_server/bedrock_server' .gitignore || echo 'bedrock_server/bedrock_server' >> .gitignore
+
+          SAMPLES_URL="https://github.com/Mojang/bedrock-samples/archive/refs/tags/${SAMPLES_TAG}.zip"
+          echo "Downloading samples: $SAMPLES_URL"
+          rm -rf bedrock_samples
+          curl -fL "$SAMPLES_URL" -o samples.zip
+          unzip -q samples.zip
+          SRC_DIR="$(ls -d bedrock-samples-* | head -n1)"
+          mkdir -p bedrock_samples
+          shopt -s dotglob
+          mv "$SRC_DIR"/* bedrock_samples/
+          rmdir "$SRC_DIR"
+          rm -f samples.zip
+
+          printf '{"channel":"%s","bds_version":"%s","samples_tag":"%s","fallback_used":%s,"updated_at":"%s"}\n' \
+            "$CHANNEL" "$BDS_VER" "$SAMPLES_TAG" "$FALLBACK" "$(date -u +%FT%TZ)" > "$META_FILE"
+
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No staged changes."
+          else
+            MSG="[${CHANNEL}] BDS ${BDS_VER} / samples ${SAMPLES_TAG}"
+            [[ "$FALLBACK" == true ]] && MSG="$MSG [fallback]"
+            git commit -m "$MSG"
+          fi
+
+          if git rev-parse --abbrev-ref --symbolic-full-name @{u} >/dev/null 2>&1; then
+            git push origin "$BRANCH" || true
+          else
+            git push -u origin "$BRANCH" || true
+          fi
+
+          if git ls-remote --tags origin | grep -q "refs/tags/$SAMPLES_TAG$"; then
+            echo "Tag $SAMPLES_TAG already exists on remote."
+          else
+            git tag "$SAMPLES_TAG" || true
+            git push origin "refs/tags/$SAMPLES_TAG" || true
+          fi
+
+          echo "Done: $CHANNEL => BDS $BDS_VER, samples $SAMPLES_TAG (fallback=$FALLBACK)"
+          BASH
+
+          cat > scripts/update_main.sh <<'BASH'
+          #!/usr/bin/env bash
+          set -euo pipefail
+          git fetch origin --prune
+          if git ls-remote --heads origin main | grep -q main; then
+            git checkout main
+            git merge --ff-only origin/main || true
+          else
+            git checkout -b main
+          fi
+
+          rm -rf _wt || true
+          mkdir -p _wt
+          # stable/preview がまだ無い初回はスキップOK
+          if git ls-remote --heads origin stable | grep -q stable; then
+            git worktree add --force _wt/stable  origin/stable
+          fi
+          if git ls-remote --heads origin preview | grep -q preview; then
+            git worktree add --force _wt/preview origin/preview
+          fi
+
+          rm -rf stable preview
+          mkdir -p stable preview
+          if [[ -d _wt/stable ]];  then ( shopt -s dotglob; cp -a _wt/stable/*  stable/  || true ); fi
+          if [[ -d _wt/preview ]]; then ( shopt -s dotglob; cp -a _wt/preview/* preview/ || true ); fi
+
+          [[ -d _wt/stable  ]] && git worktree remove --force _wt/stable
+          [[ -d _wt/preview ]] && git worktree remove --force _wt/preview
+          rm -rf _wt
+
+          git add -A
+          if git diff --cached --quiet; then
+            echo "main: no changes."
+          else
+            S_VER="$(jq -r '.bds_version // empty' stable/.bds-meta.json  2>/dev/null || true)"
+            P_VER="$(jq -r '.bds_version // empty' preview/.bds-meta.json 2>/dev/null || true)"
+            MSG="[main] merge stable(${S_VER:-?}) + preview(${P_VER:-?})"
+            git commit -m "$MSG"
+            if git rev-parse --abbrev-ref --symbolic-full-name @{u} >/dev/null 2>&1; then
+              git push || true
+            else
+              git push -u origin main || true
+            fi
+          fi
+          echo "Done: main updated."
+          BASH
+
+          chmod +x scripts/update_channel.sh scripts/update_main.sh
+          ls -l scripts
+
+      - name: Git identity
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreplygithub.com"
+
       - name: Update stable
         env:
           GITHUB_TOKEN: ${{ github.token }}
           STRICT_SERIES: "true"
-        run: update_channel.sh stable
+        run: bash -x scripts/update_channel.sh stable
 
       - name: Update preview
         env:
           GITHUB_TOKEN: ${{ github.token }}
           STRICT_SERIES: "true"
-        run: update_channel.sh preview
+        run: bash -x scripts/update_channel.sh preview
 
-      - name: Update main (combine stable + preview)
-        run: update_main.sh
+      - name: Update main (combine)
+        run: bash -x scripts/update_main.sh
