@@ -5621,30 +5621,6 @@
                   },
                   {
                      "default" : "0",
-                     "description" : [ "minecraft:chain [\"pillar_axis\" = \"y\"]" ],
-                     "header_level" : 3,
-                     "name" : "minecraft:chain:000",
-                     "show_in_index" : true,
-                     "type" : "minecraft:chain"
-                  },
-                  {
-                     "default" : "1",
-                     "description" : [ "minecraft:chain [\"pillar_axis\" = \"x\"]" ],
-                     "header_level" : 3,
-                     "name" : "minecraft:chain:001",
-                     "show_in_index" : true,
-                     "type" : "minecraft:chain"
-                  },
-                  {
-                     "default" : "2",
-                     "description" : [ "minecraft:chain [\"pillar_axis\" = \"z\"]" ],
-                     "header_level" : 3,
-                     "name" : "minecraft:chain:002",
-                     "show_in_index" : true,
-                     "type" : "minecraft:chain"
-                  },
-                  {
-                     "default" : "0",
                      "description" : [
                         "minecraft:chain_command_block [\"conditional_bit\" = 0, \"facing_direction\" = 0]"
                      ],
@@ -15446,6 +15422,30 @@
                      "name" : "minecraft:hopper:015",
                      "show_in_index" : true,
                      "type" : "minecraft:hopper"
+                  },
+                  {
+                     "default" : "0",
+                     "description" : [ "minecraft:iron_chain [\"pillar_axis\" = \"y\"]" ],
+                     "header_level" : 3,
+                     "name" : "minecraft:iron_chain:000",
+                     "show_in_index" : true,
+                     "type" : "minecraft:iron_chain"
+                  },
+                  {
+                     "default" : "1",
+                     "description" : [ "minecraft:iron_chain [\"pillar_axis\" = \"x\"]" ],
+                     "header_level" : 3,
+                     "name" : "minecraft:iron_chain:001",
+                     "show_in_index" : true,
+                     "type" : "minecraft:iron_chain"
+                  },
+                  {
+                     "default" : "2",
+                     "description" : [ "minecraft:iron_chain [\"pillar_axis\" = \"z\"]" ],
+                     "header_level" : 3,
+                     "name" : "minecraft:iron_chain:002",
+                     "show_in_index" : true,
+                     "type" : "minecraft:iron_chain"
                   },
                   {
                      "default" : "0",
@@ -35896,6 +35896,14 @@
                      "type" : "String"
                   },
                   {
+                     "default" : "unconnected, right, center, left",
+                     "description" : [ "Determines the powered variant of the Shelf" ],
+                     "header_level" : 3,
+                     "name" : "shelf_connection_type",
+                     "show_in_index" : true,
+                     "type" : "Integer"
+                  },
+                  {
                      "default" : "dry, wet",
                      "description" : [ "DEPRECATED - Determines the type of a sponge block" ],
                      "header_level" : 3,
@@ -36418,6 +36426,11 @@
                   },
                   {
                      "header_level" : 3,
+                     "name" : "minecraft:acacia_shelf",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
                      "name" : "minecraft:acacia_slab",
                      "show_in_index" : false
                   },
@@ -36608,6 +36621,11 @@
                   },
                   {
                      "header_level" : 3,
+                     "name" : "minecraft:bamboo_shelf",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
                      "name" : "minecraft:bamboo_slab",
                      "show_in_index" : false
                   },
@@ -36739,6 +36757,11 @@
                   {
                      "header_level" : 3,
                      "name" : "minecraft:birch_sapling",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
+                     "name" : "minecraft:birch_shelf",
                      "show_in_index" : false
                   },
                   {
@@ -37168,11 +37191,6 @@
                   },
                   {
                      "header_level" : 3,
-                     "name" : "minecraft:chain",
-                     "show_in_index" : false
-                  },
-                  {
-                     "header_level" : 3,
                      "name" : "minecraft:chain_command_block",
                      "show_in_index" : false
                   },
@@ -37239,6 +37257,11 @@
                   {
                      "header_level" : 3,
                      "name" : "minecraft:cherry_sapling",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
+                     "name" : "minecraft:cherry_shelf",
                      "show_in_index" : false
                   },
                   {
@@ -37473,12 +37496,22 @@
                   },
                   {
                      "header_level" : 3,
+                     "name" : "minecraft:copper_bars",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
                      "name" : "minecraft:copper_block",
                      "show_in_index" : false
                   },
                   {
                      "header_level" : 3,
                      "name" : "minecraft:copper_bulb",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
+                     "name" : "minecraft:copper_chain",
                      "show_in_index" : false
                   },
                   {
@@ -37493,12 +37526,27 @@
                   },
                   {
                      "header_level" : 3,
+                     "name" : "minecraft:copper_golem_statue",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
                      "name" : "minecraft:copper_grate",
                      "show_in_index" : false
                   },
                   {
                      "header_level" : 3,
+                     "name" : "minecraft:copper_lantern",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
                      "name" : "minecraft:copper_ore",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
+                     "name" : "minecraft:copper_torch",
                      "show_in_index" : false
                   },
                   {
@@ -37614,6 +37662,11 @@
                   {
                      "header_level" : 3,
                      "name" : "minecraft:crimson_roots",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
+                     "name" : "minecraft:crimson_shelf",
                      "show_in_index" : false
                   },
                   {
@@ -37814,6 +37867,11 @@
                   {
                      "header_level" : 3,
                      "name" : "minecraft:dark_oak_sapling",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
+                     "name" : "minecraft:dark_oak_shelf",
                      "show_in_index" : false
                   },
                   {
@@ -38873,7 +38931,17 @@
                   },
                   {
                      "header_level" : 3,
+                     "name" : "minecraft:exposed_copper_bars",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
                      "name" : "minecraft:exposed_copper_bulb",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
+                     "name" : "minecraft:exposed_copper_chain",
                      "show_in_index" : false
                   },
                   {
@@ -38888,7 +38956,17 @@
                   },
                   {
                      "header_level" : 3,
+                     "name" : "minecraft:exposed_copper_golem_statue",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
                      "name" : "minecraft:exposed_copper_grate",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
+                     "name" : "minecraft:exposed_copper_lantern",
                      "show_in_index" : false
                   },
                   {
@@ -38914,6 +38992,11 @@
                   {
                      "header_level" : 3,
                      "name" : "minecraft:exposed_double_cut_copper_slab",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
+                     "name" : "minecraft:exposed_lightning_rod",
                      "show_in_index" : false
                   },
                   {
@@ -39508,6 +39591,11 @@
                   },
                   {
                      "header_level" : 3,
+                     "name" : "minecraft:iron_chain",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
                      "name" : "minecraft:iron_door",
                      "show_in_index" : false
                   },
@@ -39584,6 +39672,11 @@
                   {
                      "header_level" : 3,
                      "name" : "minecraft:jungle_sapling",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
+                     "name" : "minecraft:jungle_shelf",
                      "show_in_index" : false
                   },
                   {
@@ -40103,6 +40196,11 @@
                   },
                   {
                      "header_level" : 3,
+                     "name" : "minecraft:mangrove_shelf",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
                      "name" : "minecraft:mangrove_slab",
                      "show_in_index" : false
                   },
@@ -40388,6 +40486,11 @@
                   },
                   {
                      "header_level" : 3,
+                     "name" : "minecraft:oak_shelf",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
                      "name" : "minecraft:oak_slab",
                      "show_in_index" : false
                   },
@@ -40498,7 +40601,17 @@
                   },
                   {
                      "header_level" : 3,
+                     "name" : "minecraft:oxidized_copper_bars",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
                      "name" : "minecraft:oxidized_copper_bulb",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
+                     "name" : "minecraft:oxidized_copper_chain",
                      "show_in_index" : false
                   },
                   {
@@ -40513,7 +40626,17 @@
                   },
                   {
                      "header_level" : 3,
+                     "name" : "minecraft:oxidized_copper_golem_statue",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
                      "name" : "minecraft:oxidized_copper_grate",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
+                     "name" : "minecraft:oxidized_copper_lantern",
                      "show_in_index" : false
                   },
                   {
@@ -40539,6 +40662,11 @@
                   {
                      "header_level" : 3,
                      "name" : "minecraft:oxidized_double_cut_copper_slab",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
+                     "name" : "minecraft:oxidized_lightning_rod",
                      "show_in_index" : false
                   },
                   {
@@ -40619,6 +40747,11 @@
                   {
                      "header_level" : 3,
                      "name" : "minecraft:pale_oak_sapling",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
+                     "name" : "minecraft:pale_oak_shelf",
                      "show_in_index" : false
                   },
                   {
@@ -41703,6 +41836,11 @@
                   },
                   {
                      "header_level" : 3,
+                     "name" : "minecraft:spruce_shelf",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
                      "name" : "minecraft:spruce_slab",
                      "show_in_index" : false
                   },
@@ -42218,6 +42356,11 @@
                   },
                   {
                      "header_level" : 3,
+                     "name" : "minecraft:warped_shelf",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
                      "name" : "minecraft:warped_slab",
                      "show_in_index" : false
                   },
@@ -42273,7 +42416,17 @@
                   },
                   {
                      "header_level" : 3,
+                     "name" : "minecraft:waxed_copper_bars",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
                      "name" : "minecraft:waxed_copper_bulb",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
+                     "name" : "minecraft:waxed_copper_chain",
                      "show_in_index" : false
                   },
                   {
@@ -42288,7 +42441,17 @@
                   },
                   {
                      "header_level" : 3,
+                     "name" : "minecraft:waxed_copper_golem_statue",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
                      "name" : "minecraft:waxed_copper_grate",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
+                     "name" : "minecraft:waxed_copper_lantern",
                      "show_in_index" : false
                   },
                   {
@@ -42328,7 +42491,17 @@
                   },
                   {
                      "header_level" : 3,
+                     "name" : "minecraft:waxed_exposed_copper_bars",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
                      "name" : "minecraft:waxed_exposed_copper_bulb",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
+                     "name" : "minecraft:waxed_exposed_copper_chain",
                      "show_in_index" : false
                   },
                   {
@@ -42343,7 +42516,17 @@
                   },
                   {
                      "header_level" : 3,
+                     "name" : "minecraft:waxed_exposed_copper_golem_statue",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
                      "name" : "minecraft:waxed_exposed_copper_grate",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
+                     "name" : "minecraft:waxed_exposed_copper_lantern",
                      "show_in_index" : false
                   },
                   {
@@ -42373,6 +42556,16 @@
                   },
                   {
                      "header_level" : 3,
+                     "name" : "minecraft:waxed_exposed_lightning_rod",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
+                     "name" : "minecraft:waxed_lightning_rod",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
                      "name" : "minecraft:waxed_oxidized_chiseled_copper",
                      "show_in_index" : false
                   },
@@ -42383,7 +42576,17 @@
                   },
                   {
                      "header_level" : 3,
+                     "name" : "minecraft:waxed_oxidized_copper_bars",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
                      "name" : "minecraft:waxed_oxidized_copper_bulb",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
+                     "name" : "minecraft:waxed_oxidized_copper_chain",
                      "show_in_index" : false
                   },
                   {
@@ -42398,7 +42601,17 @@
                   },
                   {
                      "header_level" : 3,
+                     "name" : "minecraft:waxed_oxidized_copper_golem_statue",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
                      "name" : "minecraft:waxed_oxidized_copper_grate",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
+                     "name" : "minecraft:waxed_oxidized_copper_lantern",
                      "show_in_index" : false
                   },
                   {
@@ -42428,6 +42641,11 @@
                   },
                   {
                      "header_level" : 3,
+                     "name" : "minecraft:waxed_oxidized_lightning_rod",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
                      "name" : "minecraft:waxed_weathered_chiseled_copper",
                      "show_in_index" : false
                   },
@@ -42438,7 +42656,17 @@
                   },
                   {
                      "header_level" : 3,
+                     "name" : "minecraft:waxed_weathered_copper_bars",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
                      "name" : "minecraft:waxed_weathered_copper_bulb",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
+                     "name" : "minecraft:waxed_weathered_copper_chain",
                      "show_in_index" : false
                   },
                   {
@@ -42453,7 +42681,17 @@
                   },
                   {
                      "header_level" : 3,
+                     "name" : "minecraft:waxed_weathered_copper_golem_statue",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
                      "name" : "minecraft:waxed_weathered_copper_grate",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
+                     "name" : "minecraft:waxed_weathered_copper_lantern",
                      "show_in_index" : false
                   },
                   {
@@ -42483,6 +42721,11 @@
                   },
                   {
                      "header_level" : 3,
+                     "name" : "minecraft:waxed_weathered_lightning_rod",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
                      "name" : "minecraft:weathered_chiseled_copper",
                      "show_in_index" : false
                   },
@@ -42493,7 +42736,17 @@
                   },
                   {
                      "header_level" : 3,
+                     "name" : "minecraft:weathered_copper_bars",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
                      "name" : "minecraft:weathered_copper_bulb",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
+                     "name" : "minecraft:weathered_copper_chain",
                      "show_in_index" : false
                   },
                   {
@@ -42508,7 +42761,17 @@
                   },
                   {
                      "header_level" : 3,
+                     "name" : "minecraft:weathered_copper_golem_statue",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
                      "name" : "minecraft:weathered_copper_grate",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
+                     "name" : "minecraft:weathered_copper_lantern",
                      "show_in_index" : false
                   },
                   {
@@ -42534,6 +42797,11 @@
                   {
                      "header_level" : 3,
                      "name" : "minecraft:weathered_double_cut_copper_slab",
+                     "show_in_index" : false
+                  },
+                  {
+                     "header_level" : 3,
+                     "name" : "minecraft:weathered_lightning_rod",
                      "show_in_index" : false
                   },
                   {
@@ -43889,7 +44157,7 @@
                "header_level" : 2,
                "name" : "acacia_chest_boat",
                "show_in_index" : false,
-               "type" : "658"
+               "type" : "657"
             },
             {
                "header_level" : 2,
@@ -43950,6 +44218,12 @@
                "name" : "acacia_sapling",
                "show_in_index" : false,
                "type" : "-828"
+            },
+            {
+               "header_level" : 2,
+               "name" : "acacia_shelf",
+               "show_in_index" : false,
+               "type" : "-1051"
             },
             {
                "header_level" : 2,
@@ -44015,7 +44289,7 @@
                "header_level" : 2,
                "name" : "allay_spawn_egg",
                "show_in_index" : false,
-               "type" : "647"
+               "type" : "646"
             },
             {
                "header_level" : 2,
@@ -44045,7 +44319,7 @@
                "header_level" : 2,
                "name" : "amethyst_shard",
                "show_in_index" : false,
-               "type" : "640"
+               "type" : "639"
             },
             {
                "header_level" : 2,
@@ -44087,7 +44361,7 @@
                "header_level" : 2,
                "name" : "angler_pottery_sherd",
                "show_in_index" : false,
-               "type" : "672"
+               "type" : "671"
             },
             {
                "header_level" : 2,
@@ -44105,19 +44379,19 @@
                "header_level" : 2,
                "name" : "archer_pottery_sherd",
                "show_in_index" : false,
-               "type" : "673"
+               "type" : "672"
             },
             {
                "header_level" : 2,
                "name" : "armadillo_scute",
                "show_in_index" : false,
-               "type" : "719"
+               "type" : "718"
             },
             {
                "header_level" : 2,
                "name" : "armadillo_spawn_egg",
                "show_in_index" : false,
-               "type" : "718"
+               "type" : "717"
             },
             {
                "header_level" : 2,
@@ -44129,7 +44403,7 @@
                "header_level" : 2,
                "name" : "arms_up_pottery_sherd",
                "show_in_index" : false,
-               "type" : "674"
+               "type" : "673"
             },
             {
                "header_level" : 2,
@@ -44207,7 +44481,7 @@
                "header_level" : 2,
                "name" : "bamboo_chest_raft",
                "show_in_index" : false,
-               "type" : "670"
+               "type" : "669"
             },
             {
                "header_level" : 2,
@@ -44279,7 +44553,7 @@
                "header_level" : 2,
                "name" : "bamboo_raft",
                "show_in_index" : false,
-               "type" : "669"
+               "type" : "668"
             },
             {
                "header_level" : 2,
@@ -44289,9 +44563,15 @@
             },
             {
                "header_level" : 2,
+               "name" : "bamboo_shelf",
+               "show_in_index" : false,
+               "type" : "-1056"
+            },
+            {
+               "header_level" : 2,
                "name" : "bamboo_sign",
                "show_in_index" : false,
-               "type" : "668"
+               "type" : "667"
             },
             {
                "header_level" : 2,
@@ -44447,7 +44727,7 @@
                "header_level" : 2,
                "name" : "birch_chest_boat",
                "show_in_index" : false,
-               "type" : "655"
+               "type" : "654"
             },
             {
                "header_level" : 2,
@@ -44508,6 +44788,12 @@
                "name" : "birch_sapling",
                "show_in_index" : false,
                "type" : "-826"
+            },
+            {
+               "header_level" : 2,
+               "name" : "birch_shelf",
+               "show_in_index" : false,
+               "type" : "-1049"
             },
             {
                "header_level" : 2,
@@ -44597,7 +44883,7 @@
                "header_level" : 2,
                "name" : "black_harness",
                "show_in_index" : false,
-               "type" : "731"
+               "type" : "730"
             },
             {
                "header_level" : 2,
@@ -44663,7 +44949,7 @@
                "header_level" : 2,
                "name" : "blade_pottery_sherd",
                "show_in_index" : false,
-               "type" : "675"
+               "type" : "674"
             },
             {
                "header_level" : 2,
@@ -44735,7 +45021,7 @@
                "header_level" : 2,
                "name" : "blue_egg",
                "show_in_index" : false,
-               "type" : "728"
+               "type" : "727"
             },
             {
                "header_level" : 2,
@@ -44747,7 +45033,7 @@
                "header_level" : 2,
                "name" : "blue_harness",
                "show_in_index" : false,
-               "type" : "732"
+               "type" : "731"
             },
             {
                "header_level" : 2,
@@ -44813,7 +45099,7 @@
                "header_level" : 2,
                "name" : "bolt_armor_trim_smithing_template",
                "show_in_index" : false,
-               "type" : "714"
+               "type" : "713"
             },
             {
                "header_level" : 2,
@@ -44915,7 +45201,7 @@
                "header_level" : 2,
                "name" : "brewer_pottery_sherd",
                "show_in_index" : false,
-               "type" : "676"
+               "type" : "675"
             },
             {
                "header_level" : 2,
@@ -44999,7 +45285,7 @@
                "header_level" : 2,
                "name" : "brown_egg",
                "show_in_index" : false,
-               "type" : "729"
+               "type" : "728"
             },
             {
                "header_level" : 2,
@@ -45011,7 +45297,7 @@
                "header_level" : 2,
                "name" : "brown_harness",
                "show_in_index" : false,
-               "type" : "733"
+               "type" : "732"
             },
             {
                "header_level" : 2,
@@ -45059,7 +45345,7 @@
                "header_level" : 2,
                "name" : "brush",
                "show_in_index" : false,
-               "type" : "695"
+               "type" : "694"
             },
             {
                "header_level" : 2,
@@ -45107,7 +45393,7 @@
                "header_level" : 2,
                "name" : "burn_pottery_sherd",
                "show_in_index" : false,
-               "type" : "677"
+               "type" : "676"
             },
             {
                "header_level" : 2,
@@ -45149,7 +45435,7 @@
                "header_level" : 2,
                "name" : "camel_spawn_egg",
                "show_in_index" : false,
-               "type" : "671"
+               "type" : "670"
             },
             {
                "header_level" : 2,
@@ -45249,12 +45535,6 @@
             },
             {
                "header_level" : 2,
-               "name" : "chain",
-               "show_in_index" : false,
-               "type" : "635"
-            },
-            {
-               "header_level" : 2,
                "name" : "chain_command_block",
                "show_in_index" : false,
                "type" : "189"
@@ -45311,7 +45591,7 @@
                "header_level" : 2,
                "name" : "cherry_boat",
                "show_in_index" : false,
-               "type" : "665"
+               "type" : "664"
             },
             {
                "header_level" : 2,
@@ -45323,7 +45603,7 @@
                "header_level" : 2,
                "name" : "cherry_chest_boat",
                "show_in_index" : false,
-               "type" : "666"
+               "type" : "665"
             },
             {
                "header_level" : 2,
@@ -45387,9 +45667,15 @@
             },
             {
                "header_level" : 2,
+               "name" : "cherry_shelf",
+               "show_in_index" : false,
+               "type" : "-1054"
+            },
+            {
+               "header_level" : 2,
                "name" : "cherry_sign",
                "show_in_index" : false,
-               "type" : "667"
+               "type" : "666"
             },
             {
                "header_level" : 2,
@@ -45437,7 +45723,7 @@
                "header_level" : 2,
                "name" : "chest_boat",
                "show_in_index" : false,
-               "type" : "661"
+               "type" : "660"
             },
             {
                "header_level" : 2,
@@ -45611,7 +45897,7 @@
                "header_level" : 2,
                "name" : "coast_armor_trim_smithing_template",
                "show_in_index" : false,
-               "type" : "699"
+               "type" : "698"
             },
             {
                "header_level" : 2,
@@ -45845,7 +46131,13 @@
                "header_level" : 2,
                "name" : "copper_axe",
                "show_in_index" : false,
-               "type" : "751"
+               "type" : "750"
+            },
+            {
+               "header_level" : 2,
+               "name" : "copper_bars",
+               "show_in_index" : false,
+               "type" : "-1066"
             },
             {
                "header_level" : 2,
@@ -45857,13 +46149,19 @@
                "header_level" : 2,
                "name" : "copper_boots",
                "show_in_index" : false,
-               "type" : "756"
+               "type" : "755"
             },
             {
                "header_level" : 2,
                "name" : "copper_bulb",
                "show_in_index" : false,
                "type" : "-776"
+            },
+            {
+               "header_level" : 2,
+               "name" : "copper_chain",
+               "show_in_index" : false,
+               "type" : "-1074"
             },
             {
                "header_level" : 2,
@@ -45875,7 +46173,7 @@
                "header_level" : 2,
                "name" : "copper_chestplate",
                "show_in_index" : false,
-               "type" : "754"
+               "type" : "753"
             },
             {
                "header_level" : 2,
@@ -45887,7 +46185,13 @@
                "header_level" : 2,
                "name" : "copper_golem_spawn_egg",
                "show_in_index" : false,
-               "type" : "747"
+               "type" : "746"
+            },
+            {
+               "header_level" : 2,
+               "name" : "copper_golem_statue",
+               "show_in_index" : false,
+               "type" : "-1039"
             },
             {
                "header_level" : 2,
@@ -45899,13 +46203,19 @@
                "header_level" : 2,
                "name" : "copper_helmet",
                "show_in_index" : false,
-               "type" : "753"
+               "type" : "752"
             },
             {
                "header_level" : 2,
                "name" : "copper_hoe",
                "show_in_index" : false,
-               "type" : "752"
+               "type" : "751"
+            },
+            {
+               "header_level" : 2,
+               "name" : "copper_horse_armor",
+               "show_in_index" : false,
+               "type" : "757"
             },
             {
                "header_level" : 2,
@@ -45915,15 +46225,21 @@
             },
             {
                "header_level" : 2,
+               "name" : "copper_lantern",
+               "show_in_index" : false,
+               "type" : "-1083"
+            },
+            {
+               "header_level" : 2,
                "name" : "copper_leggings",
                "show_in_index" : false,
-               "type" : "755"
+               "type" : "754"
             },
             {
                "header_level" : 2,
                "name" : "copper_nugget",
                "show_in_index" : false,
-               "type" : "757"
+               "type" : "756"
             },
             {
                "header_level" : 2,
@@ -45935,19 +46251,25 @@
                "header_level" : 2,
                "name" : "copper_pickaxe",
                "show_in_index" : false,
-               "type" : "750"
+               "type" : "749"
             },
             {
                "header_level" : 2,
                "name" : "copper_shovel",
                "show_in_index" : false,
-               "type" : "749"
+               "type" : "748"
             },
             {
                "header_level" : 2,
                "name" : "copper_sword",
                "show_in_index" : false,
-               "type" : "748"
+               "type" : "747"
+            },
+            {
+               "header_level" : 2,
+               "name" : "copper_torch",
+               "show_in_index" : false,
+               "type" : "-1082"
             },
             {
                "header_level" : 2,
@@ -46043,7 +46365,7 @@
                "header_level" : 2,
                "name" : "creaking_spawn_egg",
                "show_in_index" : false,
-               "type" : "726"
+               "type" : "725"
             },
             {
                "header_level" : 2,
@@ -46134,6 +46456,12 @@
                "name" : "crimson_roots",
                "show_in_index" : false,
                "type" : "-223"
+            },
+            {
+               "header_level" : 2,
+               "name" : "crimson_shelf",
+               "show_in_index" : false,
+               "type" : "-1057"
             },
             {
                "header_level" : 2,
@@ -46289,7 +46617,7 @@
                "header_level" : 2,
                "name" : "cyan_harness",
                "show_in_index" : false,
-               "type" : "734"
+               "type" : "733"
             },
             {
                "header_level" : 2,
@@ -46337,7 +46665,7 @@
                "header_level" : 2,
                "name" : "danger_pottery_sherd",
                "show_in_index" : false,
-               "type" : "678"
+               "type" : "677"
             },
             {
                "header_level" : 2,
@@ -46355,7 +46683,7 @@
                "header_level" : 2,
                "name" : "dark_oak_chest_boat",
                "show_in_index" : false,
-               "type" : "659"
+               "type" : "658"
             },
             {
                "header_level" : 2,
@@ -46416,6 +46744,12 @@
                "name" : "dark_oak_sapling",
                "show_in_index" : false,
                "type" : "-829"
+            },
+            {
+               "header_level" : 2,
+               "name" : "dark_oak_shelf",
+               "show_in_index" : false,
+               "type" : "-1052"
             },
             {
                "header_level" : 2,
@@ -46901,7 +47235,7 @@
                "header_level" : 2,
                "name" : "disc_fragment_5",
                "show_in_index" : false,
-               "type" : "653"
+               "type" : "652"
             },
             {
                "header_level" : 2,
@@ -47015,7 +47349,7 @@
                "header_level" : 2,
                "name" : "dune_armor_trim_smithing_template",
                "show_in_index" : false,
-               "type" : "698"
+               "type" : "697"
             },
             {
                "header_level" : 2,
@@ -47027,7 +47361,7 @@
                "header_level" : 2,
                "name" : "echo_shard",
                "show_in_index" : false,
-               "type" : "663"
+               "type" : "662"
             },
             {
                "header_level" : 2,
@@ -47927,7 +48261,7 @@
                "header_level" : 2,
                "name" : "explorer_pottery_sherd",
                "show_in_index" : false,
-               "type" : "679"
+               "type" : "678"
             },
             {
                "header_level" : 2,
@@ -47943,9 +48277,21 @@
             },
             {
                "header_level" : 2,
+               "name" : "exposed_copper_bars",
+               "show_in_index" : false,
+               "type" : "-1067"
+            },
+            {
+               "header_level" : 2,
                "name" : "exposed_copper_bulb",
                "show_in_index" : false,
                "type" : "-777"
+            },
+            {
+               "header_level" : 2,
+               "name" : "exposed_copper_chain",
+               "show_in_index" : false,
+               "type" : "-1075"
             },
             {
                "header_level" : 2,
@@ -47961,9 +48307,21 @@
             },
             {
                "header_level" : 2,
+               "name" : "exposed_copper_golem_statue",
+               "show_in_index" : false,
+               "type" : "-1040"
+            },
+            {
+               "header_level" : 2,
                "name" : "exposed_copper_grate",
                "show_in_index" : false,
                "type" : "-769"
+            },
+            {
+               "header_level" : 2,
+               "name" : "exposed_copper_lantern",
+               "show_in_index" : false,
+               "type" : "-1084"
             },
             {
                "header_level" : 2,
@@ -47997,9 +48355,15 @@
             },
             {
                "header_level" : 2,
+               "name" : "exposed_lightning_rod",
+               "show_in_index" : false,
+               "type" : "-1059"
+            },
+            {
+               "header_level" : 2,
                "name" : "eye_armor_trim_smithing_template",
                "show_in_index" : false,
-               "type" : "702"
+               "type" : "701"
             },
             {
                "header_level" : 2,
@@ -48131,7 +48495,7 @@
                "header_level" : 2,
                "name" : "flow_armor_trim_smithing_template",
                "show_in_index" : false,
-               "type" : "713"
+               "type" : "712"
             },
             {
                "header_level" : 2,
@@ -48143,7 +48507,7 @@
                "header_level" : 2,
                "name" : "flow_pottery_sherd",
                "show_in_index" : false,
-               "type" : "680"
+               "type" : "679"
             },
             {
                "header_level" : 2,
@@ -48191,7 +48555,7 @@
                "header_level" : 2,
                "name" : "friend_pottery_sherd",
                "show_in_index" : false,
-               "type" : "681"
+               "type" : "680"
             },
             {
                "header_level" : 2,
@@ -48203,7 +48567,7 @@
                "header_level" : 2,
                "name" : "frog_spawn_egg",
                "show_in_index" : false,
-               "type" : "644"
+               "type" : "643"
             },
             {
                "header_level" : 2,
@@ -48269,7 +48633,7 @@
                "header_level" : 2,
                "name" : "glow_frame",
                "show_in_index" : false,
-               "type" : "639"
+               "type" : "638"
             },
             {
                "header_level" : 2,
@@ -48317,7 +48681,7 @@
                "header_level" : 2,
                "name" : "goat_horn",
                "show_in_index" : false,
-               "type" : "643"
+               "type" : "642"
             },
             {
                "header_level" : 2,
@@ -48521,7 +48885,7 @@
                "header_level" : 2,
                "name" : "gray_harness",
                "show_in_index" : false,
-               "type" : "735"
+               "type" : "734"
             },
             {
                "header_level" : 2,
@@ -48599,7 +48963,7 @@
                "header_level" : 2,
                "name" : "green_harness",
                "show_in_index" : false,
-               "type" : "736"
+               "type" : "735"
             },
             {
                "header_level" : 2,
@@ -48659,7 +49023,7 @@
                "header_level" : 2,
                "name" : "guster_pottery_sherd",
                "show_in_index" : false,
-               "type" : "682"
+               "type" : "681"
             },
             {
                "header_level" : 2,
@@ -48671,7 +49035,7 @@
                "header_level" : 2,
                "name" : "happy_ghast_spawn_egg",
                "show_in_index" : false,
-               "type" : "730"
+               "type" : "729"
             },
             {
                "header_level" : 2,
@@ -48911,13 +49275,13 @@
                "header_level" : 2,
                "name" : "heart_pottery_sherd",
                "show_in_index" : false,
-               "type" : "683"
+               "type" : "682"
             },
             {
                "header_level" : 2,
                "name" : "heartbreak_pottery_sherd",
                "show_in_index" : false,
-               "type" : "684"
+               "type" : "683"
             },
             {
                "header_level" : 2,
@@ -49007,13 +49371,13 @@
                "header_level" : 2,
                "name" : "host_armor_trim_smithing_template",
                "show_in_index" : false,
-               "type" : "712"
+               "type" : "711"
             },
             {
                "header_level" : 2,
                "name" : "howl_pottery_sherd",
                "show_in_index" : false,
-               "type" : "685"
+               "type" : "684"
             },
             {
                "header_level" : 2,
@@ -49122,6 +49486,12 @@
                "name" : "iron_boots",
                "show_in_index" : false,
                "type" : "349"
+            },
+            {
+               "header_level" : 2,
+               "name" : "iron_chain",
+               "show_in_index" : false,
+               "type" : "-286"
             },
             {
                "header_level" : 2,
@@ -49263,12 +49633,6 @@
             },
             {
                "header_level" : 2,
-               "name" : "item.chain",
-               "show_in_index" : false,
-               "type" : "-286"
-            },
-            {
-               "header_level" : 2,
                "name" : "item.crimson_door",
                "show_in_index" : false,
                "type" : "-244"
@@ -49403,7 +49767,7 @@
                "header_level" : 2,
                "name" : "jungle_chest_boat",
                "show_in_index" : false,
-               "type" : "656"
+               "type" : "655"
             },
             {
                "header_level" : 2,
@@ -49464,6 +49828,12 @@
                "name" : "jungle_sapling",
                "show_in_index" : false,
                "type" : "-827"
+            },
+            {
+               "header_level" : 2,
+               "name" : "jungle_shelf",
+               "show_in_index" : false,
+               "type" : "-1050"
             },
             {
                "header_level" : 2,
@@ -49793,7 +50163,7 @@
                "header_level" : 2,
                "name" : "light_blue_harness",
                "show_in_index" : false,
-               "type" : "737"
+               "type" : "736"
             },
             {
                "header_level" : 2,
@@ -49865,7 +50235,7 @@
                "header_level" : 2,
                "name" : "light_gray_harness",
                "show_in_index" : false,
-               "type" : "738"
+               "type" : "737"
             },
             {
                "header_level" : 2,
@@ -49967,7 +50337,7 @@
                "header_level" : 2,
                "name" : "lime_harness",
                "show_in_index" : false,
-               "type" : "739"
+               "type" : "738"
             },
             {
                "header_level" : 2,
@@ -50135,7 +50505,7 @@
                "header_level" : 2,
                "name" : "magenta_harness",
                "show_in_index" : false,
-               "type" : "740"
+               "type" : "739"
             },
             {
                "header_level" : 2,
@@ -50189,7 +50559,7 @@
                "header_level" : 2,
                "name" : "mangrove_boat",
                "show_in_index" : false,
-               "type" : "651"
+               "type" : "650"
             },
             {
                "header_level" : 2,
@@ -50201,13 +50571,13 @@
                "header_level" : 2,
                "name" : "mangrove_chest_boat",
                "show_in_index" : false,
-               "type" : "660"
+               "type" : "659"
             },
             {
                "header_level" : 2,
                "name" : "mangrove_door",
                "show_in_index" : false,
-               "type" : "649"
+               "type" : "648"
             },
             {
                "header_level" : 2,
@@ -50271,9 +50641,15 @@
             },
             {
                "header_level" : 2,
+               "name" : "mangrove_shelf",
+               "show_in_index" : false,
+               "type" : "-1053"
+            },
+            {
+               "header_level" : 2,
                "name" : "mangrove_sign",
                "show_in_index" : false,
-               "type" : "650"
+               "type" : "649"
             },
             {
                "header_level" : 2,
@@ -50369,7 +50745,7 @@
                "header_level" : 2,
                "name" : "miner_pottery_sherd",
                "show_in_index" : false,
-               "type" : "686"
+               "type" : "685"
             },
             {
                "header_level" : 2,
@@ -50471,7 +50847,7 @@
                "header_level" : 2,
                "name" : "mourner_pottery_sherd",
                "show_in_index" : false,
-               "type" : "687"
+               "type" : "686"
             },
             {
                "header_level" : 2,
@@ -50555,7 +50931,7 @@
                "header_level" : 2,
                "name" : "music_disc_5",
                "show_in_index" : false,
-               "type" : "652"
+               "type" : "651"
             },
             {
                "header_level" : 2,
@@ -50615,13 +50991,13 @@
                "header_level" : 2,
                "name" : "music_disc_otherside",
                "show_in_index" : false,
-               "type" : "642"
+               "type" : "641"
             },
             {
                "header_level" : 2,
                "name" : "music_disc_pigstep",
                "show_in_index" : false,
-               "type" : "636"
+               "type" : "635"
             },
             {
                "header_level" : 2,
@@ -50633,7 +51009,7 @@
                "header_level" : 2,
                "name" : "music_disc_relic",
                "show_in_index" : false,
-               "type" : "715"
+               "type" : "714"
             },
             {
                "header_level" : 2,
@@ -50735,7 +51111,7 @@
                "header_level" : 2,
                "name" : "nether_sprouts",
                "show_in_index" : false,
-               "type" : "637"
+               "type" : "636"
             },
             {
                "header_level" : 2,
@@ -50837,7 +51213,7 @@
                "header_level" : 2,
                "name" : "netherite_upgrade_smithing_template",
                "show_in_index" : false,
-               "type" : "696"
+               "type" : "695"
             },
             {
                "header_level" : 2,
@@ -50891,7 +51267,7 @@
                "header_level" : 2,
                "name" : "oak_chest_boat",
                "show_in_index" : false,
-               "type" : "654"
+               "type" : "653"
             },
             {
                "header_level" : 2,
@@ -50934,6 +51310,12 @@
                "name" : "oak_sapling",
                "show_in_index" : false,
                "type" : "6"
+            },
+            {
+               "header_level" : 2,
+               "name" : "oak_shelf",
+               "show_in_index" : false,
+               "type" : "-1047"
             },
             {
                "header_level" : 2,
@@ -50993,7 +51375,7 @@
                "header_level" : 2,
                "name" : "ominous_trial_key",
                "show_in_index" : false,
-               "type" : "722"
+               "type" : "721"
             },
             {
                "header_level" : 2,
@@ -51047,7 +51429,7 @@
                "header_level" : 2,
                "name" : "orange_harness",
                "show_in_index" : false,
-               "type" : "741"
+               "type" : "740"
             },
             {
                "header_level" : 2,
@@ -51105,9 +51487,21 @@
             },
             {
                "header_level" : 2,
+               "name" : "oxidized_copper_bars",
+               "show_in_index" : false,
+               "type" : "-1069"
+            },
+            {
+               "header_level" : 2,
                "name" : "oxidized_copper_bulb",
                "show_in_index" : false,
                "type" : "-779"
+            },
+            {
+               "header_level" : 2,
+               "name" : "oxidized_copper_chain",
+               "show_in_index" : false,
+               "type" : "-1077"
             },
             {
                "header_level" : 2,
@@ -51123,9 +51517,21 @@
             },
             {
                "header_level" : 2,
+               "name" : "oxidized_copper_golem_statue",
+               "show_in_index" : false,
+               "type" : "-1042"
+            },
+            {
+               "header_level" : 2,
                "name" : "oxidized_copper_grate",
                "show_in_index" : false,
                "type" : "-771"
+            },
+            {
+               "header_level" : 2,
+               "name" : "oxidized_copper_lantern",
+               "show_in_index" : false,
+               "type" : "-1086"
             },
             {
                "header_level" : 2,
@@ -51156,6 +51562,12 @@
                "name" : "oxidized_double_cut_copper_slab",
                "show_in_index" : false,
                "type" : "-371"
+            },
+            {
+               "header_level" : 2,
+               "name" : "oxidized_lightning_rod",
+               "show_in_index" : false,
+               "type" : "-1061"
             },
             {
                "header_level" : 2,
@@ -51197,7 +51609,7 @@
                "header_level" : 2,
                "name" : "pale_oak_boat",
                "show_in_index" : false,
-               "type" : "723"
+               "type" : "722"
             },
             {
                "header_level" : 2,
@@ -51209,7 +51621,7 @@
                "header_level" : 2,
                "name" : "pale_oak_chest_boat",
                "show_in_index" : false,
-               "type" : "724"
+               "type" : "723"
             },
             {
                "header_level" : 2,
@@ -51273,9 +51685,15 @@
             },
             {
                "header_level" : 2,
+               "name" : "pale_oak_shelf",
+               "show_in_index" : false,
+               "type" : "-1055"
+            },
+            {
+               "header_level" : 2,
                "name" : "pale_oak_sign",
                "show_in_index" : false,
-               "type" : "725"
+               "type" : "724"
             },
             {
                "header_level" : 2,
@@ -51449,7 +51867,7 @@
                "header_level" : 2,
                "name" : "pink_harness",
                "show_in_index" : false,
-               "type" : "742"
+               "type" : "741"
             },
             {
                "header_level" : 2,
@@ -51539,7 +51957,7 @@
                "header_level" : 2,
                "name" : "plenty_pottery_sherd",
                "show_in_index" : false,
-               "type" : "688"
+               "type" : "687"
             },
             {
                "header_level" : 2,
@@ -51911,7 +52329,7 @@
                "header_level" : 2,
                "name" : "prize_pottery_sherd",
                "show_in_index" : false,
-               "type" : "689"
+               "type" : "688"
             },
             {
                "header_level" : 2,
@@ -52001,7 +52419,7 @@
                "header_level" : 2,
                "name" : "purple_harness",
                "show_in_index" : false,
-               "type" : "743"
+               "type" : "742"
             },
             {
                "header_level" : 2,
@@ -52151,7 +52569,7 @@
                "header_level" : 2,
                "name" : "raiser_armor_trim_smithing_template",
                "show_in_index" : false,
-               "type" : "710"
+               "type" : "709"
             },
             {
                "header_level" : 2,
@@ -52205,7 +52623,7 @@
                "header_level" : 2,
                "name" : "recovery_compass",
                "show_in_index" : false,
-               "type" : "662"
+               "type" : "661"
             },
             {
                "header_level" : 2,
@@ -52259,7 +52677,7 @@
                "header_level" : 2,
                "name" : "red_harness",
                "show_in_index" : false,
-               "type" : "744"
+               "type" : "743"
             },
             {
                "header_level" : 2,
@@ -52445,7 +52863,7 @@
                "header_level" : 2,
                "name" : "resin_brick",
                "show_in_index" : false,
-               "type" : "727"
+               "type" : "726"
             },
             {
                "header_level" : 2,
@@ -52493,7 +52911,7 @@
                "header_level" : 2,
                "name" : "rib_armor_trim_smithing_template",
                "show_in_index" : false,
-               "type" : "706"
+               "type" : "705"
             },
             {
                "header_level" : 2,
@@ -52583,7 +53001,7 @@
                "header_level" : 2,
                "name" : "scrape_pottery_sherd",
                "show_in_index" : false,
-               "type" : "690"
+               "type" : "689"
             },
             {
                "header_level" : 2,
@@ -52637,19 +53055,19 @@
                "header_level" : 2,
                "name" : "sentry_armor_trim_smithing_template",
                "show_in_index" : false,
-               "type" : "697"
+               "type" : "696"
             },
             {
                "header_level" : 2,
                "name" : "shaper_armor_trim_smithing_template",
                "show_in_index" : false,
-               "type" : "711"
+               "type" : "710"
             },
             {
                "header_level" : 2,
                "name" : "sheaf_pottery_sherd",
                "show_in_index" : false,
-               "type" : "691"
+               "type" : "690"
             },
             {
                "header_level" : 2,
@@ -52667,7 +53085,7 @@
                "header_level" : 2,
                "name" : "shelter_pottery_sherd",
                "show_in_index" : false,
-               "type" : "692"
+               "type" : "691"
             },
             {
                "header_level" : 2,
@@ -52715,7 +53133,7 @@
                "header_level" : 2,
                "name" : "silence_armor_trim_smithing_template",
                "show_in_index" : false,
-               "type" : "708"
+               "type" : "707"
             },
             {
                "header_level" : 2,
@@ -52751,7 +53169,7 @@
                "header_level" : 2,
                "name" : "skull",
                "show_in_index" : false,
-               "type" : "716"
+               "type" : "715"
             },
             {
                "header_level" : 2,
@@ -52763,7 +53181,7 @@
                "header_level" : 2,
                "name" : "skull_pottery_sherd",
                "show_in_index" : false,
-               "type" : "693"
+               "type" : "692"
             },
             {
                "header_level" : 2,
@@ -52919,13 +53337,13 @@
                "header_level" : 2,
                "name" : "snort_pottery_sherd",
                "show_in_index" : false,
-               "type" : "694"
+               "type" : "693"
             },
             {
                "header_level" : 2,
                "name" : "snout_armor_trim_smithing_template",
                "show_in_index" : false,
-               "type" : "705"
+               "type" : "704"
             },
             {
                "header_level" : 2,
@@ -52955,7 +53373,7 @@
                "header_level" : 2,
                "name" : "soul_campfire",
                "show_in_index" : false,
-               "type" : "638"
+               "type" : "637"
             },
             {
                "header_level" : 2,
@@ -53015,7 +53433,7 @@
                "header_level" : 2,
                "name" : "spire_armor_trim_smithing_template",
                "show_in_index" : false,
-               "type" : "707"
+               "type" : "706"
             },
             {
                "header_level" : 2,
@@ -53051,7 +53469,7 @@
                "header_level" : 2,
                "name" : "spruce_chest_boat",
                "show_in_index" : false,
-               "type" : "657"
+               "type" : "656"
             },
             {
                "header_level" : 2,
@@ -53115,6 +53533,12 @@
             },
             {
                "header_level" : 2,
+               "name" : "spruce_shelf",
+               "show_in_index" : false,
+               "type" : "-1048"
+            },
+            {
+               "header_level" : 2,
                "name" : "spruce_sign",
                "show_in_index" : false,
                "type" : "587"
@@ -53159,7 +53583,7 @@
                "header_level" : 2,
                "name" : "spyglass",
                "show_in_index" : false,
-               "type" : "641"
+               "type" : "640"
             },
             {
                "header_level" : 2,
@@ -53183,7 +53607,7 @@
                "header_level" : 2,
                "name" : "stained_hardened_clay",
                "show_in_index" : false,
-               "type" : "717"
+               "type" : "716"
             },
             {
                "header_level" : 2,
@@ -53561,13 +53985,13 @@
                "header_level" : 2,
                "name" : "tadpole_bucket",
                "show_in_index" : false,
-               "type" : "646"
+               "type" : "645"
             },
             {
                "header_level" : 2,
                "name" : "tadpole_spawn_egg",
                "show_in_index" : false,
-               "type" : "645"
+               "type" : "644"
             },
             {
                "header_level" : 2,
@@ -53597,7 +54021,7 @@
                "header_level" : 2,
                "name" : "tide_armor_trim_smithing_template",
                "show_in_index" : false,
-               "type" : "704"
+               "type" : "703"
             },
             {
                "header_level" : 2,
@@ -53651,7 +54075,7 @@
                "header_level" : 2,
                "name" : "trader_llama_spawn_egg",
                "show_in_index" : false,
-               "type" : "664"
+               "type" : "663"
             },
             {
                "header_level" : 2,
@@ -53669,7 +54093,7 @@
                "header_level" : 2,
                "name" : "trial_key",
                "show_in_index" : false,
-               "type" : "721"
+               "type" : "720"
             },
             {
                "header_level" : 2,
@@ -53885,7 +54309,7 @@
                "header_level" : 2,
                "name" : "vex_armor_trim_smithing_template",
                "show_in_index" : false,
-               "type" : "703"
+               "type" : "702"
             },
             {
                "header_level" : 2,
@@ -53933,13 +54357,13 @@
                "header_level" : 2,
                "name" : "ward_armor_trim_smithing_template",
                "show_in_index" : false,
-               "type" : "701"
+               "type" : "700"
             },
             {
                "header_level" : 2,
                "name" : "warden_spawn_egg",
                "show_in_index" : false,
-               "type" : "648"
+               "type" : "647"
             },
             {
                "header_level" : 2,
@@ -54021,6 +54445,12 @@
             },
             {
                "header_level" : 2,
+               "name" : "warped_shelf",
+               "show_in_index" : false,
+               "type" : "-1058"
+            },
+            {
+               "header_level" : 2,
                "name" : "warped_sign",
                "show_in_index" : false,
                "type" : "631"
@@ -54099,9 +54529,21 @@
             },
             {
                "header_level" : 2,
+               "name" : "waxed_copper_bars",
+               "show_in_index" : false,
+               "type" : "-1070"
+            },
+            {
+               "header_level" : 2,
                "name" : "waxed_copper_bulb",
                "show_in_index" : false,
                "type" : "-780"
+            },
+            {
+               "header_level" : 2,
+               "name" : "waxed_copper_chain",
+               "show_in_index" : false,
+               "type" : "-1078"
             },
             {
                "header_level" : 2,
@@ -54117,9 +54559,21 @@
             },
             {
                "header_level" : 2,
+               "name" : "waxed_copper_golem_statue",
+               "show_in_index" : false,
+               "type" : "-1043"
+            },
+            {
+               "header_level" : 2,
                "name" : "waxed_copper_grate",
                "show_in_index" : false,
                "type" : "-772"
+            },
+            {
+               "header_level" : 2,
+               "name" : "waxed_copper_lantern",
+               "show_in_index" : false,
+               "type" : "-1087"
             },
             {
                "header_level" : 2,
@@ -54165,9 +54619,21 @@
             },
             {
                "header_level" : 2,
+               "name" : "waxed_exposed_copper_bars",
+               "show_in_index" : false,
+               "type" : "-1071"
+            },
+            {
+               "header_level" : 2,
                "name" : "waxed_exposed_copper_bulb",
                "show_in_index" : false,
                "type" : "-781"
+            },
+            {
+               "header_level" : 2,
+               "name" : "waxed_exposed_copper_chain",
+               "show_in_index" : false,
+               "type" : "-1079"
             },
             {
                "header_level" : 2,
@@ -54183,9 +54649,21 @@
             },
             {
                "header_level" : 2,
+               "name" : "waxed_exposed_copper_golem_statue",
+               "show_in_index" : false,
+               "type" : "-1044"
+            },
+            {
+               "header_level" : 2,
                "name" : "waxed_exposed_copper_grate",
                "show_in_index" : false,
                "type" : "-773"
+            },
+            {
+               "header_level" : 2,
+               "name" : "waxed_exposed_copper_lantern",
+               "show_in_index" : false,
+               "type" : "-1088"
             },
             {
                "header_level" : 2,
@@ -54219,6 +54697,18 @@
             },
             {
                "header_level" : 2,
+               "name" : "waxed_exposed_lightning_rod",
+               "show_in_index" : false,
+               "type" : "-1063"
+            },
+            {
+               "header_level" : 2,
+               "name" : "waxed_lightning_rod",
+               "show_in_index" : false,
+               "type" : "-1062"
+            },
+            {
+               "header_level" : 2,
                "name" : "waxed_oxidized_chiseled_copper",
                "show_in_index" : false,
                "type" : "-766"
@@ -54231,9 +54721,21 @@
             },
             {
                "header_level" : 2,
+               "name" : "waxed_oxidized_copper_bars",
+               "show_in_index" : false,
+               "type" : "-1073"
+            },
+            {
+               "header_level" : 2,
                "name" : "waxed_oxidized_copper_bulb",
                "show_in_index" : false,
                "type" : "-783"
+            },
+            {
+               "header_level" : 2,
+               "name" : "waxed_oxidized_copper_chain",
+               "show_in_index" : false,
+               "type" : "-1081"
             },
             {
                "header_level" : 2,
@@ -54249,9 +54751,21 @@
             },
             {
                "header_level" : 2,
+               "name" : "waxed_oxidized_copper_golem_statue",
+               "show_in_index" : false,
+               "type" : "-1046"
+            },
+            {
+               "header_level" : 2,
                "name" : "waxed_oxidized_copper_grate",
                "show_in_index" : false,
                "type" : "-775"
+            },
+            {
+               "header_level" : 2,
+               "name" : "waxed_oxidized_copper_lantern",
+               "show_in_index" : false,
+               "type" : "-1090"
             },
             {
                "header_level" : 2,
@@ -54285,6 +54799,12 @@
             },
             {
                "header_level" : 2,
+               "name" : "waxed_oxidized_lightning_rod",
+               "show_in_index" : false,
+               "type" : "-1065"
+            },
+            {
+               "header_level" : 2,
                "name" : "waxed_weathered_chiseled_copper",
                "show_in_index" : false,
                "type" : "-767"
@@ -54297,9 +54817,21 @@
             },
             {
                "header_level" : 2,
+               "name" : "waxed_weathered_copper_bars",
+               "show_in_index" : false,
+               "type" : "-1072"
+            },
+            {
+               "header_level" : 2,
                "name" : "waxed_weathered_copper_bulb",
                "show_in_index" : false,
                "type" : "-782"
+            },
+            {
+               "header_level" : 2,
+               "name" : "waxed_weathered_copper_chain",
+               "show_in_index" : false,
+               "type" : "-1080"
             },
             {
                "header_level" : 2,
@@ -54315,9 +54847,21 @@
             },
             {
                "header_level" : 2,
+               "name" : "waxed_weathered_copper_golem_statue",
+               "show_in_index" : false,
+               "type" : "-1045"
+            },
+            {
+               "header_level" : 2,
                "name" : "waxed_weathered_copper_grate",
                "show_in_index" : false,
                "type" : "-774"
+            },
+            {
+               "header_level" : 2,
+               "name" : "waxed_weathered_copper_lantern",
+               "show_in_index" : false,
+               "type" : "-1089"
             },
             {
                "header_level" : 2,
@@ -54351,9 +54895,15 @@
             },
             {
                "header_level" : 2,
+               "name" : "waxed_weathered_lightning_rod",
+               "show_in_index" : false,
+               "type" : "-1064"
+            },
+            {
+               "header_level" : 2,
                "name" : "wayfinder_armor_trim_smithing_template",
                "show_in_index" : false,
-               "type" : "709"
+               "type" : "708"
             },
             {
                "header_level" : 2,
@@ -54369,9 +54919,21 @@
             },
             {
                "header_level" : 2,
+               "name" : "weathered_copper_bars",
+               "show_in_index" : false,
+               "type" : "-1068"
+            },
+            {
+               "header_level" : 2,
                "name" : "weathered_copper_bulb",
                "show_in_index" : false,
                "type" : "-778"
+            },
+            {
+               "header_level" : 2,
+               "name" : "weathered_copper_chain",
+               "show_in_index" : false,
+               "type" : "-1076"
             },
             {
                "header_level" : 2,
@@ -54387,9 +54949,21 @@
             },
             {
                "header_level" : 2,
+               "name" : "weathered_copper_golem_statue",
+               "show_in_index" : false,
+               "type" : "-1041"
+            },
+            {
+               "header_level" : 2,
                "name" : "weathered_copper_grate",
                "show_in_index" : false,
                "type" : "-770"
+            },
+            {
+               "header_level" : 2,
+               "name" : "weathered_copper_lantern",
+               "show_in_index" : false,
+               "type" : "-1085"
             },
             {
                "header_level" : 2,
@@ -54420,6 +54994,12 @@
                "name" : "weathered_double_cut_copper_slab",
                "show_in_index" : false,
                "type" : "-370"
+            },
+            {
+               "header_level" : 2,
+               "name" : "weathered_lightning_rod",
+               "show_in_index" : false,
+               "type" : "-1060"
             },
             {
                "header_level" : 2,
@@ -54497,7 +55077,7 @@
                "header_level" : 2,
                "name" : "white_harness",
                "show_in_index" : false,
-               "type" : "745"
+               "type" : "744"
             },
             {
                "header_level" : 2,
@@ -54539,7 +55119,7 @@
                "header_level" : 2,
                "name" : "wild_armor_trim_smithing_template",
                "show_in_index" : false,
-               "type" : "700"
+               "type" : "699"
             },
             {
                "header_level" : 2,
@@ -54587,7 +55167,7 @@
                "header_level" : 2,
                "name" : "wolf_armor",
                "show_in_index" : false,
-               "type" : "720"
+               "type" : "719"
             },
             {
                "header_level" : 2,
@@ -54719,7 +55299,7 @@
                "header_level" : 2,
                "name" : "yellow_harness",
                "show_in_index" : false,
-               "type" : "746"
+               "type" : "745"
             },
             {
                "header_level" : 2,
@@ -55124,5 +55704,5 @@
          "table_name_title" : "Name"
       }
    ],
-   "version" : "1.21.100.6"
+   "version" : "1.21.110.23"
 }
