@@ -1,14 +1,19 @@
 name: Scrape
+
 on:
   workflow_dispatch:
   schedule:
     - cron: "*/10 * * * *"   # 10分ごと（UTC）
 
+# 同時実行を抑制（同じワークフローで並列起動させない）
 concurrency:
   group: scrape
   cancel-in-progress: false
 
 jobs:
+  # =========================
+  # 1) 既存のスクレイプ更新
+  # =========================
   update:
     runs-on: ubuntu-22.04
     permissions:
@@ -46,16 +51,25 @@ jobs:
       - name: Update main (combine stable + preview)
         run: bash -x scripts/update_main.sh
 
-  # --- 新しい2本目：ProtocolParserで docs -> Markdown 生成 ---
+  # ============================================
+  # 2) ProtocolParser で docs -> Markdown 生成
+  # ============================================
   protocol-parse:
     runs-on: ubuntu-22.04
     permissions:
       contents: write
+
     steps:
       - name: Checkout (this repo)
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Checkout ProtocolParser sources
+        uses: actions/checkout@v4
+        with:
+          repository: CloudburstMC/ProtocolParser
+          path: ProtocolParser
 
       - name: Checkout Mojang bedrock-protocol-docs
         uses: actions/checkout@v4
@@ -63,14 +77,21 @@ jobs:
           repository: Mojang/bedrock-protocol-docs
           path: protocol-docs   # 入力（dot/ と html/ がいるルート）
 
-      - name: Set up Java 17
+      - name: Set up Java 17 (with Gradle cache)
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 17
           cache: gradle
+          # ProtocolParser 配下の Gradle ファイルを参照（cache検出のため）
+          cache-dependency-path: |
+            ProtocolParser/**/gradle-wrapper.properties
+            ProtocolParser/**/*.gradle*
+            ProtocolParser/gradle/*.versions.toml
+            ProtocolParser/**/versions.properties
 
       - name: Build ProtocolParser (shadowJar)
+        working-directory: ProtocolParser
         run: |
           chmod +x ./gradlew
           ./gradlew --no-daemon shadowJar
@@ -78,7 +99,7 @@ jobs:
       - name: Run ProtocolParser
         run: |
           mkdir -p generated/protocol-md
-          java -jar build/libs/ProtocolParser.jar \
+          java -jar ProtocolParser/build/libs/ProtocolParser.jar \
             -i="protocol-docs" \
             -o="generated/protocol-md"
 
