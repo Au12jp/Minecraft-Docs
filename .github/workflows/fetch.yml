@@ -59,6 +59,7 @@ jobs:
           CHANNEL="${1:?channel required: stable|preview}"
           [[ "$CHANNEL" == "stable" || "$CHANNEL" == "preview" ]] || { echo "invalid channel"; exit 2; }
 
+          BDS_BASE="https://www.minecraft.net/bedrockdedicatedserver"
           JSON_URL="https://raw.githubusercontent.com/Bedrock-OSS/BDS-Versions/main/versions.json"
           SAMPLES_API="https://api.github.com/repos/Mojang/bedrock-samples/tags?per_page=200"
           UA="Mozilla/5.0"
@@ -96,9 +97,11 @@ jobs:
           versions_json="$(curl -fsSL -A "$UA" "$JSON_URL")"
           if [[ "$CHANNEL" == "preview" ]]; then
             BDS_VER="$(jq -r '.linux.preview' <<<"$versions_json")"
+            BDS_DIR="bin-linux-preview"                 # ← preview はこっち
             WANT_PREV=true;  WANT_TAG="v${BDS_VER}-preview"
           else
             BDS_VER="$(jq -r '.linux.stable'  <<<"$versions_json")"
+            BDS_DIR="bin-linux"                         # ← stable
             WANT_PREV=false; WANT_TAG="v${BDS_VER}"
           fi
 
@@ -138,8 +141,8 @@ jobs:
             exit 0
           fi
 
-          # Download BDS
-          BDS_URL="https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-${BDS_VER}.zip"
+          # Download BDS (channel-specific path)
+          BDS_URL="${BDS_BASE}/${BDS_DIR}/bedrock-server-${BDS_VER}.zip"
           echo "Downloading BDS: $BDS_URL"
           rm -rf bedrock_server
           mkdir -p bedrock_server
@@ -192,7 +195,7 @@ jobs:
             git push origin "refs/tags/$SAMPLES_TAG" || true
           fi
 
-          echo "Done: $CHANNEL => BDS $BDS_VER, samples $SAMPLES_TAG (fallback=$FALLBACK)"
+          echo "Done: $CHANNEL => BDS $BDS_VER (${BDS_DIR}), samples $SAMPLES_TAG (fallback=$FALLBACK)"
           BASH
 
           # ---------- update_main.sh ----------
