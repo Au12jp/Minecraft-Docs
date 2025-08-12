@@ -2,19 +2,17 @@ name: Scrape
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 15 * * *"   # JST 0:00（ActionsはUTC）
+    - cron: "*/10 * * * *"   # 10分ごと（UTC）
+
+concurrency:
+  group: scrape
+  cancel-in-progress: false
 
 jobs:
-  perform-fetch:
+  update:
     runs-on: ubuntu-22.04
     permissions:
       contents: write
-    strategy:
-      max-parallel: 1            # ← stable→preview の順で実行（同時更新競合を避ける）
-      matrix:
-        channel: [stable, preview]
-    env:
-      STRICT_SERIES: "true"      # まず同系列(例 1.21.100.*)で近いタグを探す
 
     steps:
       - name: Checkout (full history)
@@ -22,199 +20,28 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Git user
+      - name: Install deps
+        run: sudo apt-get update && sudo apt-get install -y jq unzip
+
+      - name: Git identity
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      # 対象ブランチへ。無ければ作成。あればfast-forwardで最新へ。
-      - name: Switch to channel branch (create if missing)
-        shell: bash
-        run: |
-          set -euo pipefail
-          BR="${{ matrix.channel }}"
-          git fetch origin --prune
-          if git ls-remote --heads origin "$BR" | grep -q "$BR"; then
-            git checkout "$BR"
-            # 既存ブランチはfast-forwardで追従（競合回避）
-            git merge --ff-only "origin/$BR" || true
-          else
-            # main から新規作成（必要に応じて別ベースに変更OK）
-            git checkout -b "$BR"
-          fi
+      - name: Make scripts executable
+        run: chmod +x scripts/update_channel.sh scripts/update_main.sh
 
-      - name: Download BDS (linux latest)
-        uses: bedrock-apis/bds-download@v1
-        with:
-          out_dir: bedrock_server
-          version: latest
-          use_preview: ${{ matrix.channel == 'preview' }}
-
-      - name: List files
-        run: ls -la bedrock_server
-
-      - name: Check GitHub 100MB limit
-        id: sizecheck
-        shell: bash
-        run: |
-          set -e
-          if find bedrock_server -type f -size +100M -print -quit | grep -q .; then
-            echo ">=100MB files found. Skip committing the large binary."
-            find bedrock_server -type f -size +100M -ls || true
-            echo "skip_commit=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "skip_commit=false" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Install jq & unzip
-        run: sudo apt-get update && sudo apt-get install -y jq unzip
-
-      # --- bedrock-samples のタグ解決（完全一致→近似フォールバック） ---
-      - name: Resolve bedrock-samples tag (with nearest fallback)
-        id: resolve_tag
+      - name: Update stable (worktree)
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          JSON_URL="https://raw.githubusercontent.com/Bedrock-OSS/BDS-Versions/main/versions.json"
-          versions_json="$(curl -fsSL "$JSON_URL")"
+          STRICT_SERIES: "true"   # 同系列(1.21.100.*など)優先で近似タグ
+        run: bash -x scripts/update_channel.sh stable
 
-          if [ "${{ matrix.channel }}" = "preview" ]; then
-            ver="$(echo "$versions_json" | jq -r '.linux.preview')"
-            tag_wanted="v${ver}-preview"
-            want_prev=true
-          else
-            ver="$(echo "$versions_json" | jq -r '.linux.stable')"
-            tag_wanted="v${ver}"
-            want_prev=false
-          fi
-          echo "bds_version=$ver" >> "$GITHUB_OUTPUT"
+      - name: Update preview (worktree)
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          STRICT_SERIES: "true"
+        run: bash -x scripts/update_channel.sh preview
 
-          # 取得（API制限を避けるため認証つき）
-          hdr=(-H "Authorization: Bearer $GITHUB_TOKEN" -H "X-GitHub-Api-Version: 2022-11-28" -H "Accept: application/vnd.github+json")
-          tags_json="$(curl -fsSL "${hdr[@]}" "https://api.github.com/repos/Mojang/bedrock-samples/tags?per_page=200")"
-
-          # 完全一致があれば採用
-          if [ "$(echo "$tags_json" | jq -r --arg T "$tag_wanted" '[.[] | select(.name==$T)] | length')" -gt 0 ]; then
-            echo "samples_tag=$tag_wanted" >> "$GITHUB_OUTPUT"
-            echo "fallback_used=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          # 近いタグを計算
-          strict_bool=$([ "$STRICT_SERIES" = "true" ] && echo true || echo false)
-          choose_nearest() {
-            echo "$tags_json" | jq -r --arg ver "$ver" --argjson want_prev "$want_prev" --argjson strict "$1" '
-              def parse:
-                map(select(.name | test("^v[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+(-preview)?$")))
-                | map({
-                    name: .name,
-                    is_preview: (.name | contains("-preview")),
-                    nums: (.name | sub("^v";"") | sub("-preview$";"") | split(".") | map(tonumber))
-                  });
-              def scalar(n): (n[0]*1000000000 + n[1]*1000000 + n[2]*1000 + n[3]);
-
-              parse
-              | map(select(.is_preview == $want_prev))
-              | ($ver | split(".") | map(tonumber)) as $w
-              | (if $strict then map(select(.nums[0]==$w[0] and .nums[1]==$w[1] and .nums[2]==$w[2])) else . end)
-              | if length==0 then [] else
-                  map(. + {dist: ((scalar(.nums) - scalar($w)) | if . < 0 then -. else . end)})
-                  | sort_by(.dist, .nums)
-                  | .[0].name
-                end
-            '
-          }
-
-          chosen=""
-          if [ "$strict_bool" = "true" ]; then chosen="$(choose_nearest true || true)"; fi
-          if [ -z "${chosen:-}" ]; then chosen="$(choose_nearest false || true)"; fi
-
-          if [ -z "${chosen:-}" ]; then
-            echo "::error::該当プレビュー/安定系で近いタグが見つかりません。"
-            exit 1
-          fi
-
-          echo "samples_tag=$chosen" >> "$GITHUB_OUTPUT"
-          echo "fallback_used=true" >> "$GITHUB_OUTPUT"
-
-      - name: Download and extract bedrock-samples
-        shell: bash
-        run: |
-          set -euo pipefail
-          tag="${{ steps.resolve_tag.outputs.samples_tag }}"
-          url="https://github.com/Mojang/bedrock-samples/archive/refs/tags/${tag}.zip"
-          echo "Downloading ${url}"
-          curl -fL "$url" -o samples.zip
-          rm -rf bedrock_samples
-          unzip -q samples.zip
-          src_dir="$(ls -d bedrock-samples-* | head -n1)"
-          mkdir -p bedrock_samples
-          shopt -s dotglob
-          mv "$src_dir"/* bedrock_samples/
-          rmdir "$src_dir"
-          rm -f samples.zip
-
-      - name: Print resolved versions
-        run: |
-          echo "Channel:      ${{ matrix.channel }}"
-          echo "BDS:          ${{ steps.resolve_tag.outputs.bds_version }}"
-          echo "Samples tag:  ${{ steps.resolve_tag.outputs.samples_tag }}"
-          echo "Fallback:     ${{ steps.resolve_tag.outputs.fallback_used }}"
-
-      # 100MB超を無視（本体のみ）
-      - name: Ignore large binary (if any)
-        if: ${{ steps.sizecheck.outputs.skip_commit == 'true' }}
-        run: |
-          set -e
-          touch .gitignore
-          grep -qxF 'bedrock_server/bedrock_server' .gitignore || echo 'bedrock_server/bedrock_server' >> .gitignore
-
-      # 変更をコミット & ブランチのupstream設定とpush（存在しなければ作成）
-      - name: Commit & push to branch (create upstream if missing)
-        shell: bash
-        run: |
-          set -euo pipefail
-          BR="${{ matrix.channel }}"
-          BDS="${{ steps.resolve_tag.outputs.bds_version }}"
-          TAG="${{ steps.resolve_tag.outputs.samples_tag }}"
-          FBK="${{ steps.resolve_tag.outputs.fallback_used }}"
-          MSG="[${BR}] Update BDS (${BDS}) and bedrock-samples (${TAG})"
-          [ "$FBK" = "true" ] && MSG="$MSG [fallback]"
-
-          git add -A
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "$MSG"
-          fi
-
-          # upstream 未設定なら作成
-          if git rev-parse --abbrev-ref --symbolic-full-name @{u} >/dev/null 2>&1; then
-            echo "Upstream already set for $BR."
-          else
-            echo "Setting upstream for $BR."
-            # まだリモートに無い場合でも -u で作成される
-            git push -u origin "$BR"
-          fi
-
-          # fast-forwardで最新を取り込み（並行実行対策）
-          git fetch origin "$BR" || true
-          git merge --ff-only "origin/$BR" || true
-
-          # 最終push（コミットがあれば反映）
-          git push origin "$BR" || true
-
-      # 自リポにも bedrock-samples と同名のタグを作成（重複時はスキップ）
-      - name: Create and push tag (same as bedrock-samples)
-        shell: bash
-        run: |
-          set -euo pipefail
-          TAG="${{ steps.resolve_tag.outputs.samples_tag }}"
-          if git ls-remote --tags origin | grep -q "refs/tags/$TAG$"; then
-            echo "Tag $TAG already exists on remote. Skip."
-          else
-            git tag -f "$TAG"   # 同名がローカルにある古いタグを更新したい場合に備えて -f
-            git push origin "refs/tags/$TAG"
-          fi
+      - name: Update main (combine stable + preview)
+        run: bash -x scripts/update_main.sh
