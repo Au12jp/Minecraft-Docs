@@ -21,7 +21,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y jq unzip
 
       - name: Make scripts executable
-        run: chmod +x scripts/update_channel.sh scripts/update_main.sh
+        run: chmod +x update_channel.sh update_main.sh
 
       # 省リソースのため順番に（並列だとAPI/ネットワーク負荷↑）
       - name: Update stable
@@ -37,4 +37,4 @@ jobs:
         run: update_channel.sh preview
 
       - name: Update main (combine stable + preview)
-        run: scripts/update_main.sh
+        run: update_main.sh
