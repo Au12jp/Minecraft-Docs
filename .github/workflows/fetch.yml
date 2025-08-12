@@ -2,7 +2,7 @@ name: Scrape
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 15 * * *"   # JST 0:00 (ActionsはUTC)
+    - cron: "0 15 * * *"   # JST 0:00 (GitHub Actions runs in UTC)
 
 concurrency:
   group: scrape
@@ -13,20 +13,23 @@ jobs:
     runs-on: ubuntu-22.04
     permissions:
       contents: write
+
     steps:
-      - uses: actions/checkout@v4
-        with: { fetch-depth: 0 }
+      - name: Checkout (full history)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Install deps
         run: sudo apt-get update && sudo apt-get install -y jq unzip
 
-      - name: Create scripts (no nested heredocs)
+      - name: Create scripts
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p scripts
 
-          # --- jq filter (別ファイル) ---
+          # ---------- jq filter (separate file; no nested heredocs) ----------
           cat > scripts/jq_filter.jq <<'JQ'
           def parse:
             map(select(.name | test("^v[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+(-preview)?$")))
@@ -48,10 +51,11 @@ jobs:
             end
           JQ
 
-          # --- update_channel.sh ---
+          # ---------- update_channel.sh ----------
           cat > scripts/update_channel.sh <<'BASH'
           #!/usr/bin/env bash
           set -euo pipefail
+
           CHANNEL="${1:?channel required: stable|preview}"
           [[ "$CHANNEL" == "stable" || "$CHANNEL" == "preview" ]] || { echo "invalid channel"; exit 2; }
 
@@ -61,7 +65,25 @@ jobs:
           STRICT_SERIES="${STRICT_SERIES:-true}"
           BRANCH="$CHANNEL"
 
-          # Git
+          # Reliable downloader: retries + HTTP/1.1 fallback
+          dl() {
+            local url="$1" out="$2" try
+            for try in 1 2 3 4 5; do
+              local extra=()
+              [[ $try -ge 3 ]] && extra+=(--http1.1)
+              echo "GET $url (try=$try${extra:+, http1.1})"
+              if curl -fL -A "$UA" \
+                   --retry 5 --retry-all-errors --retry-delay 2 --retry-connrefused \
+                   --connect-timeout 20 --max-time 600 \
+                   "${extra[@]}" "$url" -o "$out"; then
+                return 0
+              fi
+              sleep $((2**try))
+            done
+            return 1
+          }
+
+          # Git branch setup
           git fetch origin --prune
           if git ls-remote --heads origin "$BRANCH" | grep -q "$BRANCH"; then
             git checkout "$BRANCH"
@@ -70,7 +92,7 @@ jobs:
             git checkout -b "$BRANCH"
           fi
 
-          # versions.json
+          # Resolve BDS version (stable/preview)
           versions_json="$(curl -fsSL -A "$UA" "$JSON_URL")"
           if [[ "$CHANNEL" == "preview" ]]; then
             BDS_VER="$(jq -r '.linux.preview' <<<"$versions_json")"
@@ -80,11 +102,12 @@ jobs:
             WANT_PREV=false; WANT_TAG="v${BDS_VER}"
           fi
 
+          # Previous meta for early exit
           META_FILE=".bds-meta.json"
           OLD_VER=""; OLD_TAG=""
           [[ -f "$META_FILE" ]] && { OLD_VER="$(jq -r '.bds_version // empty' "$META_FILE")"; OLD_TAG="$(jq -r '.samples_tag // empty' "$META_FILE")"; }
 
-          # tags一覧（トークンあれば付与）
+          # Fetch tags (use token if available to avoid rate limit)
           if [[ -n "${GITHUB_TOKEN:-}" ]]; then
             HDR=(-H "Authorization: Bearer $GITHUB_TOKEN" -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28")
           else
@@ -92,7 +115,7 @@ jobs:
           fi
           tags_json="$(curl -fsSL -A "$UA" "${HDR[@]}" "$SAMPLES_API")"
 
-          # 完全一致→近似
+          # Exact match -> use; else nearest (strict series first)
           if [[ "$(jq -r --arg T "$WANT_TAG" '[.[]|select(.name==$T)]|length' <<<"$tags_json")" -gt 0 ]]; then
             SAMPLES_TAG="$WANT_TAG"; FALLBACK=false
           else
@@ -106,7 +129,7 @@ jobs:
             FALLBACK=true
           fi
 
-          # 変化なしなら即終了（節約）
+          # Skip if nothing changed (saves bandwidth)
           if [[ "$BDS_VER" == "$OLD_VER" && "$SAMPLES_TAG" == "$OLD_TAG" ]]; then
             echo "No changes for $CHANNEL. Skip downloads/commit."
             if ! git rev-parse --abbrev-ref --symbolic-full-name @{u} >/dev/null 2>&1; then
@@ -115,24 +138,24 @@ jobs:
             exit 0
           fi
 
-          # BDS DL
+          # Download BDS
           BDS_URL="https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-${BDS_VER}.zip"
           echo "Downloading BDS: $BDS_URL"
           rm -rf bedrock_server
           mkdir -p bedrock_server
-          curl -fL "$BDS_URL" -o bds.zip
-          unzip -q bds.zip -d bedrock_server
+          dl "$BDS_URL" bds.zip
+          unzip -q bds.zip -d bedrock_server || { echo "unzip failed for BDS"; rm -f bds.zip; exit 1; }
           rm -f bds.zip
 
-          # 大バイナリはコミットしない
+          # Ignore huge binary in commits
           touch .gitignore
           grep -qxF 'bedrock_server/bedrock_server' .gitignore || echo 'bedrock_server/bedrock_server' >> .gitignore
 
-          # samples DL
+          # Download bedrock-samples
           SAMPLES_URL="https://github.com/Mojang/bedrock-samples/archive/refs/tags/${SAMPLES_TAG}.zip"
           echo "Downloading samples: $SAMPLES_URL"
           rm -rf bedrock_samples
-          curl -fL "$SAMPLES_URL" -o samples.zip
+          dl "$SAMPLES_URL" samples.zip
           unzip -q samples.zip
           SRC_DIR="$(ls -d bedrock-samples-* | head -n1)"
           mkdir -p bedrock_samples
@@ -141,11 +164,11 @@ jobs:
           rmdir "$SRC_DIR"
           rm -f samples.zip
 
-          # メタ
+          # Write meta
           printf '{"channel":"%s","bds_version":"%s","samples_tag":"%s","fallback_used":%s,"updated_at":"%s"}\n' \
             "$CHANNEL" "$BDS_VER" "$SAMPLES_TAG" "$FALLBACK" "$(date -u +%FT%TZ)" > "$META_FILE"
 
-          # commit/push
+          # Commit & push
           git add -A
           if git diff --cached --quiet; then
             echo "No staged changes."
@@ -161,7 +184,7 @@ jobs:
             git push -u origin "$BRANCH" || true
           fi
 
-          # タグ（自リポ）
+          # Tag (mirror bedrock-samples tag). Skip if exists
           if git ls-remote --tags origin | grep -q "refs/tags/$SAMPLES_TAG$"; then
             echo "Tag $SAMPLES_TAG already exists on remote."
           else
@@ -172,10 +195,11 @@ jobs:
           echo "Done: $CHANNEL => BDS $BDS_VER, samples $SAMPLES_TAG (fallback=$FALLBACK)"
           BASH
 
-          # --- update_main.sh ---
+          # ---------- update_main.sh ----------
           cat > scripts/update_main.sh <<'BASH'
           #!/usr/bin/env bash
           set -euo pipefail
+
           git fetch origin --prune
           if git ls-remote --heads origin main | grep -q main; then
             git checkout main
@@ -216,6 +240,7 @@ jobs:
               git push -u origin main || true
             fi
           fi
+
           echo "Done: main updated."
           BASH
 
@@ -239,5 +264,5 @@ jobs:
           STRICT_SERIES: "true"
         run: bash -x scripts/update_channel.sh preview
 
-      - name: Update main (combine)
+      - name: Update main (combine stable + preview)
         run: bash -x scripts/update_main.sh
