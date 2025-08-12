@@ -28,13 +28,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
           STRICT_SERIES: "true"
-        run: scripts/update_channel.sh stable
+        run: update_channel.sh stable
 
       - name: Update preview
         env:
           GITHUB_TOKEN: ${{ github.token }}
           STRICT_SERIES: "true"
-        run: scripts/update_channel.sh preview
+        run: update_channel.sh preview
 
       - name: Update main (combine stable + preview)
         run: scripts/update_main.sh
