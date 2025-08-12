@@ -2,7 +2,7 @@ name: Scrape
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 15 * * *"   # JST 0:00 (GitHub Actions runs in UTC)
+    - cron: "0 15 * * *"   # JST 0:00 (Actions runs in UTC)
 
 concurrency:
   group: scrape
@@ -23,13 +23,13 @@ jobs:
       - name: Install deps
         run: sudo apt-get update && sudo apt-get install -y jq unzip
 
-      - name: Create scripts
+      - name: Create helper scripts (repo-agnostic)
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p scripts
 
-          # ---------- jq filter (separate file; no nested heredocs) ----------
+          # ---- jq filter (closest tag resolver) ----
           cat > scripts/jq_filter.jq <<'JQ'
           def parse:
             map(select(.name | test("^v[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+(-preview)?$")))
@@ -51,13 +51,16 @@ jobs:
             end
           JQ
 
-          # ---------- update_channel.sh ----------
+          # ---- update_channel.sh (uses git worktree) ----
           cat > scripts/update_channel.sh <<'BASH'
           #!/usr/bin/env bash
           set -euo pipefail
 
           CHANNEL="${1:?channel required: stable|preview}"
           [[ "$CHANNEL" == "stable" || "$CHANNEL" == "preview" ]] || { echo "invalid channel"; exit 2; }
+
+          ROOT_DIR="$(pwd)"
+          JQ_FILTER="$ROOT_DIR/scripts/jq_filter.jq"
 
           BDS_BASE="https://www.minecraft.net/bedrockdedicatedserver"
           JSON_URL="https://raw.githubusercontent.com/Bedrock-OSS/BDS-Versions/main/versions.json"
@@ -84,24 +87,28 @@ jobs:
             return 1
           }
 
-          # Git branch setup
+          # Prepare a clean worktree for the target branch (no conflicts with scripts/)
           git fetch origin --prune
+          WT_DIR="$ROOT_DIR/_wt/$BRANCH"
+          mkdir -p "$ROOT_DIR/_wt"
           if git ls-remote --heads origin "$BRANCH" | grep -q "$BRANCH"; then
-            git checkout "$BRANCH"
-            git merge --ff-only "origin/$BRANCH" || true
+            git worktree add --force "$WT_DIR" "origin/$BRANCH"
           else
-            git checkout -b "$BRANCH"
+            # base on current HEAD (usually main)
+            git worktree add --force -B "$BRANCH" "$WT_DIR" HEAD
           fi
+
+          cd "$WT_DIR"
 
           # Resolve BDS version (stable/preview)
           versions_json="$(curl -fsSL -A "$UA" "$JSON_URL")"
           if [[ "$CHANNEL" == "preview" ]]; then
             BDS_VER="$(jq -r '.linux.preview' <<<"$versions_json")"
-            BDS_DIR="bin-linux-preview"                 # ← preview はこっち
+            BDS_DIR="bin-linux-preview"                 # preview path
             WANT_PREV=true;  WANT_TAG="v${BDS_VER}-preview"
           else
             BDS_VER="$(jq -r '.linux.stable'  <<<"$versions_json")"
-            BDS_DIR="bin-linux"                         # ← stable
+            BDS_DIR="bin-linux"                         # stable path
             WANT_PREV=false; WANT_TAG="v${BDS_VER}"
           fi
 
@@ -122,8 +129,8 @@ jobs:
           if [[ "$(jq -r --arg T "$WANT_TAG" '[.[]|select(.name==$T)]|length' <<<"$tags_json")" -gt 0 ]]; then
             SAMPLES_TAG="$WANT_TAG"; FALLBACK=false
           else
-            choose_nearest_strict() { jq -r -f scripts/jq_filter.jq --arg ver "$BDS_VER" --argjson want_prev "$WANT_PREV" --argjson strict true  <<<"$tags_json"; }
-            choose_nearest_any()    { jq -r -f scripts/jq_filter.jq --arg ver "$BDS_VER" --argjson want_prev "$WANT_PREV" --argjson strict false <<<"$tags_json"; }
+            choose_nearest_strict() { jq -r -f "$JQ_FILTER" --arg ver "$BDS_VER" --argjson want_prev "$WANT_PREV" --argjson strict true  <<<"$tags_json"; }
+            choose_nearest_any()    { jq -r -f "$JQ_FILTER" --arg ver "$BDS_VER" --argjson want_prev "$WANT_PREV" --argjson strict false <<<"$tags_json"; }
 
             SAMPLES_TAG=""
             if [[ "${STRICT_SERIES,,}" == "true" ]]; then SAMPLES_TAG="$(choose_nearest_strict || true)"; fi
@@ -135,13 +142,15 @@ jobs:
           # Skip if nothing changed (saves bandwidth)
           if [[ "$BDS_VER" == "$OLD_VER" && "$SAMPLES_TAG" == "$OLD_TAG" ]]; then
             echo "No changes for $CHANNEL. Skip downloads/commit."
+            # ensure branch exists upstream
             if ! git rev-parse --abbrev-ref --symbolic-full-name @{u} >/dev/null 2>&1; then
               git push -u origin "$BRANCH" || true
             fi
+            cd "$ROOT_DIR"; git worktree remove --force "$WT_DIR" || true
             exit 0
           fi
 
-          # Download BDS (channel-specific path)
+          # Download BDS
           BDS_URL="${BDS_BASE}/${BDS_DIR}/bedrock-server-${BDS_VER}.zip"
           echo "Downloading BDS: $BDS_URL"
           rm -rf bedrock_server
@@ -195,10 +204,14 @@ jobs:
             git push origin "refs/tags/$SAMPLES_TAG" || true
           fi
 
-          echo "Done: $CHANNEL => BDS $BDS_VER (${BDS_DIR}), samples $SAMPLES_TAG (fallback=$FALLBACK)"
+          # Cleanup worktree
+          cd "$ROOT_DIR"
+          git worktree remove --force "$WT_DIR" || true
+
+          echo "Done: $CHANNEL => BDS $BDS_VER, samples $SAMPLES_TAG (fallback=$FALLBACK)"
           BASH
 
-          # ---------- update_main.sh ----------
+          # ---- update_main.sh (combine stable + preview into main) ----
           cat > scripts/update_main.sh <<'BASH'
           #!/usr/bin/env bash
           set -euo pipefail
@@ -255,13 +268,13 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Update stable
+      - name: Update stable (worktree)
         env:
           GITHUB_TOKEN: ${{ github.token }}
           STRICT_SERIES: "true"
         run: bash -x scripts/update_channel.sh stable
 
-      - name: Update preview
+      - name: Update preview (worktree)
         env:
           GITHUB_TOKEN: ${{ github.token }}
           STRICT_SERIES: "true"
