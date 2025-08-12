@@ -5,7 +5,6 @@ on:
   schedule:
     - cron: "*/10 * * * *"   # 10分ごと（UTC）
 
-# 同時実行を抑制（同じワークフローで並列起動させない）
 concurrency:
   group: scrape
   cancel-in-progress: false
@@ -58,7 +57,6 @@ jobs:
     runs-on: ubuntu-22.04
     permissions:
       contents: write
-
     steps:
       - name: Checkout (this repo)
         uses: actions/checkout@v4
@@ -77,24 +75,25 @@ jobs:
           repository: Mojang/bedrock-protocol-docs
           path: protocol-docs   # 入力（dot/ と html/ がいるルート）
 
-      - name: Set up Java 17 (with Gradle cache)
+      - name: Set up Java 17
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 17
-          cache: gradle
-          # ProtocolParser 配下の Gradle ファイルを参照（cache検出のため）
-          cache-dependency-path: |
-            ProtocolParser/**/gradle-wrapper.properties
-            ProtocolParser/**/*.gradle*
-            ProtocolParser/gradle/*.versions.toml
-            ProtocolParser/**/versions.properties
+          # cacheはONのままでOK（wrapper無しでも失敗しません）
+
+      # ★ GradleをCI上にインストール（wrapperを使わない）
+      - name: Install Gradle 8.6
+        run: |
+          curl -sLo gradle.zip https://services.gradle.org/distributions/gradle-8.6-bin.zip
+          unzip -q gradle.zip
+          echo "$PWD/gradle-8.6/bin" >> "$GITHUB_PATH"
+
+      - name: Verify Gradle
+        run: gradle -v
 
       - name: Build ProtocolParser (shadowJar)
-        working-directory: ProtocolParser
-        run: |
-          chmod +x ./gradlew
-          ./gradlew --no-daemon shadowJar
+        run: gradle -p ProtocolParser --no-daemon shadowJar
 
       - name: Run ProtocolParser
         run: |
