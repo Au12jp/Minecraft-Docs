@@ -9,20 +9,38 @@ jobs:
     runs-on: ubuntu-22.04
     permissions:
       contents: write
+    strategy:
+      matrix:
+        channel: [stable, preview]  # ← 両方まわす
     env:
-      USE_PREVIEW: "false"       # true なら preview 系で解決
-      STRICT_SERIES: "true"      # true なら同系列(例: 1.21.100.*)優先で探し、無ければ全体から最も近いのを選ぶ
+      STRICT_SERIES: "true"         # まず同系列(1.21.100.* 等)で近いタグを探す
 
     steps:
-      - name: Checkout
+      - name: Checkout (fetch all)
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
+      # 対象ブランチ（stable / preview）に切り替え。無ければ作成。
+      - name: Switch to channel branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          BR="${{ matrix.channel }}"
+          git fetch origin
+          if git ls-remote --heads origin "$BR" | grep -q "$BR"; then
+            git checkout "$BR"
+          else
+            git checkout -b "$BR"
+          fi
+
+      # BDS 取得（channel ごとに安定/プレビューを切替）
       - name: Download BDS (linux latest)
         uses: bedrock-apis/bds-download@v1
         with:
           out_dir: bedrock_server
           version: latest
-          use_preview: ${{ env.USE_PREVIEW }}
+          use_preview: ${{ matrix.channel == 'preview' }}
 
       - name: List files
         run: ls -la bedrock_server
@@ -43,7 +61,7 @@ jobs:
       - name: Install jq & unzip
         run: sudo apt-get update && sudo apt-get install -y jq unzip
 
-      # ---- bedrock-samples のタグ解決（最も近いタグにフォールバック）----
+      # ---- bedrock-samples のタグ解決（完全一致→近いタグにフォールバック）----
       - name: Resolve bedrock-samples tag (nearest fallback)
         id: resolve_tag
         env:
@@ -52,41 +70,36 @@ jobs:
         run: |
           set -euo pipefail
 
-          # 1) BDSの最新バージョン番号を取得（安定/プレビューを USE_PREVIEW と合わせる）
+          # 1) BDSの最新バージョン番号を取得（channel に合わせて安定/プレビュー）
           JSON_URL="https://raw.githubusercontent.com/Bedrock-OSS/BDS-Versions/main/versions.json"
           versions_json="$(curl -fsSL "$JSON_URL")"
-          if [ "${USE_PREVIEW}" = "true" ]; then
+          if [ "${{ matrix.channel }}" = "preview" ]; then
             ver="$(echo "$versions_json" | jq -r '.linux.preview')"
             tag_wanted="v${ver}-preview"
+            want_prev=true
           else
             ver="$(echo "$versions_json" | jq -r '.linux.stable')"
             tag_wanted="v${ver}"
+            want_prev=false
           fi
           echo "bds_version=$ver" >> "$GITHUB_OUTPUT"
 
-          echo "Wanted tag: $tag_wanted"
-
-          # 2) bedrock-samples のタグ一覧（認証付きでレート制限回避）
+          # 2) bedrock-samples のタグ一覧
           hdr=(-H "Authorization: Bearer $GITHUB_TOKEN" -H "X-GitHub-Api-Version: 2022-11-28" -H "Accept: application/vnd.github+json")
           tags_json="$(curl -fsSL "${hdr[@]}" "https://api.github.com/repos/Mojang/bedrock-samples/tags?per_page=200")"
 
-          # 3) まずは完全一致があるか
-          exists="$(echo "$tags_json" | jq -r --arg T "$tag_wanted" '[.[] | select(.name==$T)] | length')"
-          if [ "$exists" -gt 0 ]; then
+          # 3) 完全一致があればそれを採用
+          if [ "$(echo "$tags_json" | jq -r --arg T "$tag_wanted" '[.[] | select(.name==$T)] | length')" -gt 0 ]; then
             echo "samples_tag=$tag_wanted" >> "$GITHUB_OUTPUT"
             echo "fallback_used=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
-          # 4) 無ければ「最も近い」タグを選ぶ
-          #    - USE_PREVIEW に一致する系のみから選択
-          #    - STRICT_SERIES=true なら同系列 (major.minor.patch が同一) を優先し、
-          #      見つからなければ全体から最小距離のものを選ぶ
-          want_prev_bool=$([ "$USE_PREVIEW" = "true" ] && echo true || echo false)
+          # 4) 近いタグへフォールバック
           strict_bool=$([ "$STRICT_SERIES" = "true" ] && echo true || echo false)
 
           choose_nearest() {
-            echo "$tags_json" | jq -r --arg ver "$ver" --argjson want_prev "$want_prev_bool" --argjson strict "$1" '
+            echo "$tags_json" | jq -r --arg ver "$ver" --argjson want_prev "$want_prev" --argjson strict "$1" '
               def parse:
                 map(select(.name | test("^v[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+(-preview)?$")))
                 | map({
@@ -99,24 +112,19 @@ jobs:
               parse
               | map(select(.is_preview == $want_prev))
               | ($ver | split(".") | map(tonumber)) as $w
-              | (if $strict
-                   then map(select(.nums[0]==$w[0] and .nums[1]==$w[1] and .nums[2]==$w[2]))
-                   else .
-                 end)
+              | (if $strict then map(select(.nums[0]==$w[0] and .nums[1]==$w[1] and .nums[2]==$w[2])) else . end)
               | if length==0 then [] else
                   map(. + {dist: ((scalar(.nums) - scalar($w)) | if . < 0 then -. else . end)})
-                  | sort_by(.dist, .nums)                       # 距離→バージョン順で安定
+                  | sort_by(.dist, .nums)
                   | .[0:1] | .[0].name
                 end
             '
           }
 
-          # 4a) 同系列で探す（STRICT_SERIES=true のとき）
           chosen=""
           if [ "$strict_bool" = "true" ]; then
             chosen="$(choose_nearest true || true)"
           fi
-          # 4b) 見つからなければ全体から最小距離
           if [ -z "${chosen:-}" ]; then
             chosen="$(choose_nearest false || true)"
           fi
@@ -149,10 +157,12 @@ jobs:
 
       - name: Print resolved versions
         run: |
+          echo "Channel:      ${{ matrix.channel }}"
           echo "BDS:          ${{ steps.resolve_tag.outputs.bds_version }}"
           echo "Samples tag:  ${{ steps.resolve_tag.outputs.samples_tag }}"
           echo "Fallback:     ${{ steps.resolve_tag.outputs.fallback_used }}"
 
+      # 100MB超があるときは .gitignore に本体を追加
       - name: Ignore large binary (if any)
         if: ${{ steps.sizecheck.outputs.skip_commit == 'true' }}
         run: |
@@ -160,6 +170,7 @@ jobs:
           touch .gitignore
           grep -qxF 'bedrock_server/bedrock_server' .gitignore || echo 'bedrock_server/bedrock_server' >> .gitignore
 
+      # コミット & プッシュ（現在のチャンネルブランチに）
       - name: Commit updated files
         uses: EndBug/add-and-commit@v9
         with:
@@ -167,5 +178,19 @@ jobs:
           add: |
             - bedrock_server
             - bedrock_samples
+            - .gitignore
           message: |
-            Update BDS (${{ steps.resolve_tag.outputs.bds_version }}) and bedrock-samples (${{ steps.resolve_tag.outputs.samples_tag }})${{ steps.resolve_tag.outputs.fallback_used == 'true' && ' [fallback]' || '' }}
+            [${{ matrix.channel }}] Update BDS (${{ steps.resolve_tag.outputs.bds_version }}) and bedrock-samples (${{ steps.resolve_tag.outputs.samples_tag }})${{ steps.resolve_tag.outputs.fallback_used == 'true' && ' [fallback]' || '' }}
+
+      # 自リポにも「bedrock-samples と同じ名前のタグ」を作成（重複時はスキップ）
+      - name: Create and push tag (same as bedrock-samples)
+        shell: bash
+        run: |
+          set -euo pipefail
+          TAG="${{ steps.resolve_tag.outputs.samples_tag }}"
+          if git ls-remote --tags origin | grep -q "refs/tags/$TAG$"; then
+            echo "Tag $TAG already exists on remote. Skip creating."
+          else
+            git tag "$TAG"
+            git push origin "$TAG"
+          fi
