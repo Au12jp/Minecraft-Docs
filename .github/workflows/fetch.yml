@@ -2,13 +2,15 @@ name: Scrape
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 15 * * *"   # JST 0:00
+    - cron: "0 15 * * *"   # JST 0:00 (ActionsはUTCで動く)
 
 jobs:
   perform-fetch:
     runs-on: ubuntu-22.04
     permissions:
       contents: write
+    env:
+      USE_PREVIEW: "false"   # ← true にすると preview 系を使う（bds-download と一致させる）
 
     steps:
       - name: Checkout
@@ -19,7 +21,7 @@ jobs:
         with:
           out_dir: bedrock_server
           version: latest
-          use_preview: false
+          use_preview: ${{ env.USE_PREVIEW }}
 
       - name: List files
         run: ls -la bedrock_server
@@ -37,27 +39,76 @@ jobs:
             echo "skip_commit=false" >> "$GITHUB_OUTPUT"
           fi
 
-      # ★ 100MB超があるときは .gitignore にでかいバイナリを追加して小物だけコミット
-      - name: Ignore large binary and commit small files
+      # ---- ここから bedrock-samples のタグ解決＆展開 ----
+      - name: Install jq & unzip
+        run: sudo apt-get update && sudo apt-get install -y jq unzip
+
+      - name: Resolve bedrock-samples tag matching BDS version
+        id: resolve_tag
+        shell: bash
+        run: |
+          set -euo pipefail
+          # BDSの最新(安定/プレビュー)バージョンを公式ミラーJSONから取得
+          JSON_URL="https://raw.githubusercontent.com/Bedrock-OSS/BDS-Versions/main/versions.json"
+          versions_json="$(curl -fsSL "$JSON_URL")"
+          if [ "${USE_PREVIEW}" = "true" ]; then
+            ver="$(echo "$versions_json" | jq -r '.linux.preview')"
+            tag="v${ver}-preview"
+          else
+            ver="$(echo "$versions_json" | jq -r '.linux.stable')"
+            tag="v${ver}"
+          fi
+          echo "bds_version=$ver" >> "$GITHUB_OUTPUT"
+          echo "samples_tag=$tag" >> "$GITHUB_OUTPUT"
+
+          # タグが実在するかチェック（存在しない場合は失敗させる）
+          exists="$(curl -fsSL "https://api.github.com/repos/Mojang/bedrock-samples/tags?per_page=200" \
+            | jq -r --arg T "$tag" '[.[] | select(.name==$T)] | length')"
+          if [ "$exists" -eq 0 ]; then
+            echo "::error::bedrock-samples にタグ $tag が見つかりません。数日ラグることがあるので、手動で近いタグを選ぶか USE_PREVIEW の整合を確認してください。"
+            exit 1
+          fi
+
+      - name: Download and extract bedrock-samples at resolved tag
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag="${{ steps.resolve_tag.outputs.samples_tag }}"
+          url="https://github.com/Mojang/bedrock-samples/archive/refs/tags/${tag}.zip"  # GitHubのタグZIP URL
+          echo "Downloading ${url}"
+          curl -fL "$url" -o samples.zip
+          rm -rf bedrock_samples
+          unzip -q samples.zip
+          # 解凍ディレクトリ（例: bedrock-samples-v1.21.100.6）を探して中身を bedrock_samples/ に集約
+          src_dir="$(ls -d bedrock-samples-* | head -n1)"
+          mkdir -p bedrock_samples
+          shopt -s dotglob
+          mv "$src_dir"/* bedrock_samples/
+          rmdir "$src_dir"
+          rm -f samples.zip
+
+      - name: Print resolved versions
+        run: |
+          echo "BDS:          ${{ steps.resolve_tag.outputs.bds_version }}"
+          echo "Samples tag:  ${{ steps.resolve_tag.outputs.samples_tag }}"
+
+      # ---- ここまで bedrock-samples ----
+
+      # 100MB超があるときは .gitignore にでかいバイナリを追加して小物だけコミット
+      - name: Ignore large binary
         if: ${{ steps.sizecheck.outputs.skip_commit == 'true' }}
         run: |
           set -e
           touch .gitignore
           grep -qxF 'bedrock_server/bedrock_server' .gitignore || echo 'bedrock_server/bedrock_server' >> .gitignore
-        # EndBugでコミット
-      - name: Commit small files only
-        if: ${{ steps.sizecheck.outputs.skip_commit == 'true' }}
-        uses: EndBug/add-and-commit@v9
-        with:
-          default_author: github_actions
-          add: bedrock_server
-          message: "Update BDS small files (large binary ignored)"
 
-      # ★ 100MB超が無いときは全部コミット
-      - name: Commit downloaded files
-        if: ${{ steps.sizecheck.outputs.skip_commit == 'false' }}
+      - name: Commit updated files
         uses: EndBug/add-and-commit@v9
         with:
           default_author: github_actions
-          add: bedrock_server
-          message: "Update BDS (linux)"
+          # bedrock_server（大物は .gitignore 済み）と bedrock_samples の両方をコミット
+          add: |
+            - bedrock_server
+            - bedrock_samples
+          message: |
+            Update BDS (${{ steps.resolve_tag.outputs.bds_version }}) and bedrock-samples (${{ steps.resolve_tag.outputs.samples_tag }})
