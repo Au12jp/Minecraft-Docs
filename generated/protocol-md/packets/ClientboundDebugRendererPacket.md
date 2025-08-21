@@ -1,6 +1,7 @@
 # ClientboundDebugRendererPacket
 
 **ID: 164**  
+**Purpose: ClientboundDebugRendererPacket**  
 
 Sent from the server to client to add/remove debug rendering objects
 

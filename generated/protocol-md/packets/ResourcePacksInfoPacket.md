@@ -1,6 +1,7 @@
 # ResourcePacksInfoPacket
 
 **ID: 6**  
+**Purpose: Resource Packs Info**  
 
 <table><thead><tr><th>Field</th><th>Info</th></tr></thead><tbody>
 <tr><td>Resource Pack Required</td><td>bool</td></tr>

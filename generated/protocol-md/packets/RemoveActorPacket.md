@@ -1,6 +1,7 @@
 # RemoveActorPacket
 
 **ID: 14**  
+**Purpose: Remove Actor**  
 
 Occasionally, during the server player tick some time is taken to remove nearby actors from the world.
 

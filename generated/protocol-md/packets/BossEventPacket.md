@@ -1,6 +1,7 @@
 # BossEventPacket
 
 **ID: 74**  
+**Purpose: Boss Event**  
 
 Two-way packet.
 

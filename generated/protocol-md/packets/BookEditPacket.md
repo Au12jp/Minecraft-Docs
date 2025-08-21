@@ -1,6 +1,7 @@
 # BookEditPacket
 
 **ID: 97**  
+**Purpose: Book Edit**  
 
 Sends the updated state of the book and quill item from client to server during use, i.e. before you sign it, making it uneditible.
 

@@ -1,6 +1,7 @@
 # CommandRequestPacket
 
 **ID: 77**  
+**Purpose: Command Request**  
 
 "slash" command execution, client to server.
 

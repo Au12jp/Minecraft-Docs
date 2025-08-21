@@ -1,8 +1,7 @@
 # ScriptMessagePacket
 
 **ID: 177**  
-
-Used to send custom messages between client and server.
+**Purpose: Used to send custom messages between client and server.**  
 
 <table><thead><tr><th>Field</th><th>Info</th></tr></thead><tbody>
 <tr><td>Message Id</td><td>string</td></tr>

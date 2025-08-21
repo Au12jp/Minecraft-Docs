@@ -1,6 +1,7 @@
 # ServerScriptDebugDrawerPacket
 
 **ID: 328**  
+**Purpose: Debug Shapes Update**  
 
 Used by Scripting to send new, removed or modified debug shapes information to the client to be used for rendering.
 

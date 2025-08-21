@@ -1,6 +1,7 @@
 # RemoveVolumeEntityPacket
 
 **ID: 167**  
+**Purpose: RemoveVolumeEntityPacket**  
 
 Sends a volume entity to be removed from server to client.
 

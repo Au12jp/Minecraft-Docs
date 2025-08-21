@@ -1,6 +1,7 @@
 # AnimateEntityPacket
 
 **ID: 158**  
+**Purpose: AnimateEntityPacket**  
 
 The AnimateEntityPacket is used to trigger a one-off animation on the client it is sent to.
 

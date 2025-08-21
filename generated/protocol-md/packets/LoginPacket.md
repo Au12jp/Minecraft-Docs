@@ -1,6 +1,7 @@
 # LoginPacket
 
 **ID: 1**  
+**Purpose: Login**  
 
 Sent once from client to server at login.
 

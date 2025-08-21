@@ -1,6 +1,7 @@
 # ItemRegistryPacket
 
 **ID: 162**  
+**Purpose: ItemRegistryPacket**  
 
 Item data from the server. Contains component information.
 

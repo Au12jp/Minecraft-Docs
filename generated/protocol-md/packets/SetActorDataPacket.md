@@ -1,6 +1,7 @@
 # SetActorDataPacket
 
 **ID: 39**  
+**Purpose: Set Actor Data**  
 
 Regular Actor Data delta packets, sent from the level on tick, mob and actor during normal tick
 

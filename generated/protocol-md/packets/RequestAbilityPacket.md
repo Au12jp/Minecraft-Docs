@@ -1,6 +1,7 @@
 # RequestAbilityPacket
 
 **ID: 184**  
+**Purpose: RequestAbilityPacket**  
 
 Sent from client to server. Used to request an ability change.
 

@@ -1,6 +1,7 @@
 # PlayerEnchantOptionsPacket
 
 **ID: 146**  
+**Purpose: PlayerEnchantOptionsPacket**  
 
 This packet is sent from the server whenever a player rerolls a new set of enchantment options from the enchantment table
 

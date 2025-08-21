@@ -1,6 +1,7 @@
 # SubChunkRequestPacket
 
 **ID: 175**  
+**Purpose: SubChunkRequestPacket**  
 
 Sent from the client to the server representing a batch of subchunks that the client requests from the server
 

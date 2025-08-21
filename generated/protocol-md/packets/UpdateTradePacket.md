@@ -1,6 +1,7 @@
 # UpdateTradePacket
 
 **ID: 80**  
+**Purpose: UpdateTradePacket**  
 
 This is used when the player trades with an npc. This sends all of the updated trade info in one big ol' packet.
 

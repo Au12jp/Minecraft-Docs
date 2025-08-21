@@ -1,6 +1,7 @@
 # CameraInstructionPacket
 
 **ID: 300**  
+**Purpose: CameraInstructionPacket**  
 
 Used to send a CameraInstruction from the server to the specified clients.
 

@@ -1,6 +1,7 @@
 # AgentActionEventPacket
 
 **ID: 181**  
+**Purpose: AgentActionEventPacket**  
 
 packet containing data of Agent Action Type
 

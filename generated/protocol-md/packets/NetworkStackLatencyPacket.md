@@ -1,6 +1,7 @@
 # NetworkStackLatencyPacket
 
 **ID: 115**  
+**Purpose: Ping Packet**  
 
 DEPRECATED. Was for testing / debug / telemetryFor testing / debug / telemetry:
 

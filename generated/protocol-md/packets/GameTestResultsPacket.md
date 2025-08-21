@@ -1,6 +1,7 @@
 # GameTestResultsPacket
 
 **ID: 195**  
+**Purpose: Game Test Results Packet**  
 
 Internal Text Packet
 

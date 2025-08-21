@@ -1,6 +1,7 @@
 # UpdateAttributesPacket
 
 **ID: 29**  
+**Purpose: Update Attributes**  
 
 Occasionally updating player attributes (buffs/debuffs, health, etc) The following attributes are important to supply with valid PlayerInputTick values for player movement simulation: - movement_speed - underwater_movement_speed - lava_movement_speed - jump_strength - hunger
 

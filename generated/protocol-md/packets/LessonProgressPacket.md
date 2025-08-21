@@ -1,8 +1,7 @@
 # LessonProgressPacket
 
 **ID: 183**  
-
-Lesson Progress
+**Purpose: Lesson Progress**  
 
 <table><thead><tr><th>Field</th><th>Info</th></tr></thead><tbody>
 <tr><td>Lesson Action</td><td>varint</td></tr>

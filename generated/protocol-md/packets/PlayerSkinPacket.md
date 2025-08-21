@@ -1,6 +1,7 @@
 # PlayerSkinPacket
 
 **ID: 93**  
+**Purpose: Player Skin**  
 
 This packet is used for when the player changes the skin they are using (in game or out of game).
 

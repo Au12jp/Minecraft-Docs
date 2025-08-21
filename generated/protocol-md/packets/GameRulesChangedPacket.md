@@ -1,6 +1,7 @@
 # GameRulesChangedPacket
 
 **ID: 72**  
+**Purpose: Game Rules Changed**  
 
 Sent from server whenever any combination of gamerules is changed. the underlying data is a vector of GameRules
 

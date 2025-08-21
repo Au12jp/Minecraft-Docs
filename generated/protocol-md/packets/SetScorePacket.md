@@ -1,6 +1,7 @@
 # SetScorePacket
 
 **ID: 108**  
+**Purpose: Set Score**  
 
 This packet is used to set the scoreboard which is used for 3rd party content.
 
