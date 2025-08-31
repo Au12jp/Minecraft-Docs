@@ -15,7 +15,6 @@ UA="Mozilla/5.0"
 STRICT_SERIES="${STRICT_SERIES:-true}"
 BRANCH="$CHANNEL"
 
-# 信頼性高いDL: リトライ + HTTP/1.1フォールバック
 dl() {
   local url="$1" out="$2" try
   for try in 1 2 3 4 5; do
@@ -33,32 +32,26 @@ dl() {
   return 1
 }
 
-# --- 作業用worktree（チャネル専用） ---
 git fetch origin --prune
 WT_DIR="$ROOT_DIR/_wt/$BRANCH"
 mkdir -p "$ROOT_DIR/_wt"
 
 if git ls-remote --heads origin "$BRANCH" | grep -q "$BRANCH"; then
-  # 既存のリモートブランチをローカルに作ってチェックアウト
   git worktree add --force -B "$BRANCH" "$WT_DIR" "origin/$BRANCH"
 else
-  # まだ無いなら main 等から作らず、孤立ブランチでゼロから開始
   git worktree add --force --detach "$WT_DIR" HEAD
   cd "$WT_DIR"
   git checkout --orphan "$BRANCH"
-  # ルートを空っぽに（.git を除く）
   find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
-  # 初期コミットは後でまとめて行うので戻る
   cd "$ROOT_DIR"
 fi
 
 cd "$WT_DIR"
 
-# --- BDSバージョン解決 ---
 versions_json="$(curl -fsSL -A "$UA" "$JSON_URL")"
 if [[ "$CHANNEL" == "preview" ]]; then
   BDS_VER="$(jq -r '.linux.preview' <<<"$versions_json")"
-  BDS_DIR="bin-linux-preview"              # previewは別パス
+  BDS_DIR="bin-linux-preview"
   WANT_PREV=true;  WANT_TAG="v${BDS_VER}-preview"
 else
   BDS_VER="$(jq -r '.linux.stable'  <<<"$versions_json")"
@@ -66,12 +59,10 @@ else
   WANT_PREV=false; WANT_TAG="v${BDS_VER}"
 fi
 
-# 前回メタ（早期終了用）
 META_FILE=".bds-meta.json"
 OLD_VER=""; OLD_TAG=""
 [[ -f "$META_FILE" ]] && { OLD_VER="$(jq -r '.bds_version // empty' "$META_FILE")"; OLD_TAG="$(jq -r '.samples_tag // empty' "$META_FILE")"; }
 
-# --- bedrock-samplesタグ一覧取得 ---
 if [[ -n "${GITHUB_TOKEN:-}" ]]; then
   HDR=(-H "Authorization: Bearer $GITHUB_TOKEN" -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28")
 else
@@ -79,7 +70,6 @@ else
 fi
 tags_json="$(curl -fsSL -A "$UA" "${HDR[@]}" "$SAMPLES_API")"
 
-# 完全一致→採用、無ければ最近傍（同系列優先）
 if [[ "$(jq -r --arg T "$WANT_TAG" '[.[]|select(.name==$T)]|length' <<<"$tags_json")" -gt 0 ]]; then
   SAMPLES_TAG="$WANT_TAG"; FALLBACK=false
 else
@@ -92,7 +82,6 @@ else
   FALLBACK=true
 fi
 
-# 変更なければ即終了（帯域節約）
 if [[ "$BDS_VER" == "$OLD_VER" && "$SAMPLES_TAG" == "$OLD_TAG" ]]; then
   echo "No changes for $CHANNEL. Skip downloads/commit."
   if ! git rev-parse --abbrev-ref --symbolic-full-name @{u} >/dev/null 2>&1; then
@@ -102,10 +91,9 @@ if [[ "$BDS_VER" == "$OLD_VER" && "$SAMPLES_TAG" == "$OLD_TAG" ]]; then
   exit 0
 fi
 
-# 念のため main専用の残骸を掃除（過去のベース流入対策）
 rm -rf stable preview scripts || true
 
-# --- BDSダウンロード＆展開 ---
+# --- BDS ダウンロード ---
 BDS_URL="${BDS_BASE}/${BDS_DIR}/bedrock-server-${BDS_VER}.zip"
 echo "Downloading BDS: $BDS_URL"
 rm -rf bedrock_server
@@ -113,8 +101,9 @@ mkdir -p bedrock_server
 dl "$BDS_URL" bds.zip
 unzip -q bds.zip -d bedrock_server || { echo "unzip failed for BDS"; rm -f bds.zip; exit 1; }
 rm -f bds.zip
+echo "BDS $BDS_VER downloaded successfully."
 
-# --- bedrock-samplesダウンロード＆展開 ---
+# --- bedrock-samples ダウンロード ---
 SAMPLES_URL="https://github.com/Mojang/bedrock-samples/archive/refs/tags/${SAMPLES_TAG}.zip"
 echo "Downloading samples: $SAMPLES_URL"
 rm -rf bedrock_samples
@@ -126,12 +115,11 @@ shopt -s dotglob
 mv "$SRC_DIR"/* bedrock_samples/
 rmdir "$SRC_DIR"
 rm -f samples.zip
+echo "Samples tag $SAMPLES_TAG downloaded and extracted."
 
-# --- .gitignore（チャネル用） ---
+# --- .gitignore ---
 touch .gitignore
-# 大バイナリを無視
 grep -qxF 'bedrock_server/bedrock_server' .gitignore || echo 'bedrock_server/bedrock_server' >> .gitignore
-# main専用ディレクトリはチャネルではコミットしない
 for p in stable/ preview/ scripts/ ; do
   grep -qxF "$p" .gitignore || echo "$p" >> .gitignore
 done
@@ -156,7 +144,6 @@ else
   git push -u origin "$BRANCH" || true
 fi
 
-# タグ（bedrock-samples と同名）。既存ならスキップ
 if git ls-remote --tags origin | grep -q "refs/tags/$SAMPLES_TAG$"; then
   echo "Tag $SAMPLES_TAG already exists on remote."
 else
@@ -164,7 +151,6 @@ else
   git push origin "refs/tags/$SAMPLES_TAG" || true
 fi
 
-# 片付け
 cd "$ROOT_DIR"
 git worktree remove --force "$WT_DIR" || true
 
