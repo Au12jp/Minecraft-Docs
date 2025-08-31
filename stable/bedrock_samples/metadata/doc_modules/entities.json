@@ -18152,6 +18152,168 @@
                "table_description_title" : "Description",
                "table_name_title" : "Name",
                "table_type_title" : "Type"
+            },
+            {
+               "description" : [ "Returns the Y rotation of this entity." ],
+               "examples" : [
+                  {
+                     "name" : "Full..",
+                     "text" : [
+                        "{ \"test\": \"y_rotation\", \"subject\": \"self\", \"operator\": \"equals\", \"value\": \"0.00\" }"
+                     ]
+                  },
+                  {
+                     "name" : "Short (using Defaults)..",
+                     "text" : [ "{ \"test\": \"y_rotation\", \"value\": \"0.00\" }" ]
+                  }
+               ],
+               "examples_print_mode" : "code",
+               "examples_title" : "Examples",
+               "header_level" : 2,
+               "name" : "y_rotation",
+               "nodes" : [
+                  {
+                     "default" : "equals",
+                     "description" : [ "(Optional) The comparison to apply with 'value'." ],
+                     "header_level" : 3,
+                     "name" : "operator",
+                     "nodes" : [
+                        {
+                           "description" : [ "Test for inequality." ],
+                           "header_level" : 4,
+                           "name" : "!=",
+                           "show_in_index" : true
+                        },
+                        {
+                           "description" : [ "Test for less-than the value." ],
+                           "header_level" : 4,
+                           "name" : "<",
+                           "show_in_index" : true
+                        },
+                        {
+                           "description" : [ "Test for less-than or equal to the value." ],
+                           "header_level" : 4,
+                           "name" : "<=",
+                           "show_in_index" : true
+                        },
+                        {
+                           "description" : [ "Test for inequality." ],
+                           "header_level" : 4,
+                           "name" : "<>",
+                           "show_in_index" : true
+                        },
+                        {
+                           "description" : [ "Test for equality." ],
+                           "header_level" : 4,
+                           "name" : "=",
+                           "show_in_index" : true
+                        },
+                        {
+                           "description" : [ "Test for equality." ],
+                           "header_level" : 4,
+                           "name" : "==",
+                           "show_in_index" : true
+                        },
+                        {
+                           "description" : [ "Test for greater-than the value." ],
+                           "header_level" : 4,
+                           "name" : ">",
+                           "show_in_index" : true
+                        },
+                        {
+                           "description" : [ "Test for greater-than or equal to the value." ],
+                           "header_level" : 4,
+                           "name" : ">=",
+                           "show_in_index" : true
+                        },
+                        {
+                           "description" : [ "Test for equality." ],
+                           "header_level" : 4,
+                           "name" : "equals",
+                           "show_in_index" : true
+                        },
+                        {
+                           "description" : [ "Test for inequality." ],
+                           "header_level" : 4,
+                           "name" : "not",
+                           "show_in_index" : true
+                        }
+                     ],
+                     "nodes_as_table" : true,
+                     "show_in_index" : true,
+                     "table_description_title" : "Description",
+                     "table_name_title" : "Options",
+                     "type" : "String"
+                  },
+                  {
+                     "default" : "self",
+                     "description" : [ "(Optional) The subject of this filter test." ],
+                     "header_level" : 3,
+                     "name" : "subject",
+                     "nodes" : [
+                        {
+                           "description" : [ "The block involved with the interaction." ],
+                           "header_level" : 4,
+                           "name" : "block",
+                           "show_in_index" : true
+                        },
+                        {
+                           "description" : [ "The damaging actor involved with the interaction." ],
+                           "header_level" : 4,
+                           "name" : "damager",
+                           "show_in_index" : true
+                        },
+                        {
+                           "description" : [ "The other member of an interaction, not the caller." ],
+                           "header_level" : 4,
+                           "name" : "other",
+                           "show_in_index" : true
+                        },
+                        {
+                           "description" : [ "The caller's current parent." ],
+                           "header_level" : 4,
+                           "name" : "parent",
+                           "show_in_index" : true
+                        },
+                        {
+                           "description" : [ "The player involved with the interaction." ],
+                           "header_level" : 4,
+                           "name" : "player",
+                           "show_in_index" : true
+                        },
+                        {
+                           "description" : [ "The entity or object calling the test" ],
+                           "header_level" : 4,
+                           "name" : "self",
+                           "show_in_index" : true
+                        },
+                        {
+                           "description" : [ "The caller's current target." ],
+                           "header_level" : 4,
+                           "name" : "target",
+                           "show_in_index" : true
+                        }
+                     ],
+                     "nodes_as_table" : true,
+                     "show_in_index" : true,
+                     "table_description_title" : "Description",
+                     "table_name_title" : "Options",
+                     "type" : "String"
+                  },
+                  {
+                     "description" : [ "(Required) A floating point value." ],
+                     "header_level" : 3,
+                     "name" : "value",
+                     "show_in_index" : true,
+                     "type" : "Decimal"
+                  }
+               ],
+               "nodes_as_table" : true,
+               "show_in_index" : true,
+               "table_default_title" : "Default",
+               "table_description_title" : "Description",
+               "table_name_title" : "Name",
+               "table_type_title" : "Type"
             }
          ],
          "nodes_as_table" : false,
@@ -26001,29 +26163,6 @@
                      "table_type_title" : "Type"
                   },
                   {
-                     "description" : [
-                        "Allows this entity to roar at another entity based on data in minecraft:anger_level. Once the anger threshold specified in minecraft:anger_level has been reached, this entity will roar for the specified amount of time, look at the other entity, apply anger boost towards it, and finally target it."
-                     ],
-                     "header_level" : 3,
-                     "name" : "minecraft:behavior.roar",
-                     "nodes" : [
-                        {
-                           "default" : "0.0",
-                           "description" : [ "The amount of time to roar for." ],
-                           "header_level" : 2,
-                           "name" : "duration",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        }
-                     ],
-                     "nodes_as_table" : true,
-                     "show_in_index" : true,
-                     "table_default_title" : "Default Value",
-                     "table_description_title" : "Description",
-                     "table_name_title" : "Name",
-                     "table_type_title" : "Type"
-                  },
-                  {
                      "description" : [ "This allows the mob to roll forward." ],
                      "header_level" : 3,
                      "name" : "minecraft:behavior.roll",
@@ -26412,160 +26551,6 @@
                   },
                   {
                      "description" : [
-                        "Causes the entity to grow tired every once in a while, while attacking."
-                     ],
-                     "header_level" : 3,
-                     "name" : "minecraft:behavior.slime_attack",
-                     "nodes" : [
-                        {
-                           "default" : "false",
-                           "description" : [ "Allows the actor to be set to persist upon targeting a player" ],
-                           "header_level" : 2,
-                           "name" : "set_persistent",
-                           "show_in_index" : true,
-                           "type" : "Boolean"
-                        },
-                        {
-                           "default" : "1",
-                           "description" : [
-                              "During attack behavior, this multiplier modifies the entity's speed when moving toward the target."
-                           ],
-                           "header_level" : 2,
-                           "name" : "speed_multiplier",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        },
-                        {
-                           "default" : "10",
-                           "description" : [
-                              "Maximum rotation (in degrees), on the X-axis, this entity can rotate while trying to look at the target."
-                           ],
-                           "header_level" : 2,
-                           "name" : "x_max_rotation",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        },
-                        {
-                           "default" : "10",
-                           "description" : [
-                              "Maximum rotation (in degrees), on the Y-axis, this entity can rotate while trying to look at the target."
-                           ],
-                           "header_level" : 2,
-                           "name" : "y_max_rotation",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        }
-                     ],
-                     "nodes_as_table" : true,
-                     "show_in_index" : true,
-                     "table_default_title" : "Default Value",
-                     "table_description_title" : "Description",
-                     "table_name_title" : "Name",
-                     "table_type_title" : "Type"
-                  },
-                  {
-                     "description" : [
-                        "Allow slimes to float in water / lava. Can only be used by Slime and Magma Cubes."
-                     ],
-                     "header_level" : 3,
-                     "name" : "minecraft:behavior.slime_float",
-                     "nodes" : [
-                        {
-                           "default" : "0.8",
-                           "description" : [
-                              "Percent chance a slime or magma cube has to jump while in water / lava."
-                           ],
-                           "header_level" : 2,
-                           "name" : "jump_chance_percentage",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        },
-                        {
-                           "default" : "1.2",
-                           "description" : [
-                              "Determines the multiplier the entity's speed is modified by when moving through water / lava."
-                           ],
-                           "header_level" : 2,
-                           "name" : "speed_multiplier",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        }
-                     ],
-                     "nodes_as_table" : true,
-                     "show_in_index" : true,
-                     "table_default_title" : "Default Value",
-                     "table_description_title" : "Description",
-                     "table_name_title" : "Name",
-                     "table_type_title" : "Type"
-                  },
-                  {
-                     "description" : [ "Allows the entity to continuously jump around like a slime." ],
-                     "header_level" : 3,
-                     "name" : "minecraft:behavior.slime_keep_on_jumping",
-                     "nodes" : [
-                        {
-                           "default" : "1",
-                           "description" : [
-                              "Determines the multiplier this entity's speed is modified by when jumping around."
-                           ],
-                           "header_level" : 2,
-                           "name" : "speed_multiplier",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        }
-                     ],
-                     "nodes_as_table" : true,
-                     "show_in_index" : true,
-                     "table_default_title" : "Default Value",
-                     "table_description_title" : "Description",
-                     "table_name_title" : "Name",
-                     "table_type_title" : "Type"
-                  },
-                  {
-                     "description" : [ "Allows the entity to move in random directions like a slime." ],
-                     "header_level" : 3,
-                     "name" : "minecraft:behavior.slime_random_direction",
-                     "nodes" : [
-                        {
-                           "default" : "3",
-                           "description" : [
-                              "Additional time (in whole seconds), chosen randomly in the range of [0, \"add_random_time_range\"], to add to \"min_change_direction_time\"."
-                           ],
-                           "header_level" : 2,
-                           "name" : "add_random_time_range",
-                           "show_in_index" : true,
-                           "type" : "Integer"
-                        },
-                        {
-                           "default" : "2",
-                           "description" : [
-                              "Constant minimum time (in seconds) to wait before choosing a new direction."
-                           ],
-                           "header_level" : 2,
-                           "name" : "min_change_direction_time",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        },
-                        {
-                           "default" : "360",
-                           "description" : [
-                              "Maximum rotation angle range (in degrees) when randomly choosing a new direction."
-                           ],
-                           "header_level" : 2,
-                           "name" : "turn_range",
-                           "show_in_index" : true,
-                           "type" : "Integer"
-                        }
-                     ],
-                     "nodes_as_table" : true,
-                     "show_in_index" : true,
-                     "table_default_title" : "Default Value",
-                     "table_description_title" : "Description",
-                     "table_name_title" : "Name",
-                     "table_type_title" : "Type"
-                  },
-                  {
-                     "description" : [
                         "Allows the mob to take a load off and snack on food that it found nearby."
                      ],
                      "header_level" : 3,
@@ -26779,184 +26764,6 @@
                   },
                   {
                      "description" : [
-                        "Allows this entity to detect the nearest player within \"sniffing_radius\" and update its \"minecraft:suspect_tracking\" component state"
-                     ],
-                     "header_level" : 3,
-                     "name" : "minecraft:behavior.sniff",
-                     "nodes" : [
-                        {
-                           "default" : "[3.0, 10.0]",
-                           "description" : [ "Cooldown range between sniffs in seconds" ],
-                           "header_level" : 2,
-                           "name" : "cooldown_range",
-                           "show_in_index" : true,
-                           "type" : "Range [a, b]"
-                        },
-                        {
-                           "default" : "1.0",
-                           "description" : [ "Sniffing duration in seconds" ],
-                           "header_level" : 2,
-                           "name" : "duration",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        },
-                        {
-                           "default" : "5.0",
-                           "description" : [ "Mob detection radius" ],
-                           "header_level" : 2,
-                           "name" : "sniffing_radius",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        },
-                        {
-                           "default" : "3.0",
-                           "description" : [
-                              "Mob suspicion horizontal radius. When a player is within this radius horizontally, the anger level towards that player is increased"
-                           ],
-                           "header_level" : 2,
-                           "name" : "suspicion_radius_horizontal",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        },
-                        {
-                           "default" : "3.0",
-                           "description" : [
-                              "Mob suspicion vertical radius. When a player is within this radius vertically, the anger level towards that player is increased"
-                           ],
-                           "header_level" : 2,
-                           "name" : "suspicion_radius_vertical",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        }
-                     ],
-                     "nodes_as_table" : true,
-                     "show_in_index" : true,
-                     "table_default_title" : "Default Value",
-                     "table_description_title" : "Description",
-                     "table_name_title" : "Name",
-                     "table_type_title" : "Type"
-                  },
-                  {
-                     "description" : [ "Allows this entity to perform a 'sonic boom' ranged attack" ],
-                     "header_level" : 3,
-                     "name" : "minecraft:behavior.sonic_boom",
-                     "nodes" : [
-                        {
-                           "default" : "5.00",
-                           "description" : [
-                              "Cooldown in seconds required after using this attack until the entity can use sonic boom again."
-                           ],
-                           "header_level" : 2,
-                           "name" : "attack_cooldown",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        },
-                        {
-                           "default" : "30.00",
-                           "description" : [ "Attack damage of the sonic boom." ],
-                           "header_level" : 2,
-                           "name" : "attack_damage",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        },
-                        {
-                           "default" : "15.00",
-                           "description" : [
-                              "Horizontal range (in blocks) at which the sonic boom can damage the target."
-                           ],
-                           "header_level" : 2,
-                           "name" : "attack_range_horizontal",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        },
-                        {
-                           "default" : "20.00",
-                           "description" : [
-                              "Vertical range (in blocks) at which the sonic boom can damage the target."
-                           ],
-                           "header_level" : 2,
-                           "name" : "attack_range_vertical",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        },
-                        {
-                           "description" : [ "Sound event for the attack." ],
-                           "header_level" : 2,
-                           "name" : "attack_sound",
-                           "show_in_index" : true,
-                           "type" : "String"
-                        },
-                        {
-                           "description" : [ "Sound event for the charge up." ],
-                           "header_level" : 2,
-                           "name" : "charge_sound",
-                           "show_in_index" : true,
-                           "type" : "String"
-                        },
-                        {
-                           "default" : "3.00",
-                           "description" : [ "Goal duration in seconds" ],
-                           "header_level" : 2,
-                           "name" : "duration",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        },
-                        {
-                           "default" : "1.70",
-                           "description" : [ "Duration in seconds until the attack sound is played." ],
-                           "header_level" : 2,
-                           "name" : "duration_until_attack_sound",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        },
-                        {
-                           "default" : "0.00",
-                           "description" : [ "Height cap of the attack knockback's vertical delta." ],
-                           "header_level" : 2,
-                           "name" : "knockback_height_cap",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        },
-                        {
-                           "default" : "0.00",
-                           "description" : [
-                              "Horizontal strength of the attack's knockback applied to the attack target."
-                           ],
-                           "header_level" : 2,
-                           "name" : "knockback_horizontal_strength",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        },
-                        {
-                           "default" : "0.00",
-                           "description" : [
-                              "Vertical strength of the attack's knockback applied to the attack target."
-                           ],
-                           "header_level" : 2,
-                           "name" : "knockback_vertical_strength",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        },
-                        {
-                           "default" : "1.00",
-                           "description" : [
-                              "This multiplier modifies the attacking entity's speed when moving toward the target."
-                           ],
-                           "header_level" : 2,
-                           "name" : "speed_multiplier",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        }
-                     ],
-                     "nodes_as_table" : true,
-                     "show_in_index" : true,
-                     "table_default_title" : "Default Value",
-                     "table_description_title" : "Description",
-                     "table_name_title" : "Name",
-                     "table_type_title" : "Type"
-                  },
-                  {
-                     "description" : [
                         "Allows the squid to dive down in water. Can only be used by the Squid."
                      ],
                      "header_level" : 3,
@@ -27079,57 +26886,6 @@
                            ],
                            "header_level" : 4,
                            "name" : "stuck_time",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        }
-                     ],
-                     "nodes_as_table" : true,
-                     "show_in_index" : true,
-                     "table_default_title" : "Default Value",
-                     "table_description_title" : "Description",
-                     "table_name_title" : "Name",
-                     "table_type_title" : "Type"
-                  },
-                  {
-                     "description" : [
-                        "The entity will attempt to toss the items from its inventory to a nearby recently played noteblock."
-                     ],
-                     "header_level" : 3,
-                     "name" : "minecraft:behavior.stay_near_noteblock",
-                     "nodes" : [
-                        {
-                           "default" : "30",
-                           "description" : [
-                              "Sets the time an entity should stay near a noteblock after hearing it."
-                           ],
-                           "header_level" : 2,
-                           "name" : "listen_time",
-                           "show_in_index" : true,
-                           "type" : "Integer"
-                        },
-                        {
-                           "default" : "1.000000",
-                           "description" : [ "Sets the entity's speed when moving toward the block." ],
-                           "header_level" : 2,
-                           "name" : "speed",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        },
-                        {
-                           "default" : "10.000000",
-                           "description" : [
-                              "Sets the distance the entity needs to be away from the block to attempt to start the goal."
-                           ],
-                           "header_level" : 2,
-                           "name" : "start_distance",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        },
-                        {
-                           "default" : "2.000000",
-                           "description" : [ "Sets the distance from the block the entity will attempt to reach." ],
-                           "header_level" : 2,
-                           "name" : "stop_distance",
                            "show_in_index" : true,
                            "type" : "Decimal"
                         }
@@ -27746,137 +27502,6 @@
                      "table_type_title" : "Type"
                   },
                   {
-                     "description" : [ "Allows the entity go idle, if swimming. Entity must be in water." ],
-                     "header_level" : 3,
-                     "name" : "minecraft:behavior.swim_idle",
-                     "nodes" : [
-                        {
-                           "default" : "5",
-                           "description" : [ "Amount of time (in seconds) to stay idle." ],
-                           "header_level" : 2,
-                           "name" : "idle_time",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        },
-                        {
-                           "default" : "0.1",
-                           "description" : [ "Percent chance this entity will go idle, 1.0 = 100%." ],
-                           "header_level" : 2,
-                           "name" : "success_rate",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        }
-                     ],
-                     "nodes_as_table" : true,
-                     "show_in_index" : true,
-                     "table_default_title" : "Default Value",
-                     "table_description_title" : "Description",
-                     "table_name_title" : "Name",
-                     "table_type_title" : "Type"
-                  },
-                  {
-                     "description" : [
-                        "Allows the mob to try to move to air once it is close to running out of its total breathable supply. Requires \"minecraft:breathable\"."
-                     ],
-                     "header_level" : 3,
-                     "name" : "minecraft:behavior.swim_up_for_breath",
-                     "nodes" : [
-                        {
-                           "default" : "water",
-                           "description" : [
-                              "The material the mob is traveling in. An air block will only be considered valid to move to with a block of this material below it. Options are: \"water\", \"lava\", or \"any\"."
-                           ],
-                           "header_level" : 2,
-                           "name" : "material_type",
-                           "show_in_index" : true,
-                           "type" : "String"
-                        },
-                        {
-                           "default" : "16",
-                           "description" : [
-                              "The height (in blocks) above the mob's current position that it will search for a valid air block to move to. If a valid block cannot be found, the mob will move to the position this many blocks above it."
-                           ],
-                           "header_level" : 2,
-                           "name" : "search_height",
-                           "show_in_index" : true,
-                           "type" : "Integer"
-                        },
-                        {
-                           "default" : "4",
-                           "description" : [
-                              "The radius (in blocks) around the mob's current position that it will search for a valid air block to move to."
-                           ],
-                           "header_level" : 2,
-                           "name" : "search_radius",
-                           "show_in_index" : true,
-                           "type" : "Integer"
-                        },
-                        {
-                           "default" : "1.40",
-                           "description" : [ "Movement speed multiplier of the mob when using this Goal." ],
-                           "header_level" : 2,
-                           "name" : "speed_mod",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        }
-                     ],
-                     "nodes_as_table" : true,
-                     "show_in_index" : true,
-                     "table_default_title" : "Default Value",
-                     "table_description_title" : "Description",
-                     "table_name_title" : "Name",
-                     "table_type_title" : "Type"
-                  },
-                  {
-                     "description" : [
-                        "Allows the entity to wander around while swimming, when not path-finding."
-                     ],
-                     "header_level" : 3,
-                     "name" : "minecraft:behavior.swim_wander",
-                     "nodes" : [
-                        {
-                           "default" : "0.00833",
-                           "description" : [ "Percent chance to start wandering, when not path-finding. 1 = 100%" ],
-                           "header_level" : 2,
-                           "name" : "interval",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        },
-                        {
-                           "default" : "5",
-                           "description" : [ "Distance to look ahead for obstacle avoidance, while wandering." ],
-                           "header_level" : 2,
-                           "name" : "look_ahead",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        },
-                        {
-                           "default" : "1",
-                           "description" : [ "This multiplier modifies the entity's speed when wandering." ],
-                           "header_level" : 2,
-                           "name" : "speed_multiplier",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        },
-                        {
-                           "default" : "5",
-                           "description" : [
-                              "Amount of time (in seconds) to wander after wandering behavior was successfully started."
-                           ],
-                           "header_level" : 2,
-                           "name" : "wander_time",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        }
-                     ],
-                     "nodes_as_table" : true,
-                     "show_in_index" : true,
-                     "table_default_title" : "Default Value",
-                     "table_description_title" : "Description",
-                     "table_name_title" : "Name",
-                     "table_type_title" : "Type"
-                  },
-                  {
                      "description" : [
                         "Allows the entity follow another entity. Both entities must be swimming [ie, in water]."
                      ],
@@ -27975,51 +27600,6 @@
                            ],
                            "header_level" : 2,
                            "name" : "success_rate",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        }
-                     ],
-                     "nodes_as_table" : true,
-                     "show_in_index" : true,
-                     "table_default_title" : "Default Value",
-                     "table_description_title" : "Description",
-                     "table_name_title" : "Name",
-                     "table_type_title" : "Type"
-                  },
-                  {
-                     "description" : [
-                        "Allows an entity to attack using swoop attack behavior; Ideal for use with flying mobs. The behavior ends if the entity has a horizontal collision or gets hit."
-                     ],
-                     "header_level" : 3,
-                     "name" : "minecraft:behavior.swoop_attack",
-                     "nodes" : [
-                        {
-                           "default" : "0.2",
-                           "description" : [
-                              "Added to the base size of the entity, to determine the target's maximum allowable distance, when trying to deal attack damage."
-                           ],
-                           "header_level" : 2,
-                           "name" : "damage_reach",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        },
-                        {
-                           "default" : "[10, 20]",
-                           "description" : [
-                              "Minimum and maximum cooldown time-range (in seconds) between each attempted swoop attack."
-                           ],
-                           "header_level" : 2,
-                           "name" : "delay_range",
-                           "show_in_index" : true,
-                           "type" : "Range [a, b]"
-                        },
-                        {
-                           "default" : "1",
-                           "description" : [
-                              "During swoop attack behavior, this determines the multiplier the entity's speed is modified by when moving toward the target."
-                           ],
-                           "header_level" : 2,
-                           "name" : "speed_multiplier",
                            "show_in_index" : true,
                            "type" : "Decimal"
                         }
@@ -28172,6 +27752,13 @@
                            "name" : "min_wait_time",
                            "show_in_index" : true,
                            "type" : "Decimal"
+                        },
+                        {
+                           "description" : [ "Event triggered when the entity takes a flower from another entity." ],
+                           "header_level" : 2,
+                           "name" : "on_take_flower",
+                           "show_in_index" : true,
+                           "type" : "Trigger"
                         },
                         {
                            "default" : "[6, 2, 6]",
@@ -30914,7 +30501,7 @@
                   {
                      "description" : [ "Ability for a rideable entity to dash." ],
                      "header_level" : 3,
-                     "name" : "minecraft:dash",
+                     "name" : "minecraft:dash_action",
                      "nodes" : [
                         {
                            "default" : "1.00",
@@ -30923,6 +30510,16 @@
                            "name" : "cooldown_time",
                            "show_in_index" : true,
                            "type" : "Decimal"
+                        },
+                        {
+                           "default" : "entity",
+                           "description" : [
+                              "Should the momentum be applied in the direction of the 'entity' or 'passenger'. When 'entity' is used the momentum is applied horizontally according to the direction the entity is looking, using only the entity's yaw. When 'passenger' is used the momentum will be applied in the direction the controlling passenger is looking, using the passenger's pitch and yaw."
+                           ],
+                           "header_level" : 4,
+                           "name" : "direction",
+                           "show_in_index" : true,
+                           "type" : "String"
                         },
                         {
                            "default" : "1.00",
@@ -31962,6 +31559,37 @@
                   },
                   {
                      "description" : [
+                        "When configured as a rideable entity, the entity will be controlled using WASD controls and mouse to move in three dimensions."
+                     ],
+                     "header_level" : 3,
+                     "name" : "minecraft:free_camera_controlled",
+                     "nodes" : [
+                        {
+                           "default" : "0.5",
+                           "description" : [ "Modifies speed going backwards." ],
+                           "header_level" : 4,
+                           "name" : "backwards_movement_modifier",
+                           "show_in_index" : true,
+                           "type" : "Decimal"
+                        },
+                        {
+                           "default" : "0.4",
+                           "description" : [ "Modifies the strafe speed." ],
+                           "header_level" : 4,
+                           "name" : "strafe_speed_modifier",
+                           "show_in_index" : true,
+                           "type" : "Decimal"
+                        }
+                     ],
+                     "nodes_as_table" : true,
+                     "show_in_index" : true,
+                     "table_default_title" : "Default Value",
+                     "table_description_title" : "Description",
+                     "table_name_title" : "Name",
+                     "table_type_title" : "Type"
+                  },
+                  {
+                     "description" : [
                         "Allows an entity to emit `entityMove`, `swim` and `flap` game events, depending on the block the entity is moving through. It is added by default to every mob. Add it again to override its behavior."
                      ],
                      "header_level" : 3,
@@ -32487,37 +32115,6 @@
                      "table_type_title" : "Type"
                   },
                   {
-                     "description" : [
-                        "When configured as a rideable entity, the entity will be controlled using WASD controls and mouse to move in three dimensions."
-                     ],
-                     "header_level" : 3,
-                     "name" : "minecraft:input_air_controlled",
-                     "nodes" : [
-                        {
-                           "default" : "0.5",
-                           "description" : [ "Modifies speed going backwards." ],
-                           "header_level" : 4,
-                           "name" : "backwards_movement_modifier",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        },
-                        {
-                           "default" : "0.4",
-                           "description" : [ "Modifies the strafe speed." ],
-                           "header_level" : 4,
-                           "name" : "strafe_speed_modifier",
-                           "show_in_index" : true,
-                           "type" : "Decimal"
-                        }
-                     ],
-                     "nodes_as_table" : true,
-                     "show_in_index" : true,
-                     "table_default_title" : "Default Value",
-                     "table_description_title" : "Description",
-                     "table_name_title" : "Name",
-                     "table_type_title" : "Type"
-                  },
-                  {
                      "description" : [ "Verifies whether the entity is inside any of the listed blocks." ],
                      "header_level" : 3,
                      "name" : "minecraft:inside_block_notifier",
@@ -32635,7 +32232,7 @@
                         },
                         {
                            "description" : [
-                              "The entity's slot to remove and drop the item from, if any, upon successful interaction. Inventory slots are denoted by positive numbers. Armor slots are denoted by 'slot.armor.head', 'slot.armor.chest', 'slot.armor.legs', 'slot.armor.feet' and 'slot.armor.body'."
+                              "The entity's slot to remove and drop the item from, if any, upon successful interaction. Inventory slots are denoted by positive numbers. Equipment slots are denoted by 'slot.weapon.mainhand', 'slot.weapon.offhand', 'slot.armor.head', 'slot.armor.chest', 'slot.armor.legs', 'slot.armor.feet' and 'slot.armor.body'."
                            ],
                            "header_level" : 4,
                            "name" : "drop_item_slot",
@@ -32654,7 +32251,7 @@
                         },
                         {
                            "description" : [
-                              "The entity's slot to equip the item to, if any, upon successful interaction. Inventory slots are denoted by positive numbers. Armor slots are denoted by 'slot.armor.head', 'slot.armor.chest', 'slot.armor.legs', 'slot.armor.feet' and 'slot.armor.body'."
+                              "The entity's slot to equip the item to, if any, upon successful interaction. Inventory slots are denoted by positive numbers. Equipment slots are denoted by 'slot.weapon.mainhand', 'slot.weapon.offhand', 'slot.armor.head', 'slot.armor.chest', 'slot.armor.legs', 'slot.armor.feet' and 'slot.armor.body'."
                            ],
                            "header_level" : 4,
                            "name" : "equip_item_slot",
@@ -32757,7 +32354,7 @@
                               },
                               {
                                  "description" : [
-                                    "The entity's slot containing the item to be repaired. Inventory slots are denoted by positive numbers. Armor slots are denoted by 'slot.armor.head', 'slot.armor.chest', 'slot.armor.legs', 'slot.armor.feet' and 'slot.armor.body'."
+                                    "The entity's slot containing the item to be repaired. Inventory slots are denoted by positive numbers. Equipment slots are denoted by 'slot.weapon.mainhand', 'slot.weapon.offhand', 'slot.armor.head', 'slot.armor.chest', 'slot.armor.legs', 'slot.armor.feet' and 'slot.armor.body'."
                                  ],
                                  "header_level" : 5,
                                  "name" : "slot",
@@ -35862,7 +35459,7 @@
                   },
                   {
                      "description" : [
-                        "Defines a list of items the mob wants to share or pick up. Each item must have the following parameters:"
+                        "Defines a list of items the mob wants to share. Each item must have the following parameters:"
                      ],
                      "header_level" : 3,
                      "name" : "minecraft:shareables",
@@ -35904,7 +35501,9 @@
                            "type" : "Integer"
                         },
                         {
-                           "description" : [ "List of items that the entity wants to share." ],
+                           "description" : [
+                              "List of items or item tags that the entity wants to share. Items in-game will match to this list from top to bottom, meaning that the first occurance of a match, be it name or tag, will shadow those coming after."
+                           ],
                            "header_level" : 4,
                            "name" : "items",
                            "nodes" : [
@@ -35947,7 +35546,7 @@
                               },
                               {
                                  "description" : [
-                                    "The name of the item. Aux value can be specified, for instance 'minecraft:skull:1'."
+                                    "The name of the item. Aux value can be specified, for instance 'minecraft:skull:1'. Alternatively, a tag can be specified to match all items with that tag."
                                  ],
                                  "header_level" : 5,
                                  "name" : "item",
@@ -35965,7 +35564,7 @@
                               {
                                  "default" : "-1",
                                  "description" : [
-                                    "Maximum number of this item the mob will pick up during a single goal tick."
+                                    "Maximum number items the mob will pick up during a single goal tick."
                                  ],
                                  "header_level" : 5,
                                  "name" : "pickup_limit",
@@ -36014,7 +35613,7 @@
                               },
                               {
                                  "default" : "-1",
-                                 "description" : [ "Number of this item this entity wants to have." ],
+                                 "description" : [ "Number of this item this entity wants to share." ],
                                  "header_level" : 5,
                                  "name" : "want_amount",
                                  "show_in_index" : true,
@@ -36028,7 +35627,7 @@
                         {
                            "default" : "false",
                            "description" : [
-                              "Controls if the mob is able to pick up more of the same item if it is already holding that item"
+                              "Boolean value that controls if the mob is able to pick up more of the same item if it is already holding that item"
                            ],
                            "header_level" : 4,
                            "name" : "singular_pickup",
@@ -37018,6 +36617,29 @@
                      "table_type_title" : "Type"
                   },
                   {
+                     "description" : [
+                        "When configured as a rideable entity, the entity will move upwards or downwards when the player uses the jump action."
+                     ],
+                     "header_level" : 3,
+                     "name" : "minecraft:vertical_movement_action",
+                     "nodes" : [
+                        {
+                           "default" : "0.5",
+                           "description" : [ "Vertical velocity to apply when jump action is issued." ],
+                           "header_level" : 4,
+                           "name" : "vertical_velocity",
+                           "show_in_index" : true,
+                           "type" : "Decimal"
+                        }
+                     ],
+                     "nodes_as_table" : true,
+                     "show_in_index" : true,
+                     "table_default_title" : "Default Value",
+                     "table_description_title" : "Description",
+                     "table_name_title" : "Name",
+                     "table_type_title" : "Type"
+                  },
+                  {
                      "description" : [ "Vibrations emitted by this entity will be ignored." ],
                      "header_level" : 3,
                      "name" : "minecraft:vibration_damper",
@@ -37986,12 +37608,6 @@
                            "show_in_index" : false
                         },
                         {
-                           "description" : [ "8169564995138049594" ],
-                           "header_level" : 4,
-                           "name" : "minecraft:behavior.roar",
-                           "show_in_index" : false
-                        },
-                        {
                            "description" : [ "817471653" ],
                            "header_level" : 4,
                            "name" : "minecraft:behavior.roll",
@@ -38046,30 +37662,6 @@
                            "show_in_index" : false
                         },
                         {
-                           "description" : [ "9939462702916185623" ],
-                           "header_level" : 4,
-                           "name" : "minecraft:behavior.slime_attack",
-                           "show_in_index" : false
-                        },
-                        {
-                           "description" : [ "3498887529883213515" ],
-                           "header_level" : 4,
-                           "name" : "minecraft:behavior.slime_float",
-                           "show_in_index" : false
-                        },
-                        {
-                           "description" : [ "9635607836508236313" ],
-                           "header_level" : 4,
-                           "name" : "minecraft:behavior.slime_keep_on_jumping",
-                           "show_in_index" : false
-                        },
-                        {
-                           "description" : [ "16233644158771707634" ],
-                           "header_level" : 4,
-                           "name" : "minecraft:behavior.slime_random_direction",
-                           "show_in_index" : false
-                        },
-                        {
                            "description" : [ "875141064" ],
                            "header_level" : 4,
                            "name" : "minecraft:behavior.snacking",
@@ -38079,18 +37671,6 @@
                            "description" : [ "1528584076" ],
                            "header_level" : 4,
                            "name" : "minecraft:behavior.sneeze",
-                           "show_in_index" : false
-                        },
-                        {
-                           "description" : [ "2518751594793034670" ],
-                           "header_level" : 4,
-                           "name" : "minecraft:behavior.sniff",
-                           "show_in_index" : false
-                        },
-                        {
-                           "description" : [ "3140959826915046776" ],
-                           "header_level" : 4,
-                           "name" : "minecraft:behavior.sonic_boom",
                            "show_in_index" : false
                         },
                         {
@@ -38130,12 +37710,6 @@
                            "show_in_index" : false
                         },
                         {
-                           "description" : [ "10537868669633006624" ],
-                           "header_level" : 4,
-                           "name" : "minecraft:behavior.stay_near_noteblock",
-                           "show_in_index" : false
-                        },
-                        {
                            "description" : [ "1346980478" ],
                            "header_level" : 4,
                            "name" : "minecraft:behavior.stay_while_sitting",
@@ -38172,33 +37746,9 @@
                            "show_in_index" : false
                         },
                         {
-                           "description" : [ "6562850329755828441" ],
-                           "header_level" : 4,
-                           "name" : "minecraft:behavior.swim_idle",
-                           "show_in_index" : false
-                        },
-                        {
-                           "description" : [ "6795851152810947053" ],
-                           "header_level" : 4,
-                           "name" : "minecraft:behavior.swim_up_for_breath",
-                           "show_in_index" : false
-                        },
-                        {
-                           "description" : [ "12378924708543723854" ],
-                           "header_level" : 4,
-                           "name" : "minecraft:behavior.swim_wander",
-                           "show_in_index" : false
-                        },
-                        {
                            "description" : [ "10204691344094313319" ],
                            "header_level" : 4,
                            "name" : "minecraft:behavior.swim_with_entity",
-                           "show_in_index" : false
-                        },
-                        {
-                           "description" : [ "7451467701814397451" ],
-                           "header_level" : 4,
-                           "name" : "minecraft:behavior.swoop_attack",
                            "show_in_index" : false
                         },
                         {
@@ -38503,9 +38053,9 @@
                            "show_in_index" : false
                         },
                         {
-                           "description" : [ "-51257122" ],
+                           "description" : [ "-1446083519" ],
                            "header_level" : 4,
-                           "name" : "minecraft:dash",
+                           "name" : "minecraft:dash_action",
                            "show_in_index" : false
                         },
                         {
@@ -38587,6 +38137,12 @@
                            "show_in_index" : false
                         },
                         {
+                           "description" : [ "-1826251563" ],
+                           "header_level" : 4,
+                           "name" : "minecraft:free_camera_controlled",
+                           "show_in_index" : false
+                        },
+                        {
                            "description" : [ "763815151" ],
                            "header_level" : 4,
                            "name" : "minecraft:game_event_movement_tracking",
@@ -38638,12 +38194,6 @@
                            "description" : [ "163715083" ],
                            "header_level" : 4,
                            "name" : "minecraft:hurt_on_condition",
-                           "show_in_index" : false
-                        },
-                        {
-                           "description" : [ "1246978592" ],
-                           "header_level" : 4,
-                           "name" : "minecraft:input_air_controlled",
                            "show_in_index" : false
                         },
                         {
@@ -39016,6 +38566,12 @@
                            "description" : [ "-368684982" ],
                            "header_level" : 4,
                            "name" : "minecraft:variable_max_auto_step",
+                           "show_in_index" : false
+                        },
+                        {
+                           "description" : [ "2076572763" ],
+                           "header_level" : 4,
+                           "name" : "minecraft:vertical_movement_action",
                            "show_in_index" : false
                         },
                         {
@@ -40146,9 +39702,7 @@
                "name" : "Triggers",
                "nodes" : [
                   {
-                     "description" : [
-                        "Only usable by the Ender Dragon. Adds a trigger to call on this entity's death."
-                     ],
+                     "description" : [ "Adds a trigger to call on this entity's death." ],
                      "header_level" : 3,
                      "name" : "minecraft:on_death",
                      "nodes" : [
@@ -40516,5 +40070,5 @@
          "show_in_index" : true
       }
    ],
-   "version" : "1.21.100.6"
+   "version" : "1.21.110.26"
 }
