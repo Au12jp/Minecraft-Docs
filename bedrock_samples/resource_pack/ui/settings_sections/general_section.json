@@ -254,7 +254,7 @@
       // Add some padding between the buttons/toggles to reduce the impression upon the eyes. (ADO:515619)
       {
         "paddingFilterProfanity": {
-          "ignored": "(not $supports_profanity_filtering or $disable_toggle_filter_profanity)",
+          "ignored": "(not $supports_profanity_filtering)",
           "type": "panel",
           "size": "$spatialPatternsPadding"
         }
@@ -262,7 +262,7 @@
 
       {
         "filter_profanity_toggle@settings_common.option_toggle": {
-          "ignored": "(not $supports_profanity_filtering or $disable_toggle_filter_profanity)",
+          "ignored": "(not $supports_profanity_filtering)",
           "$option_label": "options.filterProfanity",
           "$option_binding_name": "#filter_profanity",
           "$option_enabled_binding_name": "#filter_profanity_enabled",
@@ -5001,6 +5001,14 @@
           "$option_binding_name": "#camera_shake",
           "$option_enabled_binding_name": "#camera_shake_enabled",
           "$toggle_name": "camera_shake"
+        }
+      },
+      {
+        "hide_endflash_toggle@settings_common.option_toggle": {
+          "$option_label": "options.hideEndFlash",
+          "$option_binding_name": "#hide_endflash",
+          "$option_enabled_binding_name": "#hide_endflash_enabled",
+          "$toggle_name": "hide_endflash"
         }
       },
       {
