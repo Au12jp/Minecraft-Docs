@@ -139,6 +139,87 @@ for p in stable/ preview/ scripts/ ; do
   grep -qxF "$p" .gitignore || echo "$p" >> .gitignore
 done
 
+# --- アイテムテクスチャJSON生成 ---
+generate_items_json() {
+  local items_path="bedrock_samples/resource_pack/textures/items"
+  local output_file="items_textures.json"
+  
+  echo "Generating items textures JSON for $CHANNEL..."
+  
+  if [[ ! -d "$items_path" ]]; then
+    echo "Warning: $items_path not found, creating empty JSON"
+    printf '{"metadata":{"channel":"%s","samples_tag":"%s","bds_version":"%s","generated_at":"%s","total_items":0},"items":[]}\n' \
+      "$CHANNEL" "$SAMPLES_TAG" "$BDS_VER" "$(date -u +%FT%TZ)" > "$output_file"
+    return 0
+  fi
+  
+  echo "Scanning items textures in $items_path..."
+  
+  # アイテムテクスチャファイルをスキャン
+  local items_array="[]"
+  
+  # .pngファイルを検索してJSONに変換
+  while IFS= read -r -d '' file; do
+    # フルパスから相対パスを生成
+    local rel_path="${file#./}"
+    # ファイル名（拡張子なし）をIDとして使用
+    local basename_no_ext="$(basename "$file" .png)"
+    # ディレクトリ構造を保持したパス
+    local dir_path="$(dirname "$rel_path")"
+    
+    # ファイル情報をJSONオブジェクトとして追加
+    local item_obj=$(jq -n \
+      --arg id "$basename_no_ext" \
+      --arg path "$rel_path" \
+      --arg dir "$dir_path" \
+      --arg filename "$(basename "$file")" \
+      '{
+        id: $id,
+        texture_path: $path,
+        directory: $dir,
+        filename: $filename
+      }')
+    
+    items_array=$(jq --argjson item "$item_obj" '. + [$item]' <<<"$items_array")
+    
+  done < <(find "$items_path" -name "*.png" -type f -print0 | sort -z)
+  
+  # アイテム数をカウント
+  local item_count=$(jq 'length' <<<"$items_array")
+  
+  echo "Found $item_count item textures"
+  
+  # 最終的なJSONを生成
+  local final_json=$(jq -n \
+    --arg channel "$CHANNEL" \
+    --arg samples_tag "$SAMPLES_TAG" \
+    --arg bds_version "$BDS_VER" \
+    --arg generated_at "$(date -u +%FT%TZ)" \
+    --argjson items "$items_array" \
+    --argjson count "$item_count" \
+    '{
+      metadata: {
+        channel: $channel,
+        samples_tag: $samples_tag,
+        bds_version: $bds_version,
+        generated_at: $generated_at,
+        total_items: $count
+      },
+      items: $items
+    }')
+  
+  # JSONファイルを出力
+  echo "$final_json" > "$output_file"
+  echo "Generated $output_file with $item_count items"
+  
+  # グローバル変数に設定（コミットメッセージで使用）
+  ITEM_COUNT="$item_count"
+}
+
+# アイテムJSON生成を実行
+ITEM_COUNT=0
+generate_items_json
+
 # --- メタ書き出し ---
 printf '{"channel":"%s","bds_version":"%s","samples_tag":"%s","fallback_used":%s,"updated_at":"%s"}\n' \
   "$CHANNEL" "$BDS_VER" "$SAMPLES_TAG" "$FALLBACK" "$(date -u +%FT%TZ)" > "$META_FILE"
@@ -150,6 +231,12 @@ if git diff --cached --quiet; then
 else
   MSG="[${CHANNEL}] BDS ${BDS_VER} / samples ${SAMPLES_TAG}"
   [[ "$FALLBACK" == true ]] && MSG="$MSG [fallback]"
+  
+  # アイテム数も含める
+  if [[ "$ITEM_COUNT" -gt 0 ]]; then
+    MSG="$MSG / items ${ITEM_COUNT}"
+  fi
+  
   git commit -m "$MSG"
 fi
 
@@ -170,4 +257,4 @@ fi
 cd "$ROOT_DIR"
 git worktree remove --force "$WT_DIR" || true
 
-echo "Done: $CHANNEL => BDS $BDS_VER (${BDS_DIR}), samples $SAMPLES_TAG (fallback=$FALLBACK)"
+echo "Done: $CHANNEL => BDS $BDS_VER (${BDS_DIR}), samples $SAMPLES_TAG (fallback=$FALLBACK), items $ITEM_COUNT"
