@@ -27,18 +27,52 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
       - name: Make scripts executable
         run: chmod +x scripts/*.sh
+      
+      # stable処理（worktree作成 → items JSON生成 → worktree維持）
       - name: Update stable (worktree)
         env:
           GITHUB_TOKEN: ${{ github.token }}
-          STRICT_SERIES: "true"   # 同系列(1.21.100.*など)優先で近似タグ
-        run: bash -x scripts/update_channel.sh stable
+          STRICT_SERIES: "true"
+        run: |
+          # update_channel.sh を変更なしでも worktree を維持するように実行
+          export KEEP_WORKTREE=true
+          bash -x scripts/update_channel.sh stable
+      
+      - name: Generate items JSON for stable
+        run: |
+          if [[ -d "_wt/stable" ]]; then
+            echo "=== Generating items JSON for stable ==="
+            cd "_wt/stable"
+            if [[ -d "bedrock_samples/resource_pack/textures/items" ]]; then
+              bash -x "$GITHUB_WORKSPACE/scripts/generate_items_json.sh" stable
+            else
+              echo "No items directory found in stable, skipping"
+            fi
+            cd "$GITHUB_WORKSPACE"
+          fi
+      
+      # preview処理（worktree作成 → items JSON生成 → worktree維持）
       - name: Update preview (worktree)
         env:
           GITHUB_TOKEN: ${{ github.token }}
           STRICT_SERIES: "true"
-        run: bash -x scripts/update_channel.sh preview
-      - name: Generate items textures JSON
-        run: bash -x scripts/generate_items_json.sh
+        run: |
+          export KEEP_WORKTREE=true
+          bash -x scripts/update_channel.sh preview
+      
+      - name: Generate items JSON for preview
+        run: |
+          if [[ -d "_wt/preview" ]]; then
+            echo "=== Generating items JSON for preview ==="
+            cd "_wt/preview"
+            if [[ -d "bedrock_samples/resource_pack/textures/items" ]]; then
+              bash -x "$GITHUB_WORKSPACE/scripts/generate_items_json.sh" preview
+            else
+              echo "No items directory found in preview, skipping"
+            fi
+            cd "$GITHUB_WORKSPACE"
+          fi
+      
       - name: Update main (combine stable + preview)
         run: bash -x scripts/update_main.sh
       
