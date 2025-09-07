@@ -1,52 +1,62 @@
 name: Scrape
+
 on:
   workflow_dispatch:
   schedule:
     - cron: "*/10 * * * *"   # 10分ごと（UTC）
+
 concurrency:
   group: scrape
   cancel-in-progress: false
+
 jobs:
   # =========================
-  # 1) 既存のスクレイプ更新（アイテムJSON生成込み）
+  # 1) 既存のスクレイプ更新
   # =========================
   update:
     runs-on: ubuntu-22.04
     permissions:
       contents: write
+
     steps:
       - name: Checkout (full history)
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - name: Install deps
         run: sudo apt-get update && sudo apt-get install -y jq unzip
+
       - name: Git identity
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
       - name: Make scripts executable
-        run: chmod +x scripts/*.sh
-      - name: Update stable (worktree + items JSON)
+        run: chmod +x scripts/update_channel.sh scripts/update_main.sh
+
+      - name: Update stable (worktree)
         env:
           GITHUB_TOKEN: ${{ github.token }}
           STRICT_SERIES: "true"   # 同系列(1.21.100.*など)優先で近似タグ
         run: bash -x scripts/update_channel.sh stable
-      - name: Update preview (worktree + items JSON)
+
+      - name: Update preview (worktree)
         env:
           GITHUB_TOKEN: ${{ github.token }}
           STRICT_SERIES: "true"
         run: bash -x scripts/update_channel.sh preview
+
       - name: Update main (combine stable + preview)
         run: bash -x scripts/update_main.sh
-      
+
       # --- 100MB超ファイルを後からDLできるようにArtifacts化 ---
       - name: Collect large files (>=100MB)
         id: collect_large
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p large_artifacts
+          mkdir -p _large_artifacts
           # .git配下は除外して100MB超を収集
           mapfile -d '' -t files < <(find . -path './.git' -prune -o -type f -size +100M -print0)
           if (( ${#files[@]} == 0 )); then
@@ -55,16 +65,16 @@ jobs:
             exit 0
           fi
           # null区切りで安全にtarへ詰める
-          printf '%s\0' "${files[@]}" | tar --null --files-from=- -czf large_artifacts/large-files.tar.gz
+          printf '%s\0' "${files[@]}" | tar --null --files-from=- -czf _large_artifacts/large-files.tar.gz
           echo "has_large=true" >> "$GITHUB_OUTPUT"
-          echo "Archived ${#files[@]} file(s) into large_artifacts/large-files.tar.gz"
-      
+          echo "Archived ${#files[@]} file(s) into _large_artifacts/large-files.tar.gz"
+
       - name: Upload large files artifact
         if: ${{ steps.collect_large.outputs.has_large == 'true' }}
         uses: actions/upload-artifact@v4
         with:
           name: large-files-${{ github.run_id }}
-          path: large_artifacts/large-files.tar.gz
+          path: _large_artifacts/large-files.tar.gz
           retention-days: 7
 
   # ============================================
