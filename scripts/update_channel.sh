@@ -4,7 +4,7 @@ set -euo pipefail
 # usage: scripts/update_channel.sh stable|preview
 CHANNEL="${1:?channel required: stable|preview}"
 [[ "$CHANNEL" == "stable" || "$CHANNEL" == "preview" ]] || { echo "invalid channel"; exit 2; }
-//
+
 ROOT_DIR="$(pwd)"
 JQ_FILTER="$ROOT_DIR/scripts/jq_filter.jq"
 
