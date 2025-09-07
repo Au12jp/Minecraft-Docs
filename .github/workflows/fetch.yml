@@ -8,7 +8,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   # =========================
-  # 1) 既存のスクレイプ更新 + アイテムJSON生成
+  # 1) 既存のスクレイプ更新（アイテムJSON生成込み）
   # =========================
   update:
     runs-on: ubuntu-22.04
@@ -27,99 +27,16 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
       - name: Make scripts executable
         run: chmod +x scripts/*.sh
-      
-      # stable処理（worktree作成 → items JSON生成 → worktree維持）
-      - name: Update stable (worktree)
+      - name: Update stable (worktree + items JSON)
         env:
           GITHUB_TOKEN: ${{ github.token }}
-          STRICT_SERIES: "true"
+          STRICT_SERIES: "true"   # 同系列(1.21.100.*など)優先で近似タグ
         run: bash -x scripts/update_channel.sh stable
-      
-      - name: Generate items JSON for stable
-        run: |
-          echo "=== Checking stable worktree ==="
-          ls -la _wt/ || echo "_wt directory not found"
-          
-          if [[ -d "_wt/stable" ]]; then
-            echo "=== Generating items JSON for stable ==="
-            ls -la "_wt/stable/"
-            cd "_wt/stable"
-            
-            if [[ -d "bedrock_samples" ]]; then
-              echo "bedrock_samples found, checking for items directory..."
-              ls -la "bedrock_samples/" || echo "Cannot list bedrock_samples"
-              
-              if [[ -d "bedrock_samples/resource_pack/textures/items" ]]; then
-                echo "Items directory found, generating JSON..."
-                ls -la "bedrock_samples/resource_pack/textures/items/" | head -10
-                bash -x "$GITHUB_WORKSPACE/scripts/generate_items_json.sh" stable
-              else
-                echo "Creating empty items JSON for stable..."
-                printf '{"metadata":{"channel":"stable","samples_tag":"unknown","bds_version":"unknown","generated_at":"%s","total_items":0},"items":[]}\n' \
-                  "$(date -u +%FT%TZ)" > "items_textures.json"
-                git add items_textures.json
-                git diff --cached --quiet || {
-                  git commit -m "[stable] Add empty items textures JSON (no items directory)"
-                  git push origin stable || echo "Warning: Failed to push stable"
-                }
-              fi
-            else
-              echo "bedrock_samples directory not found in stable"
-            fi
-            cd "$GITHUB_WORKSPACE"
-          else
-            echo "Stable worktree not found"
-          fi
-      
-      # preview処理（worktree作成 → items JSON生成 → worktree維持）
-      - name: Update preview (worktree)
+      - name: Update preview (worktree + items JSON)
         env:
           GITHUB_TOKEN: ${{ github.token }}
           STRICT_SERIES: "true"
         run: bash -x scripts/update_channel.sh preview
-      
-      - name: Generate items JSON for preview
-        run: |
-          echo "=== Checking preview worktree ==="
-          ls -la _wt/ || echo "_wt directory not found"
-          
-          if [[ -d "_wt/preview" ]]; then
-            echo "=== Generating items JSON for preview ==="
-            ls -la "_wt/preview/"
-            cd "_wt/preview"
-            
-            if [[ -d "bedrock_samples" ]]; then
-              echo "bedrock_samples found, checking for items directory..."
-              ls -la "bedrock_samples/" || echo "Cannot list bedrock_samples"
-              
-              if [[ -d "bedrock_samples/resource_pack/textures/items" ]]; then
-                echo "Items directory found, generating JSON..."
-                ls -la "bedrock_samples/resource_pack/textures/items/" | head -10
-                bash -x "$GITHUB_WORKSPACE/scripts/generate_items_json.sh" preview
-              else
-                echo "Creating empty items JSON for preview..."
-                printf '{"metadata":{"channel":"preview","samples_tag":"unknown","bds_version":"unknown","generated_at":"%s","total_items":0},"items":[]}\n' \
-                  "$(date -u +%FT%TZ)" > "items_textures.json"
-                git add items_textures.json
-                git diff --cached --quiet || {
-                  git commit -m "[preview] Add empty items textures JSON (no items directory)"
-                  git push origin preview || echo "Warning: Failed to push preview"
-                }
-              fi
-            else
-              echo "bedrock_samples directory not found in preview"
-            fi
-            cd "$GITHUB_WORKSPACE"
-          else
-            echo "Preview worktree not found"
-          fi
-      
-      - name: Check generated JSON files
-        run: |
-          echo "=== Checking for generated JSON files ==="
-          find . -name "items_textures.json" -type f || echo "No items_textures.json files found"
-          ls -la _wt/*/items_textures.json || echo "No JSON files in worktrees"
-      
       - name: Update main (combine stable + preview)
         run: bash -x scripts/update_main.sh
       
@@ -149,17 +66,6 @@ jobs:
           name: large-files-${{ github.run_id }}
           path: large_artifacts/large-files.tar.gz
           retention-days: 7
-      
-      # アイテムJSONもアーティファクトとして保存
-      - name: Upload items JSON artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: items-textures-json-${{ github.run_id }}
-          path: |
-            _wt/*/items_textures.json
-            */items_textures.json
-          retention-days: 30
-          if-no-files-found: ignore
 
   # ============================================
   # 2) ProtocolParser で docs -> Markdown 生成
