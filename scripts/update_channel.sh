@@ -97,8 +97,8 @@ else
   fi
 fi
 
-# --- 変更なければ終了 ---
-if [[ "$BDS_VER" == "$OLD_VER" && "$SAMPLES_TAG" == "$OLD_TAG" ]]; then
+# --- 変更なければ終了（ただし強制フラグがある場合は継続） ---
+if [[ "$BDS_VER" == "$OLD_VER" && "$SAMPLES_TAG" == "$OLD_TAG" && "${FORCE_ITEMS_JSON:-false}" != "true" ]]; then
   echo "No changes for $CHANNEL. Skip downloads/commit."
   if ! git rev-parse --abbrev-ref --symbolic-full-name @{u} >/dev/null 2>&1; then
     git push -u origin "$BRANCH" || true
