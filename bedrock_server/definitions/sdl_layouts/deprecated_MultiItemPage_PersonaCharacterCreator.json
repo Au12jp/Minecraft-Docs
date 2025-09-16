@@ -1,3 +1,5 @@
+// This screen needs updated before it should be displayed.
+// Removing the "deprecated_" will make it show up again
 {
   "result": {
     "pageId": "DressingRoom_All_Owned",
@@ -612,7 +614,6 @@
         ]
       },
 
-      // Body
       {
         "controlId": "VerticalLineDivider",
         "components": [
