@@ -409,11 +409,7 @@
                 }
             },
             {
-                "FailReason": "LegacyDisconnect",
-                "OverrideStrings": {
-                    "Title": "disconnectionScreen.cantConnect",
-                    "Body": "disconnectionScreen.body.versionNotSupported"
-                }
+                "FailReason": "LegacyDisconnect"
             },
             {
                 "FailReason": "NoWiFi",
