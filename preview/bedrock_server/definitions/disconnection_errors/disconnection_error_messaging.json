@@ -165,6 +165,13 @@
                     "Title": "disconnectionScreen.internalError.cantFindServer",
                     "Body": "disconnectionScreen.internalError.cantConnect"
                 }
+            },
+            {
+                "FailReason": "ConnectionLost",
+                "OverrideStrings": {
+                    "Title": "disconnectionScreen.disconnected",
+                    "Body": "disconnectionScreen.connectionLost"
+                }
             }
         ]
     },
