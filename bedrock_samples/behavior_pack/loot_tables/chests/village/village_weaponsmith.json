@@ -154,16 +154,6 @@
         {
           "type": "item",
           "name": "minecraft:horsearmordiamond"
-        },
-        {
-          "type": "item",
-          "name": "minecraft:copper_spear",
-          "weight": 7
-        },
-        {
-          "type": "item",
-          "name": "minecraft:iron_spear",
-          "weight": 5
         }
       ]
     },

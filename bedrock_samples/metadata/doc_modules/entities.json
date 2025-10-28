@@ -24953,7 +24953,7 @@
                 "Allows the entity to first travel to a random point on the outskirts of the village, and then explore random points within a small distance. This goal requires \"minecraft:dweller\" and \"minecraft:navigation\" to execute."
               ],
               "header_level": 3,
-              "name": "minecraft:behavior.explore_outskirts (See JSON Schema since 1.21.130)",
+              "name": "minecraft:behavior.explore_outskirts",
               "nodes": [
                 {
                   "default": "[5, 0, 5]",
@@ -26811,7 +26811,7 @@
                 "Allows this entity to move towards a \"suspicious\" position based on data gathered in minecraft:suspect_tracking"
               ],
               "header_level": 3,
-              "name": "minecraft:behavior.investigate_suspicious_location (See JSON Schema since 1.21.130)",
+              "name": "minecraft:behavior.investigate_suspicious_location",
               "nodes": [
                 {
                   "default": "1.5",
@@ -35239,7 +35239,7 @@
                 },
                 {
                   "description": [
-                    "List of items that can be fed to the entity. Includes 'item' for the item name, 'growth' to define how much time it grows up by, and 'result_item' that defines what item the feed item will transform to upon successful interaction (Format: itemName:auxValue)."
+                    "List of items that can be fed to the entity. Includes 'item' for the item name and 'growth' to define how much time it grows up by."
                   ],
                   "header_level": 4,
                   "name": "feed_items",
@@ -35263,6 +35263,15 @@
                   "name": "interact_filters",
                   "show_in_index": true,
                   "type": "Minecraft Filter"
+                },
+                {
+                  "description": [
+                    "The feed item used will transform to this item upon successful interaction. Format: itemName:auxValue"
+                  ],
+                  "header_level": 4,
+                  "name": "transform_to_item",
+                  "show_in_index": true,
+                  "type": "Item Description Properties"
                 }
               ],
               "nodes_as_table": true,
@@ -36231,7 +36240,7 @@
                 },
                 {
                   "description": [
-                    "The list of items that can be used to get the entity into the 'love' state. Includes 'item' for the item name, and 'result_item' that defines what item the breed item will transform to upon successful interaction (Format: itemName:auxValue)."
+                    "The list of items that can be used to get the entity into the 'love' state"
                   ],
                   "header_level": 4,
                   "name": "breed_items",
@@ -36520,6 +36529,15 @@
                   "name": "require_tame",
                   "show_in_index": true,
                   "type": "Boolean"
+                },
+                {
+                  "description": [
+                    "The breed item used will transform to this item upon successful interaction. Format: itemName:auxValue"
+                  ],
+                  "header_level": 4,
+                  "name": "transform_to_item",
+                  "show_in_index": true,
+                  "type": "String"
                 }
               ],
               "nodes_as_table": true,
@@ -36649,7 +36667,7 @@
             },
             {
               "description": [
-                "."
+                "Specifies if a mob burns in daylight."
               ],
               "header_level": 3,
               "name": "minecraft:burns_in_daylight",
@@ -37093,16 +37111,6 @@
               "header_level": 3,
               "name": "minecraft:dash_action",
               "nodes": [
-                {
-                  "default": "false",
-                  "description": [
-                    "Whether the entity can dash underwater. Default value is false."
-                  ],
-                  "header_level": 4,
-                  "name": "can_dash_underwater",
-                  "show_in_index": true,
-                  "type": "Boolean"
-                },
                 {
                   "default": "1.00",
                   "description": [
@@ -43699,14 +43707,6 @@
             },
             {
               "description": [
-                "Pauses this entity's breathing under water."
-              ],
-              "header_level": 3,
-              "name": "minecraft:underwater_mount_breathing",
-              "show_in_index": true
-            },
-            {
-              "description": [
                 "Entities with this component will have a maximum auto step height that is different depending on whether they are on a block that prevents jumping. Incompatible with \"runtime_identifier\": \"minecraft:horse\"."
               ],
               "header_level": 3,
@@ -44353,10 +44353,10 @@
                 },
                 {
                   "description": [
-                    "13285467020746982065"
+                    "1573426610843290210"
                   ],
                   "header_level": 4,
-                  "name": "minecraft:behavior.explore_outskirts (See JSON Schema since 1.21.130)",
+                  "name": "minecraft:behavior.explore_outskirts",
                   "show_in_index": false
                 },
                 {
@@ -44545,10 +44545,10 @@
                 },
                 {
                   "description": [
-                    "5707373970465808196"
+                    "17828766620487298865"
                   ],
                   "header_level": 4,
-                  "name": "minecraft:behavior.investigate_suspicious_location (See JSON Schema since 1.21.130)",
+                  "name": "minecraft:behavior.investigate_suspicious_location",
                   "show_in_index": false
                 },
                 {
@@ -46412,14 +46412,6 @@
                 },
                 {
                   "description": [
-                    "-1401248464"
-                  ],
-                  "header_level": 4,
-                  "name": "minecraft:underwater_mount_breathing",
-                  "show_in_index": false
-                },
-                {
-                  "description": [
                     "-368684982"
                   ],
                   "header_level": 4,
@@ -46516,14 +46508,6 @@
                   ],
                   "header_level": 4,
                   "name": "minecraft:body_rotation_blocked",
-                  "show_in_index": false
-                },
-                {
-                  "description": [
-                    "1958193887"
-                  ],
-                  "header_level": 4,
-                  "name": "minecraft:body_rotation_locked_to_vehicle",
                   "show_in_index": false
                 },
                 {
@@ -47059,7 +47043,7 @@
             },
             {
               "description": [
-                "Causes the entity's body rotation to match the one of their head.",
+                "Causes the entity's body to always be automatically rotated to align with the entity's head.",
                 "Does not override the \"minecraft:body_rotation_blocked\" component."
               ],
               "header_level": 3,
@@ -47072,14 +47056,6 @@
               ],
               "header_level": 3,
               "name": "minecraft:body_rotation_blocked",
-              "show_in_index": true
-            },
-            {
-              "description": [
-                "Causes the entity's body rotation to match their vehicle's facing direction."
-              ],
-              "header_level": 3,
-              "name": "minecraft:body_rotation_locked_to_vehicle",
               "show_in_index": true
             },
             {

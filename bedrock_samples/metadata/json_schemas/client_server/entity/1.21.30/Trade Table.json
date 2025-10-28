@@ -271,8 +271,7 @@
           "type": "number"
         },
         "quantity": {
-          "$ref": "#/definitions/2298823339",
-          "x-runtime-constraint-description": "Check that the limits imposed on the range (minimum, maximum and maximum distance between values) are respected"
+          "$ref": "#/definitions/2298823339"
         }
       },
       "required": [

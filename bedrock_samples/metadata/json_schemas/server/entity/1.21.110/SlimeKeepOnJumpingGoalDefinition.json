@@ -20,8 +20,7 @@
       "type": "integer"
     },
     "speed_multiplier": {
-      "default": 1,
-      "description": "Determines the multiplier this entity's speed is modified by when jumping around.",
+      "description": "Determines the multiplier this entity's speed is modified by when jumping around. Default value: 1.",
       "type": "number"
     }
   },

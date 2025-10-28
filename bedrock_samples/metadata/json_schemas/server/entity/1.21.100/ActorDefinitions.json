@@ -6,19 +6,16 @@
       "description": "Defines if the entity ticks the world and the radius around it to tick.",
       "properties": {
         "distance_to_players": {
-          "default": 128,
-          "description": "The distance at which the closest player has to be before this entity despawns. This option will be ignored if never_despawn is true.",
+          "description": "The distance at which the closest player has to be before this entity despawns. This option will be ignored if never_despawn is true. Default value: 128.",
           "minimum": 128,
           "type": "number"
         },
         "never_despawn": {
-          "default": true,
-          "description": "If true, this entity will not despawn even if players are far away. If false, distance_to_players will be used to determine when to despawn.",
+          "description": "If true, this entity will not despawn even if players are far away. If false, distance_to_players will be used to determine when to despawn. Default value: true.",
           "type": "boolean"
         },
         "radius": {
-          "default": 2,
-          "description": "The area around the entity to tick. Allowed range: 2-6.",
+          "description": "The area around the entity to tick. Allowed range: 2-6. Default value: 2.",
           "maximum": 6,
           "minimum": 2,
           "type": "integer"
@@ -55,13 +52,11 @@
           "type": "array"
         },
         "max_distance": {
-          "default": 3,
-          "description": "A charge attack cannot start if the entity is farther than this distance to the target.",
+          "description": "A charge attack cannot start if the entity is farther than this distance to the target. Default value: 3.",
           "type": "number"
         },
         "min_distance": {
-          "default": 2,
-          "description": "A charge attack cannot start if the entity is closer than this distance to the target.",
+          "description": "A charge attack cannot start if the entity is closer than this distance to the target. Default value: 2.",
           "type": "number"
         },
         "priority": {
@@ -590,27 +585,17 @@
             "place_item",
             "single_swap",
             "multi_swap",
-            "item.enchant.lunge1",
-            "item.enchant.lunge2",
-            "item.enchant.lunge3",
-            "attack.critical",
-            "item.spear.attack_hit",
-            "item.spear.attack_miss",
-            "item.wooden_spear.attack_hit",
-            "item.wooden_spear.attack_miss",
             "undefined"
           ],
           "title": "LevelSoundEvent",
           "type": "string"
         },
         "speed_multiplier": {
-          "default": 1,
-          "description": "Modifies the entity's speed when charging toward the target.",
+          "description": "Modifies the entity's speed when charging toward the target. Default value: 1.",
           "type": "number"
         },
         "success_rate": {
-          "default": 0.1428000032901764,
-          "description": "Percent chance this entity will start a charge attack, if not already attacking (1.0 = 100%).",
+          "description": "Percent chance this entity will start a charge attack, if not already attacking (1.0 = 100%). Default value: 0.1428.",
           "type": "number"
         }
       },
@@ -633,18 +618,15 @@
           "type": "array"
         },
         "cooldown_time": {
-          "default": 10,
-          "description": "Time (in seconds) between each start of the cycle to roar, then breath flame.",
+          "description": "Time (in seconds) between each start of the cycle to roar, then breath flame. Default value: 10.",
           "type": "number"
         },
         "flame_time": {
-          "default": 0.5,
-          "description": "Time (in seconds), after roar, to breath flame.",
+          "description": "Time (in seconds), after roar, to breath flame. Default value: 0.5.",
           "type": "number"
         },
         "ground_flame_count": {
-          "default": 4,
-          "description": "Number of ground flame-breath attacks to use before flight-takeoff.",
+          "description": "Number of ground flame-breath attacks to use before flight-takeoff. Default value: 4.",
           "type": "integer"
         },
         "priority": {
@@ -652,20 +634,19 @@
           "type": "integer"
         },
         "roar_time": {
-          "default": 2,
-          "description": "Time (in seconds) to roar, before breathing flame.",
+          "description": "Time (in seconds) to roar, before breathing flame. Default value: 2.",
           "type": "number"
         },
         "smoke_color": {
-          "default": "#DC00EF",
+          "description": " Default value: #DC00EF.",
           "type": "string"
         },
         "smoke_radius": {
-          "default": 5,
+          "description": " Default value: 5.",
           "type": "number"
         },
         "smoke_time": {
-          "default": 10,
+          "description": " Default value: 10.",
           "type": "number"
         }
       },
@@ -690,14 +671,11 @@
       "description": "A behavior that enables a mob to transport items from and to containers.",
       "properties": {
         "allow_simultaneous_interaction": {
-          "default": false,
-          "description": "When true the mob will wait until a container is not used by other entities before starting to interact with it.",
+          "description": "When true the mob will wait until a container is not used by other entities before starting to interact with it. Default value: false.",
           "type": "boolean"
         },
         "allowed_items": {
-          "default": [
-          ],
-          "description": "A list of item descriptors that are the only items the mob is allowed to transport. If this and \"disallowed_items\" are both empty, then all items are allowed. If non-empty \"disallowed_items\" must be empty.",
+          "description": "A list of item descriptors that are the only items the mob is allowed to transport. If this and \"disallowed_items\" are both empty, then all items are allowed. If non-empty \"disallowed_items\" must be empty. Default value: empty.",
           "items": {
             "$ref": "#/definitions/1531870811"
           },
@@ -716,54 +694,44 @@
           "type": "array"
         },
         "destination_container_types": {
-          "default": [
-          ],
-          "description": "A list of block descriptors that should be a container type to put items in.",
+          "description": "A list of block descriptors that should be a container type to put items in. Default value: empty.",
           "items": {
             "$ref": "#/definitions/2794205495"
           },
           "type": "array"
         },
         "disallowed_items": {
-          "default": [
-          ],
-          "description": "A list of item descriptors that are the mob is not allowed to transport. If non-empty \"allowed_items\" must be empty.",
+          "description": "A list of item descriptors that are the mob is not allowed to transport. If non-empty \"allowed_items\" must be empty. Default value: emtpy.",
           "items": {
             "$ref": "#/definitions/1531870811"
           },
           "type": "array"
         },
         "idle_cooldown": {
-          "default": 20,
-          "description": "When the mob cannot find a container in which to get or put items, the goal will stop being active for this amount of time in seconds.",
+          "description": "When the mob cannot find a container in which to get or put items, the goal will stop being active for this amount of time in seconds. Default value: 20.",
           "type": "integer"
         },
         "initial_cooldown": {
-          "default": 0,
-          "description": "How long the mob will wait after spawning or getting the goal added before the goal can start.",
+          "description": "How long the mob will wait after spawning or getting the goal added before the goal can start. Default value: 0.",
           "type": "integer"
         },
         "interaction_time": {
-          "default": 3,
-          "description": "The amount of time in seconds spent interacting with the containers.",
+          "description": "The amount of time in seconds spent interacting with the containers. Default value: 3.",
           "minimum": 0,
           "type": "number"
         },
         "max_stack_size": {
-          "default": 64,
-          "description": "The maximum stack size that the mob will try to take from a container.",
+          "description": "The maximum stack size that the mob will try to take from a container. Default value: 64.",
           "maximum": 64,
           "minimum": 1,
           "type": "integer"
         },
         "max_visited_containers": {
-          "default": 16,
-          "description": "The maximum number of containers that the mob will try to take/place items from before going on cooldown and starting over.",
+          "description": "The maximum number of containers that the mob will try to take/place items from before going on cooldown and starting over. Default value: 16.",
           "type": "integer"
         },
         "place_strategy": {
-          "default": "any",
-          "description": "The strategy to use for placing the transported item. Any - always place if there is room, With matching - place if there is a matching item in the container, With matching or empty - like With matching but will also place in empty containers",
+          "description": "The strategy to use for placing the transported item. Any - always place if there is room, With matching - place if there is a matching item in the container, With matching or empty - like With matching but will also place in empty containers Default value: any.",
           "enum": [
             "any",
             "with_matching",
@@ -778,15 +746,10 @@
         },
         "search_distance": {
           "$ref": "#/definitions/4021724221",
-          "default": [
-            64,
-            32
-          ],
-          "description": "The maximum search distance horizontally and vertically at which to find containers for taking or placing items."
+          "description": "The maximum search distance horizontally and vertically at which to find containers for taking or placing items. Default value: Vec2(64,32)."
         },
         "search_strategy": {
-          "default": "random",
-          "description": "The strategy to use for finding source or destination containers. The nearest valid container or a random valid container in range.",
+          "description": "The strategy to use for finding source or destination containers. The nearest valid container or a random valid container in range. Default value: random.",
           "enum": [
             "nearest",
             "random"
@@ -795,9 +758,7 @@
           "type": "string"
         },
         "source_container_types": {
-          "default": [
-          ],
-          "description": "A list of block descriptors that should be a container type to get items from.",
+          "description": "A list of block descriptors that should be a container type to get items from. Default value: empty.",
           "items": {
             "$ref": "#/definitions/2794205495"
           },
@@ -823,20 +784,17 @@
           "type": "array"
         },
         "fractional_rotation": {
-          "default": 0.5,
-          "description": "The entity will attempt to rotate to face where the player is facing each tick. The entity will target this percentage of their difference in their current facing angles each tick (from 0.0 to 1.0 where 1.0 = 100%). This is limited by \"fractional_rotation_limit\". A value of 0.0 will result in the entity no longer turning to where the player is facing.",
+          "description": "The entity will attempt to rotate to face where the player is facing each tick. The entity will target this percentage of their difference in their current facing angles each tick (from 0.0 to 1.0 where 1.0 = 100%). This is limited by \"fractional_rotation_limit\". A value of 0.0 will result in the entity no longer turning to where the player is facing. Default value: 0.5.",
           "maximum": 1,
           "minimum": 0.5,
           "type": "number"
         },
         "fractional_rotation_limit": {
-          "default": 5,
-          "description": "Limits the total degrees the entity can rotate to face where the player is facing on each tick.",
+          "description": "Limits the total degrees the entity can rotate to face where the player is facing on each tick. Default value: 5.0.",
           "type": "number"
         },
         "mount_speed_multiplier": {
-          "default": 1,
-          "description": "Speed multiplier of mount when controlled by player.",
+          "description": "Speed multiplier of mount when controlled by player. Default value: 1.0.",
           "type": "number"
         },
         "priority": {
@@ -863,8 +821,7 @@
           "type": "array"
         },
         "eat_animation_time": {
-          "default": 1,
-          "description": "Sets the time in seconds the eat animation should play for.",
+          "description": "Sets the time in seconds the eat animation should play for. Default value: 1.000000.",
           "type": "number"
         },
         "eat_mob_sound": {
@@ -880,18 +837,15 @@
           "type": "integer"
         },
         "pull_in_force": {
-          "default": 1,
-          "description": "Sets the force which the mob-to-be-eaten is pulled towards the eating mob.",
+          "description": "Sets the force which the mob-to-be-eaten is pulled towards the eating mob. Default value: 1.000000.",
           "type": "number"
         },
         "reach_mob_distance": {
-          "default": 1,
-          "description": "Sets the desired distance to be reached before eating the mob.",
+          "description": "Sets the desired distance to be reached before eating the mob. Default value: 1.000000.",
           "type": "number"
         },
         "run_speed": {
-          "default": 1,
-          "description": "Sets the entity's speed when running toward the target.",
+          "description": "Sets the entity's speed when running toward the target. Default value: 1.000000.",
           "type": "number"
         }
       },
@@ -919,16 +873,14 @@
     "2794205495": {
       "oneOf": [
         {
-          "$ref": "#/definitions/2770948419",
-          "x-runtime-constraint-description": "Check that a valid block name or expression is provided, and in the latter case verify that there are no block states as well"
+          "$ref": "#/definitions/2770948419"
         },
         {
           "minLength": 1,
           "type": "string"
         },
         {
-          "$ref": "#/definitions/2770948419",
-          "x-runtime-constraint-description": "Check that a valid block name or expression is provided, and in the latter case verify that there are no block states as well"
+          "$ref": "#/definitions/2770948419"
         }
       ],
       "title": "Block Descriptor"
@@ -953,8 +905,7 @@
           "type": "integer"
         },
         "speed_multiplier": {
-          "default": 1,
-          "description": "Movement speed multiplier applied to the mob when using this AI Goal.",
+          "description": "Movement speed multiplier applied to the mob when using this AI Goal. Default value: 1.",
           "type": "number"
         }
       },
@@ -989,8 +940,7 @@
       "description": "Causes an entity to circle around an anchor point placed near a point or target.",
       "properties": {
         "angle_change": {
-          "default": 15,
-          "description": "Number of degrees to change this entity's facing by, when the entity selects its next anchor point.",
+          "description": "Number of degrees to change this entity's facing by, when the entity selects its next anchor point. Default value: 15.0.",
           "type": "number"
         },
         "control_flags": {
@@ -1006,58 +956,39 @@
           "type": "array"
         },
         "goal_radius": {
-          "default": 0.5,
-          "description": "Maximum distance from the anchor-point in which this entity considers itself to have reached the anchor point. This is to prevent the entity from bouncing back and forth trying to reach a specific spot.",
+          "description": "Maximum distance from the anchor-point in which this entity considers itself to have reached the anchor point. This is to prevent the entity from bouncing back and forth trying to reach a specific spot. Default value: 0.500000.",
           "type": "number"
         },
         "height_above_target_range": {
           "$ref": "#/definitions/1057349585",
-          "default": {
-            "max": 0,
-            "min": 0
-          },
-          "description": "The number of blocks above the target that the next anchor point can be set. This value is used only when the entity is tracking a target.",
-          "x-runtime-constraint-description": "Check that the limits imposed on the range (minimum, maximum and maximum distance between values) are respected"
+          "description": "The number of blocks above the target that the next anchor point can be set. This value is used only when the entity is tracking a target. Default value: [0.0, 0.0]."
         },
         "height_adjustment_chance": {
-          "default": 0.0028570001013576984,
-          "description": "Percent chance to determine how often to increase or decrease the current height around the anchor point. 1 = 100%. \"height_change_chance\" is deprecated and has been replaced with \"height_adjustment_chance\".",
+          "description": "Percent chance to determine how often to increase or decrease the current height around the anchor point. 1 = 100%. \"height_change_chance\" is deprecated and has been replaced with \"height_adjustment_chance\". Default value: 0.003.",
           "type": "number"
         },
         "height_offset_range": {
           "$ref": "#/definitions/1057349585",
-          "default": {
-            "max": 0,
-            "min": 0
-          },
-          "description": "Vertical distance from the anchor point this entity must stay within, upon a successful height adjustment."
+          "description": "Vertical distance from the anchor point this entity must stay within, upon a successful height adjustment. Default value: [0.0, 0.0]."
         },
         "priority": {
           "minimum": 0,
           "type": "integer"
         },
         "radius_adjustment_chance": {
-          "default": 0.004000000189989805,
-          "description": "Percent chance to determine how often to increase the size of the current movement radius around the anchor point. 1 = 100%. \"radius_change_chance\" is deprecated and has been replaced with \"radius_adjustment_chance\".",
+          "description": "Percent chance to determine how often to increase the size of the current movement radius around the anchor point. 1 = 100%. \"radius_change_chance\" is deprecated and has been replaced with \"radius_adjustment_chance\". Default value: 0.0.",
           "type": "number"
         },
         "radius_change": {
-          "default": 1,
-          "description": "The number of blocks to increase the current movement radius by, upon successful \"radius_adjustment_chance\". If the current radius increases over the range maximum, the current radius will be set back to the range minimum and the entity will change between clockwise and counter-clockwise movement.",
+          "description": "The number of blocks to increase the current movement radius by, upon successful \"radius_adjustment_chance\". If the current radius increases over the range maximum, the current radius will be set back to the range minimum and the entity will change between clockwise and counter-clockwise movement. Default value: 1.",
           "type": "number"
         },
         "radius_range": {
           "$ref": "#/definitions/1057349585",
-          "default": {
-            "max": 15,
-            "min": 5
-          },
-          "description": "Horizontal distance from the anchor point this entity must stay within upon a successful radius adjustment.",
-          "x-runtime-constraint-description": "Check that the limits imposed on the range (minimum, maximum and maximum distance between values) are respected"
+          "description": "Horizontal distance from the anchor point this entity must stay within upon a successful radius adjustment. Default value: [5.0, 5.0]."
         },
         "speed_multiplier": {
-          "default": 1,
-          "description": "Multiplies the speed at which this entity travels to its next desired position.",
+          "description": "Multiplies the speed at which this entity travels to its next desired position. Default value: 1.0.",
           "type": "number"
         }
       },
@@ -1681,9 +1612,6 @@
     "minecraft:body_rotation_blocked": {
       "description": "Dynamic value"
     },
-    "minecraft:body_rotation_locked_to_vehicle": {
-      "description": "Dynamic value"
-    },
     "minecraft:boostable": {
       "description": "Dynamic value"
     },
@@ -2205,9 +2133,6 @@
       "description": "Dynamic value"
     },
     "minecraft:type_family": {
-      "description": "Dynamic value"
-    },
-    "minecraft:underwater_mount_breathing": {
       "description": "Dynamic value"
     },
     "minecraft:underwater_movement": {

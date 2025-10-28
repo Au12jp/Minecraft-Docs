@@ -106,16 +106,12 @@
         "module_name": {
           "type": "string"
         },
-        "optional": {
-          "type": "boolean"
-        },
         "version": {
           "oneOf": [
             {
               "enum": [
                 "alpha",
-                "beta",
-                "internal"
+                "beta"
               ],
               "title": "VersionSelectType",
               "type": "string"
@@ -266,7 +262,6 @@
           "items": {
             "$ref": "#/definitions/1415538356"
           },
-          "maxItems": 20,
           "minItems": 2,
           "type": "array"
         },
@@ -438,7 +433,6 @@
           }
         ]
       },
-      "maxItems": 50,
       "minItems": 1,
       "type": "array"
     },

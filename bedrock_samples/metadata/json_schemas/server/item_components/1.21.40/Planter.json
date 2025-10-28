@@ -27,16 +27,14 @@
     "2794205495": {
       "oneOf": [
         {
-          "$ref": "#/definitions/2770948419",
-          "x-runtime-constraint-description": "Check that a valid block name or expression is provided, and in the latter case verify that there are no block states as well"
+          "$ref": "#/definitions/2770948419"
         },
         {
           "minLength": 1,
           "type": "string"
         },
         {
-          "$ref": "#/definitions/2770948419",
-          "x-runtime-constraint-description": "Check that a valid block name or expression is provided, and in the latter case verify that there are no block states as well"
+          "$ref": "#/definitions/2770948419"
         }
       ],
       "title": "Block Descriptor"

@@ -40036,56 +40036,6 @@
               "type": "String"
             },
             {
-              "default": "true, false",
-              "description": [
-                "Whether the block is connected to another block to the east."
-              ],
-              "header_level": 3,
-              "name": "minecraft:connection_east",
-              "show_in_index": true,
-              "type": "String"
-            },
-            {
-              "default": "true, false",
-              "description": [
-                "Whether the block is connected to another block to the north."
-              ],
-              "header_level": 3,
-              "name": "minecraft:connection_north",
-              "show_in_index": true,
-              "type": "String"
-            },
-            {
-              "default": "true, false",
-              "description": [
-                "Whether the block is connected to another block to the south."
-              ],
-              "header_level": 3,
-              "name": "minecraft:connection_south",
-              "show_in_index": true,
-              "type": "String"
-            },
-            {
-              "default": "true, false",
-              "description": [
-                "Whether the block is connected to another block to the west."
-              ],
-              "header_level": 3,
-              "name": "minecraft:connection_west",
-              "show_in_index": true,
-              "type": "String"
-            },
-            {
-              "default": "inner_left, inner_right, outer_left, outer_right, none",
-              "description": [
-                "Defines the corner shape of a block."
-              ],
-              "header_level": 3,
-              "name": "minecraft:corner",
-              "show_in_index": true,
-              "type": "String"
-            },
-            {
               "default": "down, up, north, south, east, west",
               "description": [
                 "Defines all placement directions of a block."
@@ -40801,48 +40751,6 @@
           "header_level": 2,
           "name": "BlockTraits",
           "nodes": [
-            {
-              "description": [
-                "Adds the connection states to a block. The values of these states are updated when the block or neighboring blocks change. [\"Upcoming Creator Features\" Experimental Toggle Required]",
-                "Experimental toggles required: Upcoming Creator Features"
-              ],
-              "header_level": 3,
-              "name": "\"minecraft:connection\"",
-              "nodes": [
-                {
-                  "description": [
-                    "Which connection states to enable. Options: [\"minecraft:cardinal_connections\"]. Must specify at least one."
-                  ],
-                  "header_level": 4,
-                  "name": "enabled_states",
-                  "nodes": [
-                    {
-                      "description": [
-                        "Enables the \"minecraft:connection_north\", \"minecraft:connection_east\", \"minecraft:connection_south\", and \"minecraft:connection_west\" states."
-                      ],
-                      "header_level": 5,
-                      "name": "minecraft:cardinal_connections",
-                      "show_in_index": true,
-                      "type": "String"
-                    }
-                  ],
-                  "nodes_as_table": true,
-                  "show_in_index": true,
-                  "table_default_title": "Default Value",
-                  "table_description_title": "Description",
-                  "table_name_title": "Name",
-                  "table_type_title": "Type",
-                  "type": "Array"
-                }
-              ],
-              "nodes_as_table": true,
-              "show_in_index": true,
-              "table_default_title": "Default Value",
-              "table_description_title": "Description",
-              "table_name_title": "Name",
-              "table_type_title": "Type",
-              "type": "JSON Object"
-            },
             {
               "description": [
                 "Adds the \"minecraft:cardinal_direction\" and/or \"minecraft:facing_direction\" states and setter function to the block. The values of these states are set when the block is placed.",
@@ -48262,15 +48170,6 @@
           "show_in_index": false
         },
         {
-          "default": "9109",
-          "description": [
-            "149"
-          ],
-          "header_level": 2,
-          "name": "nautilus",
-          "show_in_index": false
-        },
-        {
           "default": "307",
           "description": [
             "51"
@@ -48817,15 +48716,6 @@
           ],
           "header_level": 2,
           "name": "zombie_horse",
-          "show_in_index": false
-        },
-        {
-          "default": "76694",
-          "description": [
-            "150"
-          ],
-          "header_level": 2,
-          "name": "zombie_nautilus",
           "show_in_index": false
         },
         {
@@ -49535,7 +49425,7 @@
           "header_level": 2,
           "name": "banner_pattern",
           "show_in_index": false,
-          "type": "808"
+          "type": "801"
         },
         {
           "header_level": 2,
@@ -50009,7 +49899,7 @@
           "header_level": 2,
           "name": "boat",
           "show_in_index": false,
-          "type": "806"
+          "type": "799"
         },
         {
           "header_level": 2,
@@ -50387,7 +50277,7 @@
           "header_level": 2,
           "name": "carpet",
           "show_in_index": false,
-          "type": "763"
+          "type": "756"
         },
         {
           "header_level": 2,
@@ -50507,7 +50397,7 @@
           "header_level": 2,
           "name": "chemistry_table",
           "show_in_index": false,
-          "type": "800"
+          "type": "793"
         },
         {
           "header_level": 2,
@@ -50915,7 +50805,7 @@
           "header_level": 2,
           "name": "colored_torch_bp",
           "show_in_index": false,
-          "type": "804"
+          "type": "797"
         },
         {
           "header_level": 2,
@@ -50939,7 +50829,7 @@
           "header_level": 2,
           "name": "colored_torch_rg",
           "show_in_index": false,
-          "type": "803"
+          "type": "796"
         },
         {
           "header_level": 2,
@@ -50987,13 +50877,13 @@
           "header_level": 2,
           "name": "concrete",
           "show_in_index": false,
-          "type": "789"
+          "type": "782"
         },
         {
           "header_level": 2,
           "name": "concrete_powder",
           "show_in_index": false,
-          "type": "790"
+          "type": "783"
         },
         {
           "header_level": 2,
@@ -51159,12 +51049,6 @@
         },
         {
           "header_level": 2,
-          "name": "copper_nautilus_armor",
-          "show_in_index": false,
-          "type": "757"
-        },
-        {
-          "header_level": 2,
           "name": "copper_nugget",
           "show_in_index": false,
           "type": "753"
@@ -51209,25 +51093,25 @@
           "header_level": 2,
           "name": "coral",
           "show_in_index": false,
-          "type": "785"
+          "type": "778"
         },
         {
           "header_level": 2,
           "name": "coral_block",
           "show_in_index": false,
-          "type": "767"
+          "type": "760"
         },
         {
           "header_level": 2,
           "name": "coral_fan",
           "show_in_index": false,
-          "type": "776"
+          "type": "769"
         },
         {
           "header_level": 2,
           "name": "coral_fan_dead",
           "show_in_index": false,
-          "type": "777"
+          "type": "770"
         },
         {
           "header_level": 2,
@@ -52095,12 +51979,6 @@
         },
         {
           "header_level": 2,
-          "name": "diamond_nautilus_armor",
-          "show_in_index": false,
-          "type": "760"
-        },
-        {
-          "header_level": 2,
           "name": "diamond_ore",
           "show_in_index": false,
           "type": "56"
@@ -52199,31 +52077,31 @@
           "header_level": 2,
           "name": "double_plant",
           "show_in_index": false,
-          "type": "783"
+          "type": "776"
         },
         {
           "header_level": 2,
           "name": "double_stone_block_slab",
           "show_in_index": false,
-          "type": "772"
+          "type": "765"
         },
         {
           "header_level": 2,
           "name": "double_stone_block_slab2",
           "show_in_index": false,
-          "type": "773"
+          "type": "766"
         },
         {
           "header_level": 2,
           "name": "double_stone_block_slab3",
           "show_in_index": false,
-          "type": "774"
+          "type": "767"
         },
         {
           "header_level": 2,
           "name": "double_stone_block_slab4",
           "show_in_index": false,
-          "type": "775"
+          "type": "768"
         },
         {
           "header_level": 2,
@@ -52289,7 +52167,7 @@
           "header_level": 2,
           "name": "dye",
           "show_in_index": false,
-          "type": "807"
+          "type": "800"
         },
         {
           "header_level": 2,
@@ -53093,7 +52971,7 @@
           "header_level": 2,
           "name": "end_crystal",
           "show_in_index": false,
-          "type": "810"
+          "type": "803"
         },
         {
           "header_level": 2,
@@ -53315,7 +53193,7 @@
           "header_level": 2,
           "name": "fence",
           "show_in_index": false,
-          "type": "765"
+          "type": "758"
         },
         {
           "header_level": 2,
@@ -53700,12 +53578,6 @@
           "name": "golden_leggings",
           "show_in_index": false,
           "type": "356"
-        },
-        {
-          "header_level": 2,
-          "name": "golden_nautilus_armor",
-          "show_in_index": false,
-          "type": "759"
         },
         {
           "header_level": 2,
@@ -54161,13 +54033,13 @@
           "header_level": 2,
           "name": "hard_stained_glass",
           "show_in_index": false,
-          "type": "801"
+          "type": "794"
         },
         {
           "header_level": 2,
           "name": "hard_stained_glass_pane",
           "show_in_index": false,
-          "type": "802"
+          "type": "795"
         },
         {
           "header_level": 2,
@@ -54480,12 +54352,6 @@
           "name": "iron_leggings",
           "show_in_index": false,
           "type": "348"
-        },
-        {
-          "header_level": 2,
-          "name": "iron_nautilus_armor",
-          "show_in_index": false,
-          "type": "758"
         },
         {
           "header_level": 2,
@@ -54941,13 +54807,13 @@
           "header_level": 2,
           "name": "leaves",
           "show_in_index": false,
-          "type": "779"
+          "type": "772"
         },
         {
           "header_level": 2,
           "name": "leaves2",
           "show_in_index": false,
-          "type": "780"
+          "type": "773"
         },
         {
           "header_level": 2,
@@ -54965,7 +54831,7 @@
           "header_level": 2,
           "name": "light_block",
           "show_in_index": false,
-          "type": "805"
+          "type": "798"
         },
         {
           "header_level": 2,
@@ -55385,13 +55251,13 @@
           "header_level": 2,
           "name": "log",
           "show_in_index": false,
-          "type": "764"
+          "type": "757"
         },
         {
           "header_level": 2,
           "name": "log2",
           "show_in_index": false,
-          "type": "787"
+          "type": "780"
         },
         {
           "header_level": 2,
@@ -55709,7 +55575,7 @@
           "header_level": 2,
           "name": "monster_egg",
           "show_in_index": false,
-          "type": "788"
+          "type": "781"
         },
         {
           "header_level": 2,
@@ -55901,13 +55767,13 @@
           "header_level": 2,
           "name": "music_disc_creator",
           "show_in_index": false,
-          "type": "795"
+          "type": "788"
         },
         {
           "header_level": 2,
           "name": "music_disc_creator_music_box",
           "show_in_index": false,
-          "type": "796"
+          "type": "789"
         },
         {
           "header_level": 2,
@@ -55919,7 +55785,7 @@
           "header_level": 2,
           "name": "music_disc_lava_chicken",
           "show_in_index": false,
-          "type": "799"
+          "type": "792"
         },
         {
           "header_level": 2,
@@ -55949,7 +55815,7 @@
           "header_level": 2,
           "name": "music_disc_precipice",
           "show_in_index": false,
-          "type": "797"
+          "type": "790"
         },
         {
           "header_level": 2,
@@ -55973,7 +55839,7 @@
           "header_level": 2,
           "name": "music_disc_tears",
           "show_in_index": false,
-          "type": "798"
+          "type": "791"
         },
         {
           "header_level": 2,
@@ -56010,12 +55876,6 @@
           "name": "nautilus_shell",
           "show_in_index": false,
           "type": "580"
-        },
-        {
-          "header_level": 2,
-          "name": "nautilus_spawn_egg",
-          "show_in_index": false,
-          "type": "755"
         },
         {
           "header_level": 2,
@@ -56136,12 +55996,6 @@
           "name": "netherite_leggings",
           "show_in_index": false,
           "type": "626"
-        },
-        {
-          "header_level": 2,
-          "name": "netherite_nautilus_armor",
-          "show_in_index": false,
-          "type": "761"
         },
         {
           "header_level": 2,
@@ -56897,7 +56751,7 @@
           "header_level": 2,
           "name": "planks",
           "show_in_index": false,
-          "type": "784"
+          "type": "777"
         },
         {
           "header_level": 2,
@@ -57617,7 +57471,7 @@
           "header_level": 2,
           "name": "red_flower",
           "show_in_index": false,
-          "type": "782"
+          "type": "775"
         },
         {
           "header_level": 2,
@@ -57941,7 +57795,7 @@
           "header_level": 2,
           "name": "sapling",
           "show_in_index": false,
-          "type": "778"
+          "type": "771"
         },
         {
           "header_level": 2,
@@ -58067,7 +57921,7 @@
           "header_level": 2,
           "name": "shulker_box",
           "show_in_index": false,
-          "type": "793"
+          "type": "786"
         },
         {
           "header_level": 2,
@@ -58367,7 +58221,7 @@
           "header_level": 2,
           "name": "spawn_egg",
           "show_in_index": false,
-          "type": "809"
+          "type": "802"
         },
         {
           "header_level": 2,
@@ -58547,13 +58401,13 @@
           "header_level": 2,
           "name": "stained_glass",
           "show_in_index": false,
-          "type": "791"
+          "type": "784"
         },
         {
           "header_level": 2,
           "name": "stained_glass_pane",
           "show_in_index": false,
-          "type": "792"
+          "type": "785"
         },
         {
           "header_level": 2,
@@ -58607,25 +58461,25 @@
           "header_level": 2,
           "name": "stone_block_slab",
           "show_in_index": false,
-          "type": "768"
+          "type": "761"
         },
         {
           "header_level": 2,
           "name": "stone_block_slab2",
           "show_in_index": false,
-          "type": "769"
+          "type": "762"
         },
         {
           "header_level": 2,
           "name": "stone_block_slab3",
           "show_in_index": false,
-          "type": "770"
+          "type": "763"
         },
         {
           "header_level": 2,
           "name": "stone_block_slab4",
           "show_in_index": false,
-          "type": "771"
+          "type": "764"
         },
         {
           "header_level": 2,
@@ -58703,7 +58557,7 @@
           "header_level": 2,
           "name": "stonebrick",
           "show_in_index": false,
-          "type": "766"
+          "type": "759"
         },
         {
           "header_level": 2,
@@ -58961,7 +58815,7 @@
           "header_level": 2,
           "name": "tallgrass",
           "show_in_index": false,
-          "type": "786"
+          "type": "779"
         },
         {
           "header_level": 2,
@@ -60119,7 +59973,7 @@
           "header_level": 2,
           "name": "wood",
           "show_in_index": false,
-          "type": "794"
+          "type": "787"
         },
         {
           "header_level": 2,
@@ -60167,7 +60021,7 @@
           "header_level": 2,
           "name": "wooden_slab",
           "show_in_index": false,
-          "type": "781"
+          "type": "774"
         },
         {
           "header_level": 2,
@@ -60179,7 +60033,7 @@
           "header_level": 2,
           "name": "wool",
           "show_in_index": false,
-          "type": "762"
+          "type": "755"
         },
         {
           "header_level": 2,
@@ -60288,12 +60142,6 @@
           "name": "zombie_horse_spawn_egg",
           "show_in_index": false,
           "type": "473"
-        },
-        {
-          "header_level": 2,
-          "name": "zombie_nautilus_spawn_egg",
-          "show_in_index": false,
-          "type": "756"
         },
         {
           "header_level": 2,

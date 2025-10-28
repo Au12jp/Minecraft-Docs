@@ -16,8 +16,7 @@
       "type": "array"
     },
     "duration": {
-      "default": 0,
-      "description": "The amount of time to roar for.",
+      "description": "The amount of time to roar for. Default value: 0.",
       "minimum": 0,
       "type": "number"
     },

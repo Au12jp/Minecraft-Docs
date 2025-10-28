@@ -596,9 +596,6 @@
         "minecraft:body_rotation_blocked": {
           "description": "Dynamic value"
         },
-        "minecraft:body_rotation_locked_to_vehicle": {
-          "description": "Dynamic value"
-        },
         "minecraft:boostable": {
           "description": "Dynamic value"
         },
@@ -1121,9 +1118,6 @@
         "minecraft:type_family": {
           "description": "Dynamic value"
         },
-        "minecraft:underwater_mount_breathing": {
-          "description": "Dynamic value"
-        },
         "minecraft:underwater_movement": {
           "description": "Dynamic value"
         },
@@ -1178,8 +1172,7 @@
           "type": "integer"
         },
         "speed_multiplier": {
-          "default": 1,
-          "description": "Movement speed multiplier applied to the mob when using this AI Goal.",
+          "description": "Movement speed multiplier applied to the mob when using this AI Goal. Default value: 1.",
           "type": "number"
         }
       },
