@@ -16,8 +16,7 @@
       "type": "array"
     },
     "idle_time": {
-      "default": 5,
-      "description": "Amount of time (in seconds) to stay idle.",
+      "description": "Amount of time (in seconds) to stay idle. Default value: 5.",
       "type": "number"
     },
     "priority": {
@@ -25,8 +24,7 @@
       "type": "integer"
     },
     "success_rate": {
-      "default": 0.10000000149011612,
-      "description": "Percent chance this entity will go idle, 1.0 = 100%.",
+      "description": "Percent chance this entity will go idle, 1.0 = 100%. Default value: 0.1.",
       "type": "number"
     }
   },

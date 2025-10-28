@@ -982,7 +982,7 @@
   "offset": "$toast_offset",
   "anchor_from": "$toast_anchor_from",
   "anchor_to": "$toast_anchor_to",
-  "size": [ "100% - 210px", 36 ],
+  "size": [ "100% - 210px", 30 ],
   "$alpha_anims|default": [],
   "$offset_anims|default": [
     "@toast_screen.popup_anim"
@@ -1003,7 +1003,7 @@
         "size": [ "100%", "100%" ],
         "anchor_from": "top_left",
         "anchor_to": "top_left",
-        "offset": [ 6.5, 6.5 ],
+        "offset": [ 5, 5 ],
         "layer": 1,
         "controls": [
           {
@@ -1054,7 +1054,7 @@
           {
             "text_padding": {
               "type": "panel",
-              "size": [ 6.5, "100%" ],
+              "size": [ 5, "100%" ],
               "bindings": [
                 {
                   "binding_name": "#text_padding_visible",
@@ -1105,13 +1105,7 @@
                     "anchor_to": "top_left",
                     "size": [ "100%", "fill" ]
                   }
-                },
-				{
-					"end_progress_padding": {
-						"type": "panel",
-						"size": [ "100%", 5 ]
-					}
-				}
+                }
               ]
             }
           },
@@ -1201,7 +1195,7 @@
   "offset": "$toast_offset",
   "anchor_from": "$toast_anchor_from",
   "anchor_to": "$toast_anchor_to",
-  "size": [ "100% - 210px", 36 ],
+  "size": [ "100% - 210px", 30 ],
   "$alpha_anims|default": [],
   "$offset_anims|default": [
     "@toast_screen.popup_anim"
@@ -1222,7 +1216,7 @@
         "size": [ "100%", "100%" ],
         "anchor_from": "top_left",
         "anchor_to": "top_left",
-        "offset": [ 6.5, 6.5 ],
+        "offset": [ 5, 5 ],
         "layer": 1,
         "controls": [
           {
@@ -1248,7 +1242,7 @@
           {
             "text_padding": {
               "type": "panel",
-              "size": [ 6.5, "100%" ]
+              "size": [ 5, "100%" ]
             }
           },
           {
@@ -1291,7 +1285,7 @@
                 {
                   "end_padding": {
                     "type": "panel",
-                    "size": [ "100%", 15 ]
+                    "size": [ "100%", 5 ]
                   }
                 }
               ]

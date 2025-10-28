@@ -152,8 +152,7 @@
       "type": "array"
     },
     "cooldown_seconds": {
-      "default": 5,
-      "description": "Time (in seconds) that the goal is on cooldown before it can be used again.",
+      "description": "Time (in seconds) that the goal is on cooldown before it can be used again. Default value: 5.",
       "type": "number"
     },
     "filters": {

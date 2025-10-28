@@ -2,38 +2,9 @@
   "$id": "471923105",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
-    "1567399336": {
-      "description": "Sets the color and optional tint of the block when rendered to a map.",
-      "properties": {
-        "color": {
-          "$ref": "#/definitions/3915697282",
-          "description": "Sets the color of the block when rendered to a map. The color is represented as a hex value in the format \"#RRGGBB\". May also be expressed as an array of [R, G, B] from 0 to 255."
-        },
-        "tint_method": {
-          "description": "Sets the tint method of the block when rendered to a map. Tint method logic varies, but often refers to the \"rain\" and \"temperature\" of the biome the block is placed in to compute the tint. Supported tint methods are \"none\", \"default_foliage\", \"birch_foliage\", \"evergreen_foliage\", \"dry_foliage\", \"grass\" and \"water\"",
-          "enum": [
-            "none",
-            "default_foliage",
-            "birch_foliage",
-            "evergreen_foliage",
-            "dry_foliage",
-            "grass",
-            "water"
-          ],
-          "title": "Tint Method",
-          "type": "string"
-        }
-      },
-      "required": [
-        "color"
-      ],
-      "title": "Map Color",
-      "type": "object"
-    },
     "2155690250": {
-      "description": "The amount that light will be dampened when it passes through the block. Higher value means the light will be dampened more.",
+      "description": "The amount that light will be dampened when it passes through the block, in a range (0-15). Higher value means the light will be dampened more.",
       "maximum": 15,
-      "minimum": 0,
       "title": "Light Dampening",
       "type": "integer"
     },
@@ -53,176 +24,25 @@
       "title": "Display Name",
       "type": "string"
     },
-    "3527967830": {
-      "description": "Sets the particles that will be used when block is destroyed. This component can be omitted.",
-      "properties": {
-        "particle_count": {
-          "description": "Sets number of particles to spawn on block destruction. Default is 100.",
-          "maximum": 255,
-          "minimum": 0,
-          "type": "integer"
-        },
-        "texture": {
-          "description": "The texture name used for the particle.",
-          "type": "string"
-        },
-        "tint_method": {
-          "description": "Sets the tint method of the particle. Tint method logic varies, but often refers to the \"rain\" and \"temperature\" of the biome the block is placed in to compute the tint. Supported tint methods are \"none\", \"default_foliage\", \"birch_foliage\", \"evergreen_foliage\", \"dry_foliage\", \"grass\" and \"water\"",
-          "enum": [
-            "none",
-            "default_foliage",
-            "birch_foliage",
-            "evergreen_foliage",
-            "dry_foliage",
-            "grass",
-            "water"
-          ],
-          "title": "Tint Method",
-          "type": "string"
-        }
-      },
-      "title": "Destruction Particles",
-      "type": "object"
-    },
     "3655705218": {
-      "description": "The amount of light this block will emit. Higher value means more light will be emitted.",
+      "description": "The amount of light this block will emit in a range (0-15). Higher value means more light will be emitted.",
       "maximum": 15,
-      "minimum": 0,
       "title": "Light Emission",
       "type": "integer"
-    },
-    "3673881199": {
-      "title": "Reference",
-      "type": "string"
-    },
-    "3915697282": {
-      "$metaProperties": {
-        "CEREAL_EDITOR_SCHEMA_TAG": "type:color"
-      },
-      "oneOf": [
-        {
-          "pattern": "^#[a-fA-F0-9]{6}$",
-          "type": "string"
-        },
-        {
-          "items": {
-            "type": "integer"
-          },
-          "maxItems": 3,
-          "minItems": 3,
-          "type": "array"
-        }
-      ],
-      "title": "Color255RGB"
-    },
-    "800260518": {
-      "additionalProperties": {
-        "oneOf": [
-          {
-            "type": "string"
-          },
-          {
-            "$ref": "#/definitions/840481292",
-            "description": "A material instance definition to map to a material instance in a geometry file. The material instance \"*\" will be used for any materials that don't have a match."
-          }
-        ]
-      },
-      "description": "The material instances for a block.\nMaps face or material_instance names in a geometry file to an actual material instance. Material instance can either be a full material instance or a name to another already defined instance.\nLimited to 64 instances.",
-      "maxProperties": 64,
-      "propertyNames": {
-        "pattern": "^[a-zA-Z0-9_.:*]+$",
-        "type": "string"
-      },
-      "title": "Material Instances Component",
-      "type": "object"
-    },
-    "840481292": {
-      "description": "A material instance definition to map to a material instance in a geometry file. The material instance \"*\" will be used for any materials that don't have a match.",
-      "properties": {
-        "alpha_masked_tint": {
-          "description": "Is the tint multiplied by the alpha channel of the texture (similar to grass_block's sides). Requires a \"tint_method\" other than \"none\" and a \"render_method\" set to \"opaque\"",
-          "type": "boolean"
-        },
-        "ambient_occlusion": {
-          "description": "Should this material have ambient occlusion applied when lighting? If true, shadows will be created around and underneath the block. Optionally can be constructed with float to control exponent applied to ao value after lighting.",
-          "maximum": 10,
-          "minimum": 0,
-          "type": "number"
-        },
-        "emissive": {
-          "description": "Should this material be rendered as emissive",
-          "type": "boolean"
-        },
-        "face_dimming": {
-          "description": "Is this material dimmed by the direction it's facing",
-          "type": "boolean"
-        },
-        "isotropic": {
-          "description": "Is the faces that this material is applied to randomize their UVs",
-          "type": "boolean"
-        },
-        "render_method": {
-          "description": "The render method to use. Each material of the block must use the same. The render method can be one of these options:\n\"opaque\" - Used for a regular block texture without an alpha layer. Does not allow for transparency or translucency.\n\"double_sided\" - Used for completely disabling backface culling.\n\"blend\" - Used for a block like stained glass. Allows for transparency and translucency (slightly transparent textures).\n\"alpha_test\" - Used for a block like the vanilla (unstained) glass. Does not allow for translucency, only fully opaque or fully transparent textures. Also disables backface culling.\n\"alpha_test_single_side\" - Same as \"alpha_test\" but with backface culling.\n\"blend_to_opaque\" - Same as \"blend\" but turn opaque in the distance.\n\"alpha_test_to_opaque\" - Same as \"alpha_test\" but turn opaque in the distance instead of disappearing.\n\"alpha_test_single_side_to_opaque\" - Same as \"alpha_test_single_side\" but turn opaque in the distance instead of disappearing.",
-          "enum": [
-            "double_sided",
-            "blend",
-            "blend_to_opaque",
-            "opaque",
-            "alpha_test_to_opaque",
-            "alpha_test",
-            "alpha_test_single_side",
-            "alpha_test_single_side_to_opaque"
-          ],
-          "title": "Block Render Layer",
-          "type": "string"
-        },
-        "texture": {
-          "$ref": "#/definitions/3673881199",
-          "description": "Texture name for the material."
-        },
-        "tint_method": {
-          "description": "Tint multiplied to the color. Tint method logic varies, but often refers to the \"rain\" and \"temperature\" of the biome the block is placed in to compute the tint. Supported tint methods are \"none\", \"default_foliage\", \"birch_foliage\", \"evergreen_foliage\", \"dry_foliage\", \"grass\" and \"water\"",
-          "enum": [
-            "none",
-            "default_foliage",
-            "birch_foliage",
-            "evergreen_foliage",
-            "dry_foliage",
-            "grass",
-            "water"
-          ],
-          "title": "Tint Method",
-          "type": "string"
-        }
-      },
-      "title": "Material Instance",
-      "type": "object"
     }
   },
   "properties": {
-    "minecraft:destruction_particles": {
-      "$ref": "#/definitions/3527967830",
-      "description": "Sets the particles that will be used when block is destroyed. This component can be omitted."
-    },
     "minecraft:display_name": {
       "$ref": "#/definitions/2879220220",
       "description": "Specifies the language file key that maps to what text will be displayed when you hover over the block in your inventory and hotbar. If the string given can not be resolved as a loc string, the raw string given will be displayed. If this component is omitted, the name of the block will be used as the display name."
     },
     "minecraft:light_dampening": {
       "$ref": "#/definitions/2155690250",
-      "description": "The amount that light will be dampened when it passes through the block. Higher value means the light will be dampened more."
+      "description": "The amount that light will be dampened when it passes through the block, in a range (0-15). Higher value means the light will be dampened more."
     },
     "minecraft:light_emission": {
       "$ref": "#/definitions/3655705218",
-      "description": "The amount of light this block will emit. Higher value means more light will be emitted."
-    },
-    "minecraft:map_color": {
-      "$ref": "#/definitions/1567399336",
-      "description": "Sets the color and optional tint of the block when rendered to a map."
-    },
-    "minecraft:material_instances": {
-      "$ref": "#/definitions/800260518",
-      "description": "The material instances for a block.\nMaps face or material_instance names in a geometry file to an actual material instance. Material instance can either be a full material instance or a name to another already defined instance.\nLimited to 64 instances."
+      "description": "The amount of light this block will emit in a range (0-15). Higher value means more light will be emitted."
     },
     "minecraft:tags": {
       "$ref": "#/definitions/2735968029",

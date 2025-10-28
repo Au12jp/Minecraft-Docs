@@ -19,8 +19,7 @@
         "slot.armor.head",
         "slot.armor.chest",
         "slot.armor.legs",
-        "slot.armor.feet",
-        "slot.armor.body"
+        "slot.armor.feet"
       ],
       "title": "EquipmentSlot",
       "type": "string"

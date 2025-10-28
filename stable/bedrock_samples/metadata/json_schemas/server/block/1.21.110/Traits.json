@@ -50,7 +50,6 @@
       "type": "object"
     }
   },
-  "description": "Change the placement position and direction behavior of a block",
   "properties": {
     "minecraft:placement_direction": {
       "$ref": "#/definitions/2208326140",

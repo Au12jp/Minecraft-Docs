@@ -1,5 +1,5 @@
 {
-  "format_version": "1.21.130",
+  "format_version": "1.21.90",
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:husk",
@@ -13,8 +13,7 @@
         "minecraft:environment_sensor": {
           "triggers": {
             "filters": {
-              "test": "is_underwater",
-              "subject": "self"
+              "test": "is_underwater", "subject": "self", "operator": "==", "value": true
             },
             "event": "minecraft:start_transforming"
           }
@@ -24,9 +23,7 @@
         "minecraft:environment_sensor": {
           "triggers": {
             "filters": {
-              "test": "is_underwater",
-              "subject": "self",
-              "value": false
+              "test": "is_underwater", "subject": "self", "operator": "==", "value": false
             },
             "event": "minecraft:stop_transforming"
           }
@@ -39,6 +36,7 @@
           }
         }
       },
+
       "minecraft:convert_to_zombie": {
         "minecraft:transformation": {
           "into": "minecraft:zombie<minecraft:as_adult>",
@@ -51,6 +49,7 @@
         "minecraft:is_shaking": {
         }
       },
+
       "minecraft:convert_to_baby_zombie": {
         "minecraft:transformation": {
           "into": "minecraft:zombie<minecraft:as_baby>",
@@ -63,6 +62,7 @@
         "minecraft:is_shaking": {
         }
       },
+
       "minecraft:zombie_husk_baby": {
         "minecraft:experience_reward": {
           "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
@@ -75,6 +75,7 @@
           "value": 0.35
         }
       },
+
       "minecraft:zombie_husk_adult": {
         "minecraft:experience_reward": {
           "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
@@ -99,6 +100,7 @@
           "track_target": true
         }
       },
+
       "minecraft:zombie_husk_jockey": {
         "minecraft:behavior.find_mount": {
           "priority": 1,
@@ -132,6 +134,8 @@
       },
       "minecraft:nameable": {
       },
+
+      // Zombie_husk Components
       "minecraft:type_family": {
         "family": [ "husk", "zombie", "undead", "monster", "mob" ]
       },
@@ -141,6 +145,7 @@
       "minecraft:equipment": {
         "table": "loot_tables/entities/zombie_equipment.json"
       },
+
       "minecraft:health": {
         "value": 20,
         "max": 20
@@ -149,7 +154,10 @@
         "damage_conditions": [
           {
             "filters": {
-              "test": "in_lava"
+              "test": "in_lava",
+              "subject": "self",
+              "operator": "==",
+              "value": true
             },
             "cause": "lava",
             "damage_per_tick": 4
@@ -173,6 +181,7 @@
         "avoid_portals": false
       },
       "minecraft:movement.basic": {
+
       },
       "minecraft:jump.static": {
       },
@@ -219,48 +228,6 @@
           },
           {
             "item": "minecraft:wooden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-          },
-          {
-            "item": "minecraft:netherite_spear",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-          },
-          {
-            "item": "minecraft:diamond_spear",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-          },
-          {
-            "item": "minecraft:iron_spear",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-          },
-          {
-            "item": "minecraft:golden_spear",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-          },
-          {
-            "item": "minecraft:copper_spear",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-          },
-          {
-            "item": "minecraft:stone_spear",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-          },
-          {
-            "item": "minecraft:wooden_spear",
             "want_amount": 1,
             "surplus_amount": 1,
             "priority": 6
@@ -463,7 +430,10 @@
         "triggers": [
           {
             "filters": {
-              "test": "is_underwater"
+              "test": "is_underwater",
+              "subject": "self",
+              "operator": "==",
+              "value": true
             },
             "event": "minecraft:start_transforming"
           }
@@ -472,30 +442,16 @@
       "minecraft:despawn": {
         "despawn_from_distance": {}
       },
+      // Zombie_husk Behaviors
       "minecraft:behavior.equip_item": {
         "priority": 2
       },
-      "minecraft:behavior.use_kinetic_weapon": {
-        "priority": 3,
-        "track_target": true,
-        "approach_distance": 10.0,
-        "reposition_distance": {
-          "min": 6.0,
-          "max": 7.0
-        },
-        "cooldown_distance": {
-          "min": 9.0,
-          "max": 11.0
-        },
-        "weapon_reach_multiplier": 0.5,
-        "weapon_min_speed_multiplier": 0.2
-      },
       "minecraft:behavior.melee_box_attack": {
         "can_spread_on_fire": true,
-        "priority": 4
+        "priority": 3
       },
       "minecraft:behavior.stomp_turtle_egg": {
-        "priority": 5,
+        "priority": 4,
         "speed_multiplier": 1,
         "search_range": 10,
         "search_height": 2,
@@ -532,7 +488,7 @@
             "filters": {
               "test": "is_family",
               "subject": "other",
-              "operator": "not",
+              "operator": "!=",
               "value": "breeze"
             }
           }
@@ -595,7 +551,8 @@
                 {
                   "test": "in_water",
                   "subject": "other",
-                  "value": false
+                  "operator": "!=",
+                  "value": true
                 }
               ]
             },
@@ -693,7 +650,7 @@
           {
             "filters": {
               "test": "has_component",
-              "operator": "not",
+              "operator": "!=",
               "value": "minecraft:is_baby"
             },
             "add": {

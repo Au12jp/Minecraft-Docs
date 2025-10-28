@@ -4,8 +4,7 @@
   "description": "Modifies use behavior, including how long the item takes to use and the player's movement speed.",
   "properties": {
     "emit_vibrations": {
-      "default": true,
-      "description": "Whether vibrations are emitted when the item starts or stops being used.",
+      "description": "Whether vibrations are emitted when the item starts or stops being used. Default value: true.",
       "type": "boolean"
     },
     "movement_modifier": {
@@ -15,8 +14,7 @@
       "type": "number"
     },
     "use_duration": {
-      "default": 0,
-      "description": "Time, in seconds, that the item takes to use.",
+      "description": "Time, in seconds, that the item takes to use. Default value: 0.",
       "minimum": 0,
       "type": "number"
     }

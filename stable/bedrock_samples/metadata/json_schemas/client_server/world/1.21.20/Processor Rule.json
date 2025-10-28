@@ -27,7 +27,6 @@
       "type": "object"
     },
     "1135547207": {
-      "maxLength": 256,
       "title": "File Reference",
       "type": "string"
     },

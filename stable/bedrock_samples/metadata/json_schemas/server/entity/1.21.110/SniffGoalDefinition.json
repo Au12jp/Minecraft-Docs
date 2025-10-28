@@ -31,15 +31,10 @@
     },
     "cooldown_range": {
       "$ref": "#/definitions/1057349585",
-      "default": {
-        "max": 10,
-        "min": 3
-      },
-      "description": "Cooldown range between sniffs in seconds"
+      "description": "Cooldown range between sniffs in seconds Default value: [3.0, 10.0]."
     },
     "duration": {
-      "default": 1,
-      "description": "Sniffing duration in seconds",
+      "description": "Sniffing duration in seconds Default value: 1.",
       "type": "number"
     },
     "priority": {
@@ -47,18 +42,15 @@
       "type": "integer"
     },
     "sniffing_radius": {
-      "default": 5,
-      "description": "Mob detection radius",
+      "description": "Mob detection radius Default value: 5.",
       "type": "number"
     },
     "suspicion_radius_horizontal": {
-      "default": 3,
-      "description": "Mob suspicion horizontal radius. When a player is within this radius horizontally, the anger level towards that player is increased",
+      "description": "Mob suspicion horizontal radius. When a player is within this radius horizontally, the anger level towards that player is increased Default value: 3.",
       "type": "number"
     },
     "suspicion_radius_vertical": {
-      "default": 3,
-      "description": "Mob suspicion vertical radius. When a player is within this radius vertically, the anger level towards that player is increased",
+      "description": "Mob suspicion vertical radius. When a player is within this radius vertically, the anger level towards that player is increased Default value: 3.",
       "minimum": 1,
       "type": "number"
     }

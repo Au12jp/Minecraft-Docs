@@ -1,12 +1,11 @@
 {
-  "format_version": "1.21.130",
+  "format_version": "1.21.90",
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:zombie_pigman",
       "is_spawnable": true,
       "is_summonable": true
     },
-
     "component_groups": {
       "minecraft:pig_zombie_baby": {
         "minecraft:experience_reward": {
@@ -18,6 +17,7 @@
           "value": 0.5
         }
       },
+
       "minecraft:pig_zombie_adult": {
         "minecraft:rideable": {
           "seat_count": 1,
@@ -152,48 +152,6 @@
           },
           {
             "item": "minecraft:wooden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-          },
-          {
-            "item": "minecraft:netherite_spear",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-          },
-          {
-            "item": "minecraft:diamond_spear",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-          },
-          {
-            "item": "minecraft:iron_spear",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-          },
-          {
-            "item": "minecraft:golden_spear",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-          },
-          {
-            "item": "minecraft:copper_spear",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-          },
-          {
-            "item": "minecraft:stone_spear",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-          },
-          {
-            "item": "minecraft:wooden_spear",
             "want_amount": 1,
             "surplus_amount": 1,
             "priority": 6
@@ -404,29 +362,12 @@
       "minecraft:behavior.equip_item": {
         "priority": 3
       },
-      "minecraft:behavior.use_kinetic_weapon": {
-        "priority": 4,
-        "track_target": true,
-        "approach_distance": 10.0,
-        "reposition_distance": {
-          "min": 6.0,
-          "max": 7.0
-        },
-        "cooldown_distance": {
-          "min": 9.0,
-          "max": 11.0
-        },
-        "weapon_reach_multiplier": 0.5,
-        "weapon_min_speed_multiplier": 0.2,
-        "speed_multiplier": 1.5,
-        "cooldown_speed_multiplier": 1.5
-      },
       "minecraft:behavior.melee_box_attack": {
-        "priority": 5,
+        "priority": 4,
         "speed_multiplier": 1.5
       },
       "minecraft:behavior.stomp_turtle_egg": {
-        "priority": 6,
+        "priority": 5,
         "speed_multiplier": 1,
         "search_range": 10,
         "search_height": 2,
@@ -434,7 +375,7 @@
         "interval": 20
       },
       "minecraft:behavior.pickup_items": {
-        "priority": 7,
+        "priority": 6,
         "max_dist": 3,
         "goal_radius": 2,
         "speed_multiplier": 1.0,
@@ -442,16 +383,16 @@
         "can_pickup_any_item": true
       },
       "minecraft:behavior.random_stroll": {
-        "priority": 8,
+        "priority": 7,
         "speed_multiplier": 1.0
       },
       "minecraft:behavior.look_at_player": {
-        "priority": 9,
+        "priority": 8,
         "look_distance": 6.0,
         "probability": 0.02
       },
       "minecraft:behavior.random_look_around": {
-        "priority": 10
+        "priority": 9
       },
       "minecraft:physics": {
       },
@@ -462,6 +403,7 @@
       "minecraft:conditional_bandwidth_optimization": {
       }
     },
+
 
     "events": {
       "minecraft:entity_transformed": {

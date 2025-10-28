@@ -313,8 +313,7 @@
             "$ref": "#/definitions/716969038",
             "description": "Represents the replacement information used to determine the placement of the overriding biome."
           },
-          "type": "array",
-          "x-runtime-constraint-description": "Check that there is at least one value in the array, that there are no duplicates, and that dimension is for all \"minecraft:overworld\""
+          "type": "array"
         }
       },
       "required": [
