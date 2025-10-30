@@ -1197,7 +1197,9 @@
               "minecraft:creaking_spawn_egg",
               "minecraft:happy_ghast_spawn_egg",
               "minecraft:nautilus_spawn_egg",
-              "minecraft:zombie_nautilus_spawn_egg"
+              "minecraft:zombie_nautilus_spawn_egg",
+              "minecraft:parched_spawn_egg",
+              "minecraft:camel_husk_spawn_egg"
             ]
           },
           {
