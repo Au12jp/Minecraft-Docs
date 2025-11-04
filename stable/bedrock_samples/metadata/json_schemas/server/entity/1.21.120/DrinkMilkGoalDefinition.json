@@ -140,6 +140,8 @@
   "description": "Allows the mob to drink milk based on specified environment conditions.",
   "properties": {
     "control_flags": {
+      "default": [
+      ],
       "items": {
         "enum": [
           "move",
@@ -152,14 +154,26 @@
       "type": "array"
     },
     "cooldown_seconds": {
-      "description": "Time (in seconds) that the goal is on cooldown before it can be used again. Default value: 5.",
+      "default": 5,
+      "description": "Time (in seconds) that the goal is on cooldown before it can be used again.",
       "type": "number"
     },
     "filters": {
       "$ref": "#/definitions/1088251937",
+      "default": {
+        "AND": null,
+        "NOT": null,
+        "OR": null,
+        "all": null,
+        "all_of": null,
+        "any": null,
+        "any_of": null,
+        "none_of": null
+      },
       "description": "Conditions that need to be met for the behavior to start."
     },
     "priority": {
+      "default": 0,
       "minimum": 0,
       "type": "integer"
     }

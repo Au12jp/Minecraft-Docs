@@ -26,6 +26,7 @@
           ]
         },
         "grass_is_shaded": {
+          "default": false,
           "description": "Adds a shading effect to the grass as if there was a roof.",
           "type": "boolean"
         }
@@ -52,11 +53,15 @@
       "title": "Grass Color Map",
       "type": "object"
     },
+    "2493785116": {
+      "title": "Reference",
+      "type": "string"
+    },
     "2503601769": {
       "description": "Set the identifier used for rendering water in Vibrant Visuals mode. Identifiers must resolve to identifiers in valid Water JSON schemas under the \"water\" directory. Biomes without this component will have default water settings.",
       "properties": {
         "water_identifier": {
-          "$ref": "#/definitions/2527487449",
+          "$ref": "#/definitions/2493785116",
           "description": "Identifier of water definition to use"
         }
       },
@@ -65,10 +70,6 @@
       ],
       "title": "minecraft:water_identifier",
       "type": "object"
-    },
-    "2527487449": {
-      "title": "Reference",
-      "type": "string"
     },
     "2571640896": {
       "description": "Set the identifier used for lighting in Vibrant Visuals mode. Identifiers must resolve to identifiers in valid Lighting JSON schemas under the \"lighting\" directory. Biomes without this component will have default lighting settings.",
@@ -219,6 +220,7 @@
           "description": "Music to be played when inside this biome. If left off or not found the default music will be determined by the dimension. Empty string will result in no music."
         },
         "underwater_music": {
+          "default": false,
           "description": "Enables underwater music",
           "type": "boolean"
         },
@@ -264,26 +266,38 @@
       "properties": {
         "addition": {
           "$ref": "#/definitions/2772549390",
+          "default": {
+            "asset": "",
+            "chance": 1
+          },
           "description": "Named sound that occasionally plays at the listener position"
         },
         "loop": {
           "$ref": "#/definitions/379658027",
+          "default": "",
           "description": "Named sound that loops while the listener position is inside the biome"
         },
         "mood": {
           "$ref": "#/definitions/379658027",
+          "default": "",
           "description": "Named sound that rarely plays at a nearby air block position when the light level is low. Biomes without an ambient mood sound will use the 'ambient.cave' sound."
         },
         "underwater_addition": {
           "$ref": "#/definitions/2772549390",
+          "default": {
+            "asset": "",
+            "chance": 1
+          },
           "description": "Named sound that occasionally plays at the listener position when underwater"
         },
         "underwater_loop": {
           "$ref": "#/definitions/379658027",
+          "default": "",
           "description": "Named sound that loops while the listener position is inside the biome and underwater"
         },
         "underwater_mood": {
           "$ref": "#/definitions/379658027",
+          "default": "",
           "description": "Named sound that rarely plays at a nearby water block position when the light level is low. Biomes without an underwater ambient mood sound will use the 'ambient.underwater.loop' sound."
         }
       },
@@ -390,7 +404,8 @@
     },
     "minecraft:water_appearance": {
       "$ref": "#/definitions/4061100221",
-      "description": "Set the water surface color used during rendering. Biomes without this component will have default water surface color behavior."
+      "description": "Set the water surface color used during rendering. Biomes without this component will have default water surface color behavior.",
+      "x-runtime-constraint-description": "Make sure that at least either the surface color or the opacity is specified"
     },
     "minecraft:water_identifier": {
       "$ref": "#/definitions/2503601769",

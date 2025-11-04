@@ -4,6 +4,8 @@
   "description": "Allows the entity to continuously jump around like a slime.",
   "properties": {
     "control_flags": {
+      "default": [
+      ],
       "items": {
         "enum": [
           "move",
@@ -16,11 +18,13 @@
       "type": "array"
     },
     "priority": {
+      "default": 0,
       "minimum": 0,
       "type": "integer"
     },
     "speed_multiplier": {
-      "description": "Determines the multiplier this entity's speed is modified by when jumping around. Default value: 1.",
+      "default": 1,
+      "description": "Determines the multiplier this entity's speed is modified by when jumping around.",
       "type": "number"
     }
   },
