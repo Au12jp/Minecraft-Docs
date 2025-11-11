@@ -172,6 +172,25 @@
                     "Title": "disconnectionScreen.disconnected",
                     "Body": "disconnectionScreen.connectionLost"
                 }
+            },
+            {
+                "FailReason": "HostSignedOut",
+                "OverrideStrings": {
+                    "Title": "disconnectionScreen.disconnected",
+                    "Body": "disconnectionScreen.body.hostSignedOut"
+                }
+            },
+            {
+                "FailReason": "ScriptWatchdogException",
+                "OverrideStrings": {
+                    "Body": "disconnect.scriptWatchdog"
+                }
+            },
+            {
+                "FailReason": "ScriptMemoryLimitExceeded",
+                "OverrideStrings": {
+                    "Body": "disconnect.scriptWatchdogOutOfMemory"
+                }
             }
         ]
     },
@@ -230,7 +249,10 @@
                 }
             },
             {
-                "FailReason": "InvalidPlayer"
+                "FailReason": "InvalidPlayer",
+                "OverrideStrings": {
+                    "Body": "disconnectionScreen.invalidPlayer"
+                }
             },
             {
                 "FailReason": "LoggedInOtherLocation",
@@ -284,10 +306,28 @@
         },
         "Errors": [
             {
-                "FailReason": "EditorMismatchEditorWorld"
+                "FailReason": "EditorMismatchEditorWorld",
+                "OverrideStrings": {
+                    "Body": "disconnectionScreen.editor.mismatchEditorWorld"
+                }
             },
             {
-                "FailReason": "EditorMismatchVanillaWorld"
+                "FailReason": "EditorMismatchVanillaWorld",
+                "OverrideStrings": {
+                    "Body": "disconnectionScreen.editor.mismatchVanillaWorld"
+                }
+            },
+            {
+                "FailReason": "EditorMismatchEditorToVanilla",
+                "OverrideStrings": {
+                    "Body": "disconnectionScreen.editor.mismatchEditorToVanilla"
+                }
+            },
+            {
+                "FailReason": "EditorMismatchVanillaToEditor",
+                "OverrideStrings": {
+                    "Body": "disconnectionScreen.editor.mismatchVanillaToEditor"
+                }
             }
         ]
     },
@@ -303,7 +343,8 @@
             {
                 "FailReason": "InvalidTenant",
                 "OverrideStrings": {
-                    "Title": "disconnectionScreen.title.invalidTenantId"
+                    "Title": "disconnectionScreen.title.invalidTenantId",
+                    "Body": "disconnectionScreen.invalidTenant"
                 }
             },
             {
@@ -340,7 +381,10 @@
                 "FailReason": "ClientGameSetupCancelled"
             },
             {
-                "FailReason": "ClientGameSetupFailed"
+                "FailReason": "ClientGameSetupFailed",
+                "OverrideStrings": {
+                    "Title": "disconnectionScreen.cantConnect"
+                }
             },
             {
                 "FailReason": "InvalidLevel",
@@ -422,7 +466,10 @@
                 "FailReason": "RealmsServerDisabled"
             },
             {
-                "FailReason": "RealmsTimelineRequired"
+                "FailReason": "RealmsTimelineRequired",
+                "OverrideStrings": {
+                    "Title": "disconnectionScreen.cantConnectToRealm"
+                }
             }
         ]
     },
@@ -578,6 +625,13 @@
             {
                 "FailReason": "NotAllowed",
                 "OverrideStrings": {
+                    "Body": "disconnectionScreen.notAllowed"
+                }
+            },
+            {
+                "FailReason": "DenyListed",
+                "OverrideStrings": {
+                    "Title": "disconnectionScreen.title.bannedByHost",
                     "Body": "disconnectionScreen.body.needsHostUnblock"
                 }
             }
@@ -702,6 +756,31 @@
                     "Title": "disconnectionScreen.title.outOfStorage",
                     "Body": "disconnectionScreen.body.checkDeviceStorage"
                 }
+            },
+            {
+                "FailReason": "WorldCorruption",
+                "OverrideStrings": {
+                    "Title": "disconnectionScreen.worldCorruption",
+                    "Body": "disconnectionScreen.worldCorruption.message"
+                }
+            },
+            {
+                "FailReason": "StorageFullDuringGameplay",
+                "OverrideStrings": {
+                    "Body": "storageSpaceWarningScreen.fullduringgameplay"
+                }
+            },
+            {
+                "FailReason": "StorageLowDuringGameplay",
+                "OverrideStrings": {
+                    "Body": "storageSpaceWarningScreen.lowduringgameplay"
+                }
+            },
+            {
+                "FailReason": "LevelStorageCorruption",
+                "OverrideStrings": {
+                    "Body": "progressScreen.dialog.message.worldCorrupted"
+                }
             }
         ]
     },
@@ -746,6 +825,20 @@
                 "OverrideStrings": {
                     "Title": "disconnectionScreen.title.incompatibleWorld",
                     "Body": "disconnectionScreen.editionMismatch"
+                }
+            },
+            {
+                "FailReason": "EditionMismatchVanillaToEdu",
+                "OverrideStrings": {
+                    "Title": "disconnectionScreen.title.incompatibleWorld",
+                    "Body": "disconnectionScreen.editionMismatchVanillaToEdu"
+                }
+            },
+            {
+                "FailReason": "EditionMismatchEduToVanilla",
+                "OverrideStrings": {
+                    "Title": "disconnectionScreen.title.incompatibleWorld",
+                    "Body": "disconnectionScreen.editionMismatchEduToVanilla"
                 }
             },
             {
