@@ -1,0 +1,19 @@
+{
+  "$id": "4201740570",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Specifies the vertical anchor",
+  "properties": {
+    "absolute": {
+      "description": "Offset from anchored vertical position",
+      "maximum": 32767,
+      "minimum": -32768,
+      "type": "integer"
+    }
+  },
+  "required": [
+    "absolute"
+  ],
+  "title": "AnchorAbsolute",
+  "type": "object",
+  "x-format-version": "1.21.20"
+}

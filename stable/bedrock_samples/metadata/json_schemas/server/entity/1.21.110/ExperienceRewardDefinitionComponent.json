@@ -1,0 +1,83 @@
+{
+  "$id": "957886722",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "2267778531": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "properties": {
+            "expression": {
+              "type": "string"
+            },
+            "version": {
+              "maximum": 32767,
+              "minimum": -32768,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "expression",
+            "version"
+          ],
+          "type": "object"
+        }
+      ],
+      "title": "Molang string"
+    },
+    "3178719147": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/2267778531"
+        },
+        {
+          "maximum": 3.4028234663852886e+38,
+          "minimum": 1.1754943508222875e-38,
+          "type": "number"
+        }
+      ],
+      "title": "Molang expression"
+    }
+  },
+  "properties": {
+    "on_bred": {
+      "$ref": "#/definitions/3178719147",
+      "default": {
+        "expression": "",
+        "version": -1
+      },
+      "description": "A Molang expression defining the amount of experience rewarded when this entity is successfully bred."
+    },
+    "on_bred_array": {
+      "default": [
+      ],
+      "deprecated": true,
+      "items": {
+        "$ref": "#/definitions/3178719147"
+      },
+      "type": "array"
+    },
+    "on_death": {
+      "$ref": "#/definitions/3178719147",
+      "default": {
+        "expression": "",
+        "version": -1
+      },
+      "description": "A Molang expression defining the amount of experience rewarded when this entity dies."
+    },
+    "on_death_array": {
+      "default": [
+      ],
+      "deprecated": true,
+      "items": {
+        "$ref": "#/definitions/3178719147"
+      },
+      "type": "array"
+    }
+  },
+  "title": "minecraft:experience_reward",
+  "type": "object",
+  "x-format-version": "1.21.110"
+}

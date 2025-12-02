@@ -1,0 +1,8 @@
+[
+    {
+        "FailReason": "MultiplayerDisabled",
+        "OverrideStrings": {
+            "Title": "disconnectionScreen.noReason"
+        }
+    }
+]
