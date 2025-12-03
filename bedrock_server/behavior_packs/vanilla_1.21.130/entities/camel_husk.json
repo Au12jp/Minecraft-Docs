@@ -432,6 +432,12 @@
                         "minecraft:camel_husk_with_hostile_rider"
                     ]
                 },
+                "remove": {
+                    "component_groups": [
+                        "minecraft:camel_husk_with_no_rider",
+                        "minecraft:camel_husk_with_no_hostile_rider"
+                    ]
+                },
                 "set_property": {
                     "minecraft:has_rider_mounted": true
                 }

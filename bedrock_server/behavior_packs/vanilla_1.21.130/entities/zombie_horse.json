@@ -481,7 +481,8 @@
         },
         "remove": {
           "component_groups": [
-            "minecraft:horse_baby"
+            "minecraft:horse_baby",
+            "minecraft:horse_can_be_leashed"
           ]
         }
       },
