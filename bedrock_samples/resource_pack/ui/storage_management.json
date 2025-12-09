@@ -107,6 +107,12 @@
                       "$button_text": "$clear_screenshots_cache_button_text"
                     }
                   }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#screenshots_showcase_enabled",
+                    "binding_name_override": "#visible"
+                  }
                 ]
               }
             },

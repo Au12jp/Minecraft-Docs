@@ -90,11 +90,13 @@
     "1491617288": {
       "properties": {
         "distance": {
+          "maximum": 4294967295,
           "minimum": 0,
           "type": "integer"
         },
         "village_border_tolerance": {
           "default": 10,
+          "maximum": 4294967295,
           "minimum": 0,
           "type": "integer"
         }
@@ -122,6 +124,8 @@
         "event_skip_count": {
           "default": 0,
           "description": "Number of the herd to skip before running the event",
+          "maximum": 2147483647,
+          "minimum": -2147483648,
           "type": "integer"
         },
         "initial_event": {
@@ -132,17 +136,21 @@
         "initial_event_count": {
           "default": 0,
           "description": "Number of times that the initial event will run",
+          "maximum": 2147483647,
+          "minimum": -2147483648,
           "type": "integer"
         },
         "max_size": {
           "default": 1,
           "description": "Maximum number in this group to attempt to spawn",
+          "maximum": 2147483647,
           "minimum": 0,
           "type": "integer"
         },
         "min_size": {
           "default": 1,
           "description": "Minimum number in this group to attempt to spawn",
+          "maximum": 2147483647,
           "minimum": 0,
           "type": "integer"
         }
@@ -191,10 +199,14 @@
       "properties": {
         "max": {
           "default": 128,
+          "maximum": 2147483647,
+          "minimum": -2147483648,
           "type": "integer"
         },
         "min": {
           "default": 24,
+          "maximum": 2147483647,
+          "minimum": -2147483648,
           "type": "integer"
         }
       },
@@ -211,11 +223,13 @@
         "min_guaranteed": {
           "default": 0,
           "description": "The minimum number of this permutation to spawn",
+          "maximum": 2147483647,
           "minimum": 0,
           "type": "integer"
         },
         "weight": {
           "description": "The ratio of all of the entities that are in the permutation",
+          "maximum": 2147483647,
           "minimum": 0,
           "type": "integer"
         }
@@ -248,6 +262,8 @@
         },
         "distance": {
           "default": 1,
+          "maximum": 2147483647,
+          "minimum": -2147483648,
           "type": "integer"
         }
       },
@@ -319,11 +335,13 @@
       "properties": {
         "surface": {
           "default": -1,
+          "maximum": 2147483647,
           "minimum": -1,
           "type": "integer"
         },
         "underground": {
           "default": -1,
+          "maximum": 2147483647,
           "minimum": -1,
           "type": "integer"
         }
@@ -340,9 +358,13 @@
               "type": "boolean"
             },
             {
+              "maximum": 2147483647,
+              "minimum": -2147483648,
               "type": "integer"
             },
             {
+              "maximum": 3.4028234663852886e+38,
+              "minimum": 1.1754943508222875e-38,
               "type": "number"
             },
             {
@@ -357,9 +379,13 @@
               "type": "boolean"
             },
             {
+              "maximum": 2147483647,
+              "minimum": -2147483648,
               "type": "integer"
             },
             {
+              "maximum": 3.4028234663852886e+38,
+              "minimum": 1.1754943508222875e-38,
               "type": "number"
             },
             {
@@ -374,9 +400,13 @@
               "type": "boolean"
             },
             {
+              "maximum": 2147483647,
+              "minimum": -2147483648,
               "type": "integer"
             },
             {
+              "maximum": 3.4028234663852886e+38,
+              "minimum": 1.1754943508222875e-38,
               "type": "number"
             },
             {
@@ -395,9 +425,13 @@
               "type": "boolean"
             },
             {
+              "maximum": 2147483647,
+              "minimum": -2147483648,
               "type": "integer"
             },
             {
+              "maximum": 3.4028234663852886e+38,
+              "minimum": 1.1754943508222875e-38,
               "type": "number"
             },
             {
@@ -415,6 +449,8 @@
     "517105782": {
       "oneOf": [
         {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
           "type": "integer"
         },
         {
@@ -429,11 +465,13 @@
     "517650772": {
       "properties": {
         "default": {
+          "maximum": 2147483647,
           "minimum": 0,
           "type": "integer"
         },
         "rarity": {
           "default": 0,
+          "maximum": 2147483647,
           "minimum": 0,
           "type": "integer"
         }
@@ -448,10 +486,14 @@
       "properties": {
         "max": {
           "default": 128,
+          "maximum": 2147483647,
+          "minimum": -2147483648,
           "type": "integer"
         },
         "min": {
           "default": 24,
+          "maximum": 2147483647,
+          "minimum": -2147483648,
           "type": "integer"
         }
       },
@@ -466,14 +508,20 @@
         },
         "max": {
           "default": 0,
+          "maximum": 2147483647,
+          "minimum": -2147483648,
           "type": "integer"
         },
         "min": {
           "default": 0,
+          "maximum": 2147483647,
+          "minimum": -2147483648,
           "type": "integer"
         },
         "spawn_chance": {
           "default": 100,
+          "maximum": 2147483647,
+          "minimum": -2147483648,
           "type": "integer"
         }
       },
@@ -629,11 +677,13 @@
       "properties": {
         "max": {
           "default": -1,
+          "maximum": 18446744073709552000,
           "minimum": 0,
           "type": "integer"
         },
         "min": {
           "default": 0,
+          "maximum": 18446744073709552000,
           "minimum": 0,
           "type": "integer"
         }

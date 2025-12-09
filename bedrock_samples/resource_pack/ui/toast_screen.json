@@ -1133,7 +1133,6 @@
           },
           {
             "popup_decline_button@common_buttons.no_background_content_button": {
-              "$focus_enabled": false,
               "$button_size_override": [ 75, 22 ],
               "$button_image_size_override": [ "100%c", 22 ],
               "$button_content_size_override": [ 75, 22 ],
@@ -1153,6 +1152,16 @@
                   "from_button_id": "button.menu_select",
                   "to_button_id": "$pressed_button_name",
                   "mapping_type": "pressed"
+                },
+                {
+                  "from_button_id": "button.menu_ok",
+                  "to_button_id": "$pressed_button_name",
+                  "mapping_type": "focused"
+                },
+                {
+                  "from_button_id": "button.toast_decline",
+                  "to_button_id": "$pressed_button_name",
+                  "mapping_type": "global"
                 }
               ],
               "variables": [
@@ -1306,7 +1315,6 @@
           },
           {
             "party_invite_button@common_buttons.no_background_content_button": {
-              "$focus_enabled": false,
               "$button_size_override": [ 75, 22 ],
               "$button_image_size_override": [ "100%c", 22 ],
               "$button_content_size_override": [ 75, 22 ],
@@ -1326,6 +1334,16 @@
                   "from_button_id": "button.menu_select",
                   "to_button_id": "$pressed_button_name",
                   "mapping_type": "pressed"
+                },
+                {
+                  "from_button_id": "button.menu_ok",
+                  "to_button_id": "$pressed_button_name",
+                  "mapping_type": "focused"
+                },
+                {
+                  "from_button_id": "button.toast_decline",
+                  "to_button_id": "$pressed_button_name",
+                  "mapping_type": "global"
                 }
               ],
               "variables": [

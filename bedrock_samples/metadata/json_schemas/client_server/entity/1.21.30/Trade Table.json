@@ -80,6 +80,7 @@
     "2298823339": {
       "oneOf": [
         {
+          "maximum": 4294967295,
           "minimum": 1,
           "type": "integer"
         },
@@ -87,11 +88,13 @@
           "properties": {
             "max": {
               "default": 1,
+              "maximum": 4294967295,
               "minimum": 1,
               "type": "integer"
             },
             "min": {
               "default": 1,
+              "maximum": 4294967295,
               "minimum": 1,
               "type": "integer"
             }
@@ -105,6 +108,7 @@
       "properties": {
         "num_to_select": {
           "default": 0,
+          "maximum": 2147483647,
           "minimum": 0,
           "type": "integer"
         },
@@ -122,6 +126,9 @@
       "title": "TradeGroup",
       "type": "object"
     },
+    "315535208": {
+      "title": "Blob JSON object"
+    },
     "3470474886": {
       "title": "Reference",
       "type": "string"
@@ -137,6 +144,8 @@
         },
         "max_uses": {
           "default": 7,
+          "maximum": 2147483647,
+          "minimum": -2147483648,
           "type": "integer"
         },
         "reward_exp": {
@@ -145,6 +154,7 @@
         },
         "trader_exp": {
           "default": 1,
+          "maximum": 4294967295,
           "minimum": 0,
           "type": "integer"
         },
@@ -157,6 +167,7 @@
         },
         "weight": {
           "default": 1,
+          "maximum": 2147483647,
           "minimum": 1,
           "type": "integer"
         }
@@ -177,9 +188,13 @@
               "type": "boolean"
             },
             {
+              "maximum": 2147483647,
+              "minimum": -2147483648,
               "type": "integer"
             },
             {
+              "maximum": 3.4028234663852886e+38,
+              "minimum": 1.1754943508222875e-38,
               "type": "number"
             },
             {
@@ -194,9 +209,13 @@
               "type": "boolean"
             },
             {
+              "maximum": 2147483647,
+              "minimum": -2147483648,
               "type": "integer"
             },
             {
+              "maximum": 3.4028234663852886e+38,
+              "minimum": 1.1754943508222875e-38,
               "type": "number"
             },
             {
@@ -211,9 +230,13 @@
               "type": "boolean"
             },
             {
+              "maximum": 2147483647,
+              "minimum": -2147483648,
               "type": "integer"
             },
             {
+              "maximum": 3.4028234663852886e+38,
+              "minimum": 1.1754943508222875e-38,
               "type": "number"
             },
             {
@@ -232,9 +255,13 @@
               "type": "boolean"
             },
             {
+              "maximum": 2147483647,
+              "minimum": -2147483648,
               "type": "integer"
             },
             {
+              "maximum": 3.4028234663852886e+38,
+              "minimum": 1.1754943508222875e-38,
               "type": "number"
             },
             {
@@ -251,6 +278,18 @@
     },
     "56017534": {
       "properties": {
+        "__DEP_fltrs": {
+          "$ref": "#/definitions/315535208",
+          "default": {
+          },
+          "deprecated": true
+        },
+        "__DEP_fnctns": {
+          "$ref": "#/definitions/315535208",
+          "default": {
+          },
+          "deprecated": true
+        },
         "filters": {
           "$ref": "#/definitions/1088251937",
           "default": {
@@ -276,6 +315,8 @@
         },
         "price_multiplier": {
           "default": 0,
+          "maximum": 3.4028234663852886e+38,
+          "minimum": 1.1754943508222875e-38,
           "type": "number"
         },
         "quantity": {
@@ -302,6 +343,7 @@
           "type": "array"
         },
         "total_exp_required": {
+          "maximum": 4294967295,
           "minimum": 0,
           "type": "integer"
         }

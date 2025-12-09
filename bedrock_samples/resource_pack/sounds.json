@@ -4802,17 +4802,15 @@
          "nautilus" : {
             "__molang_version" : 13,
             "events" : {
-               "ambient" : "mob.nautilus.ambient",
-               "ambient.in.water" : "mob.nautilus.ambient.in.water",
+               "ambient.in.water" : "mob.nautilus.ambient",
                "armor.unequip_generic" : "mob.nautilus.armor_unequip",
                "dash_ready" : "mob.nautilus.dash_ready",
                "death" : "mob.nautilus.death",
-               "death.in.water" : "mob.nautilus.death.in.water",
+               "death.in.water" : "mob.nautilus.death",
                "eat" : "mob.nautilus.eat",
                "hurt" : "mob.nautilus.hurt",
-               "hurt.in.water" : "mob.nautilus.hurt.in.water",
+               "hurt.in.water" : "mob.nautilus.hurt",
                "saddle" : "mob.nautilus.nautilus_saddle",
-               "swim" : "mob.nautilus.swim",
                "unsaddle" : "mob.unsaddle"
             },
             "pitch" : 1.0,
@@ -4821,29 +4819,25 @@
                "map" : {
                   "adult" : {
                      "events" : {
-                        "ambient" : "mob.nautilus.ambient",
-                        "ambient.in.water" : "mob.nautilus.ambient.in.water",
+                        "ambient.in.water" : "mob.nautilus.ambient",
                         "dash_ready" : "mob.nautilus.dash_ready",
                         "death" : "mob.nautilus.death",
-                        "death.in.water" : "mob.nautilus.death.in.water",
+                        "death.in.water" : "mob.nautilus.death",
                         "eat" : "mob.nautilus.eat",
                         "hurt" : "mob.nautilus.hurt",
-                        "hurt.in.water" : "mob.nautilus.hurt.in.water",
-                        "swim" : "mob.nautilus.swim"
+                        "hurt.in.water" : "mob.nautilus.hurt"
                      },
                      "pitch" : 1.0,
                      "volume" : 3.0
                   },
                   "baby" : {
                      "events" : {
-                        "ambient" : "mob.baby_nautilus.ambient",
-                        "ambient.in.water" : "mob.baby_nautilus.ambient.in.water",
+                        "ambient.in.water" : "mob.baby_nautilus.ambient",
                         "death" : "mob.baby_nautilus.death",
-                        "death.in.water" : "mob.baby_nautilus.death.in.water",
+                        "death.in.water" : "mob.baby_nautilus.death",
                         "eat" : "mob.nautilus.eat",
                         "hurt" : "mob.baby_nautilus.hurt",
-                        "hurt.in.water" : "mob.baby_nautilus.hurt.in.water",
-                        "swim" : "mob.nautilus.swim"
+                        "hurt.in.water" : "mob.baby_nautilus.hurt"
                      },
                      "pitch" : 1.0,
                      "volume" : 3.0
@@ -6186,17 +6180,15 @@
          },
          "zombie_nautilus" : {
             "events" : {
-               "ambient" : "mob.zombie_nautilus.ambient",
-               "ambient.in.water" : "mob.zombie_nautilus.ambient.in.water",
+               "ambient.in.water" : "mob.zombie_nautilus.ambient",
                "armor.unequip_generic" : "mob.nautilus.armor_unequip",
                "dash_ready" : "mob.zombie_nautilus.dash_ready",
                "death" : "mob.zombie_nautilus.death",
-               "death.in.water" : "mob.zombie_nautilus.death.in.water",
+               "death.in.water" : "mob.zombie_nautilus.death",
                "eat" : "mob.zombie_nautilus.eat",
                "hurt" : "mob.zombie_nautilus.hurt",
-               "hurt.in.water" : "mob.zombie_nautilus.hurt.in.water",
+               "hurt.in.water" : "mob.zombie_nautilus.hurt",
                "saddle" : "mob.nautilus.nautilus_saddle",
-               "swim" : "mob.zombie_nautilus.swim",
                "unsaddle" : "mob.unsaddle"
             },
             "pitch" : 1.0,

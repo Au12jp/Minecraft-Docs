@@ -1,13 +1,11 @@
 {
-  "format_version": "1.26.0",
+  "format_version": "1.21.130",
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:nautilus",
-      "spawn_category": "water_creature",
       "is_spawnable": true,
       "is_summonable": true
     },
-
     "components": {
       "minecraft:breathable": {
         "total_supply": 15,
@@ -99,7 +97,6 @@
         "success_rate": 0.1
       }
     },
-
     "component_groups": {
       "minecraft:nautilus_baby": {
         "minecraft:collision_box": {
@@ -223,8 +220,8 @@
           "within_radius": 25.0,
           "must_see_forget_duration": 17.0,
           "attack_interval": {
-            "min": 120.0,
-            "max": 180.0
+            "range_min": 120.0,
+            "range_max": 180.0
           },
           "target_acquisition_probability": 0.5,
           "entity_types": [
@@ -503,6 +500,7 @@
             {
               "filters": {
                 "test": "in_water",
+                "operator": "==",
                 "value": false
               },
               "event": "minecraft:on_saddled_out_of_water"
@@ -524,7 +522,9 @@
           "triggers": [
             {
               "filters": {
-                "test": "in_water"
+                "test": "in_water",
+                "operator": "==",
+                "value": true
               },
               "event": "minecraft:on_saddled_in_water"
             }
@@ -540,6 +540,26 @@
         },
         "minecraft:behavior.player_ride_tamed": {
           "priority": 0
+        },
+        "minecraft:environment_sensor": {
+          "triggers": [
+            {
+              "filters": {
+                "test": "in_water",
+                "operator": "==",
+                "value": true
+              },
+              "event": "minecraft:on_saddled_in_water"
+            },
+            {
+              "filters": {
+                "test": "in_water",
+                "operator": "==",
+                "value": false
+              },
+              "event": "minecraft:on_saddled_out_of_water"
+            }
+          ]
         }
       },
       "minecraft:nautilus_tame_unsaddled": {
@@ -594,7 +614,6 @@
         }
       }
     },
-
     "events": {
       "minecraft:entity_spawned": {
         "randomize": [
@@ -616,18 +635,6 @@
           "component_groups": [
             "minecraft:nautilus_adult",
             "minecraft:nautilus_wild_adult_calm",
-            "minecraft:nautilus_ai_controlled",
-            "minecraft:nautilus_leashable"
-          ]
-        }
-      },
-      "minecraft:spawn_tame_adult": {
-        "add": {
-          "component_groups": [
-            "minecraft:nautilus_adult",
-            "minecraft:nautilus_tame",
-            "minecraft:nautilus_tame_adult",
-            "minecraft:nautilus_tame_unsaddled",
             "minecraft:nautilus_ai_controlled",
             "minecraft:nautilus_leashable"
           ]
@@ -709,12 +716,13 @@
               "component_groups": [
                 "minecraft:nautilus_tame_saddled"
               ]
-            },
-            "set_home_position": {}
+            }
           },
           {
             "filters": {
-              "test": "in_water"
+              "test": "in_water",
+              "operator": "==",
+              "value": true
             },
             "trigger": "minecraft:on_saddled_in_water"
           },
@@ -724,6 +732,9 @@
               "value": false
             },
             "trigger": "minecraft:on_saddled_out_of_water"
+          },
+          {
+            "set_home_position": {}
           }
         ]
       },
@@ -737,7 +748,8 @@
           "component_groups": [
             "minecraft:nautilus_tame_saddled_in_water"
           ]
-        }
+        },
+        "set_home_position": {}
       },
       "minecraft:on_saddled_out_of_water": {
         "remove": {
