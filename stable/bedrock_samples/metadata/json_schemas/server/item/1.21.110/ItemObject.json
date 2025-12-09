@@ -6,10 +6,14 @@
       "properties": {
         "max": {
           "default": 0,
+          "maximum": 3.4028234663852886e+38,
+          "minimum": 1.1754943508222875e-38,
           "type": "number"
         },
         "min": {
           "default": 0,
+          "maximum": 3.4028234663852886e+38,
+          "minimum": 1.1754943508222875e-38,
           "type": "number"
         }
       },
@@ -26,6 +30,7 @@
         },
         "value": {
           "description": "Specifies the value of the enchantment (minimum of 0).",
+          "maximum": 32767,
           "minimum": 0,
           "type": "integer"
         }
@@ -51,16 +56,22 @@
         "damage_modifier": {
           "default": 0,
           "description": "Value added to the the scaled dot product (after applying \"damage_multiplier\").",
+          "maximum": 3.4028234663852886e+38,
+          "minimum": 1.1754943508222875e-38,
           "type": "number"
         },
         "damage_multiplier": {
           "default": 1,
           "description": "Value multiplied to sum of the dot products of the user and target's velocity vectors projected onto the view vector.",
+          "maximum": 3.4028234663852886e+38,
+          "minimum": 1.1754943508222875e-38,
           "type": "number"
         },
         "delay": {
           "default": 0,
           "description": "Time, in ticks, after which kinetic damage and its effects start being applied.",
+          "maximum": 32767,
+          "minimum": -32768,
           "type": "integer"
         },
         "dismount_conditions": {
@@ -70,6 +81,8 @@
         "hitbox_margin": {
           "default": 0,
           "description": "Added tolerance to the view vector raycast for detecting entity collisions.",
+          "maximum": 3.4028234663852886e+38,
+          "minimum": 1.1754943508222875e-38,
           "type": "number"
         },
         "knockback_conditions": {
@@ -146,10 +159,14 @@
       "properties": {
         "max": {
           "default": 0,
+          "maximum": 2147483647,
+          "minimum": -2147483648,
           "type": "integer"
         },
         "min": {
           "default": 0,
+          "maximum": 2147483647,
+          "minimum": -2147483648,
           "type": "integer"
         }
       },
@@ -255,6 +272,7 @@
           "default": 64,
           "description": "The maximum allowed weight of the sum of all contained items. Maximum is 64. Default is 64.",
           "maximum": 64,
+          "minimum": -2147483648,
           "type": "integer"
         }
       },
@@ -288,6 +306,8 @@
         },
         "speed": {
           "description": "Digging speed for the correlating block(s).",
+          "maximum": 2147483647,
+          "minimum": -2147483648,
           "type": "integer"
         }
       },
@@ -327,6 +347,8 @@
         "hitbox_margin": {
           "default": 0,
           "description": "Added tolerance to the view vector raycast for detecting entity collisions.",
+          "maximum": 3.4028234663852886e+38,
+          "minimum": 1.1754943508222875e-38,
           "type": "number"
         },
         "reach": {
@@ -370,6 +392,8 @@
               "type": "string"
             },
             "version": {
+              "maximum": 32767,
+              "minimum": -32768,
               "type": "integer"
             }
           },
@@ -2097,11 +2121,14 @@
         "nutrition": {
           "default": 0,
           "description": "Value that is added to the entity's nutrition when the item is used. Default is set to 0.",
+          "maximum": 2147483647,
+          "minimum": -2147483648,
           "type": "integer"
         },
         "saturation_modifier": {
           "default": 0.6000000238418579,
           "description": "saturation_modifier is used in this formula: (nutrition * saturation_modifier * 2) when applying the saturation buff. Default is set to 0.6.",
+          "maximum": 3.4028234663852886e+38,
           "minimum": 0,
           "type": "number"
         },
@@ -2223,17 +2250,21 @@
         "max_duration": {
           "default": -1,
           "description": "Time, in ticks, during which the effect can be applied after \"delay\" elapses. If negative, the effect is applied indefinitely.",
+          "maximum": 32767,
+          "minimum": -32768,
           "type": "integer"
         },
         "min_relative_speed": {
           "default": 0,
           "description": "Minimum relative speed of the user with respect to the target (projected onto the view vector via a dot product) required for the effect to be applied.",
+          "maximum": 3.4028234663852886e+38,
           "minimum": 0,
           "type": "number"
         },
         "min_speed": {
           "default": 0,
           "description": "Minimum user's speed (projected onto the view vector via a dot product) required for the effect to be applied.",
+          "maximum": 3.4028234663852886e+38,
           "minimum": 0,
           "type": "number"
         }
@@ -2247,11 +2278,15 @@
         "comparator_signal": {
           "default": 1,
           "description": "Specifies signal strength for comparator blocks to use, from 1 - 13.",
+          "maximum": 2147483647,
+          "minimum": -2147483648,
           "type": "integer"
         },
         "duration": {
           "default": 0,
           "description": "Specifies duration of sound event in seconds, float value.",
+          "maximum": 3.4028234663852886e+38,
+          "minimum": 1.1754943508222875e-38,
           "type": "number"
         },
         "sound_event": {
@@ -2856,6 +2891,7 @@
         "value": {
           "default": 0.30000001192092896,
           "description": "Duration, in seconds, of the item's swing animation played when mining or attacking. Affects visuals only and does not impact attack frequency or other gameplay mechanics.",
+          "maximum": 3.4028234663852886e+38,
           "minimum": 0,
           "type": "number"
         }
@@ -2867,6 +2903,7 @@
       "description": "The damage component determines how much extra damage the item does on attack.",
       "oneOf": [
         {
+          "maximum": 32767,
           "minimum": 0,
           "type": "integer"
         },
@@ -2875,6 +2912,7 @@
             "value": {
               "default": 0,
               "description": "Specifies how much extra damage the item does, must be a positive number.",
+              "maximum": 32767,
               "minimum": 0,
               "type": "integer"
             }
@@ -2909,6 +2947,8 @@
           "$ref": "#/definitions/2267778531"
         },
         {
+          "maximum": 3.4028234663852886e+38,
+          "minimum": 1.1754943508222875e-38,
           "type": "number"
         }
       ],
@@ -2997,6 +3037,7 @@
       "description": "Fuel item component allows this item to be used as fuel in a furnace to 'cook' other items.",
       "oneOf": [
         {
+          "maximum": 3.4028234663852886e+38,
           "minimum": 0.05000000074505806,
           "type": "number"
         },
@@ -3005,6 +3046,7 @@
             "duration": {
               "default": 0.05000000074505806,
               "description": "Amount of time, in seconds, this fuel will cook items.",
+              "maximum": 3.4028234663852886e+38,
               "minimum": 0.05000000074505806,
               "type": "number"
             }
@@ -3059,6 +3101,7 @@
           "default": 64,
           "description": "The maximum allowed weight of the sum of all contained items. Maximum is 64. Default is 64.",
           "maximum": 64,
+          "minimum": -2147483648,
           "type": "integer"
         }
       },
@@ -3079,6 +3122,7 @@
         },
         "max_durability": {
           "description": "Max durability is the amount of damage that this item can take before breaking. This is a required parameter and has a minimum of 0.",
+          "maximum": 2147483647,
           "minimum": 0,
           "type": "integer"
         }
@@ -3104,6 +3148,7 @@
         "protection": {
           "default": 0,
           "description": "How much protection the wearable item provides. Default is set to 0.",
+          "maximum": 2147483647,
           "minimum": 0,
           "type": "integer"
         },
@@ -3167,6 +3212,11 @@
         "minecraft:cooldown": {
           "$ref": "#/definitions/886176099",
           "description": "Adds a cooldown to the item so that, after performing an action of the specified \"type\", all items with a \"minecraft:cooldown\" component in the same \"category\" become unable to perform that same type of action for the number of seconds defined in \"duration\"."
+        },
+        "minecraft:custom_components": {
+          "$ref": "#/definitions/4150838471",
+          "deprecated": true,
+          "description": "Specifies an array of custom components defined in a script that should be added to this item."
         },
         "minecraft:damage": {
           "$ref": "#/definitions/3173009623",
@@ -3338,21 +3388,29 @@
         "launch_power_scale": {
           "default": 1,
           "description": "The scale at which the power of the throw increases. Default is set to 1.0.",
+          "maximum": 3.4028234663852886e+38,
+          "minimum": 1.1754943508222875e-38,
           "type": "number"
         },
         "max_draw_duration": {
           "default": 0,
           "description": "The maximum duration to draw a throwable item. Default is set to 0.0.",
+          "maximum": 3.4028234663852886e+38,
+          "minimum": 1.1754943508222875e-38,
           "type": "number"
         },
         "max_launch_power": {
           "default": 1,
           "description": "The maximum power to launch the throwable item. Default is set to 1.0.",
+          "maximum": 3.4028234663852886e+38,
+          "minimum": 1.1754943508222875e-38,
           "type": "number"
         },
         "min_draw_duration": {
           "default": 0,
           "description": "The minimum duration to draw a throwable item. Default is set to 0.0.",
+          "maximum": 3.4028234663852886e+38,
+          "minimum": 1.1754943508222875e-38,
           "type": "number"
         },
         "scale_power_by_draw_duration": {
@@ -3384,6 +3442,8 @@
         "max_draw_duration": {
           "default": 0,
           "description": "Draw Duration. Default is set to 0.",
+          "maximum": 3.4028234663852886e+38,
+          "minimum": 1.1754943508222875e-38,
           "type": "number"
         },
         "scale_power_by_draw_duration": {
@@ -3425,6 +3485,8 @@
         },
         {
           "items": {
+            "maximum": 2147483647,
+            "minimum": -2147483648,
             "type": "integer"
           },
           "maxItems": 3,
@@ -3464,6 +3526,16 @@
       },
       "title": "menu_category",
       "type": "object"
+    },
+    "4150838471": {
+      "description": "Specifies an array of custom components defined in a script that should be added to this item.",
+      "items": {
+        "pattern": "^(?:(?!^(minecraft):).)+:(?:.)+$",
+        "type": "string",
+        "x-regex-flags": "ECMAScript,icase"
+      },
+      "title": "minecraft:custom_components",
+      "type": "array"
     },
     "435751873": {
       "description": "Modifies use behavior, including how long the item takes to use and the player's movement speed.",
@@ -4022,6 +4094,7 @@
         "use_duration": {
           "default": 0,
           "description": "Time, in seconds, that the item takes to use.",
+          "maximum": 3.4028234663852886e+38,
           "minimum": 0,
           "type": "number"
         }
@@ -4032,6 +4105,8 @@
     "517105782": {
       "oneOf": [
         {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
           "type": "integer"
         },
         {
@@ -4049,6 +4124,8 @@
         "minimum_critical_power": {
           "default": 0,
           "description": "Specifies how long a player must charge a projectile for it to critically hit.",
+          "maximum": 3.4028234663852886e+38,
+          "minimum": 1.1754943508222875e-38,
           "type": "number"
         },
         "projectile_entity": {
@@ -4070,6 +4147,8 @@
         "durability": {
           "default": 0,
           "description": "The effects are emitted when the item durability value is less than or equal to this value.",
+          "maximum": 2147483647,
+          "minimum": -2147483648,
           "type": "integer"
         },
         "particle_type": {
@@ -4722,6 +4801,7 @@
         "weight_in_storage_item": {
           "default": 4,
           "description": "The weight of this item when inside another Storage Item. Default is 4. 0 means item is not allowed in another Storage Item.",
+          "maximum": 2147483647,
           "minimum": 0,
           "type": "integer"
         }
@@ -4798,6 +4878,8 @@
         },
         "duration": {
           "description": "Duration of the cooldown, in seconds, before the item can perform an action of the specified \"type\" again.",
+          "maximum": 3.4028234663852886e+38,
+          "minimum": 1.1754943508222875e-38,
           "type": "number"
         },
         "type": {

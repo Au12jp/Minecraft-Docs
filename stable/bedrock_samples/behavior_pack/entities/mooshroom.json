@@ -103,7 +103,6 @@
                 "table": "loot_tables/gameplay/entities/mooshroom_milking.json"
               },
               "use_item": true,
-              "swing": true,
               "play_sounds": "milk_suspiciously",
               "interact_text": "action.interact.moostew"
             },
@@ -121,7 +120,6 @@
                 "target": "self"
               },
               "use_item": true,
-              "swing": true,
               "play_sounds": "eat",
               "particle_on_start": { "particle_type": "smoke", "particle_y_offset": 0.25, "particle_offset_towards_interactor": true },
               "interact_text": "action.interact.feed"
@@ -140,7 +138,6 @@
                 "target": "self"
               },
               "use_item": true,
-              "swing": true,
               "play_sounds": "eat",
               "particle_on_start": { "particle_type": "smoke", "particle_y_offset": 0.25, "particle_offset_towards_interactor": true },
               "interact_text": "action.interact.feed"
@@ -159,7 +156,6 @@
                 "target": "self"
               },
               "use_item": true,
-              "swing": true,
               "play_sounds": "eat",
               "particle_on_start": { "particle_type": "smoke", "particle_y_offset": 0.25, "particle_offset_towards_interactor": true },
               "interact_text": "action.interact.feed"
@@ -178,7 +174,6 @@
                 "target": "self"
               },
               "use_item": true,
-              "swing": true,
               "play_sounds": "eat",
               "particle_on_start": { "particle_type": "smoke", "particle_y_offset": 0.25, "particle_offset_towards_interactor": true },
               "interact_text": "action.interact.feed"
@@ -197,7 +192,6 @@
                 "target": "self"
               },
               "use_item": true,
-              "swing": true,
               "play_sounds": "eat",
               "particle_on_start": { "particle_type": "smoke", "particle_y_offset": 0.25, "particle_offset_towards_interactor": true },
               "interact_text": "action.interact.feed"
@@ -216,7 +210,6 @@
                 "target": "self"
               },
               "use_item": true,
-              "swing": true,
               "play_sounds": "eat",
               "particle_on_start": { "particle_type": "smoke", "particle_y_offset": 0.25, "particle_offset_towards_interactor": true },
               "interact_text": "action.interact.feed"
@@ -235,7 +228,6 @@
                 "target": "self"
               },
               "use_item": true,
-              "swing": true,
               "play_sounds": "eat",
               "particle_on_start": { "particle_type": "smoke", "particle_y_offset": 0.25, "particle_offset_towards_interactor": true },
               "interact_text": "action.interact.feed"
@@ -254,7 +246,6 @@
                 "target": "self"
               },
               "use_item": true,
-              "swing": true,
               "play_sounds": "eat",
               "particle_on_start": { "particle_type": "smoke", "particle_y_offset": 0.25, "particle_offset_towards_interactor": true },
               "interact_text": "action.interact.feed"
@@ -278,7 +269,6 @@
                 "target": "self"
               },
               "use_item": true,
-              "swing": true,
               "play_sounds": "eat",
               "particle_on_start": { "particle_type": "smoke", "particle_y_offset": 0.25, "particle_offset_towards_interactor": true },
               "interact_text": "action.interact.feed"
@@ -297,7 +287,6 @@
                 "target": "self"
               },
               "use_item": true,
-              "swing": true,
               "play_sounds": "eat",
               "particle_on_start": { "particle_type": "smoke", "particle_y_offset": 0.25, "particle_offset_towards_interactor": true },
               "interact_text": "action.interact.feed"
@@ -316,7 +305,6 @@
                 "target": "self"
               },
               "use_item": true,
-              "swing": true,
               "play_sounds": "eat",
               "particle_on_start": { "particle_type": "smoke", "particle_y_offset": 0.25, "particle_offset_towards_interactor": true },
               "interact_text": "action.interact.feed"
@@ -335,7 +323,6 @@
                 "target": "self"
               },
               "use_item": true,
-              "swing": true,
               "play_sounds": "eat",
               "particle_on_start": { "particle_type": "smoke", "particle_y_offset": 0.25, "particle_offset_towards_interactor": true },
               "interact_text": "action.interact.feed"
@@ -354,7 +341,6 @@
                 "target": "self"
               },
               "use_item": true,
-              "swing": true,
               "play_sounds": "eat",
               "particle_on_start": { "particle_type": "smoke", "particle_y_offset": 0.25, "particle_offset_towards_interactor": true },
               "interact_text": "action.interact.feed"
@@ -372,7 +358,6 @@
                 "target": "self"
               },
               "use_item": false,
-              "swing": true,
               "hurt_item": 1,
               "play_sounds": "shear",
               "spawn_items": { "table": "loot_tables/entities/mooshroom_shear.json" },
@@ -393,7 +378,6 @@
                 "target": "self"
               },
               "use_item": false,
-              "swing": true,
               "hurt_item": 1,
               "play_sounds": "shear",
               "spawn_items": { "table": "loot_tables/entities/brown_mooshroom_shear.json" },
@@ -411,7 +395,6 @@
                 }
               },
               "use_item": true,
-              "swing": true,
               "transform_to_item": "bucket:1",
               "play_sounds": "milk",
               "interact_text": "action.interact.milk"

@@ -60,6 +60,7 @@
         "controller.render.nautilus_saddle",
         "controller.render.nautilus_armor"
       ],
+      "enable_attachables": true,
       "spawn_egg": {
         "texture": "spawn_egg_zombie_nautilus"
       },

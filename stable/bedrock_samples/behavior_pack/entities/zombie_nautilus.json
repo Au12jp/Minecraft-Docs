@@ -1,9 +1,8 @@
 {
-  "format_version": "1.26.0",
+  "format_version": "1.21.130",
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:zombie_nautilus",
-      "spawn_category": "monster",
       "is_spawnable": true,
       "is_summonable": true,
       "properties": {
@@ -15,7 +14,6 @@
         }
       }
     },
-
     "components": {
       "minecraft:breathable": {
         "total_supply": 15,
@@ -61,7 +59,7 @@
         "is_pushable_by_piston": true
       },
       "minecraft:type_family": {
-        "family":[ "aquatic", "zombie_nautilus", "undead", "monster", "mob" ]
+        "family":[ "aquatic", "zombie_nautilus", "undead", "mob" ]
       },
       "minecraft:knockback_resistance": {
         "value": 0.3
@@ -114,7 +112,6 @@
         "success_rate": 0.1
       }
     },
-
     "component_groups": {
       "minecraft:zombie_nautilus_tameable": {
         "minecraft:behavior.tempt": {
@@ -153,7 +150,7 @@
             "drowned"
           ],
           "seats": {
-            "position": [ 0.0, 0.925, -0.2 ]
+            "position": [ 0.0, 1.0, -0.2 ]
           }
         }
       },
@@ -165,8 +162,8 @@
           "within_radius": 25.0,
           "must_see_forget_duration": 17.0,
           "attack_interval": {
-            "min": 120.0,
-            "max": 180.0
+            "range_min": 120.0,
+            "range_max": 180.0
           },
           "target_acquisition_probability": 0.5,
           "entity_types": [
@@ -526,7 +523,6 @@
         }
       }
     },
-
     "events": {
       "minecraft:entity_spawned": {
         "sequence": [
@@ -578,8 +574,7 @@
               "component_groups": [
                 "minecraft:zombie_nautilus_tame_saddled"
               ]
-            },
-            "set_home_position": {}
+            }
           },
           {
             "filters": {
@@ -593,6 +588,9 @@
               "value": false
             },
             "trigger": "minecraft:on_saddled_out_of_water"
+          },
+          {
+            "set_home_position": {}
           }
         ]
       },
@@ -606,7 +604,8 @@
           "component_groups": [
             "minecraft:zombie_nautilus_tame_saddled_in_water"
           ]
-        }
+        },
+        "set_home_position": {}
       },
       "minecraft:on_saddled_out_of_water": {
         "remove": {
@@ -651,8 +650,7 @@
             "minecraft:zombie_nautilus_wild",
             "minecraft:zombie_nautilus_wild_unmounted",
             "minecraft:zombie_nautilus_wild_calm",
-            "minecraft:zombie_nautilus_tameable",
-            "minecraft:zombie_nautilus_ai_controlled"
+            "minecraft:zombie_nautilus_tameable"
           ]
         },
         "add": {

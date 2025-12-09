@@ -648,7 +648,7 @@
       },
       {
         "from_button_id": "button.controller_select",
-        "to_button_id": "button.coin_wallet",
+        "to_button_id": "button.coin_wallet_no_dressing_room",
         "mapping_type": "global"
       }
     ],

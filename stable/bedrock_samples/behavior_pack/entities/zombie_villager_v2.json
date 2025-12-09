@@ -1,9 +1,8 @@
 {
-  "format_version": "1.26.0",
+  "format_version": "1.21.130",
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:zombie_villager_v2",
-      "spawn_category": "monster",
       "is_spawnable": true,
       "is_summonable": false
     },

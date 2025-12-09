@@ -36,12 +36,18 @@
     "1403051027": {
       "properties": {
         "default": {
+          "maximum": 3.4028234663852886e+38,
+          "minimum": 1.1754943508222875e-38,
           "type": "number"
         },
         "max": {
+          "maximum": 3.4028234663852886e+38,
+          "minimum": 1.1754943508222875e-38,
           "type": "number"
         },
         "min": {
+          "maximum": 3.4028234663852886e+38,
+          "minimum": 1.1754943508222875e-38,
           "type": "number"
         },
         "name": {
@@ -51,6 +57,8 @@
         },
         "step": {
           "exclusiveMinimum": 0,
+          "maximum": 3.4028234663852886e+38,
+          "minimum": 1.1754943508222875e-38,
           "type": "number"
         },
         "text": {
@@ -172,16 +180,19 @@
         },
         "major": {
           "default": 0,
+          "maximum": 65535,
           "minimum": 0,
           "type": "integer"
         },
         "minor": {
           "default": 0,
+          "maximum": 65535,
           "minimum": 0,
           "type": "integer"
         },
         "patch": {
           "default": 0,
+          "maximum": 65535,
           "minimum": 0,
           "type": "integer"
         },

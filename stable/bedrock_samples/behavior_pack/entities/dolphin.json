@@ -1,5 +1,5 @@
 {
-  "format_version": "1.26.0",
+  "format_version": "1.21.90",
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:dolphin",
@@ -14,6 +14,8 @@
         },
         "minecraft:loot": {
           "table": "loot_tables/entities/dolphin.json"
+        },
+        "minecraft:leashable_to": {
         },
         "minecraft:bribeable": {
           "bribe_items": [ "fish", "salmon" ]
@@ -314,13 +316,6 @@
         "is_pushable_by_piston": true
       },
       "minecraft:leashable": {
-        "presets": [
-          {
-            "soft_distance": 4.0,
-            "hard_distance": 6.0,
-            "max_distance": 10.0
-          }
-        ]
       },
       "minecraft:balloonable": {
         "mass": 0.4
@@ -343,17 +338,14 @@
           },
           {
             "weight": 10,
-            "trigger": "minecraft:entity_born"
+            "add": {
+              "component_groups": [
+                "dolphin_baby",
+                "dolphin_swimming_navigation"
+              ]
+            }
           }
         ]
-      },
-      "minecraft:entity_born": {
-        "add": {
-          "component_groups": [
-            "dolphin_baby",
-            "dolphin_swimming_navigation"
-          ]
-        }
       },
       "ageable_grow_up": {
         "remove": {
