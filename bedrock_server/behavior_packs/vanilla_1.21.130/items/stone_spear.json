@@ -95,7 +95,7 @@
                     "min_relative_speed": 4.6
                 },
                 "knockback_conditions": {
-                    "max_duration": 110,
+                    "max_duration": 180,
                     "min_speed": 5.1
                 },
                 "dismount_conditions": {

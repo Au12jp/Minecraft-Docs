@@ -1,5 +1,5 @@
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.0",
     "minecraft:entity": {
         "description": {
             "identifier": "minecraft:camel_husk",
@@ -199,12 +199,6 @@
                             "vibration": "shear"
                         }
                     ]
-                }
-            },
-            "minecraft:camel_husk_with_no_rider": {
-                "minecraft:behavior.panic": {
-                    "priority": 2,
-                    "speed_multiplier": 4
                 }
             },
             "minecraft:camel_husk_standing": {
@@ -420,7 +414,6 @@
                 "add": {
                     "component_groups": [
                         "minecraft:camel_husk_standing",
-                        "minecraft:camel_husk_with_no_rider",
                         "minecraft:camel_husk_with_no_hostile_rider"
                     ]
                 }
@@ -434,7 +427,6 @@
                 },
                 "remove": {
                     "component_groups": [
-                        "minecraft:camel_husk_with_no_rider",
                         "minecraft:camel_husk_with_no_hostile_rider"
                     ]
                 },
@@ -483,7 +475,6 @@
             "minecraft:all_riders_dismounted": {
                 "add": {
                     "component_groups": [
-                        "minecraft:camel_husk_with_no_rider",
                         "minecraft:camel_husk_with_no_hostile_rider"
                     ]
                 },
@@ -497,11 +488,6 @@
                 }
             },
             "minecraft:rider_mounted": {
-                "remove": {
-                    "component_groups": [
-                        "minecraft:camel_husk_with_no_rider"
-                    ]
-                },
                 "set_property": {
                     "minecraft:has_rider_mounted": true
                 }
