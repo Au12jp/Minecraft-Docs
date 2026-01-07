@@ -585,7 +585,7 @@
         }
       },
       "minecraft:nautilus_wild_adult_angry": {
-        "minecraft:angry": {  
+        "minecraft:angry": { 
           "duration": 20,
           "broadcast_anger": false,
           "broadcast_range": 16,
