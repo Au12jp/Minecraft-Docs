@@ -10,8 +10,7 @@
 
     "component_groups": {
       "minecraft:cat_baby": {
-        "minecraft:is_baby": {
-        },
+        "minecraft:is_baby": {},
         "minecraft:ageable": {
           "duration": 1200,
           "feed_items": ["fish", "salmon"],
@@ -36,8 +35,7 @@
         "minecraft:scale": {
           "value": 0.8
         },
-        "minecraft:leashable_to": {
-        },
+        "minecraft:leashable_to": {},
         "minecraft:breedable": {
           "require_tame": true,
           "require_full_health": true,

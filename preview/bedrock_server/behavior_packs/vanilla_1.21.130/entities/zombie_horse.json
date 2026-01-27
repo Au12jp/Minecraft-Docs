@@ -363,38 +363,51 @@
       "minecraft:despawn": {
         "despawn_from_distance": {}
       },
+      // Used exclusively to dismount the passenger.
       "minecraft:behavior.float": {
         "priority": 0,
-        "chance_per_tick_to_float": 1.0,
+        "chance_per_tick_to_float": 0.0,
         "time_under_water_to_dismount_passengers": 2.0
+      },
+      "minecraft:buoyant": {
+        "base_buoyancy": 1.0,
+        "apply_gravity": false,
+        "can_auto_step_from_liquid": true,
+        "movement_type": "bobbing",
+        "liquid_blocks": [
+          "minecraft:water",
+          "minecraft:flowing_water",
+          "minecraft:lava",
+          "minecraft:flowing_lava"
+        ]
       },
       "minecraft:behavior.flee_sun": {
         "priority": 1,
         "speed_multiplier": 1.2
       },
-        "minecraft:behavior.panic": {
-            "priority": 2,
-            "damage_sources": [
-                "campfire",
-                "fire",
-                "freezing",
-                "lava",
-                "lightning",
-                "magma",
-                "soul_campfire",
-                "temperature",
-                "entity_attack",
-                "entity_explosion",
-                "fireworks",
-                "magic",
-                "projectile",
-                "ram_attack",
-                "sonic_boom",
-                "wither",
-                "mace_smash"
-            ],
-            "speed_multiplier": 1.2
-        },
+      "minecraft:behavior.panic": {
+          "priority": 2,
+          "damage_sources": [
+              "campfire",
+              "fire",
+              "freezing",
+              "lava",
+              "lightning",
+              "magma",
+              "soul_campfire",
+              "temperature",
+              "entity_attack",
+              "entity_explosion",
+              "fireworks",
+              "magic",
+              "projectile",
+              "ram_attack",
+              "sonic_boom",
+              "wither",
+              "mace_smash"
+          ],
+          "speed_multiplier": 1.2
+      },
       "minecraft:behavior.tempt": {
         "priority": 3,
         "speed_multiplier": 1.2,
