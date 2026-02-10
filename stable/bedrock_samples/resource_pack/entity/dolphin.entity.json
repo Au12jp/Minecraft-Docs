@@ -7,12 +7,10 @@
         "default": "dolphin"
       },
       "textures": {
-        "default": "textures/entity/dolphin",
-        "baby": "textures/entity/dolphin/dolphin_baby"
+        "default": "textures/entity/dolphin"
       },
       "geometry": {
-        "default": "geometry.dolphin",
-        "baby": "geometry.dolphin.baby"
+        "default": "geometry.dolphin"
       },
       "animations": {
         "move": "animation.dolphin.move",
@@ -27,7 +25,7 @@
         "dolphin_move_particle": "minecraft:dolphin_move_particle"
       },
       "render_controllers": [
-        "controller.render.dolphin.v2"
+        "controller.render.dolphin"
       ],
       "spawn_egg": {
         "texture": "spawn_egg_dolphin"

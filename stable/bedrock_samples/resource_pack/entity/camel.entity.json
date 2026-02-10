@@ -7,12 +7,10 @@
         "default": "camel"
       },
       "textures": {
-        "default": "textures/entity/camel/camel",
-        "baby": "textures/entity/camel/camel_baby"
+        "default": "textures/entity/camel/camel"
       },
       "geometry": {
-        "default": "geometry.camel",
-        "baby": "geometry.camel.baby"
+        "default": "geometry.camel"
       },
       "spawn_egg": {
         "texture": "spawn_egg_camel"
@@ -37,13 +35,7 @@
         "look_at_target": "animation.camel.look_at_target",
         "dashing": "animation.camel.dash",
         "dashing_sound": "animation.camel.dash_sound",
-        "idle": "animation.camel.idle",
-        "baby_moving": "animation.camel.baby_walk",
-        "baby_sit_down": "animation.camel.baby_sit_down",
-        "baby_sitting": "animation.camel.baby_sit",
-        "baby_stand_up": "animation.camel.baby_stand_up",
-        "baby_dashing": "animation.camel.baby_dash",
-        "baby_idle": "animation.camel.baby_idle"
+        "idle": "animation.camel.idle"
       },
       "sound_effects": {
         "sit_down": "mob.camel.sit",
@@ -59,7 +51,7 @@
         }
       ],
       "render_controllers": [
-        "controller.render.camel.v2"
+        "controller.render.camel"
       ]
     }
   }

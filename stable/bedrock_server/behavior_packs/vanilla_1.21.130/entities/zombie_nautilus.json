@@ -14,6 +14,7 @@
         }
       }
     },
+
     "components": {
       "minecraft:breathable": {
         "total_supply": 15,
@@ -112,6 +113,7 @@
         "success_rate": 0.1
       }
     },
+
     "component_groups": {
       "minecraft:zombie_nautilus_tameable": {
         "minecraft:behavior.tempt": {
@@ -150,7 +152,7 @@
             "drowned"
           ],
           "seats": {
-            "position": [ 0.0, 1.0, -0.2 ]
+            "position": [ 0.0, 0.925, -0.2 ]
           }
         }
       },
@@ -523,6 +525,7 @@
         }
       }
     },
+
     "events": {
       "minecraft:entity_spawned": {
         "sequence": [

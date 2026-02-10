@@ -1,7 +1,6 @@
 {
   "result": {
     "pageId": "DressingRoom_PersonaProfile_Offline",
-    "addToRecentlyViewed": false,
     "rows": [
       {
         "controlId": "CharacterSelectorRow",
