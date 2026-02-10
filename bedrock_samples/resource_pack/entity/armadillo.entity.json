@@ -7,15 +7,13 @@
         "default": "armadillo"
       },
       "geometry": {
-        "default": "geometry.armadillo",
-        "baby": "geometry.armadillo.baby"
+        "default": "geometry.armadillo"
       },
       "textures": {
-        "default": "textures/entity/armadillo",
-        "baby": "textures/entity/armadillo/armadillo_baby"
+        "default": "textures/entity/armadillo"
       },
       "render_controllers": [
-        "controller.render.armadillo.v2"
+        "controller.render.armadillo"
       ],
       "scripts": {
         "pre_animation": [
@@ -47,11 +45,7 @@
         "peek": "animation.armadillo.peek",
         "unroll": "animation.armadillo.unroll",
         "unroll_fast": "animation.armadillo.unroll_fast",
-        "roll_up_controller": "controller.animation.armadillo.roll_up",
-        "baby_walk": "animation.armadillo.baby_walk",
-        "baby_roll_up": "animation.armadillo.baby_roll_up",
-        "baby_peek": "animation.armadillo.baby_peek",
-        "baby_unroll": "animation.armadillo.baby_unroll"
+        "roll_up_controller": "controller.animation.armadillo.roll_up"
       },
       "sound_effects": {
         "roll": "mob.armadillo.roll",

@@ -6,13 +6,13 @@
       "is_spawnable": true,
       "is_summonable": true
     },
+
     "components": {
       "minecraft:breathable": {
         "total_supply": 15,
         "suffocate_time": 0,
         "breathes_air": false,
-        "breathes_water": true,
-        "can_dehydrate" : true
+        "breathes_water": true
       },
       "minecraft:experience_reward": {
         "on_death": "query.last_hit_by_player && !query.is_baby ? Math.Random(1,3) : 0",
@@ -97,6 +97,7 @@
         "success_rate": 0.1
       }
     },
+
     "component_groups": {
       "minecraft:nautilus_baby": {
         "minecraft:collision_box": {
@@ -500,7 +501,6 @@
             {
               "filters": {
                 "test": "in_water",
-                "operator": "==",
                 "value": false
               },
               "event": "minecraft:on_saddled_out_of_water"
@@ -522,9 +522,7 @@
           "triggers": [
             {
               "filters": {
-                "test": "in_water",
-                "operator": "==",
-                "value": true
+                "test": "in_water"
               },
               "event": "minecraft:on_saddled_in_water"
             }
@@ -545,16 +543,13 @@
           "triggers": [
             {
               "filters": {
-                "test": "in_water",
-                "operator": "==",
-                "value": true
+                "test": "in_water"
               },
               "event": "minecraft:on_saddled_in_water"
             },
             {
               "filters": {
                 "test": "in_water",
-                "operator": "==",
                 "value": false
               },
               "event": "minecraft:on_saddled_out_of_water"
@@ -590,7 +585,7 @@
         }
       },
       "minecraft:nautilus_wild_adult_angry": {
-        "minecraft:angry": {  
+        "minecraft:angry": { 
           "duration": 20,
           "broadcast_anger": false,
           "broadcast_range": 16,
@@ -614,6 +609,7 @@
         }
       }
     },
+
     "events": {
       "minecraft:entity_spawned": {
         "randomize": [
@@ -636,6 +632,18 @@
             "minecraft:nautilus_adult",
             "minecraft:nautilus_wild_adult_calm",
             "minecraft:nautilus_ai_controlled",
+            "minecraft:nautilus_leashable"
+          ]
+        }
+      },
+      "minecraft:spawn_tame_adult": {
+        "add": {
+          "component_groups": [
+            "minecraft:nautilus_adult",
+            "minecraft:nautilus_tame",
+            "minecraft:nautilus_tame_adult",
+            "minecraft:nautilus_tame_unsaddled",
+            "minecraft:nautilus_unmounted",
             "minecraft:nautilus_leashable"
           ]
         }
@@ -720,9 +728,7 @@
           },
           {
             "filters": {
-              "test": "in_water",
-              "operator": "==",
-              "value": true
+              "test": "in_water"
             },
             "trigger": "minecraft:on_saddled_in_water"
           },

@@ -7,12 +7,10 @@
         "default": "squid"
       },
       "textures": {
-        "default": "textures/entity/squid",
-        "baby": "textures/entity/squid/squid_baby"
+        "default": "textures/entity/squid"
       },
       "geometry": {
-        "default": "geometry.squid",
-        "baby": "geometry.squid.baby"
+        "default": "geometry.squid"
       },
       "animations": {
         "move": "animation.squid.move",
@@ -25,7 +23,7 @@
         ]
       },
       "render_controllers": [
-        "controller.render.squid.v2"
+        "controller.render.squid"
       ],
       "spawn_egg": {
         "texture": "spawn_egg_squid"

@@ -10,12 +10,10 @@
       "textures": {
         "skeleton": "textures/entity/horse2/horse_skeleton",
         "markings_none": "textures/entity/horse2/horse_markings_none",
-        "armor_none": "textures/entity/horse2/armor/horse_armor_none",
-        "baby_skeleton": "textures/entity/horse2/horse_skeleton_baby"
+        "armor_none": "textures/entity/horse2/armor/horse_armor_none"
       },
       "geometry": {
-        "default": "geometry.horse.v3",
-        "baby": "geometry.horse.baby"
+        "default": "geometry.horse.v3"
       },
       "animations": {
         "baby_transform": "animation.horse.v3.baby_transform",
@@ -37,6 +35,9 @@
           "variable.leg_x_rot_anim = variable.leg_stand_factor * 45.8 * query.modified_move_speed;"
         ],
         "animate": [
+          {
+            "baby_transform": "query.is_baby"
+          },
           "walk",
           "look_at_player",
           {
@@ -51,7 +52,7 @@
         ]
       },
       "render_controllers": [
-        "controller.render.skeleton_horse.v4"
+        "controller.render.skeleton_horse.v3"
       ],
       "spawn_egg": {
         "texture": "spawn_egg_skeleton_horse"

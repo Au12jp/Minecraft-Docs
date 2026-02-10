@@ -4372,8 +4372,6 @@
 
     "$scroll_background_image_control|default": "common.scroll_indent_image",
     "$scroll_track_image_control|default": "common.scroll_indent_image",
-    "$force_scroll_to_end_binding_name|default": "",
-    "$force_scroll_to_end_binding_type|default": "none",
 
     "$focus_for_tts_enabled": "#focus_for_tts_enabled_binding",
 
@@ -4393,12 +4391,6 @@
       {
         "binding_name": "(not #is_using_gamepad)",
         "binding_name_override": "#focus_for_tts_enabled_binding"
-      },
-      {
-        "binding_type": "$force_scroll_to_end_binding_type",
-        "binding_name": "$force_scroll_to_end_binding_name",
-        "binding_name_override": "#force_scroll_to_end",
-        "binding_condition": "always_when_visible"
       }
     ],
 
@@ -7050,14 +7042,15 @@
         }
       }
     ],
-    "bindings": [
+    "$static_tooltip_popup_with_image_and_text_bindings|default": [
       {
         "binding_name": "$tooltip_popup_visible_binding",
         "binding_name_override": "#visible",
         "binding_collection_name": "$tooltip_button_collection_name",
         "binding_type": "$tooltip_button_binding_type"
       }
-    ]
+    ],
+    "bindings": "$static_tooltip_popup_with_image_and_text_bindings"
   },
 
   "dynamic_tooltip_popup_with_custom_content@common.tooltip_background": {

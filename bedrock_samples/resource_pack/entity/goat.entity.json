@@ -7,12 +7,10 @@
         "default": "goat"
       },
       "textures": {
-        "default": "textures/entity/goat/goat",
-        "baby": "textures/entity/goat/goat_baby"
+        "default": "textures/entity/goat/goat"
       },
       "geometry": {
-        "default": "geometry.goat",
-        "baby": "geometry.goat.baby"
+        "default": "geometry.goat"
       },
       "spawn_egg": {
         "texture": "spawn_egg_goat"
@@ -40,7 +38,7 @@
         "ram_attack": "animation.goat.ram_attack"
       },
       "render_controllers": [
-        "controller.render.goat.v2"
+        "controller.render.goat"
       ]
     }
   }
