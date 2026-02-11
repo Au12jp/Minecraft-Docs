@@ -23848,7 +23848,7 @@
                 "Allows this entity to celebrate surviving a raid by making celebration sounds and jumping."
               ],
               "header_level": 3,
-              "name": "minecraft:behavior.celebrate (See JSON Schema since 1.26.10)",
+              "name": "minecraft:behavior.celebrate",
               "nodes": [
                 {
                   "description": [
@@ -25169,7 +25169,7 @@
                 "Allows the entity to move toward a target, and drop an item near the target. This goal requires a \"minecraft:navigation\" to execute."
               ],
               "header_level": 3,
-              "name": "minecraft:behavior.drop_item_for (See JSON Schema since 1.26.10)",
+              "name": "minecraft:behavior.drop_item_for",
               "nodes": [
                 {
                   "default": "0.2",
@@ -25201,9 +25201,9 @@
                   "type": "Minecraft Filter"
                 },
                 {
-                  "default": "0.5",
+                  "default": "0.50",
                   "description": [
-                    "Distance in blocks within the mob considers it has reached the goal. This is the \"wiggle room\" to stop the AI from bouncing back and forth trying to reach a specific spot."
+                    "Distance in blocks within the entity considers it has reached it's target position. "
                   ],
                   "header_level": 2,
                   "name": "goal_radius",
@@ -25261,7 +25261,7 @@
                 {
                   "default": "0",
                   "description": [
-                    "The number of randomly selected blocks each tick that the mob will check within its search range and height for a valid block to move to. A value of 0 will have the mob check every block within range in one tick."
+                    "The number of blocks each tick that the entity will check within its search range and height for a valid block to move to. A value of 0 will have the mob check every block within range in one tick."
                   ],
                   "header_level": 2,
                   "name": "search_count",
@@ -25271,7 +25271,7 @@
                 {
                   "default": "1",
                   "description": [
-                    "The height in blocks the entity will search within to find a valid target position."
+                    "The Height in blocks the entity will search within to find a valid target position."
                   ],
                   "header_level": 2,
                   "name": "search_height",
@@ -25299,9 +25299,9 @@
                   "type": "Decimal"
                 },
                 {
-                  "default": "1.0",
+                  "default": "1.00",
                   "description": [
-                    "Movement speed multiplier of the mob when using this goal."
+                    "Movement speed multiplier of the entity when using this Goal."
                   ],
                   "header_level": 2,
                   "name": "speed_multiplier",
@@ -25696,12 +25696,12 @@
                 "Allows the mob to search within an area for a growable crop block. If found, the mob will use any available fertilizer in their inventory on the crop. This goal will not execute if the mob does not have a fertilizer item in its inventory."
               ],
               "header_level": 3,
-              "name": "minecraft:behavior.fertilize_farm_block (See JSON Schema since 1.26.10)",
+              "name": "minecraft:behavior.fertilize_farm_block",
               "nodes": [
                 {
-                  "default": "1.5",
+                  "default": "1.50",
                   "description": [
-                    "Distance in blocks within the mob considers it has reached it's target position."
+                    "Distance in blocks within the mob considers it has reached it's target position. "
                   ],
                   "header_level": 2,
                   "name": "goal_radius",
@@ -25741,7 +25741,7 @@
                 {
                   "default": "1",
                   "description": [
-                    "The height in blocks the mob will search within to find a valid target position."
+                    "The Height in blocks the mob will search within to find a valid target position."
                   ],
                   "header_level": 2,
                   "name": "search_height",
@@ -25759,9 +25759,9 @@
                   "type": "Integer"
                 },
                 {
-                  "default": "0.5",
+                  "default": "0.50",
                   "description": [
-                    "Movement speed multiplier of the mob when using this goal."
+                    "Movement speed multiplier of the mob when using this Goal."
                   ],
                   "header_level": 2,
                   "name": "speed_multiplier",
@@ -27051,12 +27051,12 @@
                 "Allows the entity to search within an area for farmland with air above it. If found, the entity will replace the air block by planting a seed item from its inventory on the farmland block. This goal requires \"minecraft:inventory\" and \"minecraft:navigation\" to execute. This goal will not execute if the entity does not have an item in its inventory."
               ],
               "header_level": 3,
-              "name": "minecraft:behavior.harvest_farm_block (See JSON Schema since 1.26.10)",
+              "name": "minecraft:behavior.harvest_farm_block",
               "nodes": [
                 {
-                  "default": "1.5",
+                  "default": "1.50",
                   "description": [
-                    "Distance in blocks within the entity considers it has reached it's target position."
+                    "Distance in blocks within the entity considers it has reached it's target position. "
                   ],
                   "header_level": 2,
                   "name": "goal_radius",
@@ -27086,7 +27086,7 @@
                 {
                   "default": "0",
                   "description": [
-                    "The number of randomly selected blocks each tick that the mob will check within its search range and height for a valid block to move to. A value of 0 will have the mob check every block within range in one tick."
+                    "The number of randomly selected blocks each tick that the entity will check within its search range and height for a valid block to move to. A value of 0 will have the mob check every block within range in one tick."
                   ],
                   "header_level": 2,
                   "name": "search_count",
@@ -27096,7 +27096,7 @@
                 {
                   "default": "1",
                   "description": [
-                    "The height in blocks the entity will search within to find a valid target position."
+                    "The Height in blocks the entity will search within to find a valid target position."
                   ],
                   "header_level": 2,
                   "name": "search_height",
@@ -27124,9 +27124,9 @@
                   "type": "Decimal"
                 },
                 {
-                  "default": "0.5",
+                  "default": "0.50",
                   "description": [
-                    "Movement speed multiplier of the mob when using this goal."
+                    "Movement speed multiplier of the entity when using this Goal."
                   ],
                   "header_level": 2,
                   "name": "speed_multiplier",
@@ -29972,7 +29972,7 @@
                 "Allows an entity to attack by sneaking and pouncing."
               ],
               "header_level": 3,
-              "name": "minecraft:behavior.ocelotattack (See JSON Schema since 1.26.10)",
+              "name": "minecraft:behavior.ocelotattack",
               "nodes": [
                 {
                   "default": "1",
@@ -30984,7 +30984,7 @@
                 "Allows this entity to damage a target by using a running attack."
               ],
               "header_level": 3,
-              "name": "minecraft:behavior.ram_attack (See JSON Schema since 1.26.10)",
+              "name": "minecraft:behavior.ram_attack",
               "nodes": [
                 {
                   "default": "0.333333",
@@ -35642,24 +35642,6 @@
                   "name": "interact_filters",
                   "show_in_index": true,
                   "type": "Minecraft Filter"
-                },
-                {
-                  "description": [
-                    "List of items that can be fed to the entity to pause growth for baby entities."
-                  ],
-                  "header_level": 4,
-                  "name": "pause_growth_items",
-                  "show_in_index": true,
-                  "type": "List"
-                },
-                {
-                  "description": [
-                    "List of items that can be used to reset growth for baby entities."
-                  ],
-                  "header_level": 4,
-                  "name": "reset_growth_items",
-                  "show_in_index": true,
-                  "type": "List"
                 }
               ],
               "nodes_as_table": true,
@@ -36776,7 +36758,7 @@
                 {
                   "default": "true",
                   "description": [
-                    "Applies gravity each tick. Causes \"movement_type\" to be more impactful, but also gravity to be applied more intensely outside liquids."
+                    "Applies gravity each tick. Causes more of a wave simulation, but will cause more gravity to be applied outside liquids."
                   ],
                   "header_level": 4,
                   "name": "apply_gravity",
@@ -36786,7 +36768,7 @@
                 {
                   "default": "1.0",
                   "description": [
-                    "Base buoyancy used to calculate how much will a entity float."
+                    "Base buoyancy used to calculate how much will a mob float."
                   ],
                   "header_level": 4,
                   "name": "base_buoyancy",
@@ -36796,7 +36778,7 @@
                 {
                   "default": "0.03",
                   "description": [
-                    "Probability for a big wave hitting the entity. Only used if \"movement_type\" is \"waves\"."
+                    "Probability for a big wave hitting the entity. Only used if `simulate_waves` is true."
                   ],
                   "header_level": 4,
                   "name": "big_wave_probability",
@@ -36806,7 +36788,7 @@
                 {
                   "default": "10.0",
                   "description": [
-                    "Multiplier for the speed to make a big wave. Triggered depending on \"big_wave_probability\"."
+                    "Multiplier for the speed to make a big wave. Triggered depending on 'big_wave_probability'."
                   ],
                   "header_level": 4,
                   "name": "big_wave_speed",
@@ -36814,19 +36796,9 @@
                   "type": "Decimal"
                 },
                 {
-                  "default": "false",
-                  "description": [
-                    "Whether the entity can move out of a liquid block to a neighboring solid block if pushed against it."
-                  ],
-                  "header_level": 4,
-                  "name": "can_auto_step_from_liquid",
-                  "show_in_index": true,
-                  "type": "Boolean"
-                },
-                {
                   "default": "0.0",
                   "description": [
-                    "How much an entity will be dragged down when the component is removed."
+                    "How much an actor will be dragged down when the Buoyancy Component is removed."
                   ],
                   "header_level": 4,
                   "name": "drag_down_on_buoyancy_removed",
@@ -36843,17 +36815,14 @@
                   "type": "List"
                 },
                 {
-                  "default": "waves",
+                  "default": "true",
                   "description": [
-                    "Type of vertical movement applied to the entity:",
-                    "\"waves\", simulates wave movement based on the entity speed.",
-                    "\"bobbing\", simulates waves going through.",
-                    "\"none\", simulates waves going through."
+                    "Should the movement simulate waves going through."
                   ],
                   "header_level": 4,
-                  "name": "movement_type",
+                  "name": "simulate_waves",
                   "show_in_index": true,
-                  "type": "String"
+                  "type": "Boolean"
                 }
               ],
               "nodes_as_table": true,
@@ -41885,7 +41854,7 @@
                 {
                   "default": "true",
                   "description": [
-                    "Whether or not the entity collides with things."
+                    "Whether or not the object collides with things."
                   ],
                   "header_level": 4,
                   "name": "has_collision",
@@ -44466,10 +44435,10 @@
                 },
                 {
                   "description": [
-                    "17074932802256079406"
+                    "3133100024050825239"
                   ],
                   "header_level": 4,
-                  "name": "minecraft:behavior.celebrate (See JSON Schema since 1.26.10)",
+                  "name": "minecraft:behavior.celebrate",
                   "show_in_index": false
                 },
                 {
@@ -44642,10 +44611,10 @@
                 },
                 {
                   "description": [
-                    "5376378384288983894"
+                    "6288016308568137423"
                   ],
                   "header_level": 4,
-                  "name": "minecraft:behavior.drop_item_for (See JSON Schema since 1.26.10)",
+                  "name": "minecraft:behavior.drop_item_for",
                   "show_in_index": false
                 },
                 {
@@ -44714,10 +44683,10 @@
                 },
                 {
                   "description": [
-                    "8807884663303834620"
+                    "9206289212958280677"
                   ],
                   "header_level": 4,
-                  "name": "minecraft:behavior.fertilize_farm_block (See JSON Schema since 1.26.10)",
+                  "name": "minecraft:behavior.fertilize_farm_block",
                   "show_in_index": false
                 },
                 {
@@ -44858,10 +44827,10 @@
                 },
                 {
                   "description": [
-                    "12386676332865576747"
+                    "10346419677401805698"
                   ],
                   "header_level": 4,
-                  "name": "minecraft:behavior.harvest_farm_block (See JSON Schema since 1.26.10)",
+                  "name": "minecraft:behavior.harvest_farm_block",
                   "show_in_index": false
                 },
                 {
@@ -45146,10 +45115,10 @@
                 },
                 {
                   "description": [
-                    "1864655070482369691"
+                    "6119969836310458450"
                   ],
                   "header_level": 4,
-                  "name": "minecraft:behavior.ocelotattack (See JSON Schema since 1.26.10)",
+                  "name": "minecraft:behavior.ocelotattack",
                   "show_in_index": false
                 },
                 {
@@ -45250,10 +45219,10 @@
                 },
                 {
                   "description": [
-                    "6724433720537763462"
+                    "16987281751541937759"
                   ],
                   "header_level": 4,
-                  "name": "minecraft:behavior.ram_attack (See JSON Schema since 1.26.10)",
+                  "name": "minecraft:behavior.ram_attack",
                   "show_in_index": false
                 },
                 {
@@ -47602,7 +47571,7 @@
                 {
                   "default": "1.0",
                   "description": [
-                    "The higher the number, the more friction affects this entity. A value of 1.0 means regular friction, while 2.0 means twice as much."
+                    "The higher the number, the more the friction affects this entity. A value of 1.0 means regular friction, while 2.0 means twice as much."
                   ],
                   "header_level": 4,
                   "name": "value",

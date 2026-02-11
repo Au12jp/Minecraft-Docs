@@ -10,7 +10,9 @@
           "arguments": [
             {
               "details": {
-                "default_value": 1
+                "default_value": 1,
+                "max_value": 2147483647,
+                "min_value": -2147483648
               },
               "name": "steps",
               "type": {
@@ -59,7 +61,9 @@
           "arguments": [
             {
               "details": {
-                "default_value": 1
+                "default_value": 1,
+                "max_value": 2147483647,
+                "min_value": -2147483648
               },
               "name": "steps",
               "type": {
@@ -142,7 +146,9 @@
           "arguments": [
             {
               "details": {
-                "default_value": 1
+                "default_value": 1,
+                "max_value": 2147483647,
+                "min_value": -2147483648
               },
               "name": "steps",
               "type": {
@@ -323,7 +329,9 @@
           "arguments": [
             {
               "details": {
-                "default_value": 1
+                "default_value": 1,
+                "max_value": 2147483647,
+                "min_value": -2147483648
               },
               "name": "steps",
               "type": {
@@ -453,7 +461,9 @@
           "arguments": [
             {
               "details": {
-                "default_value": 1
+                "default_value": 1,
+                "max_value": 2147483647,
+                "min_value": -2147483648
               },
               "name": "steps",
               "type": {
@@ -502,7 +512,9 @@
           "arguments": [
             {
               "details": {
-                "default_value": 1
+                "default_value": 1,
+                "max_value": 2147483647,
+                "min_value": -2147483648
               },
               "name": "steps",
               "type": {
@@ -1500,7 +1512,8 @@
           "arguments": [
             {
               "details": {
-                "min_value": 0
+                "max_value": 2147483647,
+                "min_value": -2147483648
               },
               "name": "slot",
               "type": {
@@ -1554,7 +1567,8 @@
           "arguments": [
             {
               "details": {
-                "min_value": 0
+                "max_value": 2147483647,
+                "min_value": -2147483648
               },
               "name": "fromSlot",
               "type": {
@@ -1569,7 +1583,8 @@
             },
             {
               "details": {
-                "min_value": 0
+                "max_value": 2147483647,
+                "min_value": -2147483648
               },
               "name": "toSlot",
               "type": {
@@ -1622,7 +1637,8 @@
           "arguments": [
             {
               "details": {
-                "min_value": 0
+                "max_value": 2147483647,
+                "min_value": -2147483648
               },
               "name": "slot",
               "type": {
@@ -1682,7 +1698,8 @@
           "arguments": [
             {
               "details": {
-                "min_value": 0
+                "max_value": 2147483647,
+                "min_value": -2147483648
               },
               "name": "slot",
               "type": {
@@ -1697,7 +1714,8 @@
             },
             {
               "details": {
-                "min_value": 0
+                "max_value": 2147483647,
+                "min_value": -2147483648
               },
               "name": "otherSlot",
               "type": {
@@ -1750,7 +1768,8 @@
           "arguments": [
             {
               "details": {
-                "min_value": 0
+                "max_value": 2147483647,
+                "min_value": -2147483648
               },
               "name": "fromSlot",
               "type": {
@@ -3406,7 +3425,10 @@
         {
           "arguments": [
             {
-              "details": null,
+              "details": {
+                "max_value": 3.402823466385289e+38,
+                "min_value": -3.402823466385289e+38
+              },
               "name": "amount",
               "type": {
                 "is_bind_type": false,
@@ -3534,7 +3556,10 @@
         {
           "arguments": [
             {
-              "details": null,
+              "details": {
+                "max_value": 3.402823466385289e+38,
+                "min_value": -3.402823466385289e+38
+              },
               "name": "directionX",
               "type": {
                 "is_bind_type": false,
@@ -3547,7 +3572,10 @@
               }
             },
             {
-              "details": null,
+              "details": {
+                "max_value": 3.402823466385289e+38,
+                "min_value": -3.402823466385289e+38
+              },
               "name": "directionZ",
               "type": {
                 "is_bind_type": false,
@@ -3560,7 +3588,10 @@
               }
             },
             {
-              "details": null,
+              "details": {
+                "max_value": 3.402823466385289e+38,
+                "min_value": -3.402823466385289e+38
+              },
               "name": "horizontalStrength",
               "type": {
                 "is_bind_type": false,
@@ -3573,7 +3604,10 @@
               }
             },
             {
-              "details": null,
+              "details": {
+                "max_value": 3.402823466385289e+38,
+                "min_value": -3.402823466385289e+38
+              },
               "name": "verticalStrength",
               "type": {
                 "is_bind_type": false,
@@ -10918,8 +10952,6 @@
           ],
           "is_baked": false,
           "is_read_only": false,
-          "max_value": 255,
-          "min_value": 1,
           "name": "amount",
           "set_privilege": [
             {
@@ -12786,7 +12818,10 @@
               }
             },
             {
-              "details": null,
+              "details": {
+                "max_value": 3.402823466385289e+38,
+                "min_value": -3.402823466385289e+38
+              },
               "name": "number",
               "type": {
                 "is_bind_type": false,
@@ -12825,7 +12860,10 @@
               }
             },
             {
-              "details": null,
+              "details": {
+                "max_value": 3.402823466385289e+38,
+                "min_value": -3.402823466385289e+38
+              },
               "name": "speed",
               "type": {
                 "is_bind_type": false,
@@ -16653,7 +16691,10 @@
               }
             },
             {
-              "details": null,
+              "details": {
+                "max_value": 2147483647,
+                "min_value": -2147483648
+              },
               "name": "scoreToAdd",
               "type": {
                 "is_bind_type": false,
@@ -16912,7 +16953,10 @@
               }
             },
             {
-              "details": null,
+              "details": {
+                "max_value": 2147483647,
+                "min_value": -2147483648
+              },
               "name": "score",
               "type": {
                 "is_bind_type": false,
@@ -17569,7 +17613,10 @@
         {
           "arguments": [
             {
-              "details": null,
+              "details": {
+                "max_value": 4294967295,
+                "min_value": 0
+              },
               "name": "runId",
               "type": {
                 "is_bind_type": false,
@@ -18855,7 +18902,10 @@
         {
           "arguments": [
             {
-              "details": null,
+              "details": {
+                "max_value": 2147483647,
+                "min_value": -2147483648
+              },
               "name": "absoluteTime",
               "type": {
                 "is_bind_type": false,

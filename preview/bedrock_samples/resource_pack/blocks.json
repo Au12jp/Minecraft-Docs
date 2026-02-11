@@ -2569,10 +2569,6 @@
       "sound" : "stone",
       "textures" : "gold_ore"
    },
-   "golden_dandelion" : {
-      "sound" : "grass",
-      "textures" : "golden_dandelion"
-   },
    "golden_rail" : {
       "sound" : "metal",
       "textures" : {

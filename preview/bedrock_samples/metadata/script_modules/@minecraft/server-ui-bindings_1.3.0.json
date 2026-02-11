@@ -839,7 +839,10 @@
               }
             },
             {
-              "details": null,
+              "details": {
+                "max_value": 3.402823466385289e+38,
+                "min_value": -3.402823466385289e+38
+              },
               "name": "minimumValue",
               "type": {
                 "is_bind_type": false,
@@ -852,7 +855,10 @@
               }
             },
             {
-              "details": null,
+              "details": {
+                "max_value": 3.402823466385289e+38,
+                "min_value": -3.402823466385289e+38
+              },
               "name": "maximumValue",
               "type": {
                 "is_bind_type": false,
@@ -865,7 +871,10 @@
               }
             },
             {
-              "details": null,
+              "details": {
+                "max_value": 3.402823466385289e+38,
+                "min_value": -3.402823466385289e+38
+              },
               "name": "valueStep",
               "type": {
                 "is_bind_type": false,
