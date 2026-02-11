@@ -7,12 +7,10 @@
         "default": "turtle"
       },
       "textures": {
-        "default": "textures/entity/sea_turtle",
-        "baby": "textures/entity/turtle/sea_turtle_baby"
+        "default": "textures/entity/sea_turtle"
       },
       "geometry": {
-        "default": "geometry.turtle",
-        "baby": "geometry.turtle.baby"
+        "default": "geometry.turtle"
       },
       "scripts": {
         "pre_animation": [
@@ -38,7 +36,7 @@
         }
       ],
       "render_controllers": [
-        "controller.render.turtle.v2"
+        "controller.render.turtle"
       ],
       "spawn_egg": {
         "texture": "spawn_egg_turtle"

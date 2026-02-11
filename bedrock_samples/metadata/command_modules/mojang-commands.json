@@ -1030,12 +1030,6 @@
           "value": "small_amethyst_bud"
         },
         {
-          "value": "minecraft:golden_dandelion"
-        },
-        {
-          "value": "golden_dandelion"
-        },
-        {
           "value": "minecraft:activator_rail"
         },
         {
@@ -10554,12 +10548,6 @@
           "value": "small_amethyst_bud"
         },
         {
-          "value": "minecraft:golden_dandelion"
-        },
-        {
-          "value": "golden_dandelion"
-        },
-        {
           "value": "minecraft:activator_rail"
         },
         {
@@ -18578,9 +18566,6 @@
           "value": "minecraft:start_sitting"
         },
         {
-          "value": "minecraft:start_sitting_baby"
-        },
-        {
           "value": "minecraft:start_transforming"
         },
         {
@@ -18612,9 +18597,6 @@
         },
         {
           "value": "minecraft:stop_sitting"
-        },
-        {
-          "value": "minecraft:stop_sitting_baby"
         },
         {
           "value": "minecraft:stop_transforming"
@@ -24415,9 +24397,6 @@
           "value": "minecraft:element_12"
         },
         {
-          "value": "minecraft:golden_dandelion"
-        },
-        {
           "value": "minecraft:element_14"
         },
         {
@@ -27367,9 +27346,6 @@
       "values": [
         {
           "value": "*"
-        },
-        {
-          "value": "minecraft:golden_dandelion"
         },
         {
           "value": "minecraft:name_tag"
@@ -36411,13 +36387,13 @@
           "value": "editor:location_pointer_idle"
         },
         {
-          "value": "editor:location_pointer_selected"
-        },
-        {
           "value": "editor:ruler_idle"
         },
         {
           "value": "editor:map_marker"
+        },
+        {
+          "value": "editor:location_pointer_selected"
         }
       ]
     },

@@ -12,14 +12,10 @@
         "saddled": "textures/entity/pig/pig_saddle",
         "warm": "textures/entity/pig/pig_warm",
         "cold": "textures/entity/pig/pig_cold",
-        "saddle": "textures/entity/saddle_v2",
-        "baby_default": "textures/entity/pig/pig_temperate_baby",
-        "baby_warm": "textures/entity/pig/pig_warm_baby",
-        "baby_cold": "textures/entity/pig/pig_cold_baby"
+        "saddle": "textures/entity/saddle_v2"
       },
       "geometry": {
-        "default": "geometry.pig.v3",
-        "baby": "geometry.pig.baby"
+        "default": "geometry.pig.v3"
       },
       "animations": {
         "setup": "animation.pig.setup",
@@ -33,7 +29,10 @@
           {
             "walk": "query.modified_move_speed"
           },
-          "look_at_target"
+          "look_at_target",
+          {
+            "baby_transform": "query.is_baby"
+          }
         ],
         "pre_animation": [
           "t.variant = query.property('minecraft:climate_variant');",
@@ -42,7 +41,7 @@
       },
       "render_controllers": [
         "controller.render.saddle",
-        "controller.render.pig.v4"
+        "controller.render.pig.v3"
       ],
       "spawn_egg": {
         "texture": "spawn_egg_pig"

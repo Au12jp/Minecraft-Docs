@@ -8,29 +8,28 @@
       "is_summonable": true
     },
 
-    "component_groups": {
+    "component_groups":{
       "minecraft:squid_baby": {
-        "minecraft:is_baby": {},
-        "minecraft:collision_box": {
-          "width": 0.4,
-          "height": 0.4
+        "minecraft:is_baby": {
+        },
+        "minecraft:scale": {
+          "value": 0.5
         }
       },
       "minecraft:squid_adult": {
-        "minecraft:leashable_to": {},
-        "minecraft:collision_box": {
-          "width": 0.8,
-          "height": 0.8
+        "minecraft:leashable_to": {
         }
       }
     },
 
     "components": {
-      "minecraft:is_hidden_when_invisible": {},
+      "minecraft:is_hidden_when_invisible": {
+      },
       "minecraft:experience_reward": {
         "on_death": "!query.is_baby && query.last_hit_by_player ? Math.Random(1,3) : 0"
       },
-      "minecraft:nameable": {},
+      "minecraft:nameable": {
+      },
       "minecraft:offspring": {
         "offspring_pairs": {
           "minecraft:glow_squid": "minecraft:glow_squid"
@@ -38,7 +37,11 @@
       },
       "minecraft:spawn_egg_interaction": {},
       "minecraft:type_family": {
-        "family": ["aquatic", "squid", "mob"]
+        "family": [ "aquatic", "squid", "mob" ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.8,
+        "height": 0.8
       },
       "minecraft:health": {
         "value": 10,
@@ -51,8 +54,7 @@
         "damage_conditions": [
           {
             "filters": {
-              "test": "in_lava",
-              "subject": "self"
+              "test": "in_lava", "subject": "self"
             },
             "cause": "lava",
             "damage_per_tick": 4
@@ -75,10 +77,14 @@
         "can_path_over_water": true,
         "can_sink": false
       },
-      "minecraft:movement.basic": {},
-      "minecraft:jump.static": {},
-      "minecraft:can_climb": {},
-      "minecraft:leashable": {},
+      "minecraft:movement.basic": {
+      },
+      "minecraft:jump.static": {
+      },
+      "minecraft:can_climb": {
+      },
+      "minecraft:leashable": {
+      },
       "minecraft:balloonable": {
         "mass": 0.5
       },
@@ -97,20 +103,23 @@
       "minecraft:behavior.squid_out_of_water": {
         "priority": 2
       },
-      "minecraft:physics": {},
+      "minecraft:physics": {
+      },
       "minecraft:pushable": {
         "is_pushable": true,
         "is_pushable_by_piston": true
       }
     },
-
-    "events": {
+    
+    "events":{
       "minecraft:entity_spawned": {
         "randomize": [
           {
             "weight": 95,
             "add": {
-              "component_groups": ["minecraft:squid_adult"]
+              "component_groups": [
+                "minecraft:squid_adult"
+              ]
             }
           },
           {
@@ -121,7 +130,9 @@
       },
       "minecraft:entity_born": {
         "add": {
-          "component_groups": ["minecraft:squid_baby"]
+          "component_groups": [
+            "minecraft:squid_baby"
+          ]
         }
       }
     }

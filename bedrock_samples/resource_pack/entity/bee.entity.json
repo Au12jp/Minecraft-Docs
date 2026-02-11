@@ -10,15 +10,10 @@
         "default": "textures/entity/bee/bee",
         "angry": "textures/entity/bee/bee_angry",
         "nectar": "textures/entity/bee/bee_nectar",
-        "angry_nectar": "textures/entity/bee/bee_angry_nectar",
-        "baby_default": "textures/entity/bee/bee_baby",
-        "baby_angry": "textures/entity/bee/bee_angry_baby",
-        "baby_nectar": "textures/entity/bee/bee_nectar_baby",
-        "baby_angry_nectar": "textures/entity/bee/bee_angry_nectar_baby"
+        "angry_nectar": "textures/entity/bee/bee_angry_nectar"
       },
       "geometry": {
-        "default": "geometry.bee",
-        "baby": "geometry.bee.baby"
+        "default": "geometry.bee"
       },
       "animations": {
         "flying": "animation.bee.flying",
@@ -41,7 +36,7 @@
         ]
       },
       "render_controllers": [
-        "controller.render.bee.v2"
+        "controller.render.bee"
       ],
       "spawn_egg": {
         "texture": "spawn_egg_bee"

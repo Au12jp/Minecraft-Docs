@@ -9,13 +9,10 @@
       },
       "textures": {
         "default": "textures/entity/cow/mooshroom_v2",
-        "brown": "textures/entity/cow/brown_mooshroom_v2",
-        "baby_default": "textures/entity/cow/mooshroom_red_baby",
-        "baby_brown": "textures/entity/cow/mooshroom_brown_baby"
+        "brown": "textures/entity/cow/brown_mooshroom_v2"
       },
       "geometry": {
-        "default": "geometry.mooshroom.v2",
-        "baby": "geometry.cow.baby"
+        "default": "geometry.mooshroom.v2"
       },
       "animations": {
         "setup": "animation.mooshroom.setup",
@@ -29,10 +26,13 @@
         },
         {
           "move": "controller.animation.mooshroom.move"
+        },
+        {
+          "baby": "controller.animation.mooshroom.baby"
         }
       ],
       "render_controllers": [
-        "controller.render.mooshroom.v2"
+        "controller.render.mooshroom"
       ],
       "spawn_egg": {
         "texture": "spawn_egg_mooshroom"
