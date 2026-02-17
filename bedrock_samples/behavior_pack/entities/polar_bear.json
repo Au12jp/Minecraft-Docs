@@ -10,13 +10,14 @@
 
     "component_groups": {
       "minecraft:baby": {
-        "minecraft:is_baby": {
-        },
+        "minecraft:is_baby": {},
         "minecraft:scale": {
           "value": 0.5
         },
         "minecraft:ageable": {
           "duration": 1200,
+          "pause_growth_items": [ "golden_dandelion" ],
+          "reset_growth_items": [ "golden_dandelion" ],
           "grow_up": {
             "event": "minecraft:ageable_grow_up",
             "target": "self"
@@ -67,8 +68,7 @@
         "minecraft:loot": {
           "table": "loot_tables/entities/polar_bear.json"
         },
-        "minecraft:leashable_to": {
-        }
+        "minecraft:leashable_to": {}
       },
 
       "minecraft:adult_wild": {
