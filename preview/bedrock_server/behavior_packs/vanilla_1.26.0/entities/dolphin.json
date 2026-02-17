@@ -3,251 +3,19 @@
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:dolphin",
-      "spawn_category": "water_creature",
+      "is_summonable": true,
       "is_spawnable": true,
-      "is_summonable": true
+      "spawn_category": "water_creature"
     },
-    "component_groups": {
-      "dolphin_adult": {
-        "minecraft:experience_reward": {
-          "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-        },
-        "minecraft:loot": {
-          "table": "loot_tables/entities/dolphin.json"
-        },
-        "minecraft:bribeable": {
-          "bribe_items": [ "fish", "salmon" ]
-        },
-        "minecraft:behavior.melee_box_attack": {
-          "priority": 2,
-          "track_target": true
-        }
-      },
-      "dolphin_baby": {
-        "minecraft:is_baby": {
-        },
-        "minecraft:scale": {
-          "value": 0.65
-        },
-        "minecraft:ageable": {
-          "duration": 1200,
-          "feed_items": [ "fish", "salmon" ],
-          "grow_up": {
-            "event": "ageable_grow_up",
-            "target": "self"
-          }
-        },
-        "minecraft:behavior.follow_parent": {
-          "priority": 4,
-          "speed_multiplier": 1.1
-        },
-        "minecraft:behavior.panic": {
-          "priority": 1,
-          "speed_multiplier": 1.25
-        }
-      },
-      "dolphin_angry": {
-        "minecraft:angry": {
-          "duration": 25,
-          "broadcast_anger": true,
-          "broadcast_range": 16,
-          "calm_event": {
-            "event": "on_calm",
-            "target": "self"
-          }
-        },
-        "minecraft:on_target_acquired": {
-        }
-      },
-      "dolphin_dried": {
-        "minecraft:damage_over_time": {
-          "damage_per_hurt": 1,
-          "time_between_hurt": 0
-        }
-      },
-      "dolphin_swimming_navigation": {
-        "minecraft:behavior.look_at_player": {
-          "priority": 8,
-          "look_distance": 6
-        },
-        "minecraft:navigation.generic": {
-          "is_amphibious": true,
-          "can_path_over_water": false,
-          "can_swim": true,
-          "can_walk": false,
-          "can_breach": true,
-          "can_sink": false
-        },
-        "minecraft:environment_sensor": {
-          "triggers": [
-            {
-              "filters": {
-                "all_of": [
-                  { "test": "on_ground", "operator": "==", "value": true },
-                  { "test": "in_water", "operator": "!=", "value": true }
-                ]
-              },
-              "event": "navigation_on_land"
-            }
-          ]
-        }
-      },
-      "dolphin_on_land": {
-        "minecraft:navigation.generic": {
-          "is_amphibious": true,
-          "can_path_over_water": true,
-          "can_swim": true,
-          "can_walk": true,
-          "can_breach": false,
-          "can_jump": false
-        },
-        "minecraft:drying_out_timer": {
-          "total_time": 120,
-          "water_bottle_refill_time": 0,
-          "dried_out_event": {
-            "event": "dried_out"
-          },
-          "stopped_drying_out_event": {
-            "event": "stop_dryingout"
-          },
-          "recover_after_dried_out_event": {
-            "event": "recover_after_dried_out"
-          }
-        }
-      },
-      "dolphin_on_land_in_rain": {
-        "minecraft:navigation.generic": {
-          "is_amphibious": true,
-          "can_path_over_water": true,
-          "can_swim": true,
-          "can_walk": true,
-          "can_breach": false,
-          "can_jump": false
-        },
-        "minecraft:environment_sensor": {
-          "triggers": [
-            {
-              "filters": {
-                "test": "in_water", "operator": "==", "value": true
-              },
-              "event": "navigation_off_land"
-            },
-            {
-              "filters": {
-                "test": "in_water_or_rain", "operator": "!=", "value": true
-              },
-              "event": "start_dryingout"
-            }
-          ]
-        }
-      }
-    },
-
     "components": {
-      "minecraft:is_hidden_when_invisible": {
-      },
-      "minecraft:nameable": {},
-      "minecraft:offspring": {
-        "offspring_pairs": {
-          "minecraft:dolphin": "minecraft:dolphin"
-        }
-      },
-      "minecraft:spawn_egg_interaction": {},
-      "minecraft:type_family": {
-        "family": [ "aquatic", "dolphin", "mob" ]
-      },
-      "minecraft:collision_box": {
-        "width": 0.9,
-        "height": 0.6
-      },
-      "minecraft:health": {
-        "value": 10,
-        "max": 10
-      },
-      "minecraft:hurt_on_condition": {
-        "damage_conditions": [
-          {
-            "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
-            "cause": "lava",
-            "damage_per_tick": 4
-          }
-        ]
-      },
-      "minecraft:follow_range": {
-        "value": 48,
-        "max": 48
-      },
-      "minecraft:breathable": {
-        "total_supply": 240,
-        "suffocate_time": 0,
-        "breathes_air": true,
-        "breathes_water": false,
-        "generates_bubbles": false
-      },
       "minecraft:attack": {
         "damage": 3
       },
-      "minecraft:movement": {
-        "value": 0.1
-      },
-      "minecraft:navigation.generic": {
-        "is_amphibious": true,
-        "can_path_over_water": true,
-        "can_swim": true,
-        "can_walk": false,
-        "can_breach": true,
-        "can_sink": false
-      },
-
-      "minecraft:underwater_movement": {
-        "value": 0.15
-      },
-
-      "minecraft:jump.static": {
-        "jump_power": 0.6
-      },
-      "minecraft:can_climb": {
-      },
-      "minecraft:behavior.swim_up_for_breath": {
-        "priority": 1
-      },
-      "minecraft:behavior.swim_with_entity": {
-        "priority": 4,
-        "success_rate": 0.1,
-        "chance_to_stop": 0.0333,
-        "state_check_interval": 0.5,
-        "catch_up_threshold": 12.0,
-        "match_direction_threshold": 2.0,
-        "catch_up_multiplier": 2.5,
-        "speed_multiplier": 1.5,
-        "search_range": 20.0,
-        "stop_distance": 5.0,
-
-        "entity_types": [
-          {
-            "filters": { "test": "is_family", "subject": "other", "value": "player" }
-          }
-        ]
-      },
-      "minecraft:despawn": {
-        "despawn_from_distance": {}
-      },
-      "minecraft:behavior.random_swim": {
-        "priority": 5,
-        "interval": 0,
-        "xz_dist": 20
-      },
-      "minecraft:behavior.random_breach": {
-        "priority": 6,
-        "interval": 50,
-        "xz_dist": 6,
-        "cooldown_time": 2.0
-      },
-      "minecraft:behavior.random_look_around": {
-        "priority": 7
+      "minecraft:balloonable": {
+        "mass": 0.4
       },
       "minecraft:behavior.avoid_mob_type": {
-        "priority": 2,
+        "probability_per_strength": 0.14,
         "entity_types": [
           {
             "filters": {
@@ -264,46 +32,150 @@
                 }
               ]
             },
-            "max_dist": 8,
-            "walk_speed_multiplier": 1.0,
-            "sprint_speed_multiplier": 1.0
+            "max_dist": 8
           }
         ],
-        "probability_per_strength": 0.14
+        "priority": 2
       },
       "minecraft:behavior.find_underwater_treasure": {
         "priority": 2,
-        "speed_multiplier": 2.0,
         "search_range": 30,
+        "speed_multiplier": 2.0,
         "stop_distance": 50
-      },
-      "minecraft:behavior.move_to_water": {
-        "priority": 1,
-        "search_range": 15,
-        "search_height": 5
       },
       "minecraft:behavior.hurt_by_target": {
         "priority": 1
       },
+      "minecraft:behavior.move_to_water": {
+        "priority": 1,
+        "search_height": 5,
+        "search_range": 15
+      },
+      "minecraft:behavior.random_breach": {
+        "cooldown_time": 2.0,
+        "interval": 50,
+        "xz_dist": 6,
+        "priority": 6
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 7
+      },
+      "minecraft:behavior.random_swim": {
+        "interval": 0,
+        "xz_dist": 20,
+        "priority": 5
+      },
+      "minecraft:behavior.swim_up_for_breath": {
+        "priority": 1
+      },
+      "minecraft:behavior.swim_with_entity": {
+        "catch_up_multiplier": 2.5,
+        "match_direction_threshold": 2.0,
+        "entity_types": [
+          {
+            "filters": {
+              "subject": "other",
+              "test": "is_family",
+              "value": "player"
+            }
+          }
+        ],
+        "catch_up_threshold": 12.0,
+        "chance_to_stop": 0.0333,
+        "priority": 4,
+        "search_range": 20.0,
+        "speed_multiplier": 1.5,
+        "state_check_interval": 0.5,
+        "stop_distance": 5.0,
+        "success_rate": 0.1
+      },
+      "minecraft:breathable": {
+        "breathes_air": true,
+        "breathes_water": false,
+        "suffocate_time": 0,
+        "generates_bubbles": false,
+        "total_supply": 240
+      },
+      "minecraft:can_climb": {},
+      "minecraft:collision_box": {
+        "height": 0.6,
+        "width": 0.9
+      },
+      "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
+      },
       "minecraft:flocking": {
-        "in_water": false,
-        "match_variants": false,
-        "use_center_of_mass": false,
-        "low_flock_limit": 4,
-        "high_flock_limit": 8,
-        "goal_weight": 2.0,
-        "loner_chance": 0.1,
-        "influence_radius": 6.0,
         "breach_influence": 0.0,
-        "separation_weight": 1.75,
-        "separation_threshold": 3.0,
-        "cohesion_weight": 1.85,
-        "cohesion_threshold": 6.5,
-        "innner_cohesion_threshold": 3.5,
-        "min_height": 4.0,
-        "max_height": 4.0,
         "block_distance": 1.0,
-        "block_weight": 0.0
+        "high_flock_limit": 8,
+        "block_weight": 0.0,
+        "min_height": 4.0,
+        "cohesion_threshold": 6.5,
+        "in_water": false,
+        "cohesion_weight": 1.85,
+        "goal_weight": 2.0,
+        "influence_radius": 6.0,
+        "innner_cohesion_threshold": 3.5,
+        "loner_chance": 0.1,
+        "low_flock_limit": 4,
+        "match_variants": false,
+        "max_height": 4.0,
+        "separation_threshold": 3.0,
+        "separation_weight": 1.75,
+        "use_center_of_mass": false
+      },
+      "minecraft:follow_range": {
+        "max": 48,
+        "value": 48
+      },
+      "minecraft:health": {
+        "max": 10,
+        "value": 10
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "cause": "lava",
+            "damage_per_tick": 4,
+            "filters": {
+              "operator": "==",
+              "test": "in_lava",
+              "subject": "self",
+              "value": true
+            }
+          }
+        ]
+      },
+      "minecraft:is_hidden_when_invisible": {},
+      "minecraft:jump.static": {
+        "jump_power": 0.6
+      },
+      "minecraft:leashable": {
+        "presets": [
+          {
+            "hard_distance": 6.0,
+            "max_distance": 10.0,
+            "soft_distance": 4.0
+          }
+        ]
+      },
+      "minecraft:movement": {
+        "value": 0.1
+      },
+      "minecraft:nameable": {},
+      "minecraft:navigation.generic": {
+        "can_breach": true,
+        "can_walk": false,
+        "can_path_over_water": true,
+        "can_sink": false,
+        "can_swim": true,
+        "is_amphibious": true
+      },
+      "minecraft:offspring": {
+        "offspring_pairs": {
+          "minecraft:dolphin": "minecraft:dolphin"
+        }
       },
       "minecraft:on_target_acquired": {
         "event": "become_angry",
@@ -312,66 +184,178 @@
       "minecraft:on_target_escape": {
         "target": "self"
       },
-      "minecraft:physics": {
-      },
+      "minecraft:physics": {},
       "minecraft:pushable": {
         "is_pushable": true,
         "is_pushable_by_piston": true
       },
-      "minecraft:leashable": {
-        "presets": [
-          {
-            "soft_distance": 4.0,
-            "hard_distance": 6.0,
-            "max_distance": 10.0
-          }
+      "minecraft:spawn_egg_interaction": {},
+      "minecraft:type_family": {
+        "family": [
+          "aquatic",
+          "dolphin",
+          "mob"
         ]
       },
-      "minecraft:balloonable": {
-        "mass": 0.4
-      },
-      "minecraft:conditional_bandwidth_optimization": {
+      "minecraft:underwater_movement": {
+        "value": 0.15
       }
     },
-
-    "events": {
-      "minecraft:entity_spawned": {
-        "randomize": [
-          {
-            "weight": 90,
-            "add": {
-              "component_groups": [
-                "dolphin_adult",
-                "dolphin_swimming_navigation"
-              ]
-            }
-          },
-          {
-            "weight": 10,
-            "trigger": "minecraft:entity_born"
-          }
-        ]
-      },
-      "minecraft:entity_born": {
-        "add": {
-          "component_groups": [
-            "dolphin_baby",
-            "dolphin_swimming_navigation"
-          ]
+    "component_groups": {
+      "dolphin_dried": {
+        "minecraft:damage_over_time": {
+          "damage_per_hurt": 1,
+          "time_between_hurt": 0
         }
       },
-      "ageable_grow_up": {
-        "remove": {
-          "component_groups": [
-            "dolphin_baby"
+      "dolphin_adult": {
+        "minecraft:behavior.melee_box_attack": {
+          "track_target": true,
+          "priority": 2
+        },
+        "minecraft:bribeable": {
+          "bribe_items": [
+            "fish",
+            "salmon"
           ]
         },
-        "add": {
-          "component_groups": [
-            "dolphin_adult"
-          ]
+        "minecraft:experience_reward": {
+          "on_death": {
+            "expression": "query.last_hit_by_player ? Math.Random(1,3) : 0",
+            "version": 13
+          }
+        },
+        "minecraft:loot": {
+          "table": "loot_tables/entities/dolphin.json"
         }
       },
+      "dolphin_angry": {
+        "minecraft:angry": {
+          "broadcast_anger": true,
+          "broadcast_range": 16,
+          "calm_event": {
+            "event": "on_calm",
+            "target": "self"
+          },
+          "duration": 25
+        },
+        "minecraft:on_target_acquired": {}
+      },
+      "dolphin_swimming_navigation": {
+        "minecraft:behavior.look_at_player": {
+          "look_distance": 6,
+          "priority": 8
+        },
+        "minecraft:environment_sensor": {
+          "triggers": [
+            {
+              "event": "navigation_on_land",
+              "filters": {
+                "all_of": [
+                  {
+                    "operator": "==",
+                    "test": "on_ground",
+                    "value": true
+                  },
+                  {
+                    "operator": "!=",
+                    "test": "in_water",
+                    "value": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "minecraft:navigation.generic": {
+          "can_breach": true,
+          "can_walk": false,
+          "can_path_over_water": false,
+          "can_sink": false,
+          "can_swim": true,
+          "is_amphibious": true
+        }
+      },
+      "dolphin_baby": {
+        "minecraft:ageable": {
+          "duration": 1200,
+          "feed_items": [
+            "fish",
+            "salmon"
+          ],
+          "grow_up": {
+            "event": "ageable_grow_up",
+            "target": "self"
+          }
+        },
+        "minecraft:behavior.follow_parent": {
+          "priority": 4,
+          "speed_multiplier": 1.1
+        },
+        "minecraft:behavior.panic": {
+          "priority": 1,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:is_baby": {},
+        "minecraft:scale": {
+          "value": 0.65
+        }
+      },
+      "dolphin_on_land": {
+        "minecraft:drying_out_timer": {
+          "dried_out_event": {
+            "event": "dried_out"
+          },
+          "recover_after_dried_out_event": {
+            "event": "recover_after_dried_out"
+          },
+          "stopped_drying_out_event": {
+            "event": "stop_dryingout"
+          },
+          "total_time": 120,
+          "water_bottle_refill_time": 0
+        },
+        "minecraft:navigation.generic": {
+          "can_breach": false,
+          "can_walk": true,
+          "can_jump": false,
+          "can_path_over_water": true,
+          "can_swim": true,
+          "is_amphibious": true
+        }
+      },
+      "dolphin_on_land_in_rain": {
+        "minecraft:environment_sensor": {
+          "triggers": [
+            {
+              "event": "navigation_off_land",
+              "filters": {
+                "operator": "==",
+                "test": "in_water",
+                "value": true
+              }
+            },
+            {
+              "event": "start_dryingout",
+              "filters": {
+                "operator": "!=",
+                "test": "in_water_or_rain",
+                "value": true
+              }
+            }
+          ]
+        },
+        "minecraft:navigation.generic": {
+          "can_breach": false,
+          "can_walk": true,
+          "can_jump": false,
+          "can_path_over_water": true,
+          "can_swim": true,
+          "is_amphibious": true
+        }
+      }
+    },
+    "events": {
       "become_angry": {
         "add": {
           "component_groups": [
@@ -386,52 +370,103 @@
           ]
         }
       },
-      "stop_dryingout": {
-        "remove": {
+      "ageable_grow_up": {
+        "add": {
           "component_groups": [
-            "dolphin_on_land",
-            "dolphin_dried"
+            "dolphin_adult"
           ]
         },
-        "add": {
-          "component_groups": [ "dolphin_on_land_in_rain" ]
+        "remove": {
+          "component_groups": [
+            "dolphin_baby"
+          ]
         }
       },
-      "start_dryingout": {
-        "remove": {
-          "component_groups": [ "dolphin_on_land_in_rain" ]
-        },
-        "add": {
-          "component_groups": [
-            "dolphin_on_land"
-          ]
-        }
+      "minecraft:entity_spawned": {
+        "randomize": [
+          {
+            "add": {
+              "component_groups": [
+                "dolphin_adult",
+                "dolphin_swimming_navigation"
+              ]
+            },
+            "weight": 90
+          },
+          {
+            "trigger": "minecraft:entity_born",
+            "weight": 10
+          }
+        ]
       },
       "dried_out": {
         "add": {
-          "component_groups": [ "dolphin_dried" ]
+          "component_groups": [
+            "dolphin_dried"
+          ]
         }
       },
-      "recover_after_dried_out": {
-        "remove": {
-          "component_groups": [ "dolphin_dried" ]
-        }
-      },
-      "navigation_on_land": {
+      "minecraft:entity_born": {
         "add": {
-          "component_groups": [ "dolphin_on_land" ]
-        },
-        "remove": {
-          "component_groups": [ "dolphin_swimming_navigation" ]
+          "component_groups": [
+            "dolphin_baby",
+            "dolphin_swimming_navigation"
+          ]
         }
       },
       "navigation_off_land": {
         "add": {
-          "component_groups": [ "dolphin_swimming_navigation" ]
+          "component_groups": [
+            "dolphin_swimming_navigation"
+          ]
         },
         "remove": {
           "component_groups": [
             "dolphin_on_land_in_rain",
+            "dolphin_on_land",
+            "dolphin_dried"
+          ]
+        }
+      },
+      "navigation_on_land": {
+        "add": {
+          "component_groups": [
+            "dolphin_on_land"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "dolphin_swimming_navigation"
+          ]
+        }
+      },
+      "recover_after_dried_out": {
+        "remove": {
+          "component_groups": [
+            "dolphin_dried"
+          ]
+        }
+      },
+      "start_dryingout": {
+        "add": {
+          "component_groups": [
+            "dolphin_on_land"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "dolphin_on_land_in_rain"
+          ]
+        }
+      },
+      "stop_dryingout": {
+        "add": {
+          "component_groups": [
+            "dolphin_on_land_in_rain"
+          ]
+        },
+        "remove": {
+          "component_groups": [
             "dolphin_on_land",
             "dolphin_dried"
           ]

@@ -752,7 +752,7 @@
     
     "$store_factory_collection_details": "collection_details",
     "$store_factory_binding_type": "collection",
-    "$store_factory_collection_prefix": "factory",
+    "$store_factory_collection_prefix": "rows",
     "$store_factory_collection_name": "factory_collection",
 
     "controls": [
