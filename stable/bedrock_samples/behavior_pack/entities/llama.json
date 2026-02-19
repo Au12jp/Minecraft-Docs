@@ -26,6 +26,8 @@
               "growth": 0.9
             }
           ],
+          "pause_growth_items": [ "golden_dandelion" ],
+          "reset_growth_items": [ "golden_dandelion" ],
           "grow_up": {
             "event": "minecraft:ageable_grow_up",
             "target": "self"
@@ -421,9 +423,7 @@
 
     "components": {
       "minecraft:offspring": {
-        "parent_centric_attribute_blending": [
-          "minecraft:health"
-        ],
+        "parent_centric_attribute_blending": ["minecraft:health"],
         "inherit_tamed": false,
         "offspring_pairs": {
           "minecraft:llama": "minecraft:llama"
@@ -432,7 +432,7 @@
       "minecraft:spawn_egg_interaction": {},
       "minecraft:is_hidden_when_invisible": {},
       "minecraft:type_family": {
-        "family": [ "llama", "mob" ]
+        "family": ["llama", "mob"]
       },
       "minecraft:breathable": {
         "total_supply": 15,
