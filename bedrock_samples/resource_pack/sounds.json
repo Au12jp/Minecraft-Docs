@@ -4016,17 +4016,12 @@
                   "baby" : {
                      "events" : {
                         "ambient" : {
-                           "pitch" : 0.50,
-                           "sound" : "mob.baby_cat.ambient",
-                           "volume" : 1.0
-                        },
-                        "ambient.baby" : {
-                           "pitch" : 0.50,
+                           "pitch" : 0.0,
                            "sound" : "mob.baby_cat.ambient",
                            "volume" : 1.0
                         },
                         "ambient.tame" : {
-                           "pitch" : 0.50,
+                           "pitch" : 0.0,
                            "sound" : "mob.baby_cat.ambient",
                            "volume" : 1.0
                         },
@@ -4150,12 +4145,7 @@
                   "baby" : {
                      "events" : {
                         "ambient" : {
-                           "pitch" : 0.50,
-                           "sound" : "mob.baby_chicken.ambient",
-                           "volume" : 1.0
-                        },
-                        "ambient.baby" : {
-                           "pitch" : 0.50,
+                           "pitch" : 0.0,
                            "sound" : "mob.baby_chicken.ambient",
                            "volume" : 1.0
                         },
@@ -4807,12 +4797,7 @@
                   "baby" : {
                      "events" : {
                         "ambient" : {
-                           "pitch" : 0.50,
-                           "sound" : "mob.baby_horse.ambient",
-                           "volume" : 1.0
-                        },
-                        "ambient.baby" : {
-                           "pitch" : 0.50,
+                           "pitch" : 0.0,
                            "sound" : "mob.baby_horse.ambient",
                            "volume" : 1.0
                         },
@@ -5450,7 +5435,7 @@
                "boost" : "mob.pig.boost",
                "death" : "mob.pig.death",
                "death.to.zombie" : "mob.pig.death",
-               "eat" : "mob.pig.eat",
+               "eat" : "",
                "hurt" : "mob.pig.say",
                "step" : "mob.pig.step",
                "unsaddle" : "mob.unsaddle"
@@ -5461,16 +5446,7 @@
                "map" : {
                   "baby" : {
                      "events" : {
-                        "ambient" : {
-                           "pitch" : 0.50,
-                           "sound" : "mob.baby_pig.ambient",
-                           "volume" : 0.50
-                        },
-                        "ambient.baby" : {
-                           "pitch" : 0.50,
-                           "sound" : "mob.baby_pig.ambient",
-                           "volume" : 0.50
-                        },
+                        "ambient" : "mob.baby_pig.ambient",
                         "boost" : {
                            "pitch" : 1,
                            "sound" : "mob.pig.boost",
@@ -5484,11 +5460,6 @@
                         "death.to.zombie" : {
                            "pitch" : -0.050,
                            "sound" : "mob.baby_pig.death",
-                           "volume" : 1.0
-                        },
-                        "eat" : {
-                           "pitch" : 1,
-                           "sound" : "mob.baby_pig.eat",
                            "volume" : 1.0
                         },
                         "hurt" : {
@@ -5511,7 +5482,6 @@
                         "boost" : "mob.pig.boost",
                         "death" : "mob.big_pig.death",
                         "death.to.zombie" : "mob.big_pig.death",
-                        "eat" : "mob.big_pig.eat",
                         "hurt" : "mob.big_pig.hurt",
                         "step" : "mob.pig.step"
                      },
@@ -5526,7 +5496,6 @@
                            "sound" : "mob.pig.death",
                            "volume" : 0.50
                         },
-                        "eat" : "mob.pig.eat",
                         "hurt" : "mob.pig.say",
                         "step" : "mob.pig.step"
                      },
@@ -5539,7 +5508,6 @@
                         "boost" : "mob.pig.boost",
                         "death" : "mob.mini_pig.death",
                         "death.to.zombie" : "mob.mini_pig.death",
-                        "eat" : "mob.mini_pig.eat",
                         "hurt" : "mob.mini_pig.hurt",
                         "step" : "mob.pig.step"
                      },
@@ -6373,16 +6341,7 @@
                   },
                   "baby" : {
                      "events" : {
-                        "ambient" : {
-                           "pitch" : 0.50,
-                           "sound" : "mob.baby_wolf.bark",
-                           "volume" : 1.0
-                        },
-                        "ambient.baby" : {
-                           "pitch" : 0.50,
-                           "sound" : "mob.baby_wolf.bark",
-                           "volume" : 1.0
-                        },
+                        "ambient" : "mob.baby_wolf.bark",
                         "death" : {
                            "pitch" : 0.50,
                            "sound" : "mob.baby_wolf.death",

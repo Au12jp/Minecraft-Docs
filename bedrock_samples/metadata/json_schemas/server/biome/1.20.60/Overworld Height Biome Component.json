@@ -1,5 +1,5 @@
 {
-  "$id": "3985206554",
+  "$id": "1042742755",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "Noise parameters used to drive terrain height in the Overworld.",
   "properties": {

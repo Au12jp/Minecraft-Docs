@@ -5,55 +5,50 @@
     "type": "stack_panel",
     "controls": [
       {
-        "faq_question_1@csb_faq.image_left_faq_question_body": {
+        "faq_question_1@realmsPlus_faq.image_left_faq_question_body": {
           "$faq_question": "store.token_faq.question1",
           "$faq_answer": "store.token_faq.answer1",
-          "$image_size": [ 50, "50%x" ],
-          "$image_texture": "textures/ui/promo_axolotl"
+          "$repo_image_texture": "adventure_characters"
         }
       },
       {
         "faq_question_1_divider@common.section_divider": {}
       },
       {
-        "faq_question_2@csb_faq.image_right_faq_question_body": {
+        "faq_question_2@realmsPlus_faq.image_right_faq_question_body": {
           "$faq_question": "store.token_faq.question2",
           "$faq_answer": "store.token_faq.answer2",
-          "$image_size": [ 50, "50%x" ],
-          "$image_texture": "textures/ui/csb_faq_parrot"
+          "$repo_image_texture": "creeper_forward"
         }
       },
       {
         "faq_question_2_divider@common.section_divider": {}
       },
       {
-        "faq_question_3@csb_faq.image_left_faq_question_body": {
+        "faq_question_3@realmsPlus_faq.image_left_faq_question_body": {
           "$faq_question": "store.token_faq.question3",
           "$faq_answer": "store.token_faq.answer3",
-          "$image_size": [ 50, "50%x" ],
-          "$image_texture": "textures/ui/promo_bee"
+          "$repo_image_texture": "pig_forward"
         }
       },
       {
         "faq_question_3_divider@common.section_divider": {}
       },
       {
-        "faq_question_4@csb_faq.image_right_faq_question_body": {
+        "faq_question_4@realmsPlus_faq.image_right_faq_question_body": {
           "$faq_question": "store.token_faq.question4",
           "$faq_answer": "store.token_faq.answer4",
-          "$image_size": [ 50, "50%x" ],
-          "$image_texture": "textures/ui/promo_wolf"
+          "$repo_image_texture": "wolf_forward"
         }
       },
       {
         "faq_question_4_divider@common.section_divider": {}
       },
       {
-        "faq_question_5@csb_faq.image_left_faq_question_body": {
+        "faq_question_5@realmsPlus_faq.image_left_faq_question_body": {
           "$faq_question": "store.token_faq.question5",
           "$faq_answer": "store.token_faq.answer5",
-          "$image_size": [ 50, "50%x" ],
-          "$image_texture": "textures/ui/csb_faq_fox"
+          "$repo_image_texture": "steve_forward"
         }
       }
     ]

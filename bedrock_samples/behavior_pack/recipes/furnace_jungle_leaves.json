@@ -4,11 +4,7 @@
     "description": {
       "identifier": "minecraft:furnace_jungle_leaves"
     },
-    "unlock": [
-      {
-        "item": "minecraft:jungle_leaves"
-      }
-    ],
+
     "tags": [ "furnace" ],
     "input": "minecraft:jungle_leaves",
     "output": "minecraft:leaf_litter"

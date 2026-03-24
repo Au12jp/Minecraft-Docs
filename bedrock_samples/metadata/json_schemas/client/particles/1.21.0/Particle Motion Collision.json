@@ -1,35 +1,8 @@
 {
-  "$id": "1924051907",
+  "$id": "49717204",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
-    "1072910172": {
-      "properties": {
-        "event": {
-          "$ref": "#/definitions/3381141713"
-        },
-        "min_speed": {
-          "default": 2,
-          "type": "number"
-        }
-      },
-      "required": [
-        "event"
-      ],
-      "title": "particle_motion_collision_event",
-      "type": "object"
-    },
-    "2014847524": {
-      "oneOf": [
-        {
-          "$ref": "#/definitions/2529973620"
-        },
-        {
-          "type": "number"
-        }
-      ],
-      "title": "Molang expression"
-    },
-    "2529973620": {
+    "2267778531": {
       "oneOf": [
         {
           "type": "string"
@@ -52,23 +25,50 @@
       ],
       "title": "Molang string"
     },
-    "3381141713": {
+    "2423881331": {
+      "properties": {
+        "event": {
+          "$ref": "#/definitions/2715320761"
+        },
+        "min_speed": {
+          "default": 2,
+          "type": "number"
+        }
+      },
+      "required": [
+        "event"
+      ],
+      "title": "particle_motion_collision_event",
+      "type": "object"
+    },
+    "2715320761": {
       "title": "hashed_string",
       "type": "string"
     },
-    "3745571211": {
+    "2751853296": {
       "oneOf": [
         {
           "items": {
-            "$ref": "#/definitions/1072910172"
+            "$ref": "#/definitions/2423881331"
           },
           "type": "array"
         },
         {
-          "$ref": "#/definitions/1072910172"
+          "$ref": "#/definitions/2423881331"
         }
       ],
       "title": "particle_motion_collision_event_vector"
+    },
+    "3178719147": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/2267778531"
+        },
+        {
+          "type": "number"
+        }
+      ],
+      "title": "Molang expression"
     }
   },
   "properties": {
@@ -86,11 +86,11 @@
       "type": "number"
     },
     "enabled": {
-      "$ref": "#/definitions/2014847524",
+      "$ref": "#/definitions/3178719147",
       "default": 1
     },
     "events": {
-      "$ref": "#/definitions/3745571211"
+      "$ref": "#/definitions/2751853296"
     },
     "expire_on_contact": {
       "default": false,

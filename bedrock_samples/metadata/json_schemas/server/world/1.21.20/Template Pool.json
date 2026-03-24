@@ -1,29 +1,25 @@
 {
-  "$id": "3393725763",
+  "$id": "1382973118",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
-    "265903687": {
-      "maxLength": 256,
-      "title": "File Reference",
-      "type": "string"
-    },
-    "2952003949": {
+    "1323337012": {
       "title": "Reference",
       "type": "string"
     },
-    "3250870955": {
+    "1356053607": {
+      "title": "Reference",
+      "type": "string"
+    },
+    "1755372388": {
       "properties": {
         "element": {
           "description": "A grouping of a Structure Template, the Processor List to use when placing the structure, and its weight that determines the likelihood of the element being chosen.",
           "oneOf": [
             {
-              "$ref": "#/definitions/3844268972"
+              "$ref": "#/definitions/2360259677"
             },
             {
-              "$ref": "#/definitions/3713756641"
-            },
-            {
-              "$ref": "#/definitions/3298877405"
+              "$ref": "#/definitions/2726507774"
             }
           ]
         },
@@ -41,43 +37,10 @@
       "title": "TemplatePoolElement",
       "type": "object"
     },
-    "3298877405": {
-      "properties": {
-        "element_type": {
-          "const": "minecraft:feature_pool_element",
-          "description": "The type of element.",
-          "enum": [
-            "minecraft:empty_pool_element",
-            "minecraft:single_pool_element",
-            "minecraft:feature_pool_element"
-          ],
-          "title": "ElementType",
-          "type": "string"
-        },
-        "feature": {
-          "$ref": "#/definitions/3456235324",
-          "description": "The identifier of the feature to place."
-        }
-      },
-      "required": [
-        "element_type",
-        "feature"
-      ],
-      "title": "FeaturePoolElement",
-      "type": "object"
-    },
-    "3415839975": {
-      "title": "Identifier",
-      "type": "string"
-    },
-    "3456235324": {
-      "title": "Reference",
-      "type": "string"
-    },
-    "3511582345": {
+    "1872243302": {
       "properties": {
         "identifier": {
-          "$ref": "#/definitions/3415839975",
+          "$ref": "#/definitions/3714778797",
           "description": "Identifier of the template pool. Used by Jigsaw Structures to assign processors to Structure Templates."
         }
       },
@@ -87,29 +50,43 @@
       "title": "Description",
       "type": "object"
     },
-    "3634282923": {
-      "title": "Reference",
-      "type": "string"
+    "2360259677": {
+      "properties": {
+        "element_type": {
+          "const": "minecraft:empty_pool_element",
+          "description": "The type of element",
+          "enum": [
+            "minecraft:empty_pool_element",
+            "minecraft:single_pool_element"
+          ],
+          "title": "ElementType",
+          "type": "string"
+        }
+      },
+      "required": [
+        "element_type"
+      ],
+      "title": "EmptyPoolElement",
+      "type": "object"
     },
-    "3713756641": {
+    "2726507774": {
       "properties": {
         "element_type": {
           "const": "minecraft:single_pool_element",
           "description": "The type of element.",
           "enum": [
             "minecraft:empty_pool_element",
-            "minecraft:single_pool_element",
-            "minecraft:feature_pool_element"
+            "minecraft:single_pool_element"
           ],
           "title": "ElementType",
           "type": "string"
         },
         "location": {
-          "$ref": "#/definitions/265903687",
+          "$ref": "#/definitions/3609101623",
           "description": "The path of the structure file. This path is relative to the behavior pack's structures folder."
         },
         "processors": {
-          "$ref": "#/definitions/2952003949",
+          "$ref": "#/definitions/1323337012",
           "default": "",
           "description": "The identifier of the processor list to use when placing the structure."
         },
@@ -131,40 +108,29 @@
       "title": "SinglePoolElement",
       "type": "object"
     },
-    "3844268972": {
-      "properties": {
-        "element_type": {
-          "const": "minecraft:empty_pool_element",
-          "description": "The type of element",
-          "enum": [
-            "minecraft:empty_pool_element",
-            "minecraft:single_pool_element",
-            "minecraft:feature_pool_element"
-          ],
-          "title": "ElementType",
-          "type": "string"
-        }
-      },
-      "required": [
-        "element_type"
-      ],
-      "title": "EmptyPoolElement",
-      "type": "object"
+    "3609101623": {
+      "maxLength": 256,
+      "title": "File Reference",
+      "type": "string"
+    },
+    "3714778797": {
+      "title": "Identifier",
+      "type": "string"
     }
   },
   "properties": {
     "description": {
-      "$ref": "#/definitions/3511582345"
+      "$ref": "#/definitions/1872243302"
     },
     "elements": {
       "description": "List of Structure Template and processor list pairs.",
       "items": {
-        "$ref": "#/definitions/3250870955"
+        "$ref": "#/definitions/1755372388"
       },
       "type": "array"
     },
     "fallback": {
-      "$ref": "#/definitions/3634282923",
+      "$ref": "#/definitions/1356053607",
       "default": "minecraft:empty",
       "description": "Fallback template pool to use if no element in the pool can be placed successfully."
     }

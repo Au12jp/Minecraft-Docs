@@ -4,11 +4,7 @@
     "description": {
       "identifier": "minecraft:furnace_azalea_leaves"
     },
-    "unlock": [
-      {
-        "item": "minecraft:azalea_leaves"
-      }
-    ],
+
     "tags": [ "furnace" ],
     "input": "minecraft:azalea_leaves",
     "output": "minecraft:leaf_litter"

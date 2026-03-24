@@ -2,11 +2,14 @@
   "format_version": "1.20.10",
   "minecraft:recipe_shaped": {
     "description": {
-      "identifier": "minecraft:torch"
+    "identifier": "minecraft:torch"
     },
-
-    "tags": ["crafting_table"],
-    "pattern": ["X", "#"],
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "X",
+      "#"
+    ],
     "key": {
       "#": {
         "item": "minecraft:stick"
@@ -15,15 +18,9 @@
         "tag": "minecraft:coals"
       }
     },
-    "unlock": [
+	"unlock": [
       {
-        "tag": "minecraft:coals"
-      },
-      {
-        "item": "minecraft:stick"
-      },
-      {
-        "tag": "minecraft:is_pickaxe"
+        "item": "minecraft:stone_pickaxe"
       }
     ],
     "result": {

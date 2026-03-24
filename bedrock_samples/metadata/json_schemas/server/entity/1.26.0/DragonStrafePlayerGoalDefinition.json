@@ -1,8 +1,8 @@
 {
-  "$id": "2461378569",
+  "$id": "2759487652",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
-    "2566306602": {
+    "1057349585": {
       "properties": {
         "max": {
           "default": 0,
@@ -70,7 +70,7 @@
       "type": "number"
     },
     "target_zone": {
-      "$ref": "#/definitions/2566306602",
+      "$ref": "#/definitions/1057349585",
       "default": {
         "max": 150,
         "min": 10

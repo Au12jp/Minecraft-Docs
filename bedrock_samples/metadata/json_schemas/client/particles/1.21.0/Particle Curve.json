@@ -1,35 +1,18 @@
 {
-  "$id": "1708704753",
+  "$id": "2236411444",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
-    "1104265546": {
-      "additionalProperties": {
-        "$ref": "#/definitions/1158630532"
-      },
-      "title": "particle_curve_bezier_chain node_map",
-      "type": "object"
-    },
-    "1158630532": {
-      "$ref": "#/definitions/976998696",
-      "title": "particle_curve_bezier_chain node"
-    },
-    "1982117790": {
+    "1644558368": {
       "properties": {
-        "horizontal_range": {
-          "$ref": "#/definitions/2014847524",
-          "default": 1
-        },
         "input": {
-          "$ref": "#/definitions/2014847524"
+          "$ref": "#/definitions/3178719147"
         },
         "nodes": {
-          "items": {
-            "$ref": "#/definitions/2014847524"
-          },
-          "type": "array"
+          "$ref": "#/definitions/2325482181"
         },
         "type": {
-          "$ref": "#/definitions/3381141713"
+          "pattern": "^bezier_chain$",
+          "type": "string"
         }
       },
       "required": [
@@ -37,21 +20,10 @@
         "nodes",
         "type"
       ],
-      "title": "particle_curve_linear",
+      "title": "particle_curve_bezier_chain",
       "type": "object"
     },
-    "2014847524": {
-      "oneOf": [
-        {
-          "$ref": "#/definitions/2529973620"
-        },
-        {
-          "type": "number"
-        }
-      ],
-      "title": "Molang expression"
-    },
-    "2529973620": {
+    "2267778531": {
       "oneOf": [
         {
           "type": "string"
@@ -74,21 +46,34 @@
       ],
       "title": "Molang string"
     },
-    "3381141713": {
-      "title": "hashed_string",
-      "type": "string"
+    "2325482181": {
+      "additionalProperties": {
+        "$ref": "#/definitions/2334075625"
+      },
+      "title": "particle_curve_bezier_chain node_map",
+      "type": "object"
     },
-    "3881713535": {
+    "2334075625": {
+      "$ref": "#/definitions/963106671",
+      "title": "particle_curve_bezier_chain node"
+    },
+    "2589586811": {
       "properties": {
+        "horizontal_range": {
+          "$ref": "#/definitions/3178719147",
+          "default": 1
+        },
         "input": {
-          "$ref": "#/definitions/2014847524"
+          "$ref": "#/definitions/3178719147"
         },
         "nodes": {
-          "$ref": "#/definitions/1104265546"
+          "items": {
+            "$ref": "#/definitions/3178719147"
+          },
+          "type": "array"
         },
         "type": {
-          "pattern": "^bezier_chain$",
-          "type": "string"
+          "$ref": "#/definitions/2715320761"
         }
       },
       "required": [
@@ -96,10 +81,25 @@
         "nodes",
         "type"
       ],
-      "title": "particle_curve_bezier_chain",
+      "title": "particle_curve_linear",
       "type": "object"
     },
-    "976998696": {
+    "2715320761": {
+      "title": "hashed_string",
+      "type": "string"
+    },
+    "3178719147": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/2267778531"
+        },
+        {
+          "type": "number"
+        }
+      ],
+      "title": "Molang expression"
+    },
+    "963106671": {
       "properties": {
         "left_slope": {
           "type": "number"
@@ -126,10 +126,10 @@
   },
   "oneOf": [
     {
-      "$ref": "#/definitions/1982117790"
+      "$ref": "#/definitions/2589586811"
     },
     {
-      "$ref": "#/definitions/3881713535"
+      "$ref": "#/definitions/1644558368"
     }
   ],
   "title": "particle_curve",

@@ -1,15 +1,24 @@
 {
-  "$id": "2414319751",
+  "$id": "3226186110",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
-    "2827075440": {
+    "1428261416": {
+      "maxLength": 256,
+      "title": "File Reference",
+      "type": "string"
+    },
+    "2715320761": {
+      "title": "hashed_string",
+      "type": "string"
+    },
+    "801168425": {
       "description": "The parameters MUST contain a material and texture.",
       "properties": {
         "material": {
-          "$ref": "#/definitions/3381141713"
+          "$ref": "#/definitions/2715320761"
         },
         "texture": {
-          "$ref": "#/definitions/2924835359"
+          "$ref": "#/definitions/1428261416"
         }
       },
       "required": [
@@ -18,21 +27,12 @@
       ],
       "title": "particle_effect basic_render_parameters",
       "type": "object"
-    },
-    "2924835359": {
-      "maxLength": 256,
-      "title": "File Reference",
-      "type": "string"
-    },
-    "3381141713": {
-      "title": "hashed_string",
-      "type": "string"
     }
   },
   "description": "The description MUST contain an identifier and basic_render_parameters.",
   "properties": {
     "basic_render_parameters": {
-      "$ref": "#/definitions/2827075440",
+      "$ref": "#/definitions/801168425",
       "description": "The parameters MUST contain a material and texture."
     },
     "identifier": {

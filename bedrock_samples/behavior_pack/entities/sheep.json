@@ -1,5 +1,5 @@
 {
-  "format_version": "1.26.20",
+  "format_version": "1.26.10",
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:sheep",
@@ -54,13 +54,6 @@
         "minecraft:behavior.follow_parent": {
           "priority": 6,
           "speed_multiplier": 1.1
-        },
-        "minecraft:rideable": {
-          "seat_count": 1,
-          "family_types": [ "baby_undead" ],
-          "seats": {
-            "position": [ 0.0, 0.70, -0.3 ]
-          }
         }
       },
 
@@ -369,7 +362,8 @@
         "add": {
           "component_groups": [
             "minecraft:sheep_baby",
-            "minecraft:sheep_dyeable"
+            "minecraft:sheep_dyeable",
+            "minecraft:rideable_sheared"
           ]
         }
       },
@@ -378,16 +372,15 @@
         "add": {
           "component_groups": [
             "minecraft:sheep_baby",
-            "minecraft:sheep_dyeable"
+            "minecraft:sheep_dyeable",
+            "minecraft:rideable_sheared"
           ]
         }
       },
 
       "minecraft:ageable_grow_up": {
         "remove": {
-          "component_groups": [
-            "minecraft:sheep_baby"
-          ]
+          "component_groups": ["minecraft:sheep_baby"]
         },
         "add": {
           "component_groups": [

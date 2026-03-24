@@ -1,8 +1,8 @@
 {
-  "$id": "4058047637",
+  "$id": "1861715976",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
-    "1429287564": {
+    "1531870811": {
       "oneOf": [
         {
           "type": "string"
@@ -16,24 +16,32 @@
       ],
       "title": "Item Descriptor"
     },
-    "2565245911": {
-      "oneOf": [
-        {
-          "type": "integer"
-        },
-        {
+    "2770948419": {
+      "properties": {
+        "name": {
+          "default": "",
           "type": "string"
         },
-        {
-          "type": "boolean"
+        "states": {
+          "additionalProperties": {
+            "$ref": "#/definitions/517105782"
+          },
+          "default": {
+          },
+          "type": "object"
+        },
+        "tags": {
+          "default": "",
+          "type": "string"
         }
-      ],
-      "title": "compound_proxy"
+      },
+      "title": "BlockDescriptorProxy",
+      "type": "object"
     },
-    "3093766462": {
+    "2794205495": {
       "oneOf": [
         {
-          "$ref": "#/definitions/855125494",
+          "$ref": "#/definitions/2770948419",
           "x-runtime-constraint-description": "Check that a valid block name or expression is provided, and in the latter case verify that there are no block states as well"
         },
         {
@@ -41,13 +49,13 @@
           "type": "string"
         },
         {
-          "$ref": "#/definitions/855125494",
+          "$ref": "#/definitions/2770948419",
           "x-runtime-constraint-description": "Check that a valid block name or expression is provided, and in the latter case verify that there are no block states as well"
         }
       ],
       "title": "Block Descriptor"
     },
-    "742152213": {
+    "4021724221": {
       "oneOf": [
         {
           "items": {
@@ -73,27 +81,19 @@
       ],
       "title": "Vec2"
     },
-    "855125494": {
-      "properties": {
-        "name": {
-          "default": "",
+    "517105782": {
+      "oneOf": [
+        {
+          "type": "integer"
+        },
+        {
           "type": "string"
         },
-        "states": {
-          "additionalProperties": {
-            "$ref": "#/definitions/2565245911"
-          },
-          "default": {
-          },
-          "type": "object"
-        },
-        "tags": {
-          "default": "",
-          "type": "string"
+        {
+          "type": "boolean"
         }
-      },
-      "title": "BlockDescriptorProxy",
-      "type": "object"
+      ],
+      "title": "compound_proxy"
     }
   },
   "description": "A behavior that enables a mob to transport items from and to containers.",
@@ -108,7 +108,7 @@
       ],
       "description": "A list of item descriptors that are the only items the mob is allowed to transport. If this and \"disallowed_items\" are both empty, then all items are allowed. If non-empty \"disallowed_items\" must be empty.",
       "items": {
-        "$ref": "#/definitions/1429287564"
+        "$ref": "#/definitions/1531870811"
       },
       "type": "array"
     },
@@ -131,7 +131,7 @@
       ],
       "description": "A list of block descriptors that should be a container type to put items in.",
       "items": {
-        "$ref": "#/definitions/3093766462"
+        "$ref": "#/definitions/2794205495"
       },
       "type": "array"
     },
@@ -140,7 +140,7 @@
       ],
       "description": "A list of item descriptors that are the mob is not allowed to transport. If non-empty \"allowed_items\" must be empty.",
       "items": {
-        "$ref": "#/definitions/1429287564"
+        "$ref": "#/definitions/1531870811"
       },
       "type": "array"
     },
@@ -192,7 +192,7 @@
       "type": "integer"
     },
     "search_distance": {
-      "$ref": "#/definitions/742152213",
+      "$ref": "#/definitions/4021724221",
       "default": [
         64,
         32
@@ -214,7 +214,7 @@
       ],
       "description": "A list of block descriptors that should be a container type to get items from.",
       "items": {
-        "$ref": "#/definitions/3093766462"
+        "$ref": "#/definitions/2794205495"
       },
       "type": "array"
     }

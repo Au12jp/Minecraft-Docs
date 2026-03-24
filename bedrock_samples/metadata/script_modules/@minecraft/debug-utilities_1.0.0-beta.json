@@ -656,7 +656,7 @@
             },
             "is_bind_type": true,
             "is_errorable": false,
-            "name": "RGBA"
+            "name": "RGB"
           }
         },
         {
@@ -971,24 +971,7 @@
               "type": {
                 "is_bind_type": false,
                 "is_errorable": false,
-                "name": "variant",
-                "variant_types": [
-                  {
-                    "from_module": {
-                      "name": "@minecraft/server-bindings",
-                      "uuid": "0196a2fa-8fb5-79a7-b29e-ce3cbc644f82",
-                      "version": "2.0.0"
-                    },
-                    "is_bind_type": true,
-                    "is_errorable": false,
-                    "name": "RawMessage"
-                  },
-                  {
-                    "is_bind_type": false,
-                    "is_errorable": false,
-                    "name": "string"
-                  }
-                ]
+                "name": "string"
               }
             }
           ],
@@ -1004,49 +987,6 @@
             "is_errorable": false,
             "name": "DebugText"
           }
-        },
-        {
-          "arguments": [
-            {
-              "details": null,
-              "name": "text",
-              "type": {
-                "is_bind_type": false,
-                "is_errorable": false,
-                "name": "variant",
-                "variant_types": [
-                  {
-                    "from_module": {
-                      "name": "@minecraft/server-bindings",
-                      "uuid": "0196a2fa-8fb5-79a7-b29e-ce3cbc644f82",
-                      "version": "2.0.0"
-                    },
-                    "is_bind_type": true,
-                    "is_errorable": false,
-                    "name": "RawMessage"
-                  },
-                  {
-                    "is_bind_type": false,
-                    "is_errorable": false,
-                    "name": "string"
-                  }
-                ]
-              }
-            }
-          ],
-          "call_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "setText",
-          "return_type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "undefined"
-          }
         }
       ],
       "name": "DebugText",
@@ -1059,89 +999,7 @@
           ],
           "is_baked": false,
           "is_read_only": false,
-          "name": "backgroundColorOverride",
-          "set_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "optional",
-            "optional_type": {
-              "from_module": {
-                "name": "@minecraft/server-bindings",
-                "uuid": "0196a2fa-8fb5-79a7-b29e-ce3cbc644f82",
-                "version": "2.0.0"
-              },
-              "is_bind_type": true,
-              "is_errorable": false,
-              "name": "RGBA"
-            }
-          }
-        },
-        {
-          "get_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_baked": false,
-          "is_read_only": false,
-          "name": "depthTest",
-          "set_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "boolean"
-          }
-        },
-        {
-          "get_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_baked": false,
-          "is_read_only": true,
           "name": "text",
-          "type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "variant",
-            "variant_types": [
-              {
-                "from_module": {
-                  "name": "@minecraft/server-bindings",
-                  "uuid": "0196a2fa-8fb5-79a7-b29e-ce3cbc644f82",
-                  "version": "2.0.0"
-                },
-                "is_bind_type": true,
-                "is_errorable": false,
-                "name": "RawMessage"
-              },
-              {
-                "is_bind_type": false,
-                "is_errorable": false,
-                "name": "string"
-              }
-            ]
-          }
-        },
-        {
-          "get_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_baked": false,
-          "is_read_only": false,
-          "name": "useRotation",
           "set_privilege": [
             {
               "name": "restricted_execution"
@@ -1150,7 +1008,7 @@
           "type": {
             "is_bind_type": false,
             "is_errorable": false,
-            "name": "boolean"
+            "name": "string"
           }
         }
       ],
