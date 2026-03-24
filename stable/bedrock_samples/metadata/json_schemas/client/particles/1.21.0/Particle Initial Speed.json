@@ -1,19 +1,8 @@
 {
-  "$id": "2966116904",
+  "$id": "2590609581",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
-    "2014847524": {
-      "oneOf": [
-        {
-          "$ref": "#/definitions/2529973620"
-        },
-        {
-          "type": "number"
-        }
-      ],
-      "title": "Molang expression"
-    },
-    "2529973620": {
+    "2267778531": {
       "oneOf": [
         {
           "type": "string"
@@ -35,19 +24,30 @@
         }
       ],
       "title": "Molang string"
+    },
+    "3178719147": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/2267778531"
+        },
+        {
+          "type": "number"
+        }
+      ],
+      "title": "Molang expression"
     }
   },
   "oneOf": [
     {
       "items": {
-        "$ref": "#/definitions/2014847524"
+        "$ref": "#/definitions/3178719147"
       },
       "maxItems": 3,
       "minItems": 3,
       "type": "array"
     },
     {
-      "$ref": "#/definitions/2014847524"
+      "$ref": "#/definitions/3178719147"
     }
   ],
   "title": "particle_initial_speed",

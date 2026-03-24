@@ -1,27 +1,8 @@
 {
-  "$id": "3152900197",
+  "$id": "1486903430",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
-    "1336804412": {
-      "properties": {
-        "minecraft:dimension_bounds": {
-          "$ref": "#/definitions/2004589657",
-          "default": {
-            "max": 0,
-            "min": 0
-          }
-        },
-        "minecraft:generation": {
-          "$ref": "#/definitions/3256507006"
-        }
-      },
-      "required": [
-        "minecraft:generation"
-      ],
-      "title": "Components",
-      "type": "object"
-    },
-    "2004589657": {
+    "1168660568": {
       "properties": {
         "max": {
           "maximum": 512,
@@ -43,7 +24,38 @@
       "title": "Bounds",
       "type": "object"
     },
-    "3256507006": {
+    "1299192089": {
+      "properties": {
+        "identifier": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "identifier"
+      ],
+      "title": "Description",
+      "type": "object"
+    },
+    "164563289": {
+      "properties": {
+        "minecraft:dimension_bounds": {
+          "$ref": "#/definitions/1168660568",
+          "default": {
+            "max": 0,
+            "min": 0
+          }
+        },
+        "minecraft:generation": {
+          "$ref": "#/definitions/1892745351"
+        }
+      },
+      "required": [
+        "minecraft:generation"
+      ],
+      "title": "Components",
+      "type": "object"
+    },
+    "1892745351": {
       "properties": {
         "generator_type": {
           "type": "string"
@@ -55,13 +67,13 @@
       "title": "Generation",
       "type": "object"
     },
-    "4235864708": {
+    "3731137331": {
       "properties": {
         "components": {
-          "$ref": "#/definitions/1336804412"
+          "$ref": "#/definitions/164563289"
         },
         "description": {
-          "$ref": "#/definitions/846838674"
+          "$ref": "#/definitions/1299192089"
         }
       },
       "required": [
@@ -70,23 +82,11 @@
       ],
       "title": "Dimension",
       "type": "object"
-    },
-    "846838674": {
-      "properties": {
-        "identifier": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "identifier"
-      ],
-      "title": "Description",
-      "type": "object"
     }
   },
   "properties": {
     "minecraft:dimension": {
-      "$ref": "#/definitions/4235864708"
+      "$ref": "#/definitions/3731137331"
     }
   },
   "required": [

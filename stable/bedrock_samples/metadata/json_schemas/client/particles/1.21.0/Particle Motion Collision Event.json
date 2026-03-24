@@ -1,15 +1,15 @@
 {
-  "$id": "1072910172",
+  "$id": "2423881331",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
-    "3381141713": {
+    "2715320761": {
       "title": "hashed_string",
       "type": "string"
     }
   },
   "properties": {
     "event": {
-      "$ref": "#/definitions/3381141713"
+      "$ref": "#/definitions/2715320761"
     },
     "min_speed": {
       "default": 2,

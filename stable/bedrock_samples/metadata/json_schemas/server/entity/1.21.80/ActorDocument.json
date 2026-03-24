@@ -1,8 +1,8 @@
 {
-  "$id": "1090613630",
+  "$id": "3739104855",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
-    "2984279167": {
+    "115319032": {
       "properties": {
         "minecraft:absorption": {
           "description": "Dynamic value"
@@ -886,30 +886,6 @@
         "minecraft:memory_behavior.follow_target": {
           "description": "Dynamic value"
         },
-        "minecraft:memory_behavior.move_to_position": {
-          "description": "Dynamic value"
-        },
-        "minecraft:memory_sensor.find_nearest_block": {
-          "description": "Dynamic value"
-        },
-        "minecraft:memory_sensor.find_nearest_block_from": {
-          "description": "Dynamic value"
-        },
-        "minecraft:memory_sensor.find_nearest_entity": {
-          "description": "Dynamic value"
-        },
-        "minecraft:memory_sensor.find_nearest_entity_from": {
-          "description": "Dynamic value"
-        },
-        "minecraft:memory_sensor.find_nearest_poi": {
-          "description": "Dynamic value"
-        },
-        "minecraft:memory_sensor.in_range_of_block": {
-          "description": "Dynamic value"
-        },
-        "minecraft:memory_sensor.in_range_of_entity": {
-          "description": "Dynamic value"
-        },
         "minecraft:mob_effect": {
           "description": "Dynamic value"
         },
@@ -1090,6 +1066,27 @@
         "minecraft:scheduler": {
           "description": "Dynamic value"
         },
+        "minecraft:sensor.find_nearest_block": {
+          "description": "Dynamic value"
+        },
+        "minecraft:sensor.find_nearest_block_from": {
+          "description": "Dynamic value"
+        },
+        "minecraft:sensor.find_nearest_entity": {
+          "description": "Dynamic value"
+        },
+        "minecraft:sensor.find_nearest_entity_from": {
+          "description": "Dynamic value"
+        },
+        "minecraft:sensor.find_nearest_poi": {
+          "description": "Dynamic value"
+        },
+        "minecraft:sensor.in_range_of_block": {
+          "description": "Dynamic value"
+        },
+        "minecraft:sensor.in_range_of_entity": {
+          "description": "Dynamic value"
+        },
         "minecraft:shareables": {
           "description": "Dynamic value"
         },
@@ -1168,9 +1165,6 @@
         "minecraft:underwater_movement": {
           "description": "Dynamic value"
         },
-        "minecraft:uses_legacy_friction": {
-          "description": "Dynamic value"
-        },
         "minecraft:variable_max_auto_step": {
           "description": "Dynamic value"
         },
@@ -1211,7 +1205,7 @@
             "type": "null"
           },
           {
-            "$ref": "#/definitions/2984279167"
+            "$ref": "#/definitions/115319032"
           }
         ]
       },
@@ -1220,7 +1214,7 @@
       "type": "object"
     },
     "components": {
-      "$ref": "#/definitions/2984279167"
+      "$ref": "#/definitions/115319032"
     },
     "description": {
       "description": "Dynamic value"

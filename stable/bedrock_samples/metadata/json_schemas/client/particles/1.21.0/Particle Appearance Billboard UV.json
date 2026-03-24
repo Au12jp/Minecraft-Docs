@@ -1,11 +1,34 @@
 {
-  "$id": "1748786039",
+  "$id": "2979283012",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
-    "2014847524": {
+    "2267778531": {
       "oneOf": [
         {
-          "$ref": "#/definitions/2529973620"
+          "type": "string"
+        },
+        {
+          "properties": {
+            "expression": {
+              "type": "string"
+            },
+            "version": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "expression",
+            "version"
+          ],
+          "type": "object"
+        }
+      ],
+      "title": "Molang string"
+    },
+    "3178719147": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/2267778531"
         },
         {
           "type": "number"
@@ -13,11 +36,11 @@
       ],
       "title": "Molang expression"
     },
-    "2492572434": {
+    "772645837": {
       "properties": {
         "base_UV": {
           "items": {
-            "$ref": "#/definitions/2014847524"
+            "$ref": "#/definitions/3178719147"
           },
           "maxItems": 2,
           "minItems": 2,
@@ -32,7 +55,7 @@
           "type": "boolean"
         },
         "max_frame": {
-          "$ref": "#/definitions/2014847524"
+          "$ref": "#/definitions/3178719147"
         },
         "size_UV": {
           "default": [
@@ -69,34 +92,11 @@
       ],
       "title": "particle_appearance_billboard flipbook_data",
       "type": "object"
-    },
-    "2529973620": {
-      "oneOf": [
-        {
-          "type": "string"
-        },
-        {
-          "properties": {
-            "expression": {
-              "type": "string"
-            },
-            "version": {
-              "type": "integer"
-            }
-          },
-          "required": [
-            "expression",
-            "version"
-          ],
-          "type": "object"
-        }
-      ],
-      "title": "Molang string"
     }
   },
   "properties": {
     "flipbook": {
-      "$ref": "#/definitions/2492572434"
+      "$ref": "#/definitions/772645837"
     },
     "texture_height": {
       "default": 1,
@@ -108,7 +108,7 @@
     },
     "uv": {
       "items": {
-        "$ref": "#/definitions/2014847524"
+        "$ref": "#/definitions/3178719147"
       },
       "maxItems": 2,
       "minItems": 2,
@@ -116,7 +116,7 @@
     },
     "uv_size": {
       "items": {
-        "$ref": "#/definitions/2014847524"
+        "$ref": "#/definitions/3178719147"
       },
       "maxItems": 2,
       "minItems": 2,

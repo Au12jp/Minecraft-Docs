@@ -1,381 +1,236 @@
 {
-  "format_version": "1.26.10",
   "tiers": [
     {
-      "groups": [
+      "trades": [ // tier 1
         {
-          "num_to_select": -1,
-          "trades": [
+          "wants": [
             {
-              "wants": [
-                {
-                  "choice": [
-                    {
-                      "quantity": {
-                        "min": 10,
-                        "max": 13
-                      },
-                      "item": "minecraft:clay_ball",
-                      "functions": []
-                    }
-                  ]
-                }
-              ],
-              "gives": [
-                {
-                  "choice": [
-                    {
-                      "item": "minecraft:emerald",
-                      "functions": []
-                    }
-                  ]
-                }
-              ]
-            },
+              "item": "minecraft:clay_ball",
+              "quantity": {
+                "min": 10,
+                "max": 13
+              }
+            }
+          ],
+          "gives": [
             {
-              "wants": [
-                {
-                  "choice": [
-                    {
-                      "quantity": {
-                        "max": 2
-                      },
-                      "item": "minecraft:emerald",
-                      "functions": []
-                    }
-                  ]
-                }
-              ],
-              "gives": [
-                {
-                  "choice": [
-                    {
-                      "quantity": {
-                        "min": 16,
-                        "max": 16
-                      },
-                      "item": "minecraft:brick",
-                      "functions": []
-                    }
-                  ]
-                }
-              ]
+              "item": "minecraft:emerald"
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:brick",
+              "quantity": {
+                "min": 16,
+                "max": 16
+              }
             }
           ]
         }
-      ],
-      "total_exp_required": 0
+      ]
     },
     {
-      "groups": [
-        {
-          "num_to_select": -1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "choice": [
-                    {
-                      "quantity": {
-                        "min": 20,
-                        "max": 26
-                      },
-                      "item": "minecraft:stone:0",
-                      "functions": []
-                    }
-                  ]
-                }
-              ],
-              "gives": [
-                {
-                  "choice": [
-                    {
-                      "item": "minecraft:emerald",
-                      "functions": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "wants": [
-                {
-                  "choice": [
-                    {
-                      "quantity": {
-                        "max": 2
-                      },
-                      "item": "minecraft:emerald",
-                      "functions": []
-                    }
-                  ]
-                }
-              ],
-              "gives": [
-                {
-                  "choice": [
-                    {
-                      "quantity": {
-                        "min": 4,
-                        "max": 4
-                      },
-                      "item": "minecraft:stonebrick:3",
-                      "functions": []
-                    }
-                  ]
-                }
-              ]
+      "trades":[ // tier 2
+      {
+        "wants": [
+          {
+            "item": "minecraft:stone:0",
+            "quantity": {
+              "min": 20,
+              "max": 26
             }
-          ]
-        }
-      ],
-      "total_exp_required": 1
+          }
+        ],
+        "gives": [
+          {
+            "item": "minecraft:emerald"
+          }
+        ]
+      },
+      {
+        "wants": [
+          {
+            "item": "minecraft:emerald",
+            "quantity": {
+              "min": 1,
+              "max": 2
+            }
+          }
+        ],
+        "gives": [
+          {
+            "item": "minecraft:stonebrick:3",
+            "quantity": {
+              "min": 4,
+              "max": 4
+            }
+          }
+        ]
+      }
+      ]
     },
     {
-      "groups": [
+      "trades": [ // tier 3
         {
-          "num_to_select": -1,
-          "trades": [
+          "wants": [
             {
-              "wants": [
-                {
-                  "choice": [
-                    {
-                      "quantity": {
-                        "min": 16,
-                        "max": 21
-                      },
-                      "item": "minecraft:stone:1",
-                      "functions": []
-                    }
-                  ]
-                }
-              ],
-              "gives": [
-                {
-                  "choice": [
-                    {
-                      "item": "minecraft:emerald",
-                      "functions": []
-                    }
-                  ]
-                }
-              ]
-            },
+              "item": "minecraft:stone:1",
+              "quantity": {
+                "min": 16,
+                "max": 21
+              }
+            }
+          ],
+          "gives": [
             {
-              "wants": [
-                {
-                  "choice": [
-                    {
-                      "quantity": {
-                        "min": 16,
-                        "max": 21
-                      },
-                      "item": "minecraft:stone:5",
-                      "functions": []
-                    }
-                  ]
-                }
-              ],
-              "gives": [
-                {
-                  "choice": [
-                    {
-                      "item": "minecraft:emerald",
-                      "functions": []
-                    }
-                  ]
-                }
-              ]
-            },
+              "item": "minecraft:emerald"
+            }
+          ]
+        },
+        {
+          "wants": [
             {
-              "wants": [
-                {
-                  "choice": [
-                    {
-                      "quantity": {
-                        "min": 16,
-                        "max": 21
-                      },
-                      "item": "minecraft:stone:3",
-                      "functions": []
-                    }
-                  ]
-                }
-              ],
-              "gives": [
-                {
-                  "choice": [
-                    {
-                      "item": "minecraft:emerald",
-                      "functions": []
-                    }
-                  ]
-                }
-              ]
-            },
+              "item": "minecraft:stone:5",
+              "quantity": {
+                "min": 16,
+                "max": 21
+              }
+            }
+          ],
+          "gives": [
             {
-              "wants": [
-                {
-                  "choice": [
-                    {
-                      "quantity": {
-                        "max": 2
-                      },
-                      "item": "minecraft:emerald",
-                      "functions": []
-                    }
-                  ]
-                }
-              ],
-              "gives": [
-                {
-                  "choice": [
-                    {
-                      "quantity": {
-                        "min": 4,
-                        "max": 4
-                      },
-                      "item": "minecraft:stone:2",
-                      "functions": []
-                    }
-                  ]
-                }
-              ]
-            },
+              "item": "minecraft:emerald"
+            }
+          ]
+        },
+        {
+          "wants": [
             {
-              "wants": [
-                {
-                  "choice": [
-                    {
-                      "quantity": {
-                        "max": 2
-                      },
-                      "item": "minecraft:emerald",
-                      "functions": []
-                    }
-                  ]
-                }
-              ],
-              "gives": [
-                {
-                  "choice": [
-                    {
-                      "quantity": {
-                        "min": 4,
-                        "max": 4
-                      },
-                      "item": "minecraft:stone:6",
-                      "functions": []
-                    }
-                  ]
-                }
-              ]
-            },
+              "item": "minecraft:stone:3",
+              "quantity": {
+                "min": 16,
+                "max": 21
+              }
+            }
+          ],
+          "gives": [
             {
-              "wants": [
-                {
-                  "choice": [
-                    {
-                      "quantity": {
-                        "max": 2
-                      },
-                      "item": "minecraft:emerald",
-                      "functions": []
-                    }
-                  ]
-                }
-              ],
-              "gives": [
-                {
-                  "choice": [
-                    {
-                      "quantity": {
-                        "min": 4,
-                        "max": 4
-                      },
-                      "item": "minecraft:stone:4",
-                      "functions": []
-                    }
-                  ]
-                }
-              ]
+              "item": "minecraft:emerald"
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:stone:2",
+              "quantity": {
+                "min": 4,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:stone:6",
+              "quantity": {
+                "min": 4,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:stone:4",
+              "quantity": {
+                "min": 4,
+                "max": 4
+              }
             }
           ]
         }
-      ],
-      "total_exp_required": 2
+      ]
     },
     {
-      "groups": [
+      "trades": [ // tier 4
         {
-          "num_to_select": -1,
-          "trades": [
+          "wants": [
             {
-              "wants": [
-                {
-                  "choice": [
-                    {
-                      "quantity": {
-                        "min": 20,
-                        "max": 26
-                      },
-                      "item": "minecraft:quartz",
-                      "functions": []
-                    }
-                  ]
-                }
-              ],
-              "gives": [
-                {
-                  "choice": [
-                    {
-                      "item": "minecraft:emerald",
-                      "functions": []
-                    }
-                  ]
-                }
-              ]
+              "item": "minecraft:quartz",
+              "quantity": {
+                "min": 20,
+                "max": 26
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald"
             }
           ]
         }
-      ],
-      "total_exp_required": 3
+      ]
     },
     {
-      "groups": [
+      "trades": [ // tier 5
         {
-          "num_to_select": -1,
-          "trades": [
+          "wants": [
             {
-              "wants": [
-                {
-                  "choice": [
-                    {
-                      "quantity": {
-                        "max": 2
-                      },
-                      "item": "minecraft:emerald",
-                      "functions": []
-                    }
-                  ]
-                }
-              ],
-              "gives": [
-                {
-                  "choice": [
-                    {
-                      "item": "minecraft:quartz_block:2",
-                      "functions": []
-                    }
-                  ]
-                }
-              ]
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:quartz_block:2"
             }
           ]
         }
-      ],
-      "total_exp_required": 4
+      ]
     }
   ]
 }
