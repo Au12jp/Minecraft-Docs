@@ -1,24 +1,24 @@
 {
-  "$id": "1184613621",
+  "$id": "3907782844",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
-    "2730509006": {
+    "2715320761": {
+      "title": "hashed_string",
+      "type": "string"
+    },
+    "771176265": {
       "oneOf": [
         {
           "items": {
-            "$ref": "#/definitions/3381141713"
+            "$ref": "#/definitions/2715320761"
           },
           "type": "array"
         },
         {
-          "$ref": "#/definitions/3381141713"
+          "$ref": "#/definitions/2715320761"
         }
       ],
       "title": "VectorEvents"
-    },
-    "3381141713": {
-      "title": "hashed_string",
-      "type": "string"
     }
   },
   "properties": {
@@ -27,7 +27,7 @@
       "type": "number"
     },
     "effects": {
-      "$ref": "#/definitions/2730509006"
+      "$ref": "#/definitions/771176265"
     }
   },
   "required": [

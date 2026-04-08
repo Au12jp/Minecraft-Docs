@@ -6,1597 +6,6 @@
       "constants": [
       ],
       "functions": [
-        {
-          "arguments": [
-          ],
-          "call_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "getBlockPriorities",
-          "return_type": {
-            "is_bind_type": false,
-            "is_errorable": true,
-            "key_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "string"
-            },
-            "name": "map",
-            "value_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "int32",
-              "valid_range": {
-                "max": 2147483647,
-                "min": -2147483648
-              }
-            }
-          }
-        },
-        {
-          "arguments": [
-          ],
-          "call_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "getBlockTagPriorities",
-          "return_type": {
-            "error_types": [
-              {
-                "from_module": {
-                  "name": "@minecraft/common",
-                  "uuid": "77ec12b4-1b2b-4c98-8d34-d1cd63f849d5",
-                  "version": "1.2.0"
-                },
-                "is_bind_type": true,
-                "is_errorable": false,
-                "name": "EngineError"
-              }
-            ],
-            "is_bind_type": false,
-            "is_errorable": true,
-            "key_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "string"
-            },
-            "name": "map",
-            "value_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "int32",
-              "valid_range": {
-                "max": 2147483647,
-                "min": -2147483648
-              }
-            }
-          }
-        },
-        {
-          "arguments": [
-          ],
-          "call_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "getEntityPriorities",
-          "return_type": {
-            "is_bind_type": false,
-            "is_errorable": true,
-            "key_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "string"
-            },
-            "name": "map",
-            "value_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "int32",
-              "valid_range": {
-                "max": 2147483647,
-                "min": -2147483648
-              }
-            }
-          }
-        },
-        {
-          "arguments": [
-          ],
-          "call_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "getEntityTypeFamilyPriorities",
-          "return_type": {
-            "error_types": [
-              {
-                "from_module": {
-                  "name": "@minecraft/common",
-                  "uuid": "77ec12b4-1b2b-4c98-8d34-d1cd63f849d5",
-                  "version": "1.2.0"
-                },
-                "is_bind_type": true,
-                "is_errorable": false,
-                "name": "EngineError"
-              }
-            ],
-            "is_bind_type": false,
-            "is_errorable": true,
-            "key_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "string"
-            },
-            "name": "map",
-            "value_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "int32",
-              "valid_range": {
-                "max": 2147483647,
-                "min": -2147483648
-              }
-            }
-          }
-        }
-      ],
-      "name": "AimAssistCategory",
-      "properties": [
-        {
-          "get_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_baked": false,
-          "is_read_only": true,
-          "name": "defaultBlockPriority",
-          "type": {
-            "is_bind_type": false,
-            "is_errorable": true,
-            "name": "int32",
-            "valid_range": {
-              "max": 2147483647,
-              "min": -2147483648
-            }
-          }
-        },
-        {
-          "get_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_baked": false,
-          "is_read_only": true,
-          "name": "defaultEntityPriority",
-          "type": {
-            "is_bind_type": false,
-            "is_errorable": true,
-            "name": "int32",
-            "valid_range": {
-              "max": 2147483647,
-              "min": -2147483648
-            }
-          }
-        },
-        {
-          "get_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_baked": false,
-          "is_read_only": true,
-          "name": "identifier",
-          "type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "string"
-          }
-        }
-      ],
-      "type": {
-        "is_bind_type": true,
-        "is_errorable": false,
-        "name": "AimAssistCategory"
-      }
-    },
-    {
-      "base_types": [
-      ],
-      "constants": [
-      ],
-      "functions": [
-        {
-          "arguments": [
-            {
-              "details": null,
-              "name": "identifier",
-              "type": {
-                "is_bind_type": false,
-                "is_errorable": false,
-                "name": "string"
-              }
-            }
-          ],
-          "call_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_constructor": true,
-          "name": "constructor",
-          "return_type": {
-            "is_bind_type": true,
-            "is_errorable": false,
-            "name": "AimAssistCategorySettings"
-          }
-        },
-        {
-          "arguments": [
-          ],
-          "call_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "getBlockPriorities",
-          "return_type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "key_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "string"
-            },
-            "name": "map",
-            "value_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "int32",
-              "valid_range": {
-                "max": 2147483647,
-                "min": -2147483648
-              }
-            }
-          }
-        },
-        {
-          "arguments": [
-          ],
-          "call_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "getBlockTagPriorities",
-          "return_type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "key_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "string"
-            },
-            "name": "map",
-            "value_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "int32",
-              "valid_range": {
-                "max": 2147483647,
-                "min": -2147483648
-              }
-            }
-          }
-        },
-        {
-          "arguments": [
-          ],
-          "call_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "getEntityPriorities",
-          "return_type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "key_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "string"
-            },
-            "name": "map",
-            "value_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "int32",
-              "valid_range": {
-                "max": 2147483647,
-                "min": -2147483648
-              }
-            }
-          }
-        },
-        {
-          "arguments": [
-          ],
-          "call_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "getEntityTypeFamilyPriorities",
-          "return_type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "key_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "string"
-            },
-            "name": "map",
-            "value_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "int32",
-              "valid_range": {
-                "max": 2147483647,
-                "min": -2147483648
-              }
-            }
-          }
-        },
-        {
-          "arguments": [
-            {
-              "details": null,
-              "name": "blockPriorities",
-              "type": {
-                "is_bind_type": false,
-                "is_errorable": false,
-                "key_type": {
-                  "is_bind_type": false,
-                  "is_errorable": false,
-                  "name": "string"
-                },
-                "name": "map",
-                "value_type": {
-                  "is_bind_type": false,
-                  "is_errorable": false,
-                  "name": "int32",
-                  "valid_range": {
-                    "max": 2147483647,
-                    "min": -2147483648
-                  }
-                }
-              }
-            }
-          ],
-          "call_privilege": [
-            {
-              "name": "default"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "setBlockPriorities",
-          "return_type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "undefined"
-          }
-        },
-        {
-          "arguments": [
-            {
-              "details": null,
-              "name": "blockTagPriorities",
-              "type": {
-                "is_bind_type": false,
-                "is_errorable": false,
-                "key_type": {
-                  "is_bind_type": false,
-                  "is_errorable": false,
-                  "name": "string"
-                },
-                "name": "map",
-                "value_type": {
-                  "is_bind_type": false,
-                  "is_errorable": false,
-                  "name": "int32",
-                  "valid_range": {
-                    "max": 2147483647,
-                    "min": -2147483648
-                  }
-                }
-              }
-            }
-          ],
-          "call_privilege": [
-            {
-              "name": "default"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "setBlockTagPriorities",
-          "return_type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "undefined"
-          }
-        },
-        {
-          "arguments": [
-            {
-              "details": null,
-              "name": "entityPriorities",
-              "type": {
-                "is_bind_type": false,
-                "is_errorable": false,
-                "key_type": {
-                  "is_bind_type": false,
-                  "is_errorable": false,
-                  "name": "string"
-                },
-                "name": "map",
-                "value_type": {
-                  "is_bind_type": false,
-                  "is_errorable": false,
-                  "name": "int32",
-                  "valid_range": {
-                    "max": 2147483647,
-                    "min": -2147483648
-                  }
-                }
-              }
-            }
-          ],
-          "call_privilege": [
-            {
-              "name": "default"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "setEntityPriorities",
-          "return_type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "undefined"
-          }
-        },
-        {
-          "arguments": [
-            {
-              "details": null,
-              "name": "entityTypeFamilyPriorities",
-              "type": {
-                "is_bind_type": false,
-                "is_errorable": false,
-                "key_type": {
-                  "is_bind_type": false,
-                  "is_errorable": false,
-                  "name": "string"
-                },
-                "name": "map",
-                "value_type": {
-                  "is_bind_type": false,
-                  "is_errorable": false,
-                  "name": "int32",
-                  "valid_range": {
-                    "max": 2147483647,
-                    "min": -2147483648
-                  }
-                }
-              }
-            }
-          ],
-          "call_privilege": [
-            {
-              "name": "default"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "setEntityTypeFamilyPriorities",
-          "return_type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "undefined"
-          }
-        }
-      ],
-      "name": "AimAssistCategorySettings",
-      "properties": [
-        {
-          "get_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_baked": false,
-          "is_read_only": false,
-          "name": "defaultBlockPriority",
-          "set_privilege": [
-            {
-              "name": "default"
-            }
-          ],
-          "type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "int32",
-            "valid_range": {
-              "max": 2147483647,
-              "min": -2147483648
-            }
-          }
-        },
-        {
-          "get_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_baked": false,
-          "is_read_only": false,
-          "name": "defaultEntityPriority",
-          "set_privilege": [
-            {
-              "name": "default"
-            }
-          ],
-          "type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "int32",
-            "valid_range": {
-              "max": 2147483647,
-              "min": -2147483648
-            }
-          }
-        },
-        {
-          "get_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_baked": false,
-          "is_read_only": true,
-          "name": "identifier",
-          "type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "string"
-          }
-        }
-      ],
-      "type": {
-        "is_bind_type": true,
-        "is_errorable": false,
-        "name": "AimAssistCategorySettings"
-      }
-    },
-    {
-      "base_types": [
-      ],
-      "constants": [
-      ],
-      "functions": [
-        {
-          "arguments": [
-          ],
-          "call_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "getExcludedBlockTagTargets",
-          "return_type": {
-            "element_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "string"
-            },
-            "error_types": [
-              {
-                "from_module": {
-                  "name": "@minecraft/common",
-                  "uuid": "77ec12b4-1b2b-4c98-8d34-d1cd63f849d5",
-                  "version": "1.2.0"
-                },
-                "is_bind_type": true,
-                "is_errorable": false,
-                "name": "EngineError"
-              }
-            ],
-            "is_bind_type": false,
-            "is_errorable": true,
-            "name": "array"
-          }
-        },
-        {
-          "arguments": [
-          ],
-          "call_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "getExcludedBlockTargets",
-          "return_type": {
-            "element_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "string"
-            },
-            "is_bind_type": false,
-            "is_errorable": true,
-            "name": "array"
-          }
-        },
-        {
-          "arguments": [
-          ],
-          "call_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "getExcludedEntityTargets",
-          "return_type": {
-            "element_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "string"
-            },
-            "is_bind_type": false,
-            "is_errorable": true,
-            "name": "array"
-          }
-        },
-        {
-          "arguments": [
-          ],
-          "call_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "getExcludedEntityTypeFamilyTargets",
-          "return_type": {
-            "element_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "string"
-            },
-            "error_types": [
-              {
-                "from_module": {
-                  "name": "@minecraft/common",
-                  "uuid": "77ec12b4-1b2b-4c98-8d34-d1cd63f849d5",
-                  "version": "1.2.0"
-                },
-                "is_bind_type": true,
-                "is_errorable": false,
-                "name": "EngineError"
-              }
-            ],
-            "is_bind_type": false,
-            "is_errorable": true,
-            "name": "array"
-          }
-        },
-        {
-          "arguments": [
-          ],
-          "call_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "getItemSettings",
-          "return_type": {
-            "is_bind_type": false,
-            "is_errorable": true,
-            "key_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "string"
-            },
-            "name": "map",
-            "value_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "string"
-            }
-          }
-        },
-        {
-          "arguments": [
-          ],
-          "call_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "getLiquidTargetingItems",
-          "return_type": {
-            "element_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "string"
-            },
-            "is_bind_type": false,
-            "is_errorable": true,
-            "name": "array"
-          }
-        }
-      ],
-      "name": "AimAssistPreset",
-      "properties": [
-        {
-          "get_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_baked": false,
-          "is_read_only": true,
-          "name": "defaultItemSettings",
-          "type": {
-            "is_bind_type": false,
-            "is_errorable": true,
-            "name": "optional",
-            "optional_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "string"
-            }
-          }
-        },
-        {
-          "get_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_baked": false,
-          "is_read_only": true,
-          "name": "handSettings",
-          "type": {
-            "is_bind_type": false,
-            "is_errorable": true,
-            "name": "optional",
-            "optional_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "string"
-            }
-          }
-        },
-        {
-          "get_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_baked": false,
-          "is_read_only": true,
-          "name": "identifier",
-          "type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "string"
-          }
-        }
-      ],
-      "type": {
-        "is_bind_type": true,
-        "is_errorable": false,
-        "name": "AimAssistPreset"
-      }
-    },
-    {
-      "base_types": [
-      ],
-      "constants": [
-      ],
-      "functions": [
-        {
-          "arguments": [
-            {
-              "details": null,
-              "name": "identifier",
-              "type": {
-                "is_bind_type": false,
-                "is_errorable": false,
-                "name": "string"
-              }
-            }
-          ],
-          "call_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_constructor": true,
-          "name": "constructor",
-          "return_type": {
-            "is_bind_type": true,
-            "is_errorable": false,
-            "name": "AimAssistPresetSettings"
-          }
-        },
-        {
-          "arguments": [
-          ],
-          "call_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "getExcludedBlockTagTargets",
-          "return_type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "optional",
-            "optional_type": {
-              "element_type": {
-                "is_bind_type": false,
-                "is_errorable": false,
-                "name": "string"
-              },
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "array"
-            }
-          }
-        },
-        {
-          "arguments": [
-          ],
-          "call_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "getExcludedBlockTargets",
-          "return_type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "optional",
-            "optional_type": {
-              "element_type": {
-                "is_bind_type": false,
-                "is_errorable": false,
-                "name": "string"
-              },
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "array"
-            }
-          }
-        },
-        {
-          "arguments": [
-          ],
-          "call_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "getExcludedEntityTargets",
-          "return_type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "optional",
-            "optional_type": {
-              "element_type": {
-                "is_bind_type": false,
-                "is_errorable": false,
-                "name": "string"
-              },
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "array"
-            }
-          }
-        },
-        {
-          "arguments": [
-          ],
-          "call_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "getExcludedEntityTypeFamilyTargets",
-          "return_type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "optional",
-            "optional_type": {
-              "element_type": {
-                "is_bind_type": false,
-                "is_errorable": false,
-                "name": "string"
-              },
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "array"
-            }
-          }
-        },
-        {
-          "arguments": [
-          ],
-          "call_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "getItemSettings",
-          "return_type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "key_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "string"
-            },
-            "name": "map",
-            "value_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "string"
-            }
-          }
-        },
-        {
-          "arguments": [
-          ],
-          "call_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "getLiquidTargetingItems",
-          "return_type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "optional",
-            "optional_type": {
-              "element_type": {
-                "is_bind_type": false,
-                "is_errorable": false,
-                "name": "string"
-              },
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "array"
-            }
-          }
-        },
-        {
-          "arguments": [
-            {
-              "details": {
-                "default_value": "null"
-              },
-              "name": "blockTagTargets",
-              "type": {
-                "is_bind_type": false,
-                "is_errorable": false,
-                "name": "optional",
-                "optional_type": {
-                  "element_type": {
-                    "is_bind_type": false,
-                    "is_errorable": false,
-                    "name": "string"
-                  },
-                  "is_bind_type": false,
-                  "is_errorable": false,
-                  "name": "array"
-                }
-              }
-            }
-          ],
-          "call_privilege": [
-            {
-              "name": "default"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "setExcludedBlockTagTargets",
-          "return_type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "undefined"
-          }
-        },
-        {
-          "arguments": [
-            {
-              "details": {
-                "default_value": "null"
-              },
-              "name": "blockTargets",
-              "type": {
-                "is_bind_type": false,
-                "is_errorable": false,
-                "name": "optional",
-                "optional_type": {
-                  "element_type": {
-                    "is_bind_type": false,
-                    "is_errorable": false,
-                    "name": "string"
-                  },
-                  "is_bind_type": false,
-                  "is_errorable": false,
-                  "name": "array"
-                }
-              }
-            }
-          ],
-          "call_privilege": [
-            {
-              "name": "default"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "setExcludedBlockTargets",
-          "return_type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "undefined"
-          }
-        },
-        {
-          "arguments": [
-            {
-              "details": {
-                "default_value": "null"
-              },
-              "name": "entityTargets",
-              "type": {
-                "is_bind_type": false,
-                "is_errorable": false,
-                "name": "optional",
-                "optional_type": {
-                  "element_type": {
-                    "is_bind_type": false,
-                    "is_errorable": false,
-                    "name": "string"
-                  },
-                  "is_bind_type": false,
-                  "is_errorable": false,
-                  "name": "array"
-                }
-              }
-            }
-          ],
-          "call_privilege": [
-            {
-              "name": "default"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "setExcludedEntityTargets",
-          "return_type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "undefined"
-          }
-        },
-        {
-          "arguments": [
-            {
-              "details": {
-                "default_value": "null"
-              },
-              "name": "entityTypeFamilyTargets",
-              "type": {
-                "is_bind_type": false,
-                "is_errorable": false,
-                "name": "optional",
-                "optional_type": {
-                  "element_type": {
-                    "is_bind_type": false,
-                    "is_errorable": false,
-                    "name": "string"
-                  },
-                  "is_bind_type": false,
-                  "is_errorable": false,
-                  "name": "array"
-                }
-              }
-            }
-          ],
-          "call_privilege": [
-            {
-              "name": "default"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "setExcludedEntityTypeFamilyTargets",
-          "return_type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "undefined"
-          }
-        },
-        {
-          "arguments": [
-            {
-              "details": null,
-              "name": "itemSettings",
-              "type": {
-                "is_bind_type": false,
-                "is_errorable": false,
-                "key_type": {
-                  "is_bind_type": false,
-                  "is_errorable": false,
-                  "name": "string"
-                },
-                "name": "map",
-                "value_type": {
-                  "is_bind_type": false,
-                  "is_errorable": false,
-                  "name": "string"
-                }
-              }
-            }
-          ],
-          "call_privilege": [
-            {
-              "name": "default"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "setItemSettings",
-          "return_type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "undefined"
-          }
-        },
-        {
-          "arguments": [
-            {
-              "details": {
-                "default_value": "null"
-              },
-              "name": "items",
-              "type": {
-                "is_bind_type": false,
-                "is_errorable": false,
-                "name": "optional",
-                "optional_type": {
-                  "element_type": {
-                    "is_bind_type": false,
-                    "is_errorable": false,
-                    "name": "string"
-                  },
-                  "is_bind_type": false,
-                  "is_errorable": false,
-                  "name": "array"
-                }
-              }
-            }
-          ],
-          "call_privilege": [
-            {
-              "name": "default"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "setLiquidTargetingItems",
-          "return_type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "undefined"
-          }
-        }
-      ],
-      "name": "AimAssistPresetSettings",
-      "properties": [
-        {
-          "get_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_baked": false,
-          "is_read_only": false,
-          "name": "defaultItemSettings",
-          "set_privilege": [
-            {
-              "name": "default"
-            }
-          ],
-          "type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "optional",
-            "optional_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "string"
-            }
-          }
-        },
-        {
-          "get_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_baked": false,
-          "is_read_only": false,
-          "name": "handSettings",
-          "set_privilege": [
-            {
-              "name": "default"
-            }
-          ],
-          "type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "optional",
-            "optional_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "string"
-            }
-          }
-        },
-        {
-          "get_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_baked": false,
-          "is_read_only": true,
-          "name": "identifier",
-          "type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "string"
-          }
-        }
-      ],
-      "type": {
-        "is_bind_type": true,
-        "is_errorable": false,
-        "name": "AimAssistPresetSettings"
-      }
-    },
-    {
-      "base_types": [
-      ],
-      "constants": [
-        {
-          "is_read_only": true,
-          "is_static": true,
-          "name": "DefaultCategoryId",
-          "type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "string"
-          },
-          "value": "minecraft:default"
-        },
-        {
-          "is_read_only": true,
-          "is_static": true,
-          "name": "DefaultPresetId",
-          "type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "string"
-          },
-          "value": "minecraft:aim_assist_default"
-        }
-      ],
-      "functions": [
-        {
-          "arguments": [
-            {
-              "details": null,
-              "name": "category",
-              "type": {
-                "is_bind_type": true,
-                "is_errorable": false,
-                "name": "AimAssistCategorySettings"
-              }
-            }
-          ],
-          "call_privilege": [
-            {
-              "name": "default"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "addCategory",
-          "return_type": {
-            "error_types": [
-              {
-                "from_module": {
-                  "name": "@minecraft/common",
-                  "uuid": "77ec12b4-1b2b-4c98-8d34-d1cd63f849d5",
-                  "version": "1.2.0"
-                },
-                "is_bind_type": true,
-                "is_errorable": false,
-                "name": "EngineError"
-              },
-              {
-                "is_bind_type": false,
-                "is_errorable": false,
-                "name": "Error"
-              },
-              {
-                "from_module": {
-                  "name": "@minecraft/common",
-                  "uuid": "77ec12b4-1b2b-4c98-8d34-d1cd63f849d5",
-                  "version": "1.2.0"
-                },
-                "is_bind_type": true,
-                "is_errorable": false,
-                "name": "InvalidArgumentError"
-              },
-              {
-                "is_bind_type": true,
-                "is_errorable": false,
-                "name": "NamespaceNameError"
-              }
-            ],
-            "is_bind_type": true,
-            "is_errorable": true,
-            "name": "AimAssistCategory"
-          }
-        },
-        {
-          "arguments": [
-            {
-              "details": null,
-              "name": "preset",
-              "type": {
-                "is_bind_type": true,
-                "is_errorable": false,
-                "name": "AimAssistPresetSettings"
-              }
-            }
-          ],
-          "call_privilege": [
-            {
-              "name": "default"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "addPreset",
-          "return_type": {
-            "error_types": [
-              {
-                "from_module": {
-                  "name": "@minecraft/common",
-                  "uuid": "77ec12b4-1b2b-4c98-8d34-d1cd63f849d5",
-                  "version": "1.2.0"
-                },
-                "is_bind_type": true,
-                "is_errorable": false,
-                "name": "EngineError"
-              },
-              {
-                "is_bind_type": false,
-                "is_errorable": false,
-                "name": "Error"
-              },
-              {
-                "from_module": {
-                  "name": "@minecraft/common",
-                  "uuid": "77ec12b4-1b2b-4c98-8d34-d1cd63f849d5",
-                  "version": "1.2.0"
-                },
-                "is_bind_type": true,
-                "is_errorable": false,
-                "name": "InvalidArgumentError"
-              },
-              {
-                "is_bind_type": true,
-                "is_errorable": false,
-                "name": "NamespaceNameError"
-              }
-            ],
-            "is_bind_type": true,
-            "is_errorable": true,
-            "name": "AimAssistPreset"
-          }
-        },
-        {
-          "arguments": [
-          ],
-          "call_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "getCategories",
-          "return_type": {
-            "element_type": {
-              "is_bind_type": true,
-              "is_errorable": false,
-              "name": "AimAssistCategory"
-            },
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "array"
-          }
-        },
-        {
-          "arguments": [
-            {
-              "details": null,
-              "name": "categoryId",
-              "type": {
-                "is_bind_type": false,
-                "is_errorable": false,
-                "name": "string"
-              }
-            }
-          ],
-          "call_privilege": [
-            {
-              "name": "default"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "getCategory",
-          "return_type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "optional",
-            "optional_type": {
-              "is_bind_type": true,
-              "is_errorable": false,
-              "name": "AimAssistCategory"
-            }
-          }
-        },
-        {
-          "arguments": [
-            {
-              "details": null,
-              "name": "presetId",
-              "type": {
-                "is_bind_type": false,
-                "is_errorable": false,
-                "name": "string"
-              }
-            }
-          ],
-          "call_privilege": [
-            {
-              "name": "default"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "getPreset",
-          "return_type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "optional",
-            "optional_type": {
-              "is_bind_type": true,
-              "is_errorable": false,
-              "name": "AimAssistPreset"
-            }
-          }
-        },
-        {
-          "arguments": [
-          ],
-          "call_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "getPresets",
-          "return_type": {
-            "element_type": {
-              "is_bind_type": true,
-              "is_errorable": false,
-              "name": "AimAssistPreset"
-            },
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "array"
-          }
-        }
-      ],
-      "name": "AimAssistRegistry",
-      "properties": [
-      ],
-      "type": {
-        "is_bind_type": true,
-        "is_errorable": false,
-        "name": "AimAssistRegistry"
-      }
-    },
-    {
-      "base_types": [
-      ],
-      "constants": [
-      ],
-      "functions": [
       ],
       "name": "BiomeType",
       "properties": [
@@ -31415,23 +29824,6 @@
           ],
           "is_constructor": false,
           "is_static": false,
-          "name": "getAimAssist",
-          "return_type": {
-            "is_bind_type": true,
-            "is_errorable": false,
-            "name": "PlayerAimAssist"
-          }
-        },
-        {
-          "arguments": [
-          ],
-          "call_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
           "name": "getControlScheme",
           "return_type": {
             "error_types": [
@@ -32419,122 +30811,6 @@
         "is_bind_type": true,
         "is_errorable": false,
         "name": "Player"
-      }
-    },
-    {
-      "base_types": [
-      ],
-      "constants": [
-      ],
-      "functions": [
-        {
-          "arguments": [
-            {
-              "details": {
-                "default_value": "null"
-              },
-              "name": "settings",
-              "type": {
-                "is_bind_type": false,
-                "is_errorable": false,
-                "name": "optional",
-                "optional_type": {
-                  "is_bind_type": true,
-                  "is_errorable": false,
-                  "name": "PlayerAimAssistSettings"
-                }
-              }
-            }
-          ],
-          "call_privilege": [
-            {
-              "name": "default"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
-          "name": "set",
-          "return_type": {
-            "error_types": [
-              {
-                "from_module": {
-                  "name": "@minecraft/common",
-                  "uuid": "77ec12b4-1b2b-4c98-8d34-d1cd63f849d5",
-                  "version": "1.2.0"
-                },
-                "is_bind_type": true,
-                "is_errorable": false,
-                "name": "ArgumentOutOfBoundsError"
-              },
-              {
-                "from_module": {
-                  "name": "@minecraft/common",
-                  "uuid": "77ec12b4-1b2b-4c98-8d34-d1cd63f849d5",
-                  "version": "1.2.0"
-                },
-                "is_bind_type": true,
-                "is_errorable": false,
-                "name": "EngineError"
-              },
-              {
-                "is_bind_type": false,
-                "is_errorable": false,
-                "name": "Error"
-              },
-              {
-                "from_module": {
-                  "name": "@minecraft/common",
-                  "uuid": "77ec12b4-1b2b-4c98-8d34-d1cd63f849d5",
-                  "version": "1.2.0"
-                },
-                "is_bind_type": true,
-                "is_errorable": false,
-                "name": "InvalidArgumentError"
-              },
-              {
-                "is_bind_type": true,
-                "is_errorable": false,
-                "name": "InvalidEntityError"
-              },
-              {
-                "is_bind_type": true,
-                "is_errorable": false,
-                "name": "NamespaceNameError"
-              }
-            ],
-            "is_bind_type": false,
-            "is_errorable": true,
-            "name": "undefined"
-          }
-        }
-      ],
-      "name": "PlayerAimAssist",
-      "properties": [
-        {
-          "get_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_baked": false,
-          "is_read_only": true,
-          "name": "settings",
-          "type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "optional",
-            "optional_type": {
-              "is_bind_type": true,
-              "is_errorable": false,
-              "name": "PlayerAimAssistSettings"
-            }
-          }
-        }
-      ],
-      "type": {
-        "is_bind_type": true,
-        "is_errorable": false,
-        "name": "PlayerAimAssist"
       }
     },
     {
@@ -43513,23 +41789,6 @@
           ],
           "is_constructor": false,
           "is_static": false,
-          "name": "getAimAssist",
-          "return_type": {
-            "is_bind_type": true,
-            "is_errorable": false,
-            "name": "AimAssistRegistry"
-          }
-        },
-        {
-          "arguments": [
-          ],
-          "call_privilege": [
-            {
-              "name": "restricted_execution"
-            }
-          ],
-          "is_constructor": false,
-          "is_static": false,
           "name": "getAllPlayers",
           "return_type": {
             "element_type": {
@@ -45906,33 +44165,6 @@
   "dependencies": [
   ],
   "enums": [
-    {
-      "constants": [
-        {
-          "is_read_only": true,
-          "is_static": true,
-          "name": "Angle",
-          "type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "string"
-          },
-          "value": "Angle"
-        },
-        {
-          "is_read_only": true,
-          "is_static": true,
-          "name": "Distance",
-          "type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "string"
-          },
-          "value": "Distance"
-        }
-      ],
-      "name": "AimAssistTargetMode"
-    },
     {
       "constants": [
         {
@@ -51356,8 +49588,6 @@
   ],
   "errors": [
     {
-      "functions": [
-      ],
       "name": "BlockCustomComponentAlreadyRegisteredError",
       "properties": [
       ],
@@ -51368,8 +49598,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "BlockCustomComponentReloadNewComponentError",
       "properties": [
       ],
@@ -51380,8 +49608,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "BlockCustomComponentReloadNewEventError",
       "properties": [
       ],
@@ -51392,8 +49618,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "BlockCustomComponentReloadVersionError",
       "properties": [
       ],
@@ -51404,8 +49628,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "BookError",
       "properties": [
         {
@@ -51434,8 +49656,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "BookPageContentError",
       "properties": [
         {
@@ -51486,8 +49706,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "CommandError",
       "properties": [
       ],
@@ -51498,8 +49716,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "ContainerRulesError",
       "properties": [
         {
@@ -51528,8 +49744,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "CustomCommandError",
       "properties": [
         {
@@ -51558,8 +49772,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "CustomComponentInvalidRegistryError",
       "properties": [
       ],
@@ -51570,8 +49782,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "CustomComponentNameError",
       "properties": [
         {
@@ -51600,8 +49810,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "EnchantmentLevelOutOfBoundsError",
       "properties": [
       ],
@@ -51612,8 +49820,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "EnchantmentTypeNotCompatibleError",
       "properties": [
       ],
@@ -51624,8 +49830,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "EnchantmentTypeUnknownIdError",
       "properties": [
       ],
@@ -51636,8 +49840,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "EntitySpawnError",
       "properties": [
       ],
@@ -51648,8 +49850,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "InvalidBlockComponentError",
       "properties": [
       ],
@@ -51660,8 +49860,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "InvalidContainerError",
       "properties": [
       ],
@@ -51672,8 +49870,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "InvalidContainerSlotError",
       "properties": [
       ],
@@ -51684,8 +49880,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "InvalidEntityError",
       "properties": [
         {
@@ -51732,8 +49926,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "InvalidItemStackError",
       "properties": [
         {
@@ -51762,8 +49954,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "InvalidIteratorError",
       "properties": [
       ],
@@ -51774,8 +49964,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "InvalidPotionDeliveryTypeError",
       "properties": [
       ],
@@ -51786,8 +49974,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "InvalidPotionEffectTypeError",
       "properties": [
       ],
@@ -51798,8 +49984,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "InvalidStructureError",
       "properties": [
       ],
@@ -51810,8 +49994,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "ItemCustomComponentAlreadyRegisteredError",
       "properties": [
       ],
@@ -51822,8 +50004,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "ItemCustomComponentReloadNewComponentError",
       "properties": [
       ],
@@ -51834,8 +50014,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "ItemCustomComponentReloadNewEventError",
       "properties": [
       ],
@@ -51846,8 +50024,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "ItemCustomComponentReloadVersionError",
       "properties": [
       ],
@@ -51858,8 +50034,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "LocationInUnloadedChunkError",
       "properties": [
       ],
@@ -51870,8 +50044,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "LocationOutOfWorldBoundariesError",
       "properties": [
       ],
@@ -51882,8 +50054,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "NamespaceNameError",
       "properties": [
         {
@@ -51912,8 +50082,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "PlaceJigsawError",
       "properties": [
       ],
@@ -51924,8 +50092,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "RawMessageError",
       "properties": [
       ],
@@ -51936,8 +50102,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "TickingAreaError",
       "properties": [
         {
@@ -51966,8 +50130,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "UnloadedChunksError",
       "properties": [
       ],
@@ -56381,77 +54543,6 @@
         "is_bind_type": true,
         "is_errorable": false,
         "name": "PlayAnimationOptions"
-      }
-    },
-    {
-      "base_types": [
-      ],
-      "name": "PlayerAimAssistSettings",
-      "properties": [
-        {
-          "is_baked": false,
-          "is_read_only": false,
-          "name": "distance",
-          "type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "optional",
-            "optional_type": {
-              "is_bind_type": false,
-              "is_errorable": false,
-              "name": "float",
-              "valid_range": {
-                "max": 2147483647,
-                "min": -2147483648
-              }
-            }
-          }
-        },
-        {
-          "is_baked": false,
-          "is_read_only": false,
-          "name": "presetId",
-          "type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "string"
-          }
-        },
-        {
-          "is_baked": false,
-          "is_read_only": false,
-          "name": "targetMode",
-          "type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "optional",
-            "optional_type": {
-              "is_bind_type": true,
-              "is_errorable": false,
-              "name": "AimAssistTargetMode"
-            }
-          }
-        },
-        {
-          "is_baked": false,
-          "is_read_only": false,
-          "name": "viewAngle",
-          "type": {
-            "is_bind_type": false,
-            "is_errorable": false,
-            "name": "optional",
-            "optional_type": {
-              "is_bind_type": true,
-              "is_errorable": false,
-              "name": "Vector2"
-            }
-          }
-        }
-      ],
-      "type": {
-        "is_bind_type": true,
-        "is_errorable": false,
-        "name": "PlayerAimAssistSettings"
       }
     },
     {

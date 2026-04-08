@@ -1,5 +1,5 @@
 {
-  "$id": "870706224",
+  "$id": "2321736235",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "Overrides the swing sounds emitted by the user.",
   "properties": {
@@ -559,8 +559,6 @@
         "item.netherite_spear.use",
         "pause_growth",
         "reset_growth",
-        "pushed_by_player",
-        "bounce",
         "undefined"
       ],
       "title": "LevelSoundEvent",
@@ -1122,8 +1120,6 @@
         "item.netherite_spear.use",
         "pause_growth",
         "reset_growth",
-        "pushed_by_player",
-        "bounce",
         "undefined"
       ],
       "title": "LevelSoundEvent",
@@ -1685,8 +1681,6 @@
         "item.netherite_spear.use",
         "pause_growth",
         "reset_growth",
-        "pushed_by_player",
-        "bounce",
         "undefined"
       ],
       "title": "LevelSoundEvent",

@@ -1,15 +1,19 @@
 {
-  "$id": "3796261919",
+  "$id": "1684720476",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
-    "1184613621": {
+    "2715320761": {
+      "title": "hashed_string",
+      "type": "string"
+    },
+    "3907782844": {
       "properties": {
         "distance": {
           "minimum": 0,
           "type": "number"
         },
         "effects": {
-          "$ref": "#/definitions/2730509006"
+          "$ref": "#/definitions/771176265"
         }
       },
       "required": [
@@ -19,33 +23,29 @@
       "title": "emitter_lifetime_events travel_distance_events",
       "type": "object"
     },
-    "2730509006": {
+    "771176265": {
       "oneOf": [
         {
           "items": {
-            "$ref": "#/definitions/3381141713"
+            "$ref": "#/definitions/2715320761"
           },
           "type": "array"
         },
         {
-          "$ref": "#/definitions/3381141713"
+          "$ref": "#/definitions/2715320761"
         }
       ],
       "title": "VectorEvents"
-    },
-    "3381141713": {
-      "title": "hashed_string",
-      "type": "string"
     }
   },
   "properties": {
     "creation_event": {
-      "$ref": "#/definitions/2730509006",
+      "$ref": "#/definitions/771176265",
       "default": [
       ]
     },
     "expiration_event": {
-      "$ref": "#/definitions/2730509006",
+      "$ref": "#/definitions/771176265",
       "default": [
       ]
     },
@@ -53,13 +53,13 @@
       "default": [
       ],
       "items": {
-        "$ref": "#/definitions/1184613621"
+        "$ref": "#/definitions/3907782844"
       },
       "type": "array"
     },
     "timeline": {
       "additionalProperties": {
-        "$ref": "#/definitions/2730509006"
+        "$ref": "#/definitions/771176265"
       },
       "default": {
       },
@@ -67,7 +67,7 @@
     },
     "travel_distance_events": {
       "additionalProperties": {
-        "$ref": "#/definitions/2730509006"
+        "$ref": "#/definitions/771176265"
       },
       "default": {
       },

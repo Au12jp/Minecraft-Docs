@@ -58,8 +58,6 @@
   ],
   "errors": [
     {
-      "functions": [
-      ],
       "name": "ArgumentOutOfBoundsError",
       "properties": [
         {
@@ -173,8 +171,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "EngineError",
       "properties": [
       ],
@@ -185,8 +181,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "InvalidArgumentError",
       "properties": [
         {
@@ -237,8 +231,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "PropertyOutOfBoundsError",
       "properties": [
         {
@@ -325,8 +317,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "RuntimeConditionError",
       "properties": [
       ],
@@ -337,8 +327,6 @@
       }
     },
     {
-      "functions": [
-      ],
       "name": "UnsupportedFunctionalityError",
       "properties": [
       ],

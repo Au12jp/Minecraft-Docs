@@ -1,17 +1,21 @@
 {
-  "$id": "2610378247",
+  "$id": "2298712664",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
-    "1170899181": {
+    "1527037515": {
+      "title": "Reference",
+      "type": "string"
+    },
+    "3076687790": {
       "description": "Specifies a particular block. Can be a string block name or a JSON object",
       "oneOf": [
         {
-          "$ref": "#/definitions/3152646801"
+          "$ref": "#/definitions/1527037515"
         },
         {
           "properties": {
             "name": {
-              "$ref": "#/definitions/3152646801",
+              "$ref": "#/definitions/1527037515",
               "description": "Name of the block"
             },
             "states": {
@@ -41,22 +45,18 @@
         }
       ],
       "title": "Block Specifier"
-    },
-    "3152646801": {
-      "title": "Reference",
-      "type": "string"
     }
   },
   "description": "Generates surface on blocks with non-solid blocks above or below.",
   "properties": {
     "beach_material": {
-      "$ref": "#/definitions/1170899181",
+      "$ref": "#/definitions/3076687790",
       "description": "Material used to decorate surface near sea level."
     },
     "ceiling_materials": {
       "description": "Materials used for the surface ceiling.",
       "items": {
-        "$ref": "#/definitions/1170899181",
+        "$ref": "#/definitions/3076687790",
         "description": "Specifies a particular block. Can be a string block name or a JSON object"
       },
       "minItems": 1,
@@ -65,18 +65,18 @@
     "floor_materials": {
       "description": "Materials used for the surface floor.",
       "items": {
-        "$ref": "#/definitions/1170899181",
+        "$ref": "#/definitions/3076687790",
         "description": "Specifies a particular block. Can be a string block name or a JSON object"
       },
       "minItems": 1,
       "type": "array"
     },
     "foundation_material": {
-      "$ref": "#/definitions/1170899181",
+      "$ref": "#/definitions/3076687790",
       "description": "Material used to replace solid blocks that are not surface blocks."
     },
     "sea_material": {
-      "$ref": "#/definitions/1170899181",
+      "$ref": "#/definitions/3076687790",
       "description": "Material used to replace air blocks below sea level."
     },
     "type": {
@@ -88,8 +88,7 @@
         "minecraft:mesa",
         "minecraft:swamp",
         "minecraft:capped",
-        "minecraft:the_end",
-        "minecraft:noise_gradient"
+        "minecraft:the_end"
       ],
       "title": "SurfaceBuilderType",
       "type": "string"

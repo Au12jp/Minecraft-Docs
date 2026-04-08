@@ -1,8 +1,8 @@
 {
-  "$id": "763867935",
+  "$id": "3781185164",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
-    "1429287564": {
+    "1531870811": {
       "oneOf": [
         {
           "type": "string"
@@ -16,10 +16,10 @@
       ],
       "title": "Item Descriptor"
     },
-    "556977336": {
+    "2681068491": {
       "properties": {
         "item": {
-          "$ref": "#/definitions/1429287564",
+          "$ref": "#/definitions/1531870811",
           "description": "Ammunition item description identifier."
         },
         "search_inventory": {
@@ -52,7 +52,7 @@
       ],
       "description": "Ammunition.",
       "items": {
-        "$ref": "#/definitions/556977336"
+        "$ref": "#/definitions/2681068491"
       },
       "type": "array"
     },

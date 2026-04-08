@@ -1,22 +1,8 @@
 {
-  "$id": "3093766462",
+  "$id": "2794205495",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
-    "2565245911": {
-      "oneOf": [
-        {
-          "type": "integer"
-        },
-        {
-          "type": "string"
-        },
-        {
-          "type": "boolean"
-        }
-      ],
-      "title": "compound_proxy"
-    },
-    "855125494": {
+    "2770948419": {
       "properties": {
         "name": {
           "default": "",
@@ -24,7 +10,7 @@
         },
         "states": {
           "additionalProperties": {
-            "$ref": "#/definitions/2565245911"
+            "$ref": "#/definitions/517105782"
           },
           "default": {
           },
@@ -37,11 +23,25 @@
       },
       "title": "BlockDescriptorProxy",
       "type": "object"
+    },
+    "517105782": {
+      "oneOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "boolean"
+        }
+      ],
+      "title": "compound_proxy"
     }
   },
   "oneOf": [
     {
-      "$ref": "#/definitions/855125494",
+      "$ref": "#/definitions/2770948419",
       "x-runtime-constraint-description": "Check that a valid block name or expression is provided, and in the latter case verify that there are no block states as well"
     },
     {
@@ -49,7 +49,7 @@
       "type": "string"
     },
     {
-      "$ref": "#/definitions/855125494",
+      "$ref": "#/definitions/2770948419",
       "x-runtime-constraint-description": "Check that a valid block name or expression is provided, and in the latter case verify that there are no block states as well"
     }
   ],

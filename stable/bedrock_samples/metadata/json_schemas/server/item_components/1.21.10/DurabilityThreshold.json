@@ -1,5 +1,5 @@
 {
-  "$id": "550975230",
+  "$id": "764203503",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "Defines both the durability threshold, and the effects emitted when that threshold is met.",
   "properties": {
@@ -104,8 +104,7 @@
         "blueflame",
         "greenflame",
         "pausemobgrowth",
-        "resetmobgrowth",
-        "sulfurcube"
+        "resetmobgrowth"
       ],
       "title": "ParticleType",
       "type": "string"
@@ -667,8 +666,6 @@
         "item.netherite_spear.use",
         "pause_growth",
         "reset_growth",
-        "pushed_by_player",
-        "bounce",
         "undefined"
       ],
       "title": "LevelSoundEvent",

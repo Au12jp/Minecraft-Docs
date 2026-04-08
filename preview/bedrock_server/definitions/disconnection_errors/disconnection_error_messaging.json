@@ -637,6 +637,30 @@
                     "Title": "disconnectionScreen.title.bannedByHost",
                     "Body": "disconnectionScreen.body.needsHostUnblock"
                 }
+            },
+            {
+                "FailReason": "NonceMissing",
+                "OverrideStrings": {
+                    "Body": "disconnectionScreen.notAllowed"
+                }
+            },
+            {
+                "FailReason": "NonceNotFound",
+                "OverrideStrings": {
+                    "Body": "disconnectionScreen.notAllowed"
+                }
+            },
+            {
+                "FailReason": "NonceExpired",
+                "OverrideStrings": {
+                    "Body": "disconnectionScreen.notAllowed"
+                  }
+            },
+            {
+                "FailReason": "NonceNotValid",
+                "OverrideStrings": {
+                    "Body": "disconnectionScreen.notAllowed"
+                }
             }
         ]
     },

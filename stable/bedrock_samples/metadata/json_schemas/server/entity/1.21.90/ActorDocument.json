@@ -1,66 +1,8 @@
 {
-  "$id": "3652229308",
+  "$id": "1097455393",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
-    "1528866228": {
-      "description": "Allows this mob to breed with other mobs.",
-      "properties": {
-        "control_flags": {
-          "default": [
-          ],
-          "items": {
-            "enum": [
-              "move",
-              "look",
-              "jump"
-            ],
-            "title": "Goal's control flags",
-            "type": "string"
-          },
-          "type": "array"
-        },
-        "priority": {
-          "default": 0,
-          "minimum": 0,
-          "type": "integer"
-        },
-        "speed_multiplier": {
-          "default": 1,
-          "description": "Movement speed multiplier applied to the mob when using this AI Goal.",
-          "type": "number"
-        }
-      },
-      "title": "minecraft:behavior.breed",
-      "type": "object"
-    },
-    "315797137": {
-      "description": "Defines how an entity applies knockback.",
-      "properties": {
-        "check_if_target_is_immersed_in_water": {
-          "default": false,
-          "description": "Whether or not the target should be fully immersed in water for the knockback rules to apply.",
-          "type": "boolean"
-        },
-        "horizontal_power": {
-          "default": 1,
-          "description": "Power with which a target should be knocked backwards.",
-          "type": "number"
-        },
-        "vertical_power": {
-          "default": 0.4000000059604645,
-          "description": "Power with which a target should be knocked upwards.",
-          "type": "number"
-        },
-        "vertical_velocity_cap": {
-          "default": 0.4000000059604645,
-          "description": "Maximum allowed Y velocity after target's knockback rules have been evaluated.",
-          "type": "number"
-        }
-      },
-      "title": "minecraft:apply_knockback_rules",
-      "type": "object"
-    },
-    "4075469329": {
+    "1417288942": {
       "properties": {
         "minecraft:absorption": {
           "description": "Dynamic value"
@@ -88,10 +30,6 @@
         },
         "minecraft:annotation.open_door": {
           "description": "Dynamic value"
-        },
-        "minecraft:apply_knockback_rules": {
-          "$ref": "#/definitions/315797137",
-          "description": "Defines how an entity applies knockback."
         },
         "minecraft:area_attack": {
           "description": "Dynamic value"
@@ -133,7 +71,7 @@
           "description": "Dynamic value"
         },
         "minecraft:behavior.breed": {
-          "$ref": "#/definitions/1528866228",
+          "$ref": "#/definitions/3731384245",
           "description": "Allows this mob to breed with other mobs."
         },
         "minecraft:behavior.celebrate": {
@@ -268,7 +206,7 @@
         "minecraft:behavior.follow_parent": {
           "description": "Dynamic value"
         },
-        "minecraft:behavior.follow_target_leader": {
+        "minecraft:behavior.follow_target_captain": {
           "description": "Dynamic value"
         },
         "minecraft:behavior.go_and_give_items_to_noteblock": {
@@ -940,34 +878,13 @@
         "minecraft:mark_variant": {
           "description": "Dynamic value"
         },
+        "minecraft:memory_behavior.collect_nectar": {
+          "description": "Dynamic value"
+        },
         "minecraft:memory_behavior.flee_threat": {
           "description": "Dynamic value"
         },
         "minecraft:memory_behavior.follow_target": {
-          "description": "Dynamic value"
-        },
-        "minecraft:memory_behavior.move_to_position": {
-          "description": "Dynamic value"
-        },
-        "minecraft:memory_sensor.find_nearest_block": {
-          "description": "Dynamic value"
-        },
-        "minecraft:memory_sensor.find_nearest_block_from": {
-          "description": "Dynamic value"
-        },
-        "minecraft:memory_sensor.find_nearest_entity": {
-          "description": "Dynamic value"
-        },
-        "minecraft:memory_sensor.find_nearest_entity_from": {
-          "description": "Dynamic value"
-        },
-        "minecraft:memory_sensor.find_nearest_poi": {
-          "description": "Dynamic value"
-        },
-        "minecraft:memory_sensor.in_range_of_block": {
-          "description": "Dynamic value"
-        },
-        "minecraft:memory_sensor.in_range_of_entity": {
           "description": "Dynamic value"
         },
         "minecraft:mob_effect": {
@@ -1150,6 +1067,27 @@
         "minecraft:scheduler": {
           "description": "Dynamic value"
         },
+        "minecraft:sensor.find_nearest_block": {
+          "description": "Dynamic value"
+        },
+        "minecraft:sensor.find_nearest_block_from": {
+          "description": "Dynamic value"
+        },
+        "minecraft:sensor.find_nearest_entity": {
+          "description": "Dynamic value"
+        },
+        "minecraft:sensor.find_nearest_entity_from": {
+          "description": "Dynamic value"
+        },
+        "minecraft:sensor.find_nearest_poi": {
+          "description": "Dynamic value"
+        },
+        "minecraft:sensor.in_range_of_block": {
+          "description": "Dynamic value"
+        },
+        "minecraft:sensor.in_range_of_entity": {
+          "description": "Dynamic value"
+        },
         "minecraft:shareables": {
           "description": "Dynamic value"
         },
@@ -1228,9 +1166,6 @@
         "minecraft:underwater_movement": {
           "description": "Dynamic value"
         },
-        "minecraft:uses_legacy_friction": {
-          "description": "Dynamic value"
-        },
         "minecraft:variable_max_auto_step": {
           "description": "Dynamic value"
         },
@@ -1261,19 +1196,50 @@
       },
       "title": "Entity component definitions",
       "type": "object"
+    },
+    "3731384245": {
+      "description": "Allows this mob to breed with other mobs.",
+      "properties": {
+        "control_flags": {
+          "default": [
+          ],
+          "items": {
+            "enum": [
+              "move",
+              "look",
+              "jump"
+            ],
+            "title": "Goal's control flags",
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "priority": {
+          "default": 0,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "speed_multiplier": {
+          "default": 1,
+          "description": "Movement speed multiplier applied to the mob when using this AI Goal.",
+          "type": "number"
+        }
+      },
+      "title": "minecraft:behavior.breed",
+      "type": "object"
     }
   },
   "properties": {
     "component_groups": {
       "additionalProperties": {
-        "$ref": "#/definitions/4075469329"
+        "$ref": "#/definitions/1417288942"
       },
       "default": {
       },
       "type": "object"
     },
     "components": {
-      "$ref": "#/definitions/4075469329"
+      "$ref": "#/definitions/1417288942"
     },
     "description": {
       "description": "Dynamic value"
