@@ -211,8 +211,7 @@
                   {
                     "price_amount@csb_price": {
                       "$price": "$price",
-                      "$color": "$price_color",
-                      "$freeTrialBindingName": "#mppFreeTrialVisible"
+                      "$color": "$price_color"
                     }
                   }
                 ]
@@ -334,8 +333,7 @@
                   {
                     "price_amount@csb_price": {
                       "$price": "$price",
-                      "$color": "$price_color",
-                      "$freeTrialBindingName": "#realmsFreeTrialVisible"
+                      "$color": "$price_color"
                     }
                   }
                 ]
@@ -562,8 +560,7 @@
           "$price": "$price",
           "$color": "$color",
           "anchor_to": "bottom_middle",
-          "anchor_from": "bottom_middle",
-          "$freeTrialBindingName": "$freeTrialBindingName"
+          "anchor_from": "bottom_middle"
         }
       }
     ]
@@ -609,12 +606,6 @@
                 "max_size": [ "100%", 10 ],
                 "color": "$color"
               }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_name": "$freeTrialBindingName",
-              "binding_name_override": "#visible"
             }
           ]
         }

@@ -1,12 +1,12 @@
 {
-  "$id": "590136708",
+  "$id": "2418450159",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
-    "3586578163": {
+    "3681664844": {
       "title": "Identifier",
       "type": "string"
     },
-    "3821849217": {
+    "4121537914": {
       "description": "menu_category contains the creative group name and category for this item.",
       "properties": {
         "category": {
@@ -41,11 +41,11 @@
   "description": "Contains the required identifier for the item. May contain optional fields like menu_category.",
   "properties": {
     "identifier": {
-      "$ref": "#/definitions/3586578163",
+      "$ref": "#/definitions/3681664844",
       "description": "Unique name for the item that must include a namespace and must not use the Minecraft namespace unless overriding a Vanilla item."
     },
     "menu_category": {
-      "$ref": "#/definitions/3821849217",
+      "$ref": "#/definitions/4121537914",
       "default": {
         "category": "none",
         "group": null,

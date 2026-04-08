@@ -1,35 +1,6 @@
 {
-  "$id": "2984279167",
+  "$id": "115319032",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "definitions": {
-    "315797137": {
-      "description": "Defines how an entity applies knockback.",
-      "properties": {
-        "check_if_target_is_immersed_in_water": {
-          "default": false,
-          "description": "Whether or not the target should be fully immersed in water for the knockback rules to apply.",
-          "type": "boolean"
-        },
-        "horizontal_power": {
-          "default": 1,
-          "description": "Power with which a target should be knocked backwards.",
-          "type": "number"
-        },
-        "vertical_power": {
-          "default": 0.4000000059604645,
-          "description": "Power with which a target should be knocked upwards.",
-          "type": "number"
-        },
-        "vertical_velocity_cap": {
-          "default": 0.4000000059604645,
-          "description": "Maximum allowed Y velocity after target's knockback rules have been evaluated.",
-          "type": "number"
-        }
-      },
-      "title": "minecraft:apply_knockback_rules",
-      "type": "object"
-    }
-  },
   "properties": {
     "minecraft:absorption": {
       "description": "Dynamic value"
@@ -57,10 +28,6 @@
     },
     "minecraft:annotation.open_door": {
       "description": "Dynamic value"
-    },
-    "minecraft:apply_knockback_rules": {
-      "$ref": "#/definitions/315797137",
-      "description": "Defines how an entity applies knockback."
     },
     "minecraft:area_attack": {
       "description": "Dynamic value"
@@ -236,7 +203,7 @@
     "minecraft:behavior.follow_parent": {
       "description": "Dynamic value"
     },
-    "minecraft:behavior.follow_target_leader": {
+    "minecraft:behavior.follow_target_captain": {
       "description": "Dynamic value"
     },
     "minecraft:behavior.go_and_give_items_to_noteblock": {
@@ -908,34 +875,13 @@
     "minecraft:mark_variant": {
       "description": "Dynamic value"
     },
+    "minecraft:memory_behavior.collect_nectar": {
+      "description": "Dynamic value"
+    },
     "minecraft:memory_behavior.flee_threat": {
       "description": "Dynamic value"
     },
     "minecraft:memory_behavior.follow_target": {
-      "description": "Dynamic value"
-    },
-    "minecraft:memory_behavior.move_to_position": {
-      "description": "Dynamic value"
-    },
-    "minecraft:memory_sensor.find_nearest_block": {
-      "description": "Dynamic value"
-    },
-    "minecraft:memory_sensor.find_nearest_block_from": {
-      "description": "Dynamic value"
-    },
-    "minecraft:memory_sensor.find_nearest_entity": {
-      "description": "Dynamic value"
-    },
-    "minecraft:memory_sensor.find_nearest_entity_from": {
-      "description": "Dynamic value"
-    },
-    "minecraft:memory_sensor.find_nearest_poi": {
-      "description": "Dynamic value"
-    },
-    "minecraft:memory_sensor.in_range_of_block": {
-      "description": "Dynamic value"
-    },
-    "minecraft:memory_sensor.in_range_of_entity": {
       "description": "Dynamic value"
     },
     "minecraft:mob_effect": {
@@ -1118,6 +1064,27 @@
     "minecraft:scheduler": {
       "description": "Dynamic value"
     },
+    "minecraft:sensor.find_nearest_block": {
+      "description": "Dynamic value"
+    },
+    "minecraft:sensor.find_nearest_block_from": {
+      "description": "Dynamic value"
+    },
+    "minecraft:sensor.find_nearest_entity": {
+      "description": "Dynamic value"
+    },
+    "minecraft:sensor.find_nearest_entity_from": {
+      "description": "Dynamic value"
+    },
+    "minecraft:sensor.find_nearest_poi": {
+      "description": "Dynamic value"
+    },
+    "minecraft:sensor.in_range_of_block": {
+      "description": "Dynamic value"
+    },
+    "minecraft:sensor.in_range_of_entity": {
+      "description": "Dynamic value"
+    },
     "minecraft:shareables": {
       "description": "Dynamic value"
     },
@@ -1194,9 +1161,6 @@
       "description": "Dynamic value"
     },
     "minecraft:underwater_movement": {
-      "description": "Dynamic value"
-    },
-    "minecraft:uses_legacy_friction": {
       "description": "Dynamic value"
     },
     "minecraft:variable_max_auto_step": {

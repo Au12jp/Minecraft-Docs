@@ -1,25 +1,12 @@
 {
-  "$id": "3166127517",
+  "$id": "1416782588",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
-    "2925706701": {
-      "properties": {
-        "identifier": {
-          "$ref": "#/definitions/3381141713",
-          "maxLength": 256
-        }
-      },
-      "required": [
-        "identifier"
-      ],
-      "title": "Description",
-      "type": "object"
-    },
-    "3041582250": {
+    "151044153": {
       "properties": {
         "boxes": {
           "items": {
-            "$ref": "#/definitions/3176301750"
+            "$ref": "#/definitions/2305154765"
           },
           "maxItems": 32,
           "minItems": 1,
@@ -32,13 +19,13 @@
       "title": "Shape",
       "type": "object"
     },
-    "3176301750": {
+    "2305154765": {
       "properties": {
         "max": {
-          "$ref": "#/definitions/725374594"
+          "$ref": "#/definitions/4004946602"
         },
         "min": {
-          "$ref": "#/definitions/725374594"
+          "$ref": "#/definitions/4004946602"
         }
       },
       "required": [
@@ -48,11 +35,11 @@
       "title": "Box",
       "type": "object"
     },
-    "3381141713": {
+    "2715320761": {
       "title": "hashed_string",
       "type": "string"
     },
-    "725374594": {
+    "4004946602": {
       "oneOf": [
         {
           "items": {
@@ -81,14 +68,27 @@
         }
       ],
       "title": "vec3"
+    },
+    "4058918574": {
+      "properties": {
+        "identifier": {
+          "$ref": "#/definitions/2715320761",
+          "maxLength": 256
+        }
+      },
+      "required": [
+        "identifier"
+      ],
+      "title": "Description",
+      "type": "object"
     }
   },
   "properties": {
     "description": {
-      "$ref": "#/definitions/2925706701"
+      "$ref": "#/definitions/4058918574"
     },
     "shape": {
-      "$ref": "#/definitions/3041582250"
+      "$ref": "#/definitions/151044153"
     }
   },
   "required": [

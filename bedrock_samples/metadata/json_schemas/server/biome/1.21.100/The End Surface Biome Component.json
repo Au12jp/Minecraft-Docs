@@ -1,5 +1,5 @@
 {
-  "$id": "4171787800",
+  "$id": "3978796423",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "properties": {
     "type": {
@@ -11,8 +11,7 @@
         "minecraft:mesa",
         "minecraft:swamp",
         "minecraft:capped",
-        "minecraft:the_end",
-        "minecraft:noise_gradient"
+        "minecraft:the_end"
       ],
       "title": "SurfaceBuilderType",
       "type": "string"

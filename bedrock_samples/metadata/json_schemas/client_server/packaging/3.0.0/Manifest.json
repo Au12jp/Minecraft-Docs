@@ -1,8 +1,8 @@
 {
-  "$id": "3093534518",
+  "$id": "2110239417",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
-    "1029402515": {
+    "1132802736": {
       "properties": {
         "description": {
           "type": "string"
@@ -17,11 +17,11 @@
           "type": "string"
         },
         "uuid": {
-          "$ref": "#/definitions/234962571",
+          "$ref": "#/definitions/1616419299",
           "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
         },
         "version": {
-          "$ref": "#/definitions/2145775940",
+          "$ref": "#/definitions/4243943436",
           "pattern": "^([1-9]+)\\.([0-9]+)\\.([0-9]+)$"
         }
       },
@@ -33,144 +33,7 @@
       "title": "Module",
       "type": "object"
     },
-    "121699317": {
-      "properties": {
-        "module_name": {
-          "type": "string"
-        },
-        "optional": {
-          "default": false,
-          "type": "boolean"
-        },
-        "version": {
-          "oneOf": [
-            {
-              "enum": [
-                "alpha",
-                "beta",
-                "internal"
-              ],
-              "title": "VersionSelectType",
-              "type": "string"
-            },
-            {
-              "$ref": "#/definitions/2145775940"
-            }
-          ]
-        }
-      },
-      "required": [
-        "module_name",
-        "version"
-      ],
-      "title": "NativeModuleDependency",
-      "type": "object"
-    },
-    "1294356741": {
-      "properties": {
-        "text": {
-          "type": "string"
-        },
-        "type": {
-          "enum": [
-            "label",
-            "slider",
-            "toggle",
-            "dropdown"
-          ],
-          "title": "SettingType",
-          "type": "string"
-        }
-      },
-      "required": [
-        "text",
-        "type"
-      ],
-      "title": "LabelSetting",
-      "type": "object"
-    },
-    "1302329431": {
-      "properties": {
-        "uuid": {
-          "$ref": "#/definitions/234962571",
-          "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
-        },
-        "version": {
-          "$ref": "#/definitions/2145775940",
-          "pattern": "^([1-9]+)\\.([0-9]+)\\.([0-9]+)$"
-        }
-      },
-      "required": [
-        "uuid",
-        "version"
-      ],
-      "title": "PackDependency",
-      "type": "object"
-    },
-    "2099554186": {
-      "properties": {
-        "authors": {
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
-        },
-        "generated_with": {
-          "additionalProperties": {
-            "items": {
-              "$ref": "#/definitions/2145775940"
-            },
-            "type": "array"
-          },
-          "type": "object"
-        },
-        "license": {
-          "type": "string"
-        },
-        "product_type": {
-          "type": "string"
-        },
-        "url": {
-          "type": "string"
-        }
-      },
-      "title": "Metadata",
-      "type": "object"
-    },
-    "2145775940": {
-      "oneOf": [
-        {
-          "$ref": "#/definitions/2658482576"
-        },
-        {
-          "type": "string"
-        }
-      ],
-      "title": "SemVersion"
-    },
-    "2192054374": {
-      "properties": {
-        "folder_name": {
-          "type": "string"
-        },
-        "memory_performance_tier": {
-          "maximum": 5,
-          "minimum": 0,
-          "type": "integer"
-        },
-        "name": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "folder_name",
-        "memory_performance_tier",
-        "name"
-      ],
-      "title": "Subpack",
-      "type": "object"
-    },
-    "2237970794": {
+    "1403051027": {
       "properties": {
         "default": {
           "type": "number"
@@ -216,11 +79,92 @@
       "title": "SliderSetting",
       "type": "object"
     },
-    "234962571": {
+    "1415538356": {
+      "properties": {
+        "name": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "text": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "text"
+      ],
+      "title": "DropdownOption",
+      "type": "object"
+    },
+    "1616419299": {
       "title": "UUID",
       "type": "string"
     },
-    "2658482576": {
+    "1627012538": {
+      "properties": {
+        "module_name": {
+          "type": "string"
+        },
+        "optional": {
+          "default": false,
+          "type": "boolean"
+        },
+        "version": {
+          "oneOf": [
+            {
+              "enum": [
+                "alpha",
+                "beta",
+                "internal"
+              ],
+              "title": "VersionSelectType",
+              "type": "string"
+            },
+            {
+              "$ref": "#/definitions/4243943436"
+            }
+          ]
+        }
+      },
+      "required": [
+        "module_name",
+        "version"
+      ],
+      "title": "NativeModuleDependency",
+      "type": "object"
+    },
+    "1774886605": {
+      "properties": {
+        "authors": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "generated_with": {
+          "additionalProperties": {
+            "items": {
+              "$ref": "#/definitions/4243943436"
+            },
+            "type": "array"
+          },
+          "type": "object"
+        },
+        "license": {
+          "type": "string"
+        },
+        "product_type": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "title": "Metadata",
+      "type": "object"
+    },
+    "201255518": {
       "properties": {
         "buildMeta": {
           "default": "",
@@ -249,7 +193,30 @@
       "title": "SemVersionProxy",
       "type": "object"
     },
-    "3439089054": {
+    "2251212786": {
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "label",
+            "slider",
+            "toggle",
+            "dropdown"
+          ],
+          "title": "SettingType",
+          "type": "string"
+        }
+      },
+      "required": [
+        "text",
+        "type"
+      ],
+      "title": "LabelSetting",
+      "type": "object"
+    },
+    "292634909": {
       "properties": {
         "allow_random_seed": {
           "type": "boolean"
@@ -271,7 +238,7 @@
           "type": "string"
         },
         "pack_optimization_version": {
-          "$ref": "#/definitions/2145775940"
+          "$ref": "#/definitions/4243943436"
         },
         "pack_scope": {
           "type": "string"
@@ -280,11 +247,11 @@
           "type": "boolean"
         },
         "uuid": {
-          "$ref": "#/definitions/234962571",
+          "$ref": "#/definitions/1616419299",
           "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
         },
         "version": {
-          "$ref": "#/definitions/2145775940",
+          "$ref": "#/definitions/4243943436",
           "pattern": "^([1-9]+)\\.([0-9]+)\\.([0-9]+)$"
         }
       },
@@ -296,7 +263,68 @@
       "title": "Header",
       "type": "object"
     },
-    "4231382625": {
+    "3861161488": {
+      "properties": {
+        "uuid": {
+          "$ref": "#/definitions/1616419299",
+          "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
+        },
+        "version": {
+          "$ref": "#/definitions/4243943436",
+          "pattern": "^([1-9]+)\\.([0-9]+)\\.([0-9]+)$"
+        }
+      },
+      "required": [
+        "uuid",
+        "version"
+      ],
+      "title": "PackDependency",
+      "type": "object"
+    },
+    "3968873291": {
+      "properties": {
+        "default": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "name": {
+          "pattern": "^(?:(?!^(minecraft):).)+:(?:.)+$",
+          "type": "string",
+          "x-regex-flags": "ECMAScript,icase"
+        },
+        "options": {
+          "items": {
+            "$ref": "#/definitions/1415538356"
+          },
+          "maxItems": 20,
+          "minItems": 2,
+          "type": "array"
+        },
+        "text": {
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "label",
+            "slider",
+            "toggle",
+            "dropdown"
+          ],
+          "title": "SettingType",
+          "type": "string"
+        }
+      },
+      "required": [
+        "default",
+        "name",
+        "options",
+        "text",
+        "type"
+      ],
+      "title": "DropdownSetting",
+      "type": "object"
+    },
+    "3991289792": {
       "properties": {
         "default": {
           "type": "boolean"
@@ -329,66 +357,38 @@
       "title": "ToggleSetting",
       "type": "object"
     },
-    "476920027": {
+    "4241525955": {
       "properties": {
-        "name": {
-          "minLength": 1,
+        "folder_name": {
           "type": "string"
         },
-        "text": {
-          "minLength": 1,
+        "memory_performance_tier": {
+          "maximum": 5,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "name": {
           "type": "string"
         }
       },
       "required": [
-        "name",
-        "text"
+        "folder_name",
+        "memory_performance_tier",
+        "name"
       ],
-      "title": "DropdownOption",
+      "title": "Subpack",
       "type": "object"
     },
-    "570548258": {
-      "properties": {
-        "default": {
-          "minLength": 1,
-          "type": "string"
+    "4243943436": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/201255518"
         },
-        "name": {
-          "pattern": "^(?:(?!^(minecraft):).)+:(?:.)+$",
-          "type": "string",
-          "x-regex-flags": "ECMAScript,icase"
-        },
-        "options": {
-          "items": {
-            "$ref": "#/definitions/476920027"
-          },
-          "maxItems": 20,
-          "minItems": 2,
-          "type": "array"
-        },
-        "text": {
-          "type": "string"
-        },
-        "type": {
-          "enum": [
-            "label",
-            "slider",
-            "toggle",
-            "dropdown"
-          ],
-          "title": "SettingType",
+        {
           "type": "string"
         }
-      },
-      "required": [
-        "default",
-        "name",
-        "options",
-        "text",
-        "type"
       ],
-      "title": "DropdownSetting",
-      "type": "object"
+      "title": "SemVersion"
     }
   },
   "properties": {
@@ -402,10 +402,10 @@
       "items": {
         "oneOf": [
           {
-            "$ref": "#/definitions/1302329431"
+            "$ref": "#/definitions/3861161488"
           },
           {
-            "$ref": "#/definitions/121699317"
+            "$ref": "#/definitions/1627012538"
           }
         ]
       },
@@ -420,14 +420,14 @@
       "type": "boolean"
     },
     "header": {
-      "$ref": "#/definitions/3439089054"
+      "$ref": "#/definitions/292634909"
     },
     "metadata": {
-      "$ref": "#/definitions/2099554186"
+      "$ref": "#/definitions/1774886605"
     },
     "modules": {
       "items": {
-        "$ref": "#/definitions/1029402515"
+        "$ref": "#/definitions/1132802736"
       },
       "minItems": 1,
       "type": "array"
@@ -436,16 +436,16 @@
       "items": {
         "oneOf": [
           {
-            "$ref": "#/definitions/1294356741"
+            "$ref": "#/definitions/2251212786"
           },
           {
-            "$ref": "#/definitions/2237970794"
+            "$ref": "#/definitions/1403051027"
           },
           {
-            "$ref": "#/definitions/4231382625"
+            "$ref": "#/definitions/3991289792"
           },
           {
-            "$ref": "#/definitions/570548258"
+            "$ref": "#/definitions/3968873291"
           }
         ]
       },
@@ -455,7 +455,7 @@
     },
     "subpacks": {
       "items": {
-        "$ref": "#/definitions/2192054374"
+        "$ref": "#/definitions/4241525955"
       },
       "type": "array"
     }

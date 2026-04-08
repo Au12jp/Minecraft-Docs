@@ -1,5 +1,5 @@
 {
-  "$id": "3135759876",
+  "$id": "435751873",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "Modifies use behavior, including how long the item takes to use and the player's movement speed.",
   "properties": {
@@ -570,8 +570,6 @@
         "item.netherite_spear.use",
         "pause_growth",
         "reset_growth",
-        "pushed_by_player",
-        "bounce",
         "undefined"
       ],
       "title": "LevelSoundEvent",

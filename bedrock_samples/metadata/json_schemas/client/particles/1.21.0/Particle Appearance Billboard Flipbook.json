@@ -1,19 +1,8 @@
 {
-  "$id": "2492572434",
+  "$id": "772645837",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
-    "2014847524": {
-      "oneOf": [
-        {
-          "$ref": "#/definitions/2529973620"
-        },
-        {
-          "type": "number"
-        }
-      ],
-      "title": "Molang expression"
-    },
-    "2529973620": {
+    "2267778531": {
       "oneOf": [
         {
           "type": "string"
@@ -35,12 +24,23 @@
         }
       ],
       "title": "Molang string"
+    },
+    "3178719147": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/2267778531"
+        },
+        {
+          "type": "number"
+        }
+      ],
+      "title": "Molang expression"
     }
   },
   "properties": {
     "base_UV": {
       "items": {
-        "$ref": "#/definitions/2014847524"
+        "$ref": "#/definitions/3178719147"
       },
       "maxItems": 2,
       "minItems": 2,
@@ -55,7 +55,7 @@
       "type": "boolean"
     },
     "max_frame": {
-      "$ref": "#/definitions/2014847524"
+      "$ref": "#/definitions/3178719147"
     },
     "size_UV": {
       "default": [

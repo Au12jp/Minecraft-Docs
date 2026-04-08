@@ -4,11 +4,7 @@
     "description": {
       "identifier": "minecraft:furnace_dark_oak_leaves"
     },
-    "unlock": [
-      {
-        "item": "minecraft:dark_oak_leaves"
-      }
-    ],
+
     "tags": [ "furnace" ],
     "input": "minecraft:dark_oak_leaves",
     "output": "minecraft:leaf_litter"
