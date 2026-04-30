@@ -14,185 +14,194 @@
             "Body": "",
             "WebUrl": "https://aka.ms/mcbedrock-help-error-terracotta"
         },
-        "Errors": [
-            {
-                "FailReason": "ThirdPartyBlocked",
-                "OverrideStrings": {
-                    "Codeword": "Fox",
-                    "Title": "disconnectionScreen.cantConnect",
-                    "Body": "networkWorld.multiplayerPrivilegesUnknown",
-                    "WebUrl": "https://aka.ms/mcbedrock-help-error-fox"
-                }
-            },
-            {
-                "FailReason": "ThirdPartyBadIP",
-                "OverrideStrings": {
-                    "Codeword": "Squid",
-                    "Title": "disconnectionScreen.cantConnect",
-                    "Body": "disconnectionScreen.invalidIP",
-                    "WebUrl": "https://aka.ms/mcbedrock-help-error-squid"
-                }
-            },
-            {
-                "FailReason": "ThirdPartyNoServerOrServerLocked",
-                "OverrideStrings": {
-                    "Codeword": "Silverfish",
-                    "Title": "disconnectionScreen.cantConnect",
-                    "Body": "disconnectionScreen.body.serverNoneOrLocked",
-                    "WebUrl": "https://aka.ms/mcbedrock-help-error-silverfish"
-                }
-            },
-            {
-                "FailReason": "LocalServerNotFound",
-                "OverrideStrings": {
-                    "Codeword": "Panda",
-                    "Title": "disconnectionScreen.title.localServerNotFound",
-                    "WebUrl": "https://aka.ms/mcbedrock-help-error-panda"
-                }
-            },
-            {
-                "FailReason": "SessionNotFound",
-                "OverrideStrings": {
-                    "Codeword": "Goat",
-                    "Title": "disconnectionScreen.cantConnect",
-                    "Body": "disconnectionScreen.body.worldNoLongerAvailable",
-                    "WebUrl": "https://aka.ms/mcbedrock-help-error-goat"
-                }
-            },
-            {
-                "FailReason": "LevelNewerThanExeVersion",
-                "OverrideStrings": {
-                    "Codeword": "Breeze",
-                    "Body": "disconnectionScreen.body.worldNewerVersion",
-                    "WebUrl": "https://aka.ms/mcbedrock-help-error-breeze"
-                }
-            },
-            {
-                "FailReason": "ServerNotFound",
-                "OverrideStrings": {
-                    "Codeword": "Clay",
-                    "Title": "disconnectionScreen.title.serverNotFound",
-                    "Body": "disconnectionScreen.body.cantConnectServer",
-                    "WebUrl": "https://aka.ms/mcbedrock-help-error-clay"
-                }
-            },
-            {
-                "FailReason": "MissingClient",
-                "OverrideStrings": {
-                    "Codeword": "Snowball",
-                    "Title": "disconnectionScreen.disconnected",
-                    "Body": "disconnectionScreen.body.cantFindClient",
-                    "WebUrl": "https://aka.ms/mcbedrock-help-error-snowball"
-                }
-            },
-            {
-                "FailReason": "UnspecifiedClientInstanceDisconnection",
-                "OverrideStrings": {
-                    "Codeword": "Feather",
-                    "WebUrl": "https://aka.ms/mcbedrock-help-error-feather"
-                }
-            },
-            {
-                "FailReason": "DeepLinkTryingToOpenDemoWorldWhileSignedIn",
-                "OverrideStrings": {
-                    "Codeword": "Honeycomb",
-                    "WebUrl": "https://aka.ms/mcbedrock-help-error-honeycomb"
-                }
-            },
-            {
-                "FailReason": "GuestWithoutHost",
-                "OverrideStrings": {
-                    "Codeword": "Bamboo",
-                    "WebUrl": "https://aka.ms/mcbedrock-help-error-bamboo"
-                }
-            },
-            {
-                "FailReason": "Disconnected",
-                "OverrideStrings": {
-                    "Codeword": "Bat",
-                    "Title": "disconnectionScreen.title.disconnectedFromHost",
-                    "Body": "disconnectionScreen.body.cantFindServer",
-                    "WebUrl": "https://aka.ms/mcbedrock-help-error-bat"
-                }
-            },
-            {
-                "FailReason": "Timeout",
-                "OverrideStrings": {
-                    "Codeword": "Kelp",
-                    "Title": "disconnectionScreen.title.connectionTimeout",
-                    "WebUrl": "https://aka.ms/mcbedrock-help-error-kelp"
-                }
-            },
-            {
-                "FailReason": "SubClientLoginDisabled",
-                "OverrideStrings": {
-                    "Codeword": "Coal",
-                    "WebUrl": "https://aka.ms/mcbedrock-help-error-coal"
-                }
-            },
-            {
-                "FailReason": "ServerFull",
-                "OverrideStrings": {
-                    "Codeword": "Hopper",
-                    "Title": "disconnectionScreen.title.worldFull",
-                    "WebUrl": "https://aka.ms/mcbedrock-help-error-hopper"
-                }
-            },
-            {
-                "FailReason": "InvalidHeights",
-                "OverrideStrings": {
-                    "Codeword": "Lead",
-                    "WebUrl": "https://aka.ms/mcbedrock-help-error-lead"
-                }
-            },
-            {
-                "FailReason": "InvalidWidths",
-                "OverrideStrings": {
-                    "Codeword": "Ladder",
-                    "WebUrl": "https://aka.ms/mcbedrock-help-error-ladder"
-                }
-            },
-            {
-                "FailReason": "EmptyUrlFromDiscovery",
-                "OverrideStrings": {
-                    "Codeword": "TNT",
-                    "WebUrl": "https://aka.ms/mcbedrock-help-error-tnt"
-                }
-            },
-            {
-                "FailReason": "FailedToJoinExperience",
-                "OverrideStrings": {
-                    "Title": "disconnectionScreen.internalError.cantFindServer",
-                    "Body": "disconnectionScreen.internalError.cantConnect"
-                }
-            },
-            {
-                "FailReason": "ConnectionLost",
-                "OverrideStrings": {
-                    "Title": "disconnectionScreen.disconnected",
-                    "Body": "disconnectionScreen.connectionLost"
-                }
-            },
-            {
-                "FailReason": "HostSignedOut",
-                "OverrideStrings": {
-                    "Title": "disconnectionScreen.disconnected",
-                    "Body": "disconnectionScreen.body.hostSignedOut"
-                }
-            },
-            {
-                "FailReason": "ScriptWatchdogException",
-                "OverrideStrings": {
-                    "Body": "disconnect.scriptWatchdog"
-                }
-            },
-            {
-                "FailReason": "ScriptMemoryLimitExceeded",
-                "OverrideStrings": {
-                    "Body": "disconnect.scriptWatchdogOutOfMemory"
-                }
-            }
-        ]
+      "Errors": [
+        {
+          "FailReason": "ThirdPartyBlocked",
+          "OverrideStrings": {
+            "Codeword": "Fox",
+            "Title": "disconnectionScreen.cantConnect",
+            "Body": "networkWorld.multiplayerPrivilegesUnknown",
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-fox"
+          }
+        },
+        {
+          "FailReason": "ThirdPartyBadIP",
+          "OverrideStrings": {
+            "Codeword": "Squid",
+            "Title": "disconnectionScreen.cantConnect",
+            "Body": "disconnectionScreen.invalidIP",
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-squid"
+          }
+        },
+        {
+          "FailReason": "ThirdPartyNoServerOrServerLocked",
+          "OverrideStrings": {
+            "Codeword": "Silverfish",
+            "Title": "disconnectionScreen.cantConnect",
+            "Body": "disconnectionScreen.body.serverNoneOrLocked",
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-silverfish"
+          }
+        },
+        {
+          "FailReason": "LocalServerNotFound",
+          "OverrideStrings": {
+            "Codeword": "Panda",
+            "Title": "disconnectionScreen.title.localServerNotFound",
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-panda"
+          }
+        },
+        {
+          "FailReason": "SessionNotFound",
+          "OverrideStrings": {
+            "Codeword": "Goat",
+            "Title": "disconnectionScreen.cantConnect",
+            "Body": "disconnectionScreen.body.worldNoLongerAvailable",
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-goat"
+          }
+        },
+        {
+          "FailReason": "LevelNewerThanExeVersion",
+          "OverrideStrings": {
+            "Codeword": "Breeze",
+            "Body": "disconnectionScreen.body.worldNewerVersion",
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-breeze"
+          }
+        },
+        {
+          "FailReason": "ServerNotFound",
+          "OverrideStrings": {
+            "Codeword": "Clay",
+            "Title": "disconnectionScreen.title.serverNotFound",
+            "Body": "disconnectionScreen.body.cantConnectServer",
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-clay"
+          }
+        },
+        {
+          "FailReason": "MissingClient",
+          "OverrideStrings": {
+            "Codeword": "Snowball",
+            "Title": "disconnectionScreen.disconnected",
+            "Body": "disconnectionScreen.body.cantFindClient",
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-snowball"
+          }
+        },
+        {
+          "FailReason": "UnspecifiedClientInstanceDisconnection",
+          "OverrideStrings": {
+            "Codeword": "Feather",
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-feather"
+          }
+        },
+        {
+          "FailReason": "DeepLinkTryingToOpenDemoWorldWhileSignedIn",
+          "OverrideStrings": {
+            "Codeword": "Honeycomb",
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-honeycomb"
+          }
+        },
+        {
+          "FailReason": "GuestWithoutHost",
+          "OverrideStrings": {
+            "Codeword": "Bamboo",
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-bamboo"
+          }
+        },
+        {
+          "FailReason": "Disconnected",
+          "OverrideStrings": {
+            "Codeword": "Bat",
+            "Title": "disconnectionScreen.title.disconnectedFromHost",
+            "Body": "disconnectionScreen.body.cantFindServer",
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-bat"
+          }
+        },
+        {
+          "FailReason": "Timeout",
+          "OverrideStrings": {
+            "Codeword": "Kelp",
+            "Title": "disconnectionScreen.title.connectionTimeout",
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-kelp"
+          }
+        },
+        {
+          "FailReason": "SubClientLoginDisabled",
+          "OverrideStrings": {
+            "Codeword": "Coal",
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-coal"
+          }
+        },
+        {
+          "FailReason": "ServerFull",
+          "OverrideStrings": {
+            "Codeword": "Hopper",
+            "Title": "disconnectionScreen.title.worldFull",
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-hopper"
+          }
+        },
+        {
+          "FailReason": "InvalidHeights",
+          "OverrideStrings": {
+            "Codeword": "Lead",
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-lead"
+          }
+        },
+        {
+          "FailReason": "InvalidWidths",
+          "OverrideStrings": {
+            "Codeword": "Ladder",
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-ladder"
+          }
+        },
+        {
+          "FailReason": "EmptyUrlFromDiscovery",
+          "OverrideStrings": {
+            "Codeword": "TNT",
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-tnt"
+          }
+        },
+        {
+          "FailReason": "FailedToJoinExperience",
+          "OverrideStrings": {
+            "Title": "disconnectionScreen.internalError.cantFindServer",
+            "Body": "disconnectionScreen.internalError.cantConnect"
+          }
+        },
+        {
+          "FailReason": "ConnectionLost",
+          "OverrideStrings": {
+            "Title": "disconnectionScreen.disconnected",
+            "Body": "disconnectionScreen.connectionLost"
+          }
+        },
+        {
+          "FailReason": "HostSignedOut",
+          "OverrideStrings": {
+            "Title": "disconnectionScreen.disconnected",
+            "Body": "disconnectionScreen.body.hostSignedOut"
+          }
+        },
+        {
+          "FailReason": "HostDisconnected",
+          "OverrideStrings": {
+            "Codeword": "Goat",
+            "Title": "disconnectionScreen.title.disconnectedFromHost",
+            "Body": "disconnectionScreen.body.worldNoLongerActive",
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-goat"
+          }
+        },
+        {
+          "FailReason": "ScriptWatchdogException",
+          "OverrideStrings": {
+            "Body": "disconnect.scriptWatchdog"
+          }
+        },
+        {
+          "FailReason": "ScriptMemoryLimitExceeded",
+          "OverrideStrings": {
+            "Body": "disconnect.scriptWatchdogOutOfMemory"
+          }
+        }
+      ]
     },
     {
         "ThemeName": "OneOffGeneral",
@@ -327,6 +336,12 @@
                 "FailReason": "EditorMismatchVanillaToEditor",
                 "OverrideStrings": {
                     "Body": "disconnectionScreen.editor.mismatchVanillaToEditor"
+                }
+            },
+            {
+                "FailReason": "EditorJoinIntentPolicyFailure",
+                "OverrideStrings": {
+                    "Body": "disconnectionScreen.editor.joinIntentPolicyFailure"
                 }
             }
         ]
