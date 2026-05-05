@@ -1,0 +1,81 @@
+{
+  "format_version": "1.26.10",
+  "minecraft:crafting_items_catalog": {
+    "categories": [
+      {
+        "category_name": "nature",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "minecraft:chicken_spawn_egg",
+              "name": "minecraft:itemGroup.name.mobEgg"
+            },
+            "items": [
+              "minecraft:sulfur_cube_spawn_egg"
+            ]
+          },
+          {
+            "items": [
+              "minecraft:sulfur",
+              "minecraft:polished_sulfur",
+              "minecraft:chiseled_sulfur",
+              "minecraft:sulfur_bricks",
+              "minecraft:potent_sulfur",
+              "minecraft:cinnabar",
+              "minecraft:polished_cinnabar",
+              "minecraft:chiseled_cinnabar",
+              "minecraft:cinnabar_bricks"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "construction",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "minecraft:smooth_stone_slab",
+              "name": "minecraft:itemGroup.name.slab"
+            },
+            "items": [
+              "minecraft:sulfur_slab",
+              "minecraft:polished_sulfur_slab",
+              "minecraft:sulfur_brick_slab",
+              "minecraft:cinnabar_slab",
+              "minecraft:polished_cinnabar_slab",
+              "minecraft:cinnabar_brick_slab"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "minecraft:stone_stairs",
+              "name": "minecraft:itemGroup.name.stairs"
+            },
+            "items": [
+              "minecraft:sulfur_stairs",
+              "minecraft:polished_sulfur_stairs",
+              "minecraft:sulfur_brick_stairs",
+              "minecraft:cinnabar_stairs",
+              "minecraft:polished_cinnabar_stairs",
+              "minecraft:cinnabar_brick_stairs"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "minecraft:cobblestone_wall",
+              "name": "minecraft:itemGroup.name.walls"
+            },
+            "items": [
+              "minecraft:sulfur_wall",
+              "minecraft:polished_sulfur_wall",
+              "minecraft:sulfur_brick_wall",
+              "minecraft:cinnabar_wall",
+              "minecraft:polished_cinnabar_wall",
+              "minecraft:cinnabar_brick_wall"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

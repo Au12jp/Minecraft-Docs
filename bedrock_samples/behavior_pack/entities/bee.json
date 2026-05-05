@@ -254,9 +254,7 @@
             "minecraft:pink_petals",
             "minecraft:open_eyeblossom",
             "minecraft:wildflowers",
-            "minecraft:cactus_flower",
-            "minecraft:chorus_flower",
-            "minecraft:spore_blossom"
+            "minecraft:cactus_flower"
           ],
           "on_stay_completed": [
             {

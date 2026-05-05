@@ -1,5 +1,5 @@
 {
-  "format_version": "1.26.30",
+  "format_version": "1.26.0",
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:boat",
@@ -17,7 +17,7 @@
           "minecraft:water",
           "minecraft:flowing_water"
         ],
-        "movement_type": "waves"
+        "simulate_waves": true
       },
       "minecraft:collision_box": {
         "height": 0.455,
@@ -116,18 +116,9 @@
         "table": "loot_tables/entities/boat.json"
       },
       "minecraft:physics": {},
-      "minecraft:pushable_by_entity": {
-        "presets": [
-          {
-            "push_mode": "legacy_boat",
-            "strength_multiplier": 0.1,
-            "min_distance": 0.3,
-            "push_scale_self": 0.5,
-            "push_scale_other": 0.25
-          }
-        ]
-      },
-      "minecraft:pushable_by_block": {
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
       },
       "minecraft:rideable": {
         "interact_text": "action.interact.ride.boat",
@@ -153,7 +144,7 @@
               -0.2,
               0.0
             ],
-            "rotate_rider_by": "query.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman', 'happy_ghast') ? -90 : 0"
+            "rotate_rider_by": "query.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman', 'happy_ghast', 'copper_golem') ? -90 : 0"
           },
           {
             "lock_rider_rotation": 90,
@@ -164,7 +155,7 @@
               -0.2,
               0.0
             ],
-            "rotate_rider_by": "query.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman', 'happy_ghast') ? -90 : 0"
+            "rotate_rider_by": "query.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman', 'happy_ghast', 'copper_golem') ? -90 : 0"
           }
         ],
         "pull_in_entities": true,
@@ -187,7 +178,7 @@
             "minecraft:flowing_water"
           ],
           "drag_down_on_buoyancy_removed": 0.7,
-          "movement_type": "none"
+          "simulate_waves": false
         },
         "minecraft:out_of_control": {},
         "minecraft:timer": {
@@ -208,7 +199,7 @@
             "minecraft:flowing_water"
           ],
           "drag_down_on_buoyancy_removed": 0.7,
-          "movement_type": "none"
+          "simulate_waves": false
         },
         "minecraft:out_of_control": {}
       },
@@ -236,7 +227,7 @@
                 0.0
               ],
               "max_rider_count": 2,
-              "rotate_rider_by": "query.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman', 'happy_ghast') ? -90 : 0"
+              "rotate_rider_by": "query.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman', 'happy_ghast', 'copper_golem') ? -90 : 0"
             },
             {
               "min_rider_count": 2,
@@ -247,7 +238,7 @@
                 0.0
               ],
               "max_rider_count": 2,
-              "rotate_rider_by": "query.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman', 'happy_ghast') ? -90 : 0"
+              "rotate_rider_by": "query.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman', 'happy_ghast', 'copper_golem') ? -90 : 0"
             }
           ],
           "passenger_max_width": 1.375,
@@ -279,7 +270,7 @@
                 0.0
               ],
               "max_rider_count": 2,
-              "rotate_rider_by": "query.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman', 'happy_ghast') ? -90 : 0"
+              "rotate_rider_by": "query.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman', 'happy_ghast', 'copper_golem') ? -90 : 0"
             },
             {
               "min_rider_count": 2,
@@ -290,7 +281,7 @@
                 0.0
               ],
               "max_rider_count": 2,
-              "rotate_rider_by": "query.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman', 'happy_ghast') ? -90 : 0"
+              "rotate_rider_by": "query.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman', 'happy_ghast', 'copper_golem') ? -90 : 0"
             }
           ],
           "passenger_max_width": 1.375,
@@ -308,7 +299,7 @@
             "minecraft:water",
             "minecraft:flowing_water"
           ],
-          "movement_type": "waves"
+          "simulate_waves": true
         }
       }
     },

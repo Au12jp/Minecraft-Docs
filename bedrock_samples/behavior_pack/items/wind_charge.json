@@ -1,24 +1,13 @@
 {
-  "format_version": "1.26.30",
+  "format_version": "1.20.50",
   "minecraft:item": {
     "description": {
       "identifier": "minecraft:wind_charge",
-      "menu_category": {
-        "category": "items"
-      }
+      "category": "Items"
     },
     "components": {
-      "minecraft:cooldown": {
-        "category": "wind_charge",
-        "duration": 0.5
-      },
-      "minecraft:display_name": {
-        "value": "item.wind_charge.name"
-      },
       "minecraft:icon": {
-        "textures": {
-          "default": "wind_charge"
-        }
+        "texture": "wind_charge"
       },
       "minecraft:projectile": {
         "projectile_entity": "wind_charge_projectile"
@@ -27,6 +16,13 @@
         "do_swing_animation": true,
         "launch_power_scale": 1.5,
         "max_launch_power": 1.5
+      },
+      "minecraft:cooldown": {
+        "category": "wind_charge",
+        "duration": 0.5
+      },
+      "minecraft:display_name": {
+        "value": "item.wind_charge.name"
       }
     }
   }
