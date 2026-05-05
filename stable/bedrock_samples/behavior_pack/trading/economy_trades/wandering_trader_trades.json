@@ -1467,21 +1467,6 @@
                 }
               ],
               "max_uses": 5
-            },
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 1
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:sulfur_spike",
-                  "quantity": 2
-                }
-              ],
-              "max_uses": 5
             }
           ]
         }

@@ -14,13 +14,6 @@
                                 "min": 2,
                                 "max": 5
                             }
-                        },
-                        {
-                            "function": "looting_enchant",
-                            "count": {
-                                "min": 0,
-                                "max": 1
-                            }
                         }
                     ]
                 }

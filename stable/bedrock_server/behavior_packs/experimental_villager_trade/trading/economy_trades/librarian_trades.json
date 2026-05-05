@@ -723,7 +723,28 @@
           "trades": [
             {
               "wants": [{"item": "minecraft:emerald", "quantity": 20, "price_multiplier": 0.05}],
-              "gives": [{"item": "minecraft:nametag", "quantity": 1}],
+              "gives": [
+                {
+                  "choice": [
+                    {
+                      "item": "minecraft:red_candle",
+                      "quantity": 1
+                    },
+                    {
+                      "item": "minecraft:red_candle",
+                      "quantity": 1
+                    },
+                    {
+                      "item": "minecraft:red_candle",
+                      "quantity": 1
+                    },
+                    {
+                      "item": "minecraft:yellow_candle",
+                      "quantity": 1
+                    }
+                  ]
+                }
+              ],
               "trader_exp": 30,
               "max_uses": 12,
               "reward_exp": true
