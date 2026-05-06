@@ -384,7 +384,10 @@
                 }
             },
             {
-                "FailReason": "HostSuspended"
+                "FailReason": "HostSuspended",
+                "OverrideStrings": {
+                    "Body": "disconnectionScreen.hostSuspended"
+                }
             },
             {
                 "FailReason": "XBLJoinLobbyFailure",

@@ -1,27 +1,32 @@
 {
   "result": {
     "pageId": "DressingRoom_ColorPicker",
-    "rows": [
+    "addToRecentlyViewed": false,
+    "pageRefresh": false,
+    "sidebarLayoutType": "none",
+    "layout": [
       {
-        "controlId": "Layout",
-        "components": [
+        "sectionName": "rows",
+        "rows": [
           {
-            "type": "appearanceInteractionComp",
-            "$type": "AppearanceInteractionComponent"
-          },
-          {
-            "type": "colorPickerComp",
-            "$type": "ColorPickerComponent"
-          },
-          {
-            "type": "openExpandedAppearanceViewComp",
-            "$type": "OpenExpandedAppearanceViewComponent"
+            "controlId": "Layout",
+            "components": [
+              {
+                "type": "appearanceInteractionComp",
+                "$type": "AppearanceInteractionComponent"
+              },
+              {
+                "type": "colorPickerComp",
+                "$type": "ColorPickerComponent"
+              },
+              {
+                "type": "openExpandedAppearanceViewComp",
+                "$type": "OpenExpandedAppearanceViewComponent"
+              }
+            ]
           }
         ]
       }
-    ],
-    "inventoryVersion": "",
-    "pageRefresh": false,
-    "sidebarLayoutType": "Persona"
+    ]
   }
 }
