@@ -1,43 +1,53 @@
 {
   "result": {
     "pageId": "MultiItemPage_PersonaSkinSelectorExpanded",
-    "rows": [
+    "addToRecentlyViewed": false,
+    "pageName": "Home L1_MultiItemPage_PersonaSkinSelector%7cSkinPack_a76099cb-7573-4732-a5e7-c6bbc2c1924e",
+    "pageRefresh": false,
+    "sidebarLayoutType": "none",
+    "layout": [
       {
-        "controlId": "Layout",
-        "components": [
+        "sectionName": "rows",
+        "rows": [
           {
-            "type": "skinPackOfferInteractionComp",
-            "$type": "SkinPackOfferInteractionComponent"
+            "controlId": "Layout",
+            "components": [
+              {
+                "type": "skinPackOfferInteractionComp",
+                "$type": "SkinPackOfferInteractionComponent"
+              },
+              {
+                "type": "appearanceInteractionComp",
+                "$type": "AppearanceInteractionComponent"
+              },
+              {
+                "type": "openColorPickerComp",
+                "$type": "OpenColorPickerComponent"
+              },
+              {
+                "type": "openExpandedAppearanceViewComp",
+                "$type": "OpenExpandedAppearanceViewComponent"
+              }
+            ]
           },
           {
-            "type": "appearanceInteractionComp",
-            "$type": "AppearanceInteractionComponent"
-          },
-          {
-            "type": "openExpandedAppearanceViewComp",
-            "$type": "OpenExpandedAppearanceViewComponent"
-          }
-        ]
-      },
-      {
-        "controlId": "ExpandedSkinPackGrid",
-        "components": [
-          {
-            "type": "expandedSkinPackComp",
-            "$type": "ExpandedSkinPackComponent",
-            "isOffline": true
-          },
-          {
-            "items": [],
-            "totalItems": 1,
-            "type": "itemListComp",
-            "$type": "ItemListComponent"
+            "controlId": "ExpandedSkinPackGrid",
+            "components": [
+              {
+                "type": "expandedSkinPackComp",
+                "$type": "ExpandedSkinPackComponent",
+                "isOffline": true
+              },
+              {
+                "items": [],
+                "totalItems": 1,
+                "type": "itemListComp",
+                "$type": "ItemListComponent"
+              }
+            ]
           }
         ]
       }
-    ],
-    "inventoryVersion": "",
-    "pageRefresh": false,
-    "sidebarLayoutType": "Persona"
+    ]
   }
 }
