@@ -405,6 +405,14 @@
                 <td>worlds</td>
                 <td>This folder will be created at startup if it doesn't already exist. Every world created will have a folder named according to their <code>level-name</code> inside the <code>server.properties</code> file.</td>
             </tr>
+            <tr>
+                <td>system_behavior_packs</td>
+                <td>This folder is not created automatically at server startup. It is used to store system administrator behavior packs that can be applied globally across all worlds. Additionally, the pack and it's module's <code>uuid</code> values are protected, and will result in other user packs failing to load if using the same ID.</td>
+            </tr>
+            <tr>
+                <td>system_resource_packs</td>
+                <td>This folder is not created automatically at server startup. It is used to store system administrator resource packs that can be applied globally across all worlds. Additionally, the pack and it's module's <code>uuid</code> values are protected, and will result in other user packs failing to load if using the same ID.</td>
+            </tr>
         </tbody>
     </table>
 
