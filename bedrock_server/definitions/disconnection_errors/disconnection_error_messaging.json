@@ -12,7 +12,8 @@
             "Codeword": "Terracotta",
             "Title": "disconnectionScreen.title.errorOccurred",
             "Body": "",
-            "WebUrl": "https://aka.ms/mcbedrock-help-error-terracotta"
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-terracotta",
+            "IsReconnectable": true
         },
       "Errors": [
         {
@@ -209,7 +210,8 @@
             "Codeword": "Terracotta",
             "Title": "disconnectionScreen.title.errorOccurred",
             "Body": "",
-            "WebUrl": "https://aka.ms/mcbedrock-help-error-terracotta"
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-terracotta",
+            "IsReconnectable": true
         },
         "Errors": [
             {
@@ -248,7 +250,8 @@
             "Codeword": "Guardian",
             "Title": "disconnectionScreen.title.errorOccurred",
             "Body": "",
-            "WebUrl": "https://aka.ms/mcbedrock-help-error-guardian"
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-guardian",
+            "IsReconnectable": true
         },
         "Errors": [
             {
@@ -302,6 +305,9 @@
                 "OverrideStrings": {
                     "Body": "disconnectionScreen.body.hostWithoutKeys"
                 }
+            },
+            {
+                "FailReason": "InvalidName"
             }
         ]
     },
@@ -311,7 +317,8 @@
             "Codeword": "Emerald",
             "Title": "disconnectionScreen.title.errorOccurred",
             "Body": "",
-            "WebUrl": "https://aka.ms/mcbedrock-help-error-emerald"
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-emerald",
+            "IsReconnectable": true
         },
         "Errors": [
             {
@@ -352,7 +359,8 @@
             "Codeword": "Gold",
             "Title": "disconnectionScreen.title.errorOccurred",
             "Body": "",
-            "WebUrl": "https://aka.ms/mcbedrock-help-error-gold"
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-gold",
+            "IsReconnectable": true
         },
         "Errors": [
             {
@@ -373,7 +381,8 @@
             "Codeword": "Boat",
             "Title": "disconnectionScreen.title.errorOccurred",
             "Body": "",
-            "WebUrl": "https://aka.ms/mcbedrock-help-error-boat"
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-boat",
+            "IsReconnectable": true
         },
         "Errors": [
             {
@@ -424,7 +433,8 @@
             "Codeword": "Evoker",
             "Title": "disconnectionScreen.title.kickedFromWorld",
             "Body": "",
-            "WebUrl": "https://aka.ms/mcbedrock-help-error-evoker"
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-evoker",
+            "IsReconnectable": false
         },
         "Errors": [
             {
@@ -454,7 +464,8 @@
             "Codeword": "Arrow",
             "Title": "disconnectionScreen.title.errorOccurred",
             "Body": "",
-            "WebUrl": "https://aka.ms/mcbedrock-help-error-arrow"
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-arrow",
+            "IsReconnectable": true
         },
         "Errors": [
             {
@@ -500,7 +511,8 @@
             "Codeword": "NetherNet",
             "Title": "disconnectionScreen.title.multiplayerConnection",
             "Body": "disconnectionScreen.body.multiplayerConnection",
-            "WebUrl": "https://aka.ms/mcbedrock-help-error-nethernet"
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-nethernet",
+            "IsReconnectable": true
         },
         "Errors": [
             {
@@ -598,7 +610,8 @@
             "Codeword": "Block",
             "Title": "disconnectionScreen.title.errorOccurred",
             "Body": "",
-            "WebUrl": "https://aka.ms/mcbedrock-help-error-block"
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-block",
+            "IsReconnectable": true
         },
         "Errors": [
             {
@@ -624,7 +637,8 @@
             "Codeword": "Spyglass",
             "Title": "disconnectionScreen.title.unableToConnect",
             "Body": "disconnectionScreen.body.permissionsDoNotAllow",
-            "WebUrl": "https://aka.ms/mcbedrock-help-error-spyglass"
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-spyglass",
+            "IsReconnectable": true
         },
         "Errors": [
             {
@@ -688,7 +702,8 @@
             "Codeword": "Rabbit",
             "Title": "disconnectionScreen.title.resourcePackLoad",
             "Body": "",
-            "WebUrl": "https://aka.ms/mcbedrock-help-error-rabbit"
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-rabbit",
+            "IsReconnectable": true
         },
         "Errors": [
             {
@@ -711,7 +726,8 @@
             "Codeword": "Door",
             "Title": "disconnectionScreen.title.multiplayerConnection",
             "Body": "disconnectionScreen.body.multiplayerConnection",
-            "WebUrl": "https://aka.ms/mcbedrock-help-error-door"
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-door",
+            "IsReconnectable": true
         },
         "Errors": [
             {
@@ -746,6 +762,12 @@
             },
             {
                 "FailReason": "NetherNetClientSignalingError"
+            },
+            {
+                "FailReason": "NetherNetIdentityNotAllowed",
+                "OverrideStrings": {
+                    "Body": "disconnectionScreen.notAllowed"
+                }
             }
         ]
     },
@@ -755,7 +777,8 @@
             "Codeword": "Armor",
             "Title": "disconnectionScreen.title.skinIssue",
             "Body": "",
-            "WebUrl": "https://aka.ms/mcbedrock-help-error-armor"
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-armor",
+            "IsReconnectable": true
         },
         "Errors": [
             {
@@ -789,7 +812,8 @@
             "Codeword": "Chest",
             "Title": "disconnectionScreen.title.errorEncountered",
             "Body": "disconnectionScreen.body.storageOut",
-            "WebUrl": "https://aka.ms/mcbedrock-help-error-chest"
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-chest",
+            "IsReconnectable": true
         },
         "Errors": [
             {
@@ -835,7 +859,8 @@
             "Codeword": "Creeper",
             "Title": "disconnectionScreen.title.errorOccurred",
             "Body": "",
-            "WebUrl": "https://aka.ms/mcbedrock-help-error-creeper"
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-creeper",
+            "IsReconnectable": true
         },
         "Errors": [
             {
@@ -852,7 +877,8 @@
             "Codeword": "Chain",
             "Title": "disconnectionScreen.title.versionMismatch",
             "Body": "disconnectionScreen.body.versionMismatchHost",
-            "WebUrl": "https://aka.ms/mcbedrock-help-error-chain"
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-chain",
+            "IsReconnectable": true
         },
         "Errors": [
             {
