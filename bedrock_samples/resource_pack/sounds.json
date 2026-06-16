@@ -150,7 +150,7 @@
             },
             "item.use.on" : {
                "pitch" : 0.80,
-               "sound" : "missing.legacyref"
+               "sound" : "use.azalea"
             },
             "place" : {
                "pitch" : [ 0.80, 1.0 ],
@@ -184,7 +184,7 @@
             },
             "item.use.on" : {
                "pitch" : 0.80,
-               "sound" : "missing.legacyref"
+               "sound" : "use.azalea_leaves"
             },
             "place" : {
                "pitch" : [ 0.80, 1.0 ],
@@ -416,7 +416,7 @@
             },
             "item.use.on" : {
                "pitch" : 0.80,
-               "sound" : "missing.legacyref"
+               "sound" : "use.big_dripleaf"
             },
             "place" : {
                "pitch" : [ 0.80, 1.0 ],
@@ -1228,7 +1228,7 @@
             "default" : "",
             "hit" : {
                "pitch" : 0.60,
-               "sound" : "missing.legacyref",
+               "sound" : "block.dried_ghast.hit",
                "volume" : 0.20
             },
             "place" : {
@@ -1995,7 +1995,7 @@
             },
             "item.use.on" : {
                "pitch" : 1.20,
-               "sound" : "missing.legacyref"
+               "sound" : "use.anvil"
             },
             "place" : {
                "pitch" : [ 1.20, 1.250 ],
@@ -2677,7 +2677,7 @@
             },
             "item.use.on" : {
                "pitch" : 0.80,
-               "sound" : "missing.legacyref"
+               "sound" : "use.powder_snow"
             },
             "place" : {
                "pitch" : [ 0.80, 1.0 ],
@@ -3354,27 +3354,6 @@
          "pitch" : 1.0,
          "volume" : 1.0
       },
-      "sulfur_spike" : {
-         "events" : {
-            "break" : {
-               "pitch" : 0.80,
-               "sound" : "block.sulfur_spike.break",
-               "volume" : 1.0
-            },
-            "hit" : {
-               "pitch" : 0.50,
-               "sound" : "block.sulfur_spike.hit",
-               "volume" : 0.30
-            },
-            "place" : {
-               "pitch" : 0.80,
-               "sound" : "block.sulfur_spike.place",
-               "volume" : 1.0
-            }
-         },
-         "pitch" : 1.0,
-         "volume" : 1.0
-      },
       "suspicious_gravel" : {
          "events" : {
             "break" : {
@@ -3394,7 +3373,7 @@
             },
             "fall" : {
                "pitch" : [ 0.80, 1.0 ],
-               "sound" : "missing.legacyref",
+               "sound" : "fall.suspicious_gravel",
                "volume" : 1.0
             },
             "hit" : {
@@ -3430,7 +3409,7 @@
             },
             "fall" : {
                "pitch" : [ 0.80, 1.0 ],
-               "sound" : "missing.legacyref",
+               "sound" : "fall.suspicious_sand",
                "volume" : 1.0
             },
             "hit" : {
@@ -4322,7 +4301,7 @@
             "__molang_version" : 13,
             "events" : {
                "ambient" : "mob.cow.say",
-               "death" : "missing.legacyref",
+               "death" : "mob.cow.death",
                "eat" : "",
                "hurt" : "mob.cow.hurt",
                "step" : "mob.cow.step"
@@ -4858,7 +4837,7 @@
          },
          "iron_golem" : {
             "events" : {
-               "ambient" : "missing.legacyref",
+               "ambient" : "mob.irongolem.say",
                "death" : "mob.irongolem.death",
                "hurt" : "mob.irongolem.hit",
                "irongolem.crack" : "mob.irongolem.crack",
@@ -4938,7 +4917,7 @@
                "ambient" : "",
                "attack" : {
                   "pitch" : [ 0.80, 1.20 ],
-                  "sound" : "missing.legacyref"
+                  "sound" : "mob.attack"
                },
                "death" : "mob.magmacube.small",
                "hurt" : "mob.magmacube.small",
@@ -5499,7 +5478,7 @@
                "admire" : "mob.piglin.admiring_item",
                "ambient" : "mob.piglin.ambient",
                "angry" : "mob.piglin.angry",
-               "attack" : "missing.legacyref",
+               "attack" : "mob.piglin.attack",
                "celebrate" : "mob.piglin.celebrate",
                "death" : "mob.piglin.death",
                "hurt" : "mob.piglin.hurt",
@@ -5760,7 +5739,7 @@
                "ambient" : "",
                "attack" : {
                   "pitch" : [ 0.80, 1.20 ],
-                  "sound" : "missing.legacyref"
+                  "sound" : "mob.attack"
                },
                "death" : "mob.slime.small",
                "hurt" : "mob.slime.small",
@@ -7485,7 +7464,7 @@
          },
          "convert_to_drowned" : {
             "pitch" : [ 0.30, 1 ],
-            "sound" : "missing.legacyref",
+            "sound" : "mob.zombie.converted_to_drowned",
             "volume" : [ 1.0, 2.0 ]
          },
          "convert_to_frog" : {
@@ -8064,17 +8043,17 @@
          },
          "nearby_close" : {
             "pitch" : [ 0.80, 1.20 ],
-            "sound" : "missing.legacyref",
+            "sound" : "nearby_close.warden",
             "volume" : 1
          },
          "nearby_closer" : {
             "pitch" : [ 0.80, 1.20 ],
-            "sound" : "missing.legacyref",
+            "sound" : "nearby_closer.warden",
             "volume" : 1
          },
          "nearby_closest" : {
             "pitch" : [ 0.80, 1.20 ],
-            "sound" : "missing.legacyref",
+            "sound" : "nearby_closest.warden",
             "volume" : 1
          },
          "note" : {
@@ -9775,11 +9754,11 @@
                   "volume" : 0.40
                },
                "jump" : {
-                  "sound" : "missing.legacyref",
+                  "sound" : "jump.ladder",
                   "volume" : 0.120
                },
                "land" : {
-                  "sound" : "missing.legacyref",
+                  "sound" : "land.ladder",
                   "volume" : 0.220
                },
                "step" : {
@@ -9799,7 +9778,7 @@
                   "volume" : 0.40
                },
                "jump" : {
-                  "sound" : "missing.legacyref",
+                  "sound" : "jump.metal",
                   "volume" : 0.150
                },
                "land" : {
@@ -11002,37 +10981,6 @@
                "step" : {
                   "pitch" : 1.0,
                   "sound" : "block.sulfur.step",
-                  "volume" : 0.30
-               }
-            },
-            "pitch" : 1.0,
-            "volume" : 1.0
-         },
-         "sulfur_spike" : {
-            "events" : {
-               "fall" : {
-                  "pitch" : 0.750,
-                  "sound" : "block.sulfur_spike.fall",
-                  "volume" : 1.0
-               },
-               "hit" : {
-                  "pitch" : 0.50,
-                  "sound" : "block.sulfur_spike.hit",
-                  "volume" : 0.50
-               },
-               "jump" : {
-                  "pitch" : 1.0,
-                  "sound" : "block.sulfur_spike.step",
-                  "volume" : 0.40
-               },
-               "land" : {
-                  "pitch" : 1.0,
-                  "sound" : "block.sulfur_spike.land",
-                  "volume" : 1.0
-               },
-               "step" : {
-                  "pitch" : 1.0,
-                  "sound" : "block.sulfur_spike.step",
                   "volume" : 0.30
                }
             },

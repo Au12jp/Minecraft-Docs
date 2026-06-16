@@ -14,7 +14,6 @@
       "blast_furnace"
     ],
     "input": "minecraft:copper_horse_armor",
-    "output": "minecraft:copper_nugget",
-    "priority": 150
+    "output": "minecraft:copper_nugget"
   }
 }

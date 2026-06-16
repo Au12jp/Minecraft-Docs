@@ -9,11 +9,8 @@
         "item": "minecraft:spruce_leaves"
       }
     ],
-    "tags": [
-      "furnace"
-    ],
+    "tags": [ "furnace" ],
     "input": "minecraft:spruce_leaves",
-    "output": "minecraft:leaf_litter",
-    "priority": 240
+    "output": "minecraft:leaf_litter"
   }
 }

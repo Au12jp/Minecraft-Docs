@@ -1385,8 +1385,7 @@
     "layer": 2,
     "size": "$share_icon_size",
     "texture": "$share_icon_texture",
-    "offset": "$share_icon_offset",
-    "color": "$text_color"
+    "offset": "$share_icon_offset"
   },
 
   "share_label": {
@@ -5550,7 +5549,7 @@
                       },
                       "bindings": [
                         {
-                          "binding_name": "#collapsed_show_more_visible_binding",
+                          "binding_name": "#collapsed_show_more_visible",
                           "binding_condition": "once"
                         },
                         {

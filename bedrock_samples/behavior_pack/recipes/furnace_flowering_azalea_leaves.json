@@ -9,11 +9,8 @@
         "item": "minecraft:azalea_leaves_flowered"
       }
     ],
-    "tags": [
-      "furnace"
-    ],
+    "tags": [ "furnace" ],
     "input": "minecraft:azalea_leaves_flowered",
-    "output": "minecraft:leaf_litter",
-    "priority": 240
+    "output": "minecraft:leaf_litter"
   }
 }

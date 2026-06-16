@@ -5872,7 +5872,7 @@
       "textures" : "sulfur"
    },
    "sulfur_spike" : {
-      "sound" : "sulfur_spike",
+      "sound" : "sulfur",
       "textures" : {
          "down" : "sulfur_spike_frustum",
          "east" : "sulfur_spike_base",
