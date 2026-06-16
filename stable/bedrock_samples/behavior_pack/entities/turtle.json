@@ -1,5 +1,5 @@
 {
-  "format_version": "1.26.40",
+  "format_version": "1.26.10",
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:turtle",
@@ -114,7 +114,6 @@
       }
     },
     "components": {
-      "minecraft:balloonable": {},
       "minecraft:offspring": {
         "offspring_pairs": {
           "minecraft:turtle": "minecraft:turtle"

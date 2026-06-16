@@ -2,19 +2,17 @@
   "format_version": "1.20.10",
   "minecraft:recipe_furnace": {
     "description": {
-      "identifier": "minecraft:furnace_deepslate_coal_ore"
+    "identifier": "minecraft:furnace_deepslate_coal_ore"
     },
+
     "unlock": [
       {
         "item": "minecraft:deepslate_coal_ore"
       }
     ],
-    "tags": [
-      "furnace",
-      "blast_furnace"
-    ],
+    "tags": ["furnace", "blast_furnace"],
     "input": "minecraft:deepslate_coal_ore",
-    "output": "minecraft:coal",
-    "priority": 250
+    "output": "minecraft:coal"
   }
+  
 }

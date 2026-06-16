@@ -9,11 +9,8 @@
         "item": "minecraft:oak_leaves"
       }
     ],
-    "tags": [
-      "furnace"
-    ],
+    "tags": [ "furnace" ],
     "input": "minecraft:oak_leaves",
-    "output": "minecraft:leaf_litter",
-    "priority": 240
+    "output": "minecraft:leaf_litter"
   }
 }

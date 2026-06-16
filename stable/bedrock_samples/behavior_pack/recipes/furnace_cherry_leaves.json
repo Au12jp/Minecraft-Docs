@@ -9,11 +9,8 @@
         "item": "minecraft:cherry_leaves"
       }
     ],
-    "tags": [
-      "furnace"
-    ],
+    "tags": [ "furnace" ],
     "input": "minecraft:cherry_leaves",
-    "output": "minecraft:leaf_litter",
-    "priority": 240
+    "output": "minecraft:leaf_litter"
   }
 }

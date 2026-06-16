@@ -5049,12 +5049,7 @@
   "properties": {
     "components": {
       "$ref": "#/definitions/3181031438",
-      "description": "List of all components used in this item.",
-      "minProperties": 1,
-      "propertyNames": {
-        "pattern": "^(?!()$)",
-        "type": "string"
-      }
+      "description": "List of all components used in this item."
     },
     "description": {
       "$ref": "#/definitions/590136708",

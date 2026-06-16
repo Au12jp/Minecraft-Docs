@@ -9,11 +9,8 @@
         "item": "minecraft:resin_clump"
       }
     ],
-    "tags": [
-      "furnace"
-    ],
+    "tags": [ "furnace" ],
     "input": "minecraft:resin_clump",
-    "output": "minecraft:resin_brick",
-    "priority": 190
+    "output": "minecraft:resin_brick"
   }
 }

@@ -10,14 +10,11 @@
         "data": 0
       }
     ],
-    "tags": [
-      "furnace"
-    ],
+	  "tags": [ "furnace" ],
     "input": {
       "item": "minecraft:sandstone",
       "data": 0
     },
-    "output": "minecraft:smooth_sandstone",
-    "priority": 410
+	  "output": "minecraft:smooth_sandstone"
   }
 }
