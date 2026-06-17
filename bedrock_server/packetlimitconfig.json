@@ -11,7 +11,7 @@
       }
     },
     {
-      "minecraftPacketIds": [ 9 ],
+      "minecraftPacketIds": [ 9, 97 ],
       "algorithm": {
         "name": "BucketPacketLimitAlgorithm",
         "params": {

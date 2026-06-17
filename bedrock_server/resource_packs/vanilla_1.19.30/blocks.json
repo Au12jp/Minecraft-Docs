@@ -1,0 +1,15 @@
+{
+	"format_version": [
+		1,
+		1,
+		0
+	],
+	"melon_block": {
+		"textures": {
+			"up": "melon_top",
+			"down": "melon_top",
+			"side": "melon_side"
+		},
+		"sound": "wood"
+	}
+}

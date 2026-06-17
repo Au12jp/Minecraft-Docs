@@ -1,0 +1,100 @@
+{
+  "format_version": "1.21.30",
+  "structure_void": {
+    "textures": "flattened_structure_void"
+  },
+  "purpur_block": {
+    "textures": "flattened_purpur_block",
+    "sound": "stone"
+  },
+  "deprecated_purpur_block_1": {
+    "textures": "flattened_purpur_block",
+    "sound": "stone"
+  },
+  "purpur_pillar": {
+    "textures": {
+      "up": "purpur_pillar_top",
+      "down": "purpur_pillar_top",
+      "side": "purpur_pillar_side"
+    },
+    "sound": "stone"
+  },
+  "deprecated_purpur_block_2": {
+    "textures": "flattened_purpur_block",
+    "sound": "stone"
+  },
+  "cobblestone_wall": {
+    "textures": "flattened_cobblestone_wall",
+    "sound": "stone"
+  },
+  "mossy_cobblestone_wall": {
+    "textures": "mossy_cobblestone_wall",
+    "sound": "stone"
+  },
+  "granite_wall": {
+    "textures": "granite_wall",
+    "sound": "stone"
+  },
+  "diorite_wall": {
+    "textures": "diorite_wall",
+    "sound": "stone"
+  },
+  "andesite_wall": {
+    "textures": "andesite_wall",
+    "sound": "stone"
+  },
+  "sandstone_wall": {
+    "textures": "sandstone_wall",
+    "sound": "stone"
+  },
+  "brick_wall": {
+    "textures": "brick_wall",
+    "sound": "stone"
+  },
+  "stone_brick_wall": {
+    "textures": "stone_brick_wall",
+    "sound": "stone"
+  },
+  "mossy_stone_brick_wall": {
+    "textures": "mossy_stone_brick_wall",
+    "sound": "stone"
+  },
+  "nether_brick_wall": {
+    "textures": "nether_brick_wall",
+    "sound": "stone"
+  },
+  "end_stone_brick_wall": {
+    "textures": "end_stone_brick_wall",
+    "sound": "stone"
+  },
+  "prismarine_wall": {
+    "textures": "prismarine_wall",
+    "sound": "stone"
+  },
+  "red_sandstone_wall": {
+    "textures": "red_sandstone_wall",
+    "sound": "stone"
+  },
+  "red_nether_brick_wall": {
+    "textures": "red_nether_brick_wall",
+    "sound": "stone"
+  },
+  "sponge": {
+    "isotropic": true,
+    "textures": "flattened_sponge",
+    "sound": "grass"
+  },
+  "wet_sponge": {
+    "isotropic": true,
+    "textures": "wet_sponge",
+    "sound": "grass"
+  },
+  "tnt": {
+    "textures": {
+      "up": "flattened_tnt_top",
+      "down": "flattened_tnt_bottom",
+      "side": "flattened_tnt_side"
+    },
+    "sound": "grass"
+  }
+}
