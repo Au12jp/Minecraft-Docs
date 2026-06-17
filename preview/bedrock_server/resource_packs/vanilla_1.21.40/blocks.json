@@ -1,0 +1,42 @@
+{
+  "format_version": "1.21.40",
+  "skeleton_skull": {
+    "textures": "skull",
+    "sound": "stone"
+  },
+  "wither_skeleton_skull": {
+    "textures": "skull",
+    "sound": "stone"
+  },
+  "zombie_head": {
+    "textures": "skull",
+    "sound": "stone"
+  },
+  "player_head": {
+    "textures": "skull",
+    "sound": "stone"
+  },
+  "creeper_head": {
+    "textures": "skull",
+    "sound": "stone"
+  },
+  "dragon_head": {
+    "textures": "skull",
+    "sound": "stone"
+  },
+  "piglin_head": {
+    "textures": "skull",
+    "sound": "stone"
+  },
+  "mushroom_stem": {
+    "textures": {
+      "up": "mushroom_stem_top",
+      "down": "mushroom_stem_bottom",
+      "north": "mushroom_stem_north",
+      "south": "mushroom_stem_south",
+      "west": "mushroom_stem_west",
+      "east": "mushroom_stem_east"
+    },
+    "sound": "wood"
+  }
+}

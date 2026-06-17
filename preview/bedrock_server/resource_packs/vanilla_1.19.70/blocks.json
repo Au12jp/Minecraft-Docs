@@ -1,0 +1,71 @@
+{
+	"format_version": [
+		1,
+		1,
+		0
+	],
+  "white_wool": {
+    "textures": "wool_colored_white",
+    "sound": "cloth"
+  },
+  "orange_wool": {
+    "textures": "wool_colored_orange",
+    "sound": "cloth"
+  },
+  "magenta_wool": {
+    "textures": "wool_colored_magenta",
+    "sound": "cloth"
+  },
+  "light_blue_wool": {
+    "textures": "wool_colored_light_blue",
+    "sound": "cloth"
+  },
+  "yellow_wool": {
+    "textures": "wool_colored_yellow",
+    "sound": "cloth"
+  },
+  "lime_wool": {
+    "textures": "wool_colored_lime",
+    "sound": "cloth"
+  },
+  "pink_wool": {
+    "textures": "wool_colored_pink",
+    "sound": "cloth"
+  },
+  "gray_wool": {
+    "textures": "wool_colored_gray",
+    "sound": "cloth"
+  },
+  "light_gray_wool": {
+    "textures": "wool_colored_silver",
+    "sound": "cloth"
+  },
+  "cyan_wool": {
+    "textures": "wool_colored_cyan",
+    "sound": "cloth"
+  },
+  "purple_wool": {
+    "textures": "wool_colored_purple",
+    "sound": "cloth"
+  },
+  "blue_wool": {
+    "textures": "wool_colored_blue",
+    "sound": "cloth"
+  },
+  "brown_wool": {
+    "textures": "wool_colored_brown",
+    "sound": "cloth"
+  },
+  "green_wool": {
+    "textures": "wool_colored_green",
+    "sound": "cloth"
+  },
+  "red_wool": {
+    "textures": "wool_colored_red",
+    "sound": "cloth"
+  },
+  "black_wool": {
+    "textures": "wool_colored_black",
+    "sound": "cloth"
+  }
+}

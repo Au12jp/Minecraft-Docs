@@ -1,0 +1,306 @@
+{
+    "format_version": [
+      1,
+      1,
+      0
+    ],
+    "dirt_with_roots": {
+      "isotropic": true,
+      "textures": "dirt_with_roots",
+      "sound": "gravel"
+    },
+    "azalea": {
+      "textures": {
+        "up": "azalea_top",
+        "east": "azalea_plant",
+        "north": "azalea_side",
+        "down": "potted_azalea_bush_top",
+        "west": "potted_azalea_bush_plant",
+        "south": "potted_azalea_bush_side"
+      },
+      "sound": "azalea"
+    },
+    "flowering_azalea": {
+      "textures": {
+        "up": "flowering_azalea_top",
+        "east": "azalea_plant",
+        "north": "flowering_azalea_side",
+        "down": "potted_flowering_azalea_bush_top",
+        "west": "potted_flowering_azalea_bush_plant",
+        "south": "potted_flowering_azalea_bush_side"
+      },
+      "sound": "azalea"
+    },
+    "candle": {
+      "textures": "candle",
+      "carried_textures": "candle_carried",
+      "sound": "candle"
+    },
+    "white_candle": {
+      "textures": "white_candle",
+      "carried_textures": "white_candle_carried",
+      "sound": "candle"
+    },
+    "orange_candle": {
+      "textures": "orange_candle",
+      "carried_textures": "orange_candle_carried",
+      "sound": "candle"
+    },
+    "magenta_candle": {
+      "textures": "magenta_candle",
+      "carried_textures": "magenta_candle_carried",
+      "sound": "candle"
+    },
+    "light_blue_candle": {
+      "textures": "light_blue_candle",
+      "carried_textures": "light_blue_candle_carried",
+      "sound": "candle"
+    },
+    "yellow_candle": {
+      "textures": "yellow_candle",
+      "carried_textures": "yellow_candle_carried",
+      "sound": "candle"
+    },
+    "lime_candle": {
+      "textures": "lime_candle",
+      "carried_textures": "lime_candle_carried",
+      "sound": "candle"
+    },
+    "pink_candle": {
+      "textures": "pink_candle",
+      "carried_textures": "pink_candle_carried",
+      "sound": "candle"
+    },
+    "gray_candle": {
+      "textures": "gray_candle",
+      "carried_textures": "gray_candle_carried",
+      "sound": "candle"
+    },
+    "light_gray_candle": {
+      "textures": "light_gray_candle",
+      "carried_textures": "light_gray_candle_carried",
+      "sound": "candle"
+    },
+    "cyan_candle": {
+      "textures": "cyan_candle",
+      "carried_textures": "cyan_candle_carried",
+      "sound": "candle"
+    },
+    "purple_candle": {
+      "textures": "purple_candle",
+      "carried_textures": "purple_candle_carried",
+      "sound": "candle"
+    },
+    "blue_candle": {
+      "textures": "blue_candle",
+      "carried_textures": "blue_candle_carried",
+      "sound": "candle"
+    },
+    "brown_candle": {
+      "textures": "brown_candle",
+      "carried_textures": "brown_candle_carried",
+      "sound": "candle"
+    },
+    "green_candle": {
+      "textures": "green_candle",
+      "carried_textures": "green_candle_carried",
+      "sound": "candle"
+    },
+    "red_candle": {
+      "textures": "red_candle",
+      "carried_textures": "red_candle_carried",
+      "sound": "candle"
+    },
+    "black_candle": {
+      "textures": "black_candle",
+      "carried_textures": "black_candle_carried",
+      "sound": "candle"
+    },
+    "candle_cake": {
+      "textures": {
+        "up": "cake_top",
+        "down": "cake_bottom",
+        "north": "cake_side",
+        "south": "cake_side",
+        "west": "cake_west",
+        "east": "cake_side"
+      },
+      "sound": "cloth"
+    },
+    "white_candle_cake": {
+      "textures": {
+        "up": "cake_top",
+        "down": "cake_bottom",
+        "north": "cake_side",
+        "south": "cake_side",
+        "west": "cake_west",
+        "east": "cake_side"
+      },
+      "sound": "cloth"
+    },
+    "orange_candle_cake": {
+      "textures": {
+        "up": "cake_top",
+        "down": "cake_bottom",
+        "north": "cake_side",
+        "south": "cake_side",
+        "west": "cake_west",
+        "east": "cake_side"
+      },
+      "sound": "cloth"
+    },
+    "magenta_candle_cake": {
+      "textures": {
+        "up": "cake_top",
+        "down": "cake_bottom",
+        "north": "cake_side",
+        "south": "cake_side",
+        "west": "cake_west",
+        "east": "cake_side"
+      },
+      "sound": "cloth"
+    },
+    "light_blue_candle_cake": {
+      "textures": {
+        "up": "cake_top",
+        "down": "cake_bottom",
+        "north": "cake_side",
+        "south": "cake_side",
+        "west": "cake_west",
+        "east": "cake_side"
+      },
+      "sound": "cloth"
+    },
+    "yellow_candle_cake": {
+      "textures": {
+        "up": "cake_top",
+        "down": "cake_bottom",
+        "north": "cake_side",
+        "south": "cake_side",
+        "west": "cake_west",
+        "east": "cake_side"
+      },
+      "sound": "cloth"
+    },
+    "lime_candle_cake": {
+      "textures": {
+        "up": "cake_top",
+        "down": "cake_bottom",
+        "north": "cake_side",
+        "south": "cake_side",
+        "west": "cake_west",
+        "east": "cake_side"
+      },
+      "sound": "cloth"
+    },
+    "pink_candle_cake": {
+      "textures": {
+        "up": "cake_top",
+        "down": "cake_bottom",
+        "north": "cake_side",
+        "south": "cake_side",
+        "west": "cake_west",
+        "east": "cake_side"
+      },
+      "sound": "cloth"
+    },
+    "gray_candle_cake": {
+      "textures": {
+        "up": "cake_top",
+        "down": "cake_bottom",
+        "north": "cake_side",
+        "south": "cake_side",
+        "west": "cake_west",
+        "east": "cake_side"
+      },
+      "sound": "cloth"
+    },
+    "light_gray_candle_cake": {
+      "textures": {
+        "up": "cake_top",
+        "down": "cake_bottom",
+        "north": "cake_side",
+        "south": "cake_side",
+        "west": "cake_west",
+        "east": "cake_side"
+      },
+      "sound": "cloth"
+    },
+    "cyan_candle_cake": {
+      "textures": {
+        "up": "cake_top",
+        "down": "cake_bottom",
+        "north": "cake_side",
+        "south": "cake_side",
+        "west": "cake_west",
+        "east": "cake_side"
+      },
+      "sound": "cloth"
+    },
+    "purple_candle_cake": {
+      "textures": {
+        "up": "cake_top",
+        "down": "cake_bottom",
+        "north": "cake_side",
+        "south": "cake_side",
+        "west": "cake_west",
+        "east": "cake_side"
+      },
+      "sound": "cloth"
+    },
+    "blue_candle_cake": {
+      "textures": {
+        "up": "cake_top",
+        "down": "cake_bottom",
+        "north": "cake_side",
+        "south": "cake_side",
+        "west": "cake_west",
+        "east": "cake_side"
+      },
+      "sound": "cloth"
+    },
+    "brown_candle_cake": {
+      "textures": {
+        "up": "cake_top",
+        "down": "cake_bottom",
+        "north": "cake_side",
+        "south": "cake_side",
+        "west": "cake_west",
+        "east": "cake_side"
+      },
+      "sound": "cloth"
+    },
+    "green_candle_cake": {
+      "textures": {
+        "up": "cake_top",
+        "down": "cake_bottom",
+        "north": "cake_side",
+        "south": "cake_side",
+        "west": "cake_west",
+        "east": "cake_side"
+      },
+      "sound": "cloth"
+    },
+    "red_candle_cake": {
+      "textures": {
+        "up": "cake_top",
+        "down": "cake_bottom",
+        "north": "cake_side",
+        "south": "cake_side",
+        "west": "cake_west",
+        "east": "cake_side"
+      },
+      "sound": "cloth"
+    },
+    "black_candle_cake": {
+      "textures": {
+        "up": "cake_top",
+        "down": "cake_bottom",
+        "north": "cake_side",
+        "south": "cake_side",
+        "west": "cake_west",
+        "east": "cake_side"
+      },
+      "sound": "cloth"
+    }
+}

@@ -57,7 +57,8 @@
             "Codeword": "Goat",
             "Title": "disconnectionScreen.cantConnect",
             "Body": "disconnectionScreen.body.worldNoLongerAvailable",
-            "WebUrl": "https://aka.ms/mcbedrock-help-error-goat"
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-goat",
+            "IsReconnectable": false
           }
         },
         {
@@ -308,6 +309,12 @@
             },
             {
                 "FailReason": "InvalidName"
+            },
+            {
+                "FailReason": "ExpiredToken",
+                "OverrideStrings": {
+                    "Body": "disconnectionScreen.body.expiredToken"
+                }
             }
         ]
     },
@@ -627,7 +634,10 @@
                 "FailReason": "InvalidCommandRequestPacket"
             },
             {
-                "FailReason": "BadPacket"
+                "FailReason": "BadPacket",
+                "OverrideStrings": {
+                    "IsReconnectable": false
+                }
             }
         ]
     },
@@ -878,7 +888,7 @@
             "Title": "disconnectionScreen.title.versionMismatch",
             "Body": "disconnectionScreen.body.versionMismatchHost",
             "WebUrl": "https://aka.ms/mcbedrock-help-error-chain",
-            "IsReconnectable": true
+            "IsReconnectable": false
         },
         "Errors": [
             {

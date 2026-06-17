@@ -1,0 +1,180 @@
+{
+	"format_version": [
+		1,
+		1,
+		0
+	],
+	"oak_slab": {
+		"textures": "oak_planks",
+		"sound": "wood"
+	},
+	"spruce_slab": {
+		"textures": "spruce_planks",
+		"sound": "wood"
+	},
+	"birch_slab": {
+		"textures": "birch_planks",
+		"sound": "wood"
+	},
+	"acacia_slab": {
+		"textures": "acacia_planks",
+		"sound": "wood"
+	},
+	"jungle_slab": {
+		"textures": "jungle_planks",
+		"sound": "wood"
+	},
+	"dark_oak_slab": {
+		"textures": "dark_oak_planks",
+		"sound": "wood"
+	},
+	"oak_double_slab": {
+		"textures": "oak_planks",
+		"sound": "wood"
+	},
+	"spruce_double_slab": {
+		"textures": "spruce_planks",
+		"sound": "wood"
+	},
+	"birch_double_slab": {
+		"textures": "birch_planks",
+		"sound": "wood"
+	},
+	"acacia_double_slab": {
+		"textures": "acacia_planks",
+		"sound": "wood"
+	},
+	"jungle_double_slab": {
+		"textures": "jungle_planks",
+		"sound": "wood"
+	},
+	"dark_oak_double_slab": {
+		"textures": "dark_oak_planks",
+		"sound": "wood"
+	},
+  "oak_leaves": {
+    "isotropic": {
+      "up": true,
+      "down": true
+    },
+    "textures": "oak_leaves",
+    "carried_textures": "oak_leaves_carried",
+    "ambient_occlusion_exponent": 0.8,
+    "sound": "grass"
+  },
+  "birch_leaves": {
+    "isotropic": {
+      "up": true,
+      "down": true
+    },
+    "textures": "birch_leaves",
+    "carried_textures": "birch_leaves_carried",
+    "ambient_occlusion_exponent": 0.8,
+    "sound": "grass"
+  },
+  "jungle_leaves": {
+    "isotropic": {
+      "up": true,
+      "down": true
+    },
+    "textures": "jungle_leaves",
+    "carried_textures": "jungle_leaves_carried",
+    "ambient_occlusion_exponent": 0.8,
+    "sound": "grass"
+  },
+  "spruce_leaves": {
+    "isotropic": {
+      "up": true,
+      "down": true
+    },
+    "textures": "spruce_leaves",
+    "carried_textures": "spruce_leaves_carried",
+    "ambient_occlusion_exponent": 0.8,
+    "sound": "grass"
+  },
+  "acacia_leaves": {
+    "isotropic": {
+      "up": true,
+      "down": true
+    },
+    "textures": "acacia_leaves",
+    "carried_textures": "acacia_leaves_carried",
+    "ambient_occlusion_exponent": 0.8,
+    "sound": "grass"
+  },
+  "dark_oak_leaves": {
+    "isotropic": {
+      "up": true,
+      "down": true
+    },
+    "textures": "big_oak_leaves",
+    "carried_textures": "big_oak_leaves_carried",
+    "ambient_occlusion_exponent": 0.8,
+    "sound": "grass"
+  },
+  "oak_wood": {
+    "textures": "oak_wood",
+    "carried_textures": "oak_wood",
+    "sound": "wood"
+  },
+  "spruce_wood": {
+    "textures": "spruce_wood",
+    "carried_textures": "spruce_wood",
+    "sound": "wood"
+  },
+  "birch_wood": {
+    "textures": "birch_wood",
+    "carried_textures": "birch_wood",
+    "sound": "wood"
+  },
+  "jungle_wood": {
+    "textures": "jungle_wood",
+    "carried_textures": "jungle_wood",
+    "sound": "wood"
+  },
+  "acacia_wood": {
+    "textures": "acacia_wood",
+    "carried_textures": "acacia_wood",
+    "sound": "wood"
+  },
+  "dark_oak_wood": {
+    "textures": "dark_oak_wood",
+    "carried_textures": "dark_oak_wood",
+    "sound": "wood"
+  },
+  "stripped_oak_wood": {
+    "textures": "stripped_oak_wood",
+    "carried_textures": "stripped_oak_wood",
+    "sound": "wood"
+  },
+  "stripped_spruce_wood": {
+    "textures": "stripped_spruce_wood",
+    "carried_textures": "stripped_spruce_wood",
+    "sound": "wood"
+  },
+  "stripped_birch_wood": {
+    "textures": "stripped_birch_wood",
+    "carried_textures": "stripped_birch_wood",
+    "sound": "wood"
+  },
+  "stripped_jungle_wood": {
+    "textures": "stripped_jungle_wood",
+    "carried_textures": "stripped_jungle_wood",
+    "sound": "wood"
+  },
+  "stripped_acacia_wood": {
+    "textures": "stripped_acacia_wood",
+    "carried_textures": "stripped_acacia_wood",
+    "sound": "wood"
+  },
+  "stripped_dark_oak_wood": {
+    "textures": "stripped_dark_oak_wood",
+    "carried_textures": "stripped_dark_oak_wood",
+    "sound": "wood"
+  },
+  "turtle_egg": {
+    "textures": "turtle_egg",
+    "carried_textures": "turtle_egg_carried",
+    "sound": "turtle_egg"
+  }
+}

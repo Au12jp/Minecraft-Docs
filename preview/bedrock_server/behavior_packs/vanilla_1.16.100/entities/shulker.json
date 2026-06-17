@@ -58,10 +58,7 @@
         }
       },
       "minecraft:experience_reward": {
-        "on_death": {
-          "expression": "query.last_hit_by_player ? 5 : 0",
-          "version": 0
-        }
+        "on_death": "query.last_hit_by_player ? 5 : 0"
       },
       "minecraft:health": {
         "max": 30,
