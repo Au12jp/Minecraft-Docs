@@ -1411,6 +1411,277 @@
       "nodes": [
         {
           "description": [
+            "Tests that an actor has an item equipped with a given enchantment."
+          ],
+          "examples": [
+            {
+              "name": "Full..",
+              "text": [
+                "{ \"test\": \"actor_has_item_with_enchantment_in_slot\", \"subject\": \"self\", \"domain\": \"any\", \"operator\": \"equals\", \"value\": \"\" }"
+              ]
+            },
+            {
+              "name": "Short (using Defaults)..",
+              "text": [
+                "{ \"test\": \"actor_has_item_with_enchantment_in_slot\", \"value\": \"\" }"
+              ]
+            }
+          ],
+          "examples_print_mode": "code",
+          "examples_title": "Examples",
+          "header_level": 2,
+          "name": "actor_has_item_with_enchantment_in_slot",
+          "nodes": [
+            {
+              "default": "any",
+              "description": [
+                "(Optional) The equipment location to test"
+              ],
+              "header_level": 3,
+              "name": "domain",
+              "nodes": [
+                {
+                  "header_level": 4,
+                  "name": "any",
+                  "show_in_index": true
+                },
+                {
+                  "header_level": 4,
+                  "name": "armor",
+                  "show_in_index": true
+                },
+                {
+                  "header_level": 4,
+                  "name": "body",
+                  "show_in_index": true
+                },
+                {
+                  "header_level": 4,
+                  "name": "feet",
+                  "show_in_index": true
+                },
+                {
+                  "header_level": 4,
+                  "name": "hand",
+                  "show_in_index": true
+                },
+                {
+                  "header_level": 4,
+                  "name": "head",
+                  "show_in_index": true
+                },
+                {
+                  "header_level": 4,
+                  "name": "inventory",
+                  "show_in_index": true
+                },
+                {
+                  "header_level": 4,
+                  "name": "leg",
+                  "show_in_index": true
+                },
+                {
+                  "header_level": 4,
+                  "name": "main_hand",
+                  "show_in_index": true
+                },
+                {
+                  "header_level": 4,
+                  "name": "torso",
+                  "show_in_index": true
+                }
+              ],
+              "nodes_as_table": true,
+              "show_in_index": true,
+              "table_description_title": "Description",
+              "table_name_title": "Options",
+              "type": "String"
+            },
+            {
+              "default": "equals",
+              "description": [
+                "(Optional) The comparison to apply with 'value'."
+              ],
+              "header_level": 3,
+              "name": "operator",
+              "nodes": [
+                {
+                  "description": [
+                    "Test for inequality."
+                  ],
+                  "header_level": 4,
+                  "name": "!=",
+                  "show_in_index": true
+                },
+                {
+                  "description": [
+                    "Test for less-than the value."
+                  ],
+                  "header_level": 4,
+                  "name": "<",
+                  "show_in_index": true
+                },
+                {
+                  "description": [
+                    "Test for less-than or equal to the value."
+                  ],
+                  "header_level": 4,
+                  "name": "<=",
+                  "show_in_index": true
+                },
+                {
+                  "description": [
+                    "Test for inequality."
+                  ],
+                  "header_level": 4,
+                  "name": "<>",
+                  "show_in_index": true
+                },
+                {
+                  "description": [
+                    "Test for equality."
+                  ],
+                  "header_level": 4,
+                  "name": "=",
+                  "show_in_index": true
+                },
+                {
+                  "description": [
+                    "Test for equality."
+                  ],
+                  "header_level": 4,
+                  "name": "==",
+                  "show_in_index": true
+                },
+                {
+                  "description": [
+                    "Test for greater-than the value."
+                  ],
+                  "header_level": 4,
+                  "name": ">",
+                  "show_in_index": true
+                },
+                {
+                  "description": [
+                    "Test for greater-than or equal to the value."
+                  ],
+                  "header_level": 4,
+                  "name": ">=",
+                  "show_in_index": true
+                },
+                {
+                  "description": [
+                    "Test for equality."
+                  ],
+                  "header_level": 4,
+                  "name": "equals",
+                  "show_in_index": true
+                },
+                {
+                  "description": [
+                    "Test for inequality."
+                  ],
+                  "header_level": 4,
+                  "name": "not",
+                  "show_in_index": true
+                }
+              ],
+              "nodes_as_table": true,
+              "show_in_index": true,
+              "table_description_title": "Description",
+              "table_name_title": "Options",
+              "type": "String"
+            },
+            {
+              "default": "self",
+              "description": [
+                "(Optional) The subject of this filter test."
+              ],
+              "header_level": 3,
+              "name": "subject",
+              "nodes": [
+                {
+                  "description": [
+                    "The block involved with the interaction."
+                  ],
+                  "header_level": 4,
+                  "name": "block",
+                  "show_in_index": true
+                },
+                {
+                  "description": [
+                    "The damaging actor involved with the interaction."
+                  ],
+                  "header_level": 4,
+                  "name": "damager",
+                  "show_in_index": true
+                },
+                {
+                  "description": [
+                    "The other member of an interaction, not the caller."
+                  ],
+                  "header_level": 4,
+                  "name": "other",
+                  "show_in_index": true
+                },
+                {
+                  "description": [
+                    "The caller's current parent."
+                  ],
+                  "header_level": 4,
+                  "name": "parent",
+                  "show_in_index": true
+                },
+                {
+                  "description": [
+                    "The player involved with the interaction."
+                  ],
+                  "header_level": 4,
+                  "name": "player",
+                  "show_in_index": true
+                },
+                {
+                  "description": [
+                    "The entity or object calling the test"
+                  ],
+                  "header_level": 4,
+                  "name": "self",
+                  "show_in_index": true
+                },
+                {
+                  "description": [
+                    "The caller's current target."
+                  ],
+                  "header_level": 4,
+                  "name": "target",
+                  "show_in_index": true
+                }
+              ],
+              "nodes_as_table": true,
+              "show_in_index": true,
+              "table_description_title": "Description",
+              "table_name_title": "Options",
+              "type": "String"
+            },
+            {
+              "description": [
+                "(Required) A string value."
+              ],
+              "header_level": 3,
+              "name": "value",
+              "show_in_index": true,
+              "type": "String"
+            }
+          ],
+          "nodes_as_table": true,
+          "show_in_index": true,
+          "table_default_title": "Default",
+          "table_description_title": "Description",
+          "table_name_title": "Name",
+          "table_type_title": "Type"
+        },
+        {
+          "description": [
             "Tests the health of the subject."
           ],
           "examples": [
@@ -24711,7 +24982,7 @@
                 "Allows an entity to charge and use their held item."
               ],
               "header_level": 3,
-              "name": "minecraft:behavior.charge_held_item",
+              "name": "minecraft:behavior.charge_held_item (See JSON Schema since 1.26.40)",
               "nodes": [
                 {
                   "default": "NA",
@@ -26052,12 +26323,12 @@
                 "Allows the entity to consume a block, replace the eaten block with another block, and trigger an event as a result."
               ],
               "header_level": 3,
-              "name": "minecraft:behavior.eat_block",
+              "name": "minecraft:behavior.eat_block (See JSON Schema since 1.26.40)",
               "nodes": [
                 {
                   "default": "N/A",
                   "description": [
-                    "A collection of pairs of blocks; the first (\"eat_block\")is the block the entity should eat, the second (\"replace_block\") is the block that should replace the eaten block."
+                    "A collection of pairs of blocks; the first (\"eat_block\") is the block the entity should eat, the second (\"replace_block\") is the block that should replace the eaten block."
                   ],
                   "header_level": 2,
                   "name": "eat_and_replace_block_pairs",
@@ -28491,7 +28762,7 @@
                 "Allows the mob to perform a damaging knockback that affects all nearby entities."
               ],
               "header_level": 3,
-              "name": "minecraft:behavior.knockback_roar",
+              "name": "minecraft:behavior.knockback_roar (See JSON Schema since 1.26.40)",
               "nodes": [
                 {
                   "default": "0.5",
@@ -28504,7 +28775,7 @@
                   "type": "Decimal"
                 },
                 {
-                  "default": "0.10",
+                  "default": "0.1",
                   "description": [
                     "Time (in seconds) the mob has to wait before using the goal again."
                   ],
@@ -32573,7 +32844,7 @@
                 "Allows an entity to attack by using ranged shots. \"charge_shoot_trigger\" must be greater than 0 to enable charged up burst-shot attacks. Requires minecraft:shooter to define projectile behaviour."
               ],
               "header_level": 3,
-              "name": "minecraft:behavior.ranged_attack",
+              "name": "minecraft:behavior.ranged_attack (See JSON Schema since 1.26.40)",
               "nodes": [
                 {
                   "default": "0",
@@ -36327,7 +36598,7 @@
               "name": "minecraft:admire_item",
               "nodes": [
                 {
-                  "default": "0",
+                  "default": "10",
                   "description": [
                     "Duration, in seconds, for which mob won't admire items if it was hurt"
                   ],
@@ -36339,7 +36610,7 @@
                 {
                   "default": "10",
                   "description": [
-                    "Duration, in seconds, that the mob is pacified."
+                    "Duration, in seconds, that the mob admires an item."
                   ],
                   "header_level": 4,
                   "name": "duration",
@@ -36721,14 +36992,6 @@
               "table_description_title": "Description",
               "table_name_title": "Name",
               "table_type_title": "Type"
-            },
-            {
-              "description": [
-                "Allows the actor to open doors assuming that that flags set up for the component to use in navigation"
-              ],
-              "header_level": 3,
-              "name": "minecraft:annotation.open_door",
-              "show_in_index": true
             },
             {
               "description": [
@@ -40782,14 +41045,6 @@
             },
             {
               "description": [
-                "This component is used to implement part of the Wandering Trader behavior"
-              ],
-              "header_level": 3,
-              "name": "minecraft:managed_wandering_trader",
-              "show_in_index": true
-            },
-            {
-              "description": [
                 "A component that applies a mob effect to entities that get within range."
               ],
               "header_level": 3,
@@ -42623,6 +42878,436 @@
             },
             {
               "description": [
+                "Adds a trigger to call on this entity's death."
+              ],
+              "header_level": 3,
+              "name": "minecraft:on_death",
+              "nodes": [
+                {
+                  "description": [
+                    "The event to run when the conditions for this trigger are met."
+                  ],
+                  "header_level": 4,
+                  "name": "event",
+                  "show_in_index": true,
+                  "type": "String"
+                },
+                {
+                  "description": [
+                    "The list of conditions for this trigger to execute."
+                  ],
+                  "header_level": 4,
+                  "name": "filters",
+                  "show_in_index": true,
+                  "type": "Minecraft Filter"
+                },
+                {
+                  "default": "self",
+                  "description": [
+                    "The target of the event."
+                  ],
+                  "header_level": 4,
+                  "name": "target",
+                  "show_in_index": true,
+                  "type": "String"
+                }
+              ],
+              "nodes_as_table": true,
+              "show_in_index": true,
+              "table_default_title": "Default Value",
+              "table_description_title": "Description",
+              "table_name_title": "Name",
+              "table_type_title": "Type"
+            },
+            {
+              "description": [
+                "Adds a trigger that will run when a nearby entity of the same type as this entity becomes Angry."
+              ],
+              "header_level": 3,
+              "name": "minecraft:on_friendly_anger",
+              "nodes": [
+                {
+                  "description": [
+                    "The event to run when the conditions for this trigger are met."
+                  ],
+                  "header_level": 4,
+                  "name": "event",
+                  "show_in_index": true,
+                  "type": "String"
+                },
+                {
+                  "description": [
+                    "The list of conditions for this trigger to execute."
+                  ],
+                  "header_level": 4,
+                  "name": "filters",
+                  "show_in_index": true,
+                  "type": "Minecraft Filter"
+                },
+                {
+                  "default": "self",
+                  "description": [
+                    "The target of the event."
+                  ],
+                  "header_level": 4,
+                  "name": "target",
+                  "show_in_index": true,
+                  "type": "String"
+                }
+              ],
+              "nodes_as_table": true,
+              "show_in_index": true,
+              "table_default_title": "Default Value",
+              "table_description_title": "Description",
+              "table_name_title": "Name",
+              "table_type_title": "Type"
+            },
+            {
+              "description": [
+                "Adds a trigger to call when this entity takes damage."
+              ],
+              "header_level": 3,
+              "name": "minecraft:on_hurt",
+              "nodes": [
+                {
+                  "description": [
+                    "The event to run when the conditions for this trigger are met."
+                  ],
+                  "header_level": 4,
+                  "name": "event",
+                  "show_in_index": true,
+                  "type": "String"
+                },
+                {
+                  "description": [
+                    "The list of conditions for this trigger to execute."
+                  ],
+                  "header_level": 4,
+                  "name": "filters",
+                  "show_in_index": true,
+                  "type": "Minecraft Filter"
+                },
+                {
+                  "default": "self",
+                  "description": [
+                    "The target of the event."
+                  ],
+                  "header_level": 4,
+                  "name": "target",
+                  "show_in_index": true,
+                  "type": "String"
+                }
+              ],
+              "nodes_as_table": true,
+              "show_in_index": true,
+              "table_default_title": "Default Value",
+              "table_description_title": "Description",
+              "table_name_title": "Name",
+              "table_type_title": "Type"
+            },
+            {
+              "description": [
+                "Adds a trigger to call when this entity is attacked by the player."
+              ],
+              "header_level": 3,
+              "name": "minecraft:on_hurt_by_player",
+              "nodes": [
+                {
+                  "description": [
+                    "The event to run when the conditions for this trigger are met."
+                  ],
+                  "header_level": 4,
+                  "name": "event",
+                  "show_in_index": true,
+                  "type": "String"
+                },
+                {
+                  "description": [
+                    "The list of conditions for this trigger to execute."
+                  ],
+                  "header_level": 4,
+                  "name": "filters",
+                  "show_in_index": true,
+                  "type": "Minecraft Filter"
+                },
+                {
+                  "default": "self",
+                  "description": [
+                    "The target of the event."
+                  ],
+                  "header_level": 4,
+                  "name": "target",
+                  "show_in_index": true,
+                  "type": "String"
+                }
+              ],
+              "nodes_as_table": true,
+              "show_in_index": true,
+              "table_default_title": "Default Value",
+              "table_description_title": "Description",
+              "table_name_title": "Name",
+              "table_type_title": "Type"
+            },
+            {
+              "description": [
+                "Adds a trigger to call when this entity is set on fire."
+              ],
+              "header_level": 3,
+              "name": "minecraft:on_ignite",
+              "nodes": [
+                {
+                  "description": [
+                    "The event to run when the conditions for this trigger are met."
+                  ],
+                  "header_level": 4,
+                  "name": "event",
+                  "show_in_index": true,
+                  "type": "String"
+                },
+                {
+                  "description": [
+                    "The list of conditions for this trigger to execute."
+                  ],
+                  "header_level": 4,
+                  "name": "filters",
+                  "show_in_index": true,
+                  "type": "Minecraft Filter"
+                },
+                {
+                  "default": "self",
+                  "description": [
+                    "The target of the event."
+                  ],
+                  "header_level": 4,
+                  "name": "target",
+                  "show_in_index": true,
+                  "type": "String"
+                }
+              ],
+              "nodes_as_table": true,
+              "show_in_index": true,
+              "table_default_title": "Default Value",
+              "table_description_title": "Description",
+              "table_name_title": "Name",
+              "table_type_title": "Type"
+            },
+            {
+              "description": [
+                "Only usable by the Ender Dragon. Adds a trigger to call when this entity lands."
+              ],
+              "header_level": 3,
+              "name": "minecraft:on_start_landing",
+              "nodes": [
+                {
+                  "description": [
+                    "The event to run when the conditions for this trigger are met."
+                  ],
+                  "header_level": 4,
+                  "name": "event",
+                  "show_in_index": true,
+                  "type": "String"
+                },
+                {
+                  "description": [
+                    "The list of conditions for this trigger to execute."
+                  ],
+                  "header_level": 4,
+                  "name": "filters",
+                  "show_in_index": true,
+                  "type": "Minecraft Filter"
+                },
+                {
+                  "default": "self",
+                  "description": [
+                    "The target of the event."
+                  ],
+                  "header_level": 4,
+                  "name": "target",
+                  "show_in_index": true,
+                  "type": "String"
+                }
+              ],
+              "nodes_as_table": true,
+              "show_in_index": true,
+              "table_default_title": "Default Value",
+              "table_description_title": "Description",
+              "table_name_title": "Name",
+              "table_type_title": "Type"
+            },
+            {
+              "description": [
+                "Only usable by the Ender Dragon. Adds a trigger to call when this entity starts flying."
+              ],
+              "header_level": 3,
+              "name": "minecraft:on_start_takeoff",
+              "nodes": [
+                {
+                  "description": [
+                    "The event to run when the conditions for this trigger are met."
+                  ],
+                  "header_level": 4,
+                  "name": "event",
+                  "show_in_index": true,
+                  "type": "String"
+                },
+                {
+                  "description": [
+                    "The list of conditions for this trigger to execute."
+                  ],
+                  "header_level": 4,
+                  "name": "filters",
+                  "show_in_index": true,
+                  "type": "Minecraft Filter"
+                },
+                {
+                  "default": "self",
+                  "description": [
+                    "The target of the event."
+                  ],
+                  "header_level": 4,
+                  "name": "target",
+                  "show_in_index": true,
+                  "type": "String"
+                }
+              ],
+              "nodes_as_table": true,
+              "show_in_index": true,
+              "table_default_title": "Default Value",
+              "table_description_title": "Description",
+              "table_name_title": "Name",
+              "table_type_title": "Type"
+            },
+            {
+              "description": [
+                "Adds a trigger to call when this entity finds a target."
+              ],
+              "header_level": 3,
+              "name": "minecraft:on_target_acquired",
+              "nodes": [
+                {
+                  "description": [
+                    "The event to run when the conditions for this trigger are met."
+                  ],
+                  "header_level": 4,
+                  "name": "event",
+                  "show_in_index": true,
+                  "type": "String"
+                },
+                {
+                  "description": [
+                    "The list of conditions for this trigger to execute."
+                  ],
+                  "header_level": 4,
+                  "name": "filters",
+                  "show_in_index": true,
+                  "type": "Minecraft Filter"
+                },
+                {
+                  "default": "self",
+                  "description": [
+                    "The target of the event."
+                  ],
+                  "header_level": 4,
+                  "name": "target",
+                  "show_in_index": true,
+                  "type": "String"
+                }
+              ],
+              "nodes_as_table": true,
+              "show_in_index": true,
+              "table_default_title": "Default Value",
+              "table_description_title": "Description",
+              "table_name_title": "Name",
+              "table_type_title": "Type"
+            },
+            {
+              "description": [
+                "Adds a trigger to call when this entity loses the target it currently has."
+              ],
+              "header_level": 3,
+              "name": "minecraft:on_target_escape",
+              "nodes": [
+                {
+                  "description": [
+                    "The event to run when the conditions for this trigger are met."
+                  ],
+                  "header_level": 4,
+                  "name": "event",
+                  "show_in_index": true,
+                  "type": "String"
+                },
+                {
+                  "description": [
+                    "The list of conditions for this trigger to execute."
+                  ],
+                  "header_level": 4,
+                  "name": "filters",
+                  "show_in_index": true,
+                  "type": "Minecraft Filter"
+                },
+                {
+                  "default": "self",
+                  "description": [
+                    "The target of the event."
+                  ],
+                  "header_level": 4,
+                  "name": "target",
+                  "show_in_index": true,
+                  "type": "String"
+                }
+              ],
+              "nodes_as_table": true,
+              "show_in_index": true,
+              "table_default_title": "Default Value",
+              "table_description_title": "Description",
+              "table_name_title": "Name",
+              "table_type_title": "Type"
+            },
+            {
+              "description": [
+                "Adds a trigger to call when this pet's owner awakes after sleeping with the pet."
+              ],
+              "header_level": 3,
+              "name": "minecraft:on_wake_with_owner",
+              "nodes": [
+                {
+                  "description": [
+                    "The event to run when the conditions for this trigger are met."
+                  ],
+                  "header_level": 4,
+                  "name": "event",
+                  "show_in_index": true,
+                  "type": "String"
+                },
+                {
+                  "description": [
+                    "The list of conditions for this trigger to execute."
+                  ],
+                  "header_level": 4,
+                  "name": "filters",
+                  "show_in_index": true,
+                  "type": "Minecraft Filter"
+                },
+                {
+                  "default": "self",
+                  "description": [
+                    "The target of the event."
+                  ],
+                  "header_level": 4,
+                  "name": "target",
+                  "show_in_index": true,
+                  "type": "String"
+                }
+              ],
+              "nodes_as_table": true,
+              "show_in_index": true,
+              "table_default_title": "Default Value",
+              "table_description_title": "Description",
+              "table_name_title": "Name",
+              "table_type_title": "Type"
+            },
+            {
+              "description": [
                 "Defines the entity's 'out of control' state."
               ],
               "header_level": 3,
@@ -42670,14 +43355,6 @@
               "table_description_title": "Description",
               "table_name_title": "Name",
               "table_type_title": "Type"
-            },
-            {
-              "description": [
-                "Defines whether an entity should be persistent in the game world."
-              ],
-              "header_level": 3,
-              "name": "minecraft:persistent",
-              "show_in_index": true
             },
             {
               "description": [
@@ -42788,7 +43465,7 @@
                 {
                   "default": "0",
                   "description": [
-                    "Determines the angle at which the projectile is thrown"
+                    "Determines the angle at which the projectile is thrown."
                   ],
                   "header_level": 4,
                   "name": "angle_offset",
@@ -42798,7 +43475,7 @@
                 {
                   "default": "false",
                   "description": [
-                    "If true, the entity hit will be set on fire"
+                    "If true, the entity hit will be set on fire."
                   ],
                   "header_level": 4,
                   "name": "catch_fire",
@@ -42808,7 +43485,7 @@
                 {
                   "default": "false",
                   "description": [
-                    "If true, the projectile will produce additional particles when a critical hit happens"
+                    "If true, the projectile will produce additional particles when a critical hit happens."
                   ],
                   "header_level": 4,
                   "name": "crit_particle_on_hurt",
@@ -42818,7 +43495,7 @@
                 {
                   "default": "false",
                   "description": [
-                    "If true, this entity will be destroyed when hit"
+                    "If true, this entity will be destroyed when hit."
                   ],
                   "header_level": 4,
                   "name": "destroy_on_hurt",
@@ -42827,7 +43504,7 @@
                 },
                 {
                   "description": [
-                    "Entity Definitions defined here can't be hurt by the projectile"
+                    "Entity definitions listed here cannot be hurt by the projectile."
                   ],
                   "header_level": 4,
                   "name": "filter",
@@ -42837,7 +43514,7 @@
                 {
                   "default": "false",
                   "description": [
-                    "If true, whether the projectile causes fire is affected by the mob griefing game rule"
+                    "If true, whether the projectile causes fire is affected by the mob griefing game rule."
                   ],
                   "header_level": 4,
                   "name": "fire_affected_by_griefing",
@@ -42847,7 +43524,7 @@
                 {
                   "default": "0.05",
                   "description": [
-                    "The gravity applied to this entity when thrown. The higher the value, the faster the entity falls"
+                    "The gravity applied to this entity when thrown. The higher the value, the faster the entity falls."
                   ],
                   "header_level": 4,
                   "name": "gravity",
@@ -42866,7 +43543,7 @@
                 },
                 {
                   "description": [
-                    "The sound that plays when the projectile hits something"
+                    "The sound that plays when the projectile hits something."
                   ],
                   "header_level": 4,
                   "name": "hit_sound",
@@ -42876,7 +43553,7 @@
                 {
                   "default": "false",
                   "description": [
-                    "If true, the projectile homes in to the nearest entity"
+                    "If true, the projectile homes in on the nearest entity."
                   ],
                   "header_level": 4,
                   "name": "homing",
@@ -42895,7 +43572,7 @@
                 {
                   "default": "0.99",
                   "description": [
-                    "The fraction of the projectile's speed maintained every frame while traveling in air"
+                    "The fraction of the projectile's speed maintained every frame while traveling in air."
                   ],
                   "header_level": 4,
                   "name": "inertia",
@@ -42905,7 +43582,7 @@
                 {
                   "default": "false",
                   "description": [
-                    "If true, the projectile will be treated as dangerous to the players"
+                    "If true, the projectile will be treated as dangerous to the players."
                   ],
                   "header_level": 4,
                   "name": "is_dangerous",
@@ -42925,7 +43602,7 @@
                 {
                   "default": "true",
                   "description": [
-                    "If true, the projectile will knock back the entity it hits"
+                    "If true, the projectile will knock back the entity it hits."
                   ],
                   "header_level": 4,
                   "name": "knockback",
@@ -42935,7 +43612,7 @@
                 {
                   "default": "false",
                   "description": [
-                    "If true, the entity hit will be struck by lightning"
+                    "If true, the entity hit will be struck by lightning."
                   ],
                   "header_level": 4,
                   "name": "lightning",
@@ -42945,7 +43622,7 @@
                 {
                   "default": "0.6",
                   "description": [
-                    "The fraction of the projectile's speed maintained every frame while traveling in water"
+                    "The fraction of the projectile's speed maintained every frame while traveling in water."
                   ],
                   "header_level": 4,
                   "name": "liquid_inertia",
@@ -42955,7 +43632,7 @@
                 {
                   "default": "true",
                   "description": [
-                    "If true, the projectile can hit multiple entities per flight"
+                    "If true, the projectile can hit multiple entities per flight."
                   ],
                   "header_level": 4,
                   "name": "multiple_targets",
@@ -42965,7 +43642,7 @@
                 {
                   "default": "[0, 0, 0]",
                   "description": [
-                    "The offset from the entity's anchor where the projectile will spawn"
+                    "The offset from the entity's anchor where the projectile will spawn."
                   ],
                   "header_level": 4,
                   "name": "offset",
@@ -42975,7 +43652,7 @@
                 {
                   "default": "5",
                   "description": [
-                    "Time in seconds that the entity hit will be on fire for"
+                    "Time in seconds that the entity hit will be on fire."
                   ],
                   "header_level": 4,
                   "name": "on_fire_time",
@@ -42985,7 +43662,7 @@
                 {
                   "default": "5",
                   "description": [
-                    "Number of ticks after launch during which the projectile cannot hit its owner"
+                    "Number of ticks after launch during which the projectile cannot hit its owner."
                   ],
                   "header_level": 4,
                   "name": "owner_launch_immunity_ticks",
@@ -42995,7 +43672,7 @@
                 {
                   "default": "iconcrack",
                   "description": [
-                    "Particle to use upon collision"
+                    "Particle to use upon collision."
                   ],
                   "header_level": 4,
                   "name": "particle",
@@ -43005,7 +43682,7 @@
                 {
                   "default": "-1",
                   "description": [
-                    "Defines the effect the arrow will apply to the entity it hits"
+                    "Defines the effect the arrow will apply to the entity it hits."
                   ],
                   "header_level": 4,
                   "name": "potion_effect",
@@ -43015,7 +43692,7 @@
                 {
                   "default": "1.3",
                   "description": [
-                    "Determines the velocity of the projectile"
+                    "Determines the velocity of the projectile."
                   ],
                   "header_level": 4,
                   "name": "power",
@@ -43025,7 +43702,7 @@
                 {
                   "default": "0",
                   "description": [
-                    "During the specified time, in seconds, the projectile cannot be reflected by hitting it"
+                    "During the specified time, in seconds, the projectile cannot be reflected by hitting it."
                   ],
                   "header_level": 4,
                   "name": "reflect_immunity",
@@ -43035,7 +43712,7 @@
                 {
                   "default": "false",
                   "description": [
-                    "If true, this entity will be reflected back when hit"
+                    "If true, this entity will be reflected back when hit."
                   ],
                   "header_level": 4,
                   "name": "reflect_on_hurt",
@@ -43045,7 +43722,7 @@
                 {
                   "default": "false",
                   "description": [
-                    "If true, damage will be randomized based on damage and speed"
+                    "If true, damage will be randomized based on damage and speed."
                   ],
                   "header_level": 4,
                   "name": "semi_random_diff_damage",
@@ -43054,7 +43731,7 @@
                 },
                 {
                   "description": [
-                    "The sound that plays when the projectile is shot"
+                    "The sound that plays when the projectile is shot."
                   ],
                   "header_level": 4,
                   "name": "shoot_sound",
@@ -43064,7 +43741,7 @@
                 {
                   "default": "true",
                   "description": [
-                    "If true, the projectile will be shot towards the target of the entity firing it"
+                    "If true, the projectile will be shot towards the target of the entity firing it."
                   ],
                   "header_level": 4,
                   "name": "shoot_target",
@@ -43074,7 +43751,7 @@
                 {
                   "default": "false",
                   "description": [
-                    "If true, the projectile will bounce upon hit"
+                    "If true, the projectile will bounce upon hit."
                   ],
                   "header_level": 4,
                   "name": "should_bounce",
@@ -43084,7 +43761,7 @@
                 {
                   "default": "false",
                   "description": [
-                    "If true, the projectile will be treated like a splash potion"
+                    "If true, the projectile will be treated like a splash potion."
                   ],
                   "header_level": 4,
                   "name": "splash_potion",
@@ -43094,7 +43771,7 @@
                 {
                   "default": "4",
                   "description": [
-                    "Radius in blocks of the 'splash' effect"
+                    "Radius in blocks of the 'splash' effect."
                   ],
                   "header_level": 4,
                   "name": "splash_range",
@@ -43104,7 +43781,7 @@
                 {
                   "default": "0",
                   "description": [
-                    "The base accuracy. Accuracy is determined by the formula uncertaintyBase - difficultyLevel * uncertaintyMultiplier"
+                    "The base accuracy. Accuracy is determined by the formula uncertaintyBase - difficultyLevel * uncertaintyMultiplier."
                   ],
                   "header_level": 4,
                   "name": "uncertainty_base",
@@ -43114,7 +43791,7 @@
                 {
                   "default": "0",
                   "description": [
-                    "Determines how much difficulty affects accuracy. Accuracy is determined by the formula uncertaintyBase - difficultyLevel * uncertaintyMultiplier"
+                    "Determines how much difficulty affects accuracy. Accuracy is determined by the formula uncertaintyBase - difficultyLevel * uncertaintyMultiplier."
                   ],
                   "header_level": 4,
                   "name": "uncertainty_multiplier",
@@ -45295,10 +45972,10 @@
                 },
                 {
                   "description": [
-                    "9534738104831396526"
+                    "13883018417049668296"
                   ],
                   "header_level": 4,
-                  "name": "minecraft:behavior.charge_held_item",
+                  "name": "minecraft:behavior.charge_held_item (See JSON Schema since 1.26.40)",
                   "show_in_index": false
                 },
                 {
@@ -45455,10 +46132,10 @@
                 },
                 {
                   "description": [
-                    "13717849383294281770"
+                    "8135000037169854404"
                   ],
                   "header_level": 4,
-                  "name": "minecraft:behavior.eat_block",
+                  "name": "minecraft:behavior.eat_block (See JSON Schema since 1.26.40)",
                   "show_in_index": false
                 },
                 {
@@ -45727,10 +46404,10 @@
                 },
                 {
                   "description": [
-                    "10556128811593022910"
+                    "14274873969460293560"
                   ],
                   "header_level": 4,
-                  "name": "minecraft:behavior.knockback_roar",
+                  "name": "minecraft:behavior.knockback_roar (See JSON Schema since 1.26.40)",
                   "show_in_index": false
                 },
                 {
@@ -46135,10 +46812,10 @@
                 },
                 {
                   "description": [
-                    "17427060681688556526"
+                    "6902083698709929224"
                   ],
                   "header_level": 4,
-                  "name": "minecraft:behavior.ranged_attack",
+                  "name": "minecraft:behavior.ranged_attack (See JSON Schema since 1.26.40)",
                   "show_in_index": false
                 },
                 {
@@ -46682,14 +47359,6 @@
                 },
                 {
                   "description": [
-                    "1004733768"
-                  ],
-                  "header_level": 4,
-                  "name": "minecraft:annotation.open_door",
-                  "show_in_index": false
-                },
-                {
-                  "description": [
                     "1169114880"
                   ],
                   "header_level": 4,
@@ -47138,14 +47807,6 @@
                 },
                 {
                   "description": [
-                    "846609640"
-                  ],
-                  "header_level": 4,
-                  "name": "minecraft:managed_wandering_trader",
-                  "show_in_index": false
-                },
-                {
-                  "description": [
                     "490430596"
                   ],
                   "header_level": 4,
@@ -47298,6 +47959,86 @@
                 },
                 {
                   "description": [
+                    "-49357854"
+                  ],
+                  "header_level": 4,
+                  "name": "minecraft:on_death",
+                  "show_in_index": false
+                },
+                {
+                  "description": [
+                    "-1009986313"
+                  ],
+                  "header_level": 4,
+                  "name": "minecraft:on_friendly_anger",
+                  "show_in_index": false
+                },
+                {
+                  "description": [
+                    "-1028603471"
+                  ],
+                  "header_level": 4,
+                  "name": "minecraft:on_hurt",
+                  "show_in_index": false
+                },
+                {
+                  "description": [
+                    "-599009831"
+                  ],
+                  "header_level": 4,
+                  "name": "minecraft:on_hurt_by_player",
+                  "show_in_index": false
+                },
+                {
+                  "description": [
+                    "-1911489054"
+                  ],
+                  "header_level": 4,
+                  "name": "minecraft:on_ignite",
+                  "show_in_index": false
+                },
+                {
+                  "description": [
+                    "-555648368"
+                  ],
+                  "header_level": 4,
+                  "name": "minecraft:on_start_landing",
+                  "show_in_index": false
+                },
+                {
+                  "description": [
+                    "426083399"
+                  ],
+                  "header_level": 4,
+                  "name": "minecraft:on_start_takeoff",
+                  "show_in_index": false
+                },
+                {
+                  "description": [
+                    "1063277906"
+                  ],
+                  "header_level": 4,
+                  "name": "minecraft:on_target_acquired",
+                  "show_in_index": false
+                },
+                {
+                  "description": [
+                    "-1373130027"
+                  ],
+                  "header_level": 4,
+                  "name": "minecraft:on_target_escape",
+                  "show_in_index": false
+                },
+                {
+                  "description": [
+                    "-1543219003"
+                  ],
+                  "header_level": 4,
+                  "name": "minecraft:on_wake_with_owner",
+                  "show_in_index": false
+                },
+                {
+                  "description": [
                     "-639930856"
                   ],
                   "header_level": 4,
@@ -47310,14 +48051,6 @@
                   ],
                   "header_level": 4,
                   "name": "minecraft:peek",
-                  "show_in_index": false
-                },
-                {
-                  "description": [
-                    "1435858387"
-                  ],
-                  "header_level": 4,
-                  "name": "minecraft:persistent",
                   "show_in_index": false
                 },
                 {
@@ -48037,92 +48770,7 @@
             {
               "header_level": 3,
               "name": "Triggers",
-              "nodes": [
-                {
-                  "description": [
-                    "-49357854"
-                  ],
-                  "header_level": 4,
-                  "name": "minecraft:on_death",
-                  "show_in_index": false
-                },
-                {
-                  "description": [
-                    "-1009986313"
-                  ],
-                  "header_level": 4,
-                  "name": "minecraft:on_friendly_anger",
-                  "show_in_index": false
-                },
-                {
-                  "description": [
-                    "-1028603471"
-                  ],
-                  "header_level": 4,
-                  "name": "minecraft:on_hurt",
-                  "show_in_index": false
-                },
-                {
-                  "description": [
-                    "-599009831"
-                  ],
-                  "header_level": 4,
-                  "name": "minecraft:on_hurt_by_player",
-                  "show_in_index": false
-                },
-                {
-                  "description": [
-                    "-1911489054"
-                  ],
-                  "header_level": 4,
-                  "name": "minecraft:on_ignite",
-                  "show_in_index": false
-                },
-                {
-                  "description": [
-                    "-555648368"
-                  ],
-                  "header_level": 4,
-                  "name": "minecraft:on_start_landing",
-                  "show_in_index": false
-                },
-                {
-                  "description": [
-                    "426083399"
-                  ],
-                  "header_level": 4,
-                  "name": "minecraft:on_start_takeoff",
-                  "show_in_index": false
-                },
-                {
-                  "description": [
-                    "1063277906"
-                  ],
-                  "header_level": 4,
-                  "name": "minecraft:on_target_acquired",
-                  "show_in_index": false
-                },
-                {
-                  "description": [
-                    "-1373130027"
-                  ],
-                  "header_level": 4,
-                  "name": "minecraft:on_target_escape",
-                  "show_in_index": false
-                },
-                {
-                  "description": [
-                    "-1543219003"
-                  ],
-                  "header_level": 4,
-                  "name": "minecraft:on_wake_with_owner",
-                  "show_in_index": false
-                }
-              ],
-              "nodes_as_table": true,
-              "show_in_index": true,
-              "table_description_title": "ID",
-              "table_name_title": "JSON Name"
+              "show_in_index": true
             }
           ],
           "nodes_as_table": false,
@@ -49095,439 +49743,6 @@
         {
           "header_level": 2,
           "name": "Triggers",
-          "nodes": [
-            {
-              "description": [
-                "Adds a trigger to call on this entity's death."
-              ],
-              "header_level": 3,
-              "name": "minecraft:on_death",
-              "nodes": [
-                {
-                  "description": [
-                    "The event to run when the conditions for this trigger are met."
-                  ],
-                  "header_level": 4,
-                  "name": "event",
-                  "show_in_index": true,
-                  "type": "String"
-                },
-                {
-                  "description": [
-                    "The list of conditions for this trigger to execute."
-                  ],
-                  "header_level": 4,
-                  "name": "filters",
-                  "show_in_index": true,
-                  "type": "Minecraft Filter"
-                },
-                {
-                  "default": "self",
-                  "description": [
-                    "The target of the event."
-                  ],
-                  "header_level": 4,
-                  "name": "target",
-                  "show_in_index": true,
-                  "type": "String"
-                }
-              ],
-              "nodes_as_table": true,
-              "show_in_index": true,
-              "table_default_title": "Default Value",
-              "table_description_title": "Description",
-              "table_name_title": "Name",
-              "table_type_title": "Type"
-            },
-            {
-              "description": [
-                "Adds a trigger that will run when a nearby entity of the same type as this entity becomes Angry."
-              ],
-              "header_level": 3,
-              "name": "minecraft:on_friendly_anger",
-              "nodes": [
-                {
-                  "description": [
-                    "The event to run when the conditions for this trigger are met."
-                  ],
-                  "header_level": 4,
-                  "name": "event",
-                  "show_in_index": true,
-                  "type": "String"
-                },
-                {
-                  "description": [
-                    "The list of conditions for this trigger to execute."
-                  ],
-                  "header_level": 4,
-                  "name": "filters",
-                  "show_in_index": true,
-                  "type": "Minecraft Filter"
-                },
-                {
-                  "default": "self",
-                  "description": [
-                    "The target of the event."
-                  ],
-                  "header_level": 4,
-                  "name": "target",
-                  "show_in_index": true,
-                  "type": "String"
-                }
-              ],
-              "nodes_as_table": true,
-              "show_in_index": true,
-              "table_default_title": "Default Value",
-              "table_description_title": "Description",
-              "table_name_title": "Name",
-              "table_type_title": "Type"
-            },
-            {
-              "description": [
-                "Adds a trigger to call when this entity takes damage."
-              ],
-              "header_level": 3,
-              "name": "minecraft:on_hurt",
-              "nodes": [
-                {
-                  "description": [
-                    "The event to run when the conditions for this trigger are met."
-                  ],
-                  "header_level": 4,
-                  "name": "event",
-                  "show_in_index": true,
-                  "type": "String"
-                },
-                {
-                  "description": [
-                    "The list of conditions for this trigger to execute."
-                  ],
-                  "header_level": 4,
-                  "name": "filters",
-                  "show_in_index": true,
-                  "type": "Minecraft Filter"
-                },
-                {
-                  "default": "self",
-                  "description": [
-                    "The target of the event."
-                  ],
-                  "header_level": 4,
-                  "name": "target",
-                  "show_in_index": true,
-                  "type": "String"
-                }
-              ],
-              "nodes_as_table": true,
-              "show_in_index": true,
-              "table_default_title": "Default Value",
-              "table_description_title": "Description",
-              "table_name_title": "Name",
-              "table_type_title": "Type"
-            },
-            {
-              "description": [
-                "Adds a trigger to call when this entity is attacked by the player."
-              ],
-              "header_level": 3,
-              "name": "minecraft:on_hurt_by_player",
-              "nodes": [
-                {
-                  "description": [
-                    "The event to run when the conditions for this trigger are met."
-                  ],
-                  "header_level": 4,
-                  "name": "event",
-                  "show_in_index": true,
-                  "type": "String"
-                },
-                {
-                  "description": [
-                    "The list of conditions for this trigger to execute."
-                  ],
-                  "header_level": 4,
-                  "name": "filters",
-                  "show_in_index": true,
-                  "type": "Minecraft Filter"
-                },
-                {
-                  "default": "self",
-                  "description": [
-                    "The target of the event."
-                  ],
-                  "header_level": 4,
-                  "name": "target",
-                  "show_in_index": true,
-                  "type": "String"
-                }
-              ],
-              "nodes_as_table": true,
-              "show_in_index": true,
-              "table_default_title": "Default Value",
-              "table_description_title": "Description",
-              "table_name_title": "Name",
-              "table_type_title": "Type"
-            },
-            {
-              "description": [
-                "Adds a trigger to call when this entity is set on fire."
-              ],
-              "header_level": 3,
-              "name": "minecraft:on_ignite",
-              "nodes": [
-                {
-                  "description": [
-                    "The event to run when the conditions for this trigger are met."
-                  ],
-                  "header_level": 4,
-                  "name": "event",
-                  "show_in_index": true,
-                  "type": "String"
-                },
-                {
-                  "description": [
-                    "The list of conditions for this trigger to execute."
-                  ],
-                  "header_level": 4,
-                  "name": "filters",
-                  "show_in_index": true,
-                  "type": "Minecraft Filter"
-                },
-                {
-                  "default": "self",
-                  "description": [
-                    "The target of the event."
-                  ],
-                  "header_level": 4,
-                  "name": "target",
-                  "show_in_index": true,
-                  "type": "String"
-                }
-              ],
-              "nodes_as_table": true,
-              "show_in_index": true,
-              "table_default_title": "Default Value",
-              "table_description_title": "Description",
-              "table_name_title": "Name",
-              "table_type_title": "Type"
-            },
-            {
-              "description": [
-                "Only usable by the Ender Dragon. Adds a trigger to call when this entity lands."
-              ],
-              "header_level": 3,
-              "name": "minecraft:on_start_landing",
-              "nodes": [
-                {
-                  "description": [
-                    "The event to run when the conditions for this trigger are met."
-                  ],
-                  "header_level": 4,
-                  "name": "event",
-                  "show_in_index": true,
-                  "type": "String"
-                },
-                {
-                  "description": [
-                    "The list of conditions for this trigger to execute."
-                  ],
-                  "header_level": 4,
-                  "name": "filters",
-                  "show_in_index": true,
-                  "type": "Minecraft Filter"
-                },
-                {
-                  "default": "self",
-                  "description": [
-                    "The target of the event."
-                  ],
-                  "header_level": 4,
-                  "name": "target",
-                  "show_in_index": true,
-                  "type": "String"
-                }
-              ],
-              "nodes_as_table": true,
-              "show_in_index": true,
-              "table_default_title": "Default Value",
-              "table_description_title": "Description",
-              "table_name_title": "Name",
-              "table_type_title": "Type"
-            },
-            {
-              "description": [
-                "Only usable by the Ender Dragon. Adds a trigger to call when this entity starts flying."
-              ],
-              "header_level": 3,
-              "name": "minecraft:on_start_takeoff",
-              "nodes": [
-                {
-                  "description": [
-                    "The event to run when the conditions for this trigger are met."
-                  ],
-                  "header_level": 4,
-                  "name": "event",
-                  "show_in_index": true,
-                  "type": "String"
-                },
-                {
-                  "description": [
-                    "The list of conditions for this trigger to execute."
-                  ],
-                  "header_level": 4,
-                  "name": "filters",
-                  "show_in_index": true,
-                  "type": "Minecraft Filter"
-                },
-                {
-                  "default": "self",
-                  "description": [
-                    "The target of the event."
-                  ],
-                  "header_level": 4,
-                  "name": "target",
-                  "show_in_index": true,
-                  "type": "String"
-                }
-              ],
-              "nodes_as_table": true,
-              "show_in_index": true,
-              "table_default_title": "Default Value",
-              "table_description_title": "Description",
-              "table_name_title": "Name",
-              "table_type_title": "Type"
-            },
-            {
-              "description": [
-                "Adds a trigger to call when this entity finds a target."
-              ],
-              "header_level": 3,
-              "name": "minecraft:on_target_acquired",
-              "nodes": [
-                {
-                  "description": [
-                    "The event to run when the conditions for this trigger are met."
-                  ],
-                  "header_level": 4,
-                  "name": "event",
-                  "show_in_index": true,
-                  "type": "String"
-                },
-                {
-                  "description": [
-                    "The list of conditions for this trigger to execute."
-                  ],
-                  "header_level": 4,
-                  "name": "filters",
-                  "show_in_index": true,
-                  "type": "Minecraft Filter"
-                },
-                {
-                  "default": "self",
-                  "description": [
-                    "The target of the event."
-                  ],
-                  "header_level": 4,
-                  "name": "target",
-                  "show_in_index": true,
-                  "type": "String"
-                }
-              ],
-              "nodes_as_table": true,
-              "show_in_index": true,
-              "table_default_title": "Default Value",
-              "table_description_title": "Description",
-              "table_name_title": "Name",
-              "table_type_title": "Type"
-            },
-            {
-              "description": [
-                "Adds a trigger to call when this entity loses the target it currently has."
-              ],
-              "header_level": 3,
-              "name": "minecraft:on_target_escape",
-              "nodes": [
-                {
-                  "description": [
-                    "The event to run when the conditions for this trigger are met."
-                  ],
-                  "header_level": 4,
-                  "name": "event",
-                  "show_in_index": true,
-                  "type": "String"
-                },
-                {
-                  "description": [
-                    "The list of conditions for this trigger to execute."
-                  ],
-                  "header_level": 4,
-                  "name": "filters",
-                  "show_in_index": true,
-                  "type": "Minecraft Filter"
-                },
-                {
-                  "default": "self",
-                  "description": [
-                    "The target of the event."
-                  ],
-                  "header_level": 4,
-                  "name": "target",
-                  "show_in_index": true,
-                  "type": "String"
-                }
-              ],
-              "nodes_as_table": true,
-              "show_in_index": true,
-              "table_default_title": "Default Value",
-              "table_description_title": "Description",
-              "table_name_title": "Name",
-              "table_type_title": "Type"
-            },
-            {
-              "description": [
-                "Adds a trigger to call when this pet's owner awakes after sleeping with the pet."
-              ],
-              "header_level": 3,
-              "name": "minecraft:on_wake_with_owner",
-              "nodes": [
-                {
-                  "description": [
-                    "The event to run when the conditions for this trigger are met."
-                  ],
-                  "header_level": 4,
-                  "name": "event",
-                  "show_in_index": true,
-                  "type": "String"
-                },
-                {
-                  "description": [
-                    "The list of conditions for this trigger to execute."
-                  ],
-                  "header_level": 4,
-                  "name": "filters",
-                  "show_in_index": true,
-                  "type": "Minecraft Filter"
-                },
-                {
-                  "default": "self",
-                  "description": [
-                    "The target of the event."
-                  ],
-                  "header_level": 4,
-                  "name": "target",
-                  "show_in_index": true,
-                  "type": "String"
-                }
-              ],
-              "nodes_as_table": true,
-              "show_in_index": true,
-              "table_default_title": "Default Value",
-              "table_description_title": "Description",
-              "table_name_title": "Name",
-              "table_type_title": "Type"
-            }
-          ],
-          "nodes_as_table": false,
           "show_in_index": true
         }
       ],
