@@ -51,7 +51,7 @@
                     "from_module": {
                       "name": "@minecraft/server-bindings",
                       "uuid": "0196a2fa-8fb5-79a7-b29e-ce3cbc644f82",
-                      "version": "2.0.0"
+                      "version": "2.9.0"
                     },
                     "is_bind_type": true,
                     "is_errorable": false,
@@ -68,7 +68,7 @@
           ],
           "call_privilege": [
             {
-              "name": "restricted_execution"
+              "name": "default"
             }
           ],
           "is_constructor": false,
@@ -85,7 +85,7 @@
                 "from_module": {
                   "name": "@minecraft/server-bindings",
                   "uuid": "0196a2fa-8fb5-79a7-b29e-ce3cbc644f82",
-                  "version": "2.0.0"
+                  "version": "2.9.0"
                 },
                 "is_bind_type": true,
                 "is_errorable": false,
@@ -94,6 +94,23 @@
             ],
             "is_bind_type": false,
             "is_errorable": true,
+            "name": "undefined"
+          }
+        },
+        {
+          "arguments": [
+          ],
+          "call_privilege": [
+            {
+              "name": "default"
+            }
+          ],
+          "is_constructor": false,
+          "is_static": false,
+          "name": "clear",
+          "return_type": {
+            "is_bind_type": false,
+            "is_errorable": false,
             "name": "undefined"
           }
         },
@@ -111,7 +128,7 @@
                     "from_module": {
                       "name": "@minecraft/server-bindings",
                       "uuid": "0196a2fa-8fb5-79a7-b29e-ce3cbc644f82",
-                      "version": "2.0.0"
+                      "version": "2.9.0"
                     },
                     "is_bind_type": true,
                     "is_errorable": false,
@@ -140,7 +157,7 @@
                 "from_module": {
                   "name": "@minecraft/server-bindings",
                   "uuid": "0196a2fa-8fb5-79a7-b29e-ce3cbc644f82",
-                  "version": "2.0.0"
+                  "version": "2.9.0"
                 },
                 "is_bind_type": true,
                 "is_errorable": false,
@@ -157,7 +174,7 @@
           ],
           "call_privilege": [
             {
-              "name": "restricted_execution"
+              "name": "default"
             }
           ],
           "is_constructor": false,
@@ -190,7 +207,7 @@
                     "from_module": {
                       "name": "@minecraft/server-bindings",
                       "uuid": "0196a2fa-8fb5-79a7-b29e-ce3cbc644f82",
-                      "version": "2.0.0"
+                      "version": "2.9.0"
                     },
                     "is_bind_type": true,
                     "is_errorable": false,
@@ -207,7 +224,7 @@
           ],
           "call_privilege": [
             {
-              "name": "restricted_execution"
+              "name": "default"
             }
           ],
           "is_constructor": false,
@@ -224,7 +241,7 @@
                 "from_module": {
                   "name": "@minecraft/server-bindings",
                   "uuid": "0196a2fa-8fb5-79a7-b29e-ce3cbc644f82",
-                  "version": "2.0.0"
+                  "version": "2.9.0"
                 },
                 "is_bind_type": true,
                 "is_errorable": false,
@@ -425,6 +442,31 @@
             "is_errorable": false,
             "name": "string"
           }
+        },
+        {
+          "get_privilege": [
+            {
+              "name": "restricted_execution"
+            }
+          ],
+          "is_baked": true,
+          "is_read_only": true,
+          "name": "splitScreenSlot",
+          "type": {
+            "is_bind_type": false,
+            "is_errorable": false,
+            "name": "optional",
+            "optional_type": {
+              "from_module": {
+                "name": "@minecraft/server-bindings",
+                "uuid": "0196a2fa-8fb5-79a7-b29e-ce3cbc644f82",
+                "version": "2.9.0"
+              },
+              "is_bind_type": true,
+              "is_errorable": false,
+              "name": "PlayerSplitScreenSlot"
+            }
+          }
         }
       ],
       "type": {
@@ -578,7 +620,7 @@
           ],
           "call_privilege": [
             {
-              "name": "restricted_execution"
+              "name": "default"
             }
           ],
           "is_constructor": false,
@@ -607,7 +649,7 @@
           ],
           "call_privilege": [
             {
-              "name": "restricted_execution"
+              "name": "default"
             }
           ],
           "is_constructor": false,
@@ -636,7 +678,7 @@
           ],
           "call_privilege": [
             {
-              "name": "restricted_execution"
+              "name": "default"
             }
           ],
           "is_constructor": false,
@@ -665,7 +707,7 @@
           ],
           "call_privilege": [
             {
-              "name": "restricted_execution"
+              "name": "default"
             }
           ],
           "is_constructor": false,
@@ -728,7 +770,7 @@
           ],
           "call_privilege": [
             {
-              "name": "restricted_execution"
+              "name": "default"
             }
           ],
           "is_constructor": false,
@@ -752,7 +794,7 @@
           ],
           "call_privilege": [
             {
-              "name": "restricted_execution"
+              "name": "default"
             }
           ],
           "is_constructor": false,
@@ -781,7 +823,7 @@
           ],
           "call_privilege": [
             {
-              "name": "restricted_execution"
+              "name": "default"
             }
           ],
           "is_constructor": false,
@@ -1156,7 +1198,7 @@
             "from_module": {
               "name": "@minecraft/server-bindings",
               "uuid": "0196a2fa-8fb5-79a7-b29e-ce3cbc644f82",
-              "version": "2.0.0"
+              "version": "2.9.0"
             },
             "is_bind_type": true,
             "is_errorable": false,
@@ -1214,7 +1256,7 @@
             "from_module": {
               "name": "@minecraft/server-bindings",
               "uuid": "0196a2fa-8fb5-79a7-b29e-ce3cbc644f82",
-              "version": "2.0.0"
+              "version": "2.9.0"
             },
             "is_bind_type": true,
             "is_errorable": false,
@@ -1288,7 +1330,7 @@
             "from_module": {
               "name": "@minecraft/server-bindings",
               "uuid": "0196a2fa-8fb5-79a7-b29e-ce3cbc644f82",
-              "version": "2.0.0"
+              "version": "2.9.0"
             },
             "is_bind_type": true,
             "is_errorable": false,
@@ -1346,7 +1388,7 @@
             "from_module": {
               "name": "@minecraft/server-bindings",
               "uuid": "0196a2fa-8fb5-79a7-b29e-ce3cbc644f82",
-              "version": "2.0.0"
+              "version": "2.9.0"
             },
             "is_bind_type": true,
             "is_errorable": false,
@@ -1517,7 +1559,7 @@
           "version": "1.17.0"
         },
         {
-          "version": "2.0.0"
+          "version": "2.9.0"
         }
       ]
     }
