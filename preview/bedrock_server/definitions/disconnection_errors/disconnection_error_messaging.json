@@ -315,6 +315,12 @@
                 "OverrideStrings": {
                     "Body": "disconnectionScreen.body.expiredToken"
                 }
+            },
+            {
+                "FailReason": "NotAuthenticatedFastFail",
+                "OverrideStrings": {
+                    "Body": "disconnectionScreen.notAuthenticated"
+                }
             }
         ]
     },
@@ -356,6 +362,12 @@
                 "FailReason": "EditorJoinIntentPolicyFailure",
                 "OverrideStrings": {
                     "Body": "disconnectionScreen.editor.joinIntentPolicyFailure"
+                }
+            },
+            {
+                "FailReason": "EditorNotAllowed",
+                "OverrideStrings": {
+                    "Body": "disconnectionScreen.editor.notAllowed"
                 }
             }
         ]
@@ -431,6 +443,9 @@
                 "OverrideStrings": {
                     "Body": "disconnectionScreen.blockMismatch"
                 }
+            },
+            {
+                "FailReason": "HostAcceptsNoTypeOfAuth"
             }
         ]
     },
