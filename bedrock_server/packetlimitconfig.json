@@ -19,6 +19,16 @@
           "maxBucketSize": 50
         }
       }
+    },
+    {
+      "minecraftPacketIds": [ 154 ],
+      "algorithm": {
+        "name": "BucketPacketLimitAlgorithm",
+        "params": {
+          "drainRatePerSec": 20,
+          "maxBucketSize": 60
+        }
+      }
     }
   ]
 }
