@@ -5,7 +5,7 @@
       "identifier": "minecraft:shelf_mushroom",
       "internal_vanilla_data": {
         "block_id": 1452,
-        "material": "plant",
+        "material": "solid_plant",
         "block_archetype": {
           "wall_foliage_block": {
             "size_count": 2,
@@ -35,11 +35,6 @@
       },
       "minecraft:destruction_particles": {
         "particle_count": 48
-      },
-      "minecraft:flammable": {
-        "catch_chance_modifier": 60,
-        "destroy_chance_modifier": 100,
-        "lava_flammable": "always"
       },
       "minecraft:geometry": {
         "identifier": "minecraft:geometry.shelf_mushroom_small",
@@ -88,25 +83,25 @@
         }
       },
       {
-        "condition": "query.block_state('growth') == 0 && query.block_state('facing_direction') == 3",
+        "condition": "query.block_state('growth') == 0 && query.block_state('minecraft:cardinal_direction') == 'south'",
         "components": {
           "minecraft:transformation": { "rotation": [0, 180, 0] }
         }
       },
       {
-        "condition": "query.block_state('growth') == 0 && query.block_state('facing_direction') == 4",
+        "condition": "query.block_state('growth') == 0 && query.block_state('minecraft:cardinal_direction') == 'west'",
         "components": {
           "minecraft:transformation": { "rotation": [0, 90, 0] }
         }
       },
       {
-        "condition": "query.block_state('growth') == 0 && query.block_state('facing_direction') == 5",
+        "condition": "query.block_state('growth') == 0 && query.block_state('minecraft:cardinal_direction') == 'east'",
         "components": {
           "minecraft:transformation": { "rotation": [0, 270, 0] }
         }
       },
       {
-        "condition": "query.block_state('growth') == 1 && query.block_state('facing_direction') == 2",
+        "condition": "query.block_state('growth') == 1 && query.block_state('minecraft:cardinal_direction') == 'north'",
         "components": {
           "minecraft:collision_box": {
             "origin": [-7, 4, -2],
@@ -130,7 +125,7 @@
         }
       },
       {
-        "condition": "query.block_state('growth') == 1 && query.block_state('facing_direction') == 3",
+        "condition": "query.block_state('growth') == 1 && query.block_state('minecraft:cardinal_direction') == 'south'",
         "components": {
           "minecraft:collision_box": {
             "origin": [-7, 4, -2],
@@ -155,7 +150,7 @@
         }
       },
       {
-        "condition": "query.block_state('growth') == 1 && query.block_state('facing_direction') == 4",
+        "condition": "query.block_state('growth') == 1 && query.block_state('minecraft:cardinal_direction') == 'west'",
         "components": {
           "minecraft:collision_box": {
             "origin": [-7, 4, -2],
@@ -180,7 +175,7 @@
         }
       },
       {
-        "condition": "query.block_state('growth') == 1 && query.block_state('facing_direction') == 5",
+        "condition": "query.block_state('growth') == 1 && query.block_state('minecraft:cardinal_direction') == 'east'",
         "components": {
           "minecraft:collision_box": {
             "origin": [-7, 4, -2],
