@@ -53,7 +53,7 @@
           }
         },
         "offset": [ 0, -0.1, 0 ],
-        "should_bounce": true,
+        "should_bounce": "if_no_damage_dealt",
         "uncertainty_base": 16,
         "uncertainty_multiplier": 4
       },
@@ -86,7 +86,7 @@
             }
           },
           "offset": [ 0, -0.1, 0 ],
-          "should_bounce": true,
+          "should_bounce": "if_no_damage_dealt",
           "uncertainty_base": 1,
           "uncertainty_multiplier": 0
         }
@@ -116,7 +116,7 @@
             }
           },
           "offset": [ 0, -0.1, 0 ],
-          "should_bounce": true,
+          "should_bounce": "if_no_damage_dealt",
           "uncertainty_base": 1,
           "uncertainty_multiplier": 0
         }
@@ -145,7 +145,7 @@
             }
           },
           "offset": [ 0, -0.1, 0 ],
-          "should_bounce": true,
+          "should_bounce": "if_no_damage_dealt",
           "uncertainty_base": 16,
           "uncertainty_multiplier": 4
         }
@@ -173,7 +173,7 @@
             }
           },
           "offset": [ 0, -0.1, 0 ],
-          "should_bounce": true,
+          "should_bounce": "if_no_damage_dealt",
           "uncertainty_base": 16,
           "uncertainty_multiplier": 4
         }
