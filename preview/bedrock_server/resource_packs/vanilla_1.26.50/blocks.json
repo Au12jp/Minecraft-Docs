@@ -1,0 +1,307 @@
+{
+  "format_version": "1.21.40",
+  "poplar_button": {
+    "textures": "poplar_planks",
+    "sound": "wood"
+  },
+  "poplar_door": {
+    "textures": {
+      "up": "poplar_door_bottom",
+      "down": "poplar_door_bottom",
+      "side": "poplar_door_top"
+    },
+    "sound": "wood"
+  },
+  "poplar_double_slab": {
+    "textures": "poplar_planks",
+    "sound": "wood"
+  },
+  "poplar_fence": {
+    "textures": "poplar_planks",
+    "sound": "wood"
+  },
+  "poplar_fence_gate": {
+    "textures": "poplar_planks",
+    "sound": "wood"
+  },
+  "poplar_hanging_sign": {
+    "textures": "poplar_planks",
+    "sound": "hanging_sign"
+  },
+  "poplar_log": {
+    "textures": {
+      "up": "poplar_log_top",
+      "down": "poplar_log_top",
+      "side": "poplar_log_side"
+    },
+    "sound": "wood"
+  },
+  "poplar_planks": {
+    "textures": "poplar_planks",
+    "sound": "wood"
+  },
+  "poplar_pressure_plate": {
+    "textures": "poplar_planks",
+    "sound": "wood"
+  },
+  "poplar_slab": {
+    "textures": "poplar_planks",
+    "sound": "wood"
+  },
+  "poplar_stairs": {
+    "textures": "poplar_planks",
+    "sound": "wood"
+  },
+  "poplar_standing_sign": {
+    "textures": "poplar_planks",
+    "sound": "wood"
+  },
+  "poplar_trapdoor": {
+    "textures": "poplar_trapdoor",
+    "sound": "wood"
+  },
+  "poplar_wall_sign": {
+    "textures": "poplar_planks",
+    "sound": "wood"
+  },
+  "poplar_wood": {
+    "textures": "poplar_log_side",
+    "sound": "wood"
+  },
+  "stripped_poplar_log": {
+    "textures": {
+      "up": "stripped_poplar_log_top",
+      "down": "stripped_poplar_log_top",
+      "side": "stripped_poplar_log_side"
+    },
+    "sound": "wood"
+  },
+  "stripped_poplar_wood": {
+    "textures": "stripped_poplar_log_side",
+    "sound": "wood"
+  },
+  "poplar_sapling": {
+    "textures": "poplar_sapling",
+    "sound": "grass"
+  },
+  "orange_poplar_leaves": {
+    "textures": "orange_poplar_leaves",
+    "ambient_occlusion_exponent": 0.8,
+    "sound": "poplar_leaves"
+  },
+  "red_poplar_leaves": {
+    "textures": "red_poplar_leaves",
+    "ambient_occlusion_exponent": 0.8,
+    "sound": "poplar_leaves"
+  },
+  "yellow_poplar_leaves": {
+    "textures": "yellow_poplar_leaves",
+    "ambient_occlusion_exponent": 0.8,
+    "sound": "poplar_leaves"
+  },
+  "poplar_shelf": {
+    "textures": "poplar_shelf",
+    "sound": "shelf"
+  },
+  "red_shrub": {
+    "sound": "sweet_berry_bush"
+  },
+  "red_wool_stairs": {
+    "textures": "red_wool_stairs",
+    "sound": "cloth"
+  },
+  "white_wool_stairs": {
+    "textures": "white_wool_stairs",
+    "sound": "cloth"
+  },
+  "blue_wool_stairs": {
+    "textures": "blue_wool_stairs",
+    "sound": "cloth"
+  },
+  "orange_wool_stairs": {
+    "textures": "orange_wool_stairs",
+    "sound": "cloth"
+  },
+  "magenta_wool_stairs": {
+    "textures": "magenta_wool_stairs",
+    "sound": "cloth"
+  },
+  "light_blue_wool_stairs": {
+    "textures": "light_blue_wool_stairs",
+    "sound": "cloth"
+  },
+  "yellow_wool_stairs": {
+    "textures": "yellow_wool_stairs",
+    "sound": "cloth"
+  },
+  "lime_wool_stairs": {
+    "textures": "lime_wool_stairs",
+    "sound": "cloth"
+  },
+  "pink_wool_stairs": {
+    "textures": "pink_wool_stairs",
+    "sound": "cloth"
+  },
+  "gray_wool_stairs": {
+    "textures": "gray_wool_stairs",
+    "sound": "cloth"
+  },
+  "light_gray_wool_stairs": {
+    "textures": "light_gray_wool_stairs",
+    "sound": "cloth"
+  },
+  "cyan_wool_stairs": {
+    "textures": "cyan_wool_stairs",
+    "sound": "cloth"
+  },
+  "purple_wool_stairs": {
+    "textures": "purple_wool_stairs",
+    "sound": "cloth"
+  },
+  "green_wool_stairs": {
+    "textures": "green_wool_stairs",
+    "sound": "cloth"
+  },
+  "brown_wool_stairs": {
+    "textures": "brown_wool_stairs",
+    "sound": "cloth"
+  },
+  "black_wool_stairs": {
+    "textures": "black_wool_stairs",
+    "sound": "cloth"
+  },
+  "white_wool_slab": {
+    "textures": "white_wool_slab",
+    "sound": "cloth"
+  },
+  "light_gray_wool_slab": {
+    "textures": "light_gray_wool_slab",
+    "sound": "cloth"
+  },
+  "gray_wool_slab": {
+    "textures": "gray_wool_slab",
+    "sound": "cloth"
+  },
+  "black_wool_slab": {
+    "textures": "black_wool_slab",
+    "sound": "cloth"
+  },
+  "brown_wool_slab": {
+    "textures": "brown_wool_slab",
+    "sound": "cloth"
+  },
+  "red_wool_slab": {
+    "textures": "red_wool_slab",
+    "sound": "cloth"
+  },
+  "orange_wool_slab": {
+    "textures": "orange_wool_slab",
+    "sound": "cloth"
+  },
+  "yellow_wool_slab": {
+    "textures": "yellow_wool_slab",
+    "sound": "cloth"
+  },
+  "lime_wool_slab": {
+    "textures": "lime_wool_slab",
+    "sound": "cloth"
+  },
+  "green_wool_slab": {
+    "textures": "green_wool_slab",
+    "sound": "cloth"
+  },
+  "cyan_wool_slab": {
+    "textures": "cyan_wool_slab",
+    "sound": "cloth"
+  },
+  "light_blue_wool_slab": {
+    "textures": "light_blue_wool_slab",
+    "sound": "cloth"
+  },
+  "blue_wool_slab": {
+    "textures": "blue_wool_slab",
+    "sound": "cloth"
+  },
+  "purple_wool_slab": {
+    "textures": "purple_wool_slab",
+    "sound": "cloth"
+  },
+  "magenta_wool_slab": {
+    "textures": "magenta_wool_slab",
+    "sound": "cloth"
+  },
+  "pink_wool_slab": {
+    "textures": "pink_wool_slab",
+    "sound": "cloth"
+  },
+  "white_wool_double_slab": {
+    "textures": "white_wool_double_slab",
+    "sound": "cloth"
+  },
+  "light_gray_wool_double_slab": {
+    "textures": "light_gray_wool_double_slab",
+    "sound": "cloth"
+  },
+  "gray_wool_double_slab": {
+    "textures": "gray_wool_double_slab",
+    "sound": "cloth"
+  },
+  "black_wool_double_slab": {
+    "textures": "black_wool_double_slab",
+    "sound": "cloth"
+  },
+  "brown_wool_double_slab": {
+    "textures": "brown_wool_double_slab",
+    "sound": "cloth"
+  },
+  "red_wool_double_slab": {
+    "textures": "red_wool_double_slab",
+    "sound": "cloth"
+  },
+  "orange_wool_double_slab": {
+    "textures": "orange_wool_double_slab",
+    "sound": "cloth"
+  },
+  "yellow_wool_double_slab": {
+    "textures": "yellow_wool_double_slab",
+    "sound": "cloth"
+  },
+  "lime_wool_double_slab": {
+    "textures": "lime_wool_double_slab",
+    "sound": "cloth"
+  },
+  "green_wool_double_slab": {
+    "textures": "green_wool_double_slab",
+    "sound": "cloth"
+  },
+  "cyan_wool_double_slab": {
+    "textures": "cyan_wool_double_slab",
+    "sound": "cloth"
+  },
+  "light_blue_wool_double_slab": {
+    "textures": "light_blue_wool_double_slab",
+    "sound": "cloth"
+  },
+  "blue_wool_double_slab": {
+    "textures": "blue_wool_double_slab",
+    "sound": "cloth"
+  },
+  "purple_wool_double_slab": {
+    "textures": "purple_wool_double_slab",
+    "sound": "cloth"
+  },
+  "magenta_wool_double_slab": {
+    "textures": "magenta_wool_double_slab",
+    "sound": "cloth"
+  },
+  "pink_wool_double_slab": {
+    "textures": "pink_wool_double_slab",
+    "sound": "cloth"
+  },
+  "shelf_mushroom": {
+    "sound": "shelf_mushroom"
+  },
+  "straw_bed": {
+    "sound": "straw_bed"
+  }
+}
