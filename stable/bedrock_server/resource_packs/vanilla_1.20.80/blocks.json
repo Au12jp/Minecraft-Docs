@@ -1,0 +1,165 @@
+{
+  "format_version": [
+    1,
+    1,
+    0
+  ],
+  "oak_sapling": {
+    "textures": "oak_sapling",
+    "sound": "grass"
+  },
+  "spruce_sapling": {
+    "textures": "spruce_sapling",
+    "sound": "grass"
+  },
+  "birch_sapling": {
+    "textures": "birch_sapling",
+    "sound": "grass"
+  },
+  "acacia_sapling": {
+    "textures": "acacia_sapling",
+    "sound": "grass"
+  },
+  "jungle_sapling": {
+    "textures": "jungle_sapling",
+    "sound": "grass"
+  },
+  "dark_oak_sapling": {
+    "textures": "dark_oak_sapling",
+    "sound": "grass"
+  },
+  "tube_coral_fan": {
+    "textures": {
+      "up": "tube_coral_fan",
+      "down": "tube_coral_fan",
+      "side": "tube_coral_fan"
+    },
+    "carried_textures": "tube_coral_fan",
+    "sound": "stone"
+  },
+  "brain_coral_fan": {
+    "textures": {
+      "up": "brain_coral_fan",
+      "down": "brain_coral_fan",
+      "side": "brain_coral_fan"
+    },
+    "carried_textures": "brain_coral_fan",
+    "sound": "stone"
+  },
+  "bubble_coral_fan": {
+    "textures": {
+      "up": "bubble_coral_fan",
+      "down": "bubble_coral_fan",
+      "side": "bubble_coral_fan"
+    },
+    "carried_textures": "bubble_coral_fan",
+    "sound": "stone"
+  },
+  "fire_coral_fan": {
+    "textures": {
+      "up": "fire_coral_fan",
+      "down": "fire_coral_fan",
+      "side": "fire_coral_fan"
+    },
+    "carried_textures": "fire_coral_fan",
+    "sound": "stone"
+  },
+  "horn_coral_fan": {
+    "textures": {
+      "up": "horn_coral_fan",
+      "down": "horn_coral_fan",
+      "side": "horn_coral_fan"
+    },
+    "carried_textures": "horn_coral_fan",
+    "sound": "stone"
+  },
+  "dead_tube_coral_fan": {
+    "textures": {
+      "up": "dead_tube_coral_fan",
+      "down": "dead_tube_coral_fan",
+      "side": "dead_tube_coral_fan"
+    },
+    "carried_textures": "dead_tube_coral_fan",
+    "sound": "stone"
+  },
+  "dead_brain_coral_fan": {
+    "textures": {
+      "up": "dead_brain_coral_fan",
+      "down": "dead_brain_coral_fan",
+      "side": "dead_brain_coral_fan"
+    },
+    "carried_textures": "dead_brain_coral_fan",
+    "sound": "stone"
+  },
+  "dead_bubble_coral_fan": {
+    "textures": {
+      "up": "dead_bubble_coral_fan",
+      "down": "dead_bubble_coral_fan",
+      "side": "dead_bubble_coral_fan"
+    },
+    "carried_textures": "dead_bubble_coral_fan",
+    "sound": "stone"
+  },
+  "dead_fire_coral_fan": {
+    "textures": {
+      "up": "dead_fire_coral_fan",
+      "down": "dead_fire_coral_fan",
+      "side": "dead_fire_coral_fan"
+    },
+    "carried_textures": "dead_fire_coral_fan",
+    "sound": "stone"
+  },
+  "dead_horn_coral_fan": {
+    "textures": {
+      "up": "dead_horn_coral_fan",
+      "down": "dead_horn_coral_fan",
+      "side": "dead_horn_coral_fan"
+    },
+    "carried_textures": "dead_horn_coral_fan",
+    "sound": "stone"
+  },
+  "poppy": {
+    "textures": "poppy",
+    "sound": "grass"
+  },
+  "blue_orchid": {
+    "textures": "blue_orchid",
+    "sound": "grass"
+  },
+  "allium": {
+    "textures": "allium",
+    "sound": "grass"
+  },
+  "azure_bluet": {
+    "textures": "azure_bluet",
+    "sound": "grass"
+  },
+  "red_tulip": {
+    "textures": "red_tulip",
+    "sound": "grass"
+  },
+  "orange_tulip": {
+    "textures": "orange_tulip",
+    "sound": "grass"
+  },
+  "white_tulip": {
+    "textures": "white_tulip",
+    "sound": "grass"
+  },
+  "pink_tulip": {
+    "textures": "pink_tulip",
+    "sound": "grass"
+  },
+  "oxeye_daisy": {
+    "textures": "oxeye_daisy",
+    "sound": "grass"
+  },
+  "cornflower": {
+    "textures": "cornflower",
+    "sound": "grass"
+  },
+  "lily_of_the_valley": {
+    "textures": "lily_of_the_valley",
+    "sound": "grass"
+  }
+}

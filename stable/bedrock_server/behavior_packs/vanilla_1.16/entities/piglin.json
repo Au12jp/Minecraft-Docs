@@ -799,10 +799,7 @@
           "radius": 16
         },
         "minecraft:experience_reward": {
-          "on_death": {
-            "expression": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0",
-            "version": 0
-          }
+          "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
         },
         "minecraft:group_size": {
           "filters": {
@@ -833,10 +830,7 @@
           "speed_multiplier": 1.1
         },
         "minecraft:experience_reward": {
-          "on_death": {
-            "expression": "query.last_hit_by_player ? 1 + (query.equipment_count * Math.Random(1,2)) : 0",
-            "version": 0
-          }
+          "on_death": "query.last_hit_by_player ? 1 + (query.equipment_count * Math.Random(1,2)) : 0"
         },
         "minecraft:is_baby": {},
         "minecraft:movement": {

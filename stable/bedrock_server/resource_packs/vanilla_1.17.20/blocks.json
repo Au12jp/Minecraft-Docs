@@ -1,0 +1,20 @@
+{
+    "format_version": [
+      1,
+      1,
+      0
+    ],
+    "unpowered_comparator": {
+      "textures": {
+        "up": "comparator_up",
+        "down": "comparator_stone_slab",
+        "side": "comparator_stone_slab"
+      },
+      "sound": "comparator"
+    },
+    "dirt_with_roots": {
+      "isotropic": true,
+      "textures": "dirt_with_roots",
+      "sound": "dirt_with_roots"
+    }
+}

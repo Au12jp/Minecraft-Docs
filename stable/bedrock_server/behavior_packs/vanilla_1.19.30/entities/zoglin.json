@@ -105,14 +105,8 @@
         }
       },
       "minecraft:experience_reward": {
-        "on_bred": {
-          "expression": "Math.Random(1,7)",
-          "version": 6
-        },
-        "on_death": {
-          "expression": "query.last_hit_by_player ? 5 : 0",
-          "version": 6
-        }
+        "on_bred": "Math.Random(1,7)",
+        "on_death": "query.last_hit_by_player ? 5 : 0"
       },
       "minecraft:fire_immune": {},
       "minecraft:health": {

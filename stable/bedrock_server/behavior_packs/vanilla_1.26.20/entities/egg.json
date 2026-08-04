@@ -97,6 +97,7 @@
       "minecraft:apply_knockback_rules": {
         "presets": [
           {
+            "horizontal_power": 0.4,
             "vertical_power": 0.12,
             "vertical_velocity_cap": 0.12
           }
