@@ -46,10 +46,7 @@
       },
       "minecraft:exhaustion_values": "",
       "minecraft:experience_reward": {
-        "on_death": {
-          "expression": "Math.Min(query.player_level * 7, 100)",
-          "version": 1
-        }
+        "on_death": "Math.Min(query.player_level * 7, 100)"
       },
       "minecraft:hurt_on_condition": {
         "damage_conditions": [

@@ -1,0 +1,426 @@
+{
+  "format_version": [
+    1,
+    1,
+    0
+  ],
+  "tube_coral": {
+    "textures": "tube_coral",
+    "carried_textures": "tube_coral",
+    "sound": "stone"
+  },
+  "brain_coral": {
+    "textures": "brain_coral",
+    "carried_textures": "brain_coral",
+    "sound": "stone"
+  },
+  "bubble_coral": {
+    "textures": "bubble_coral",
+    "carried_textures": "bubble_coral",
+    "sound": "stone"
+  },
+  "fire_coral": {
+    "textures": "fire_coral",
+    "carried_textures": "fire_coral",
+    "sound": "stone"
+  },
+  "horn_coral": {
+    "textures": "horn_coral",
+    "carried_textures": "horn_coral",
+    "sound": "stone"
+  },
+  "dead_tube_coral": {
+    "textures": "dead_tube_coral",
+    "carried_textures": "dead_tube_coral",
+    "sound": "stone"
+  },
+  "dead_brain_coral": {
+    "textures": "dead_brain_coral",
+    "carried_textures": "dead_brain_coral",
+    "sound": "stone"
+  },
+  "dead_bubble_coral": {
+    "textures": "dead_bubble_coral",
+    "carried_textures": "dead_bubble_coral",
+    "sound": "stone"
+  },
+  "dead_fire_coral": {
+    "textures": "dead_fire_coral",
+    "carried_textures": "dead_fire_coral",
+    "sound": "stone"
+  },
+  "dead_horn_coral": {
+    "textures": "dead_horn_coral",
+    "carried_textures": "dead_horn_coral",
+    "sound": "stone"
+  },
+  "pitcher_crop": {
+    "textures": {
+      "up": "pitcher_crop_top",
+      "down": "pitcher_crop_bottom",
+      "north": "pitcher_crop_side",
+      "south": "pitcher_crop_lower_flower",
+      "west": "pitcher_crop_upper_flower",
+      "east": "pitcher_crop_upper_flower"
+    },
+    "sound": "grass"
+  },
+  "pitcher_plant": {
+    "textures": {
+      "up": "pitcher_plant_top",
+      "down": "pitcher_plant_bottom",
+      "side": "pitcher_plant_bottom"
+    },
+    "sound": "grass",
+    "carried_textures": "pitcher_plant_carried"
+  },
+  "torchflower_crop": {
+    "textures": "torchflower_crop",
+    "sound": "grass"
+  },
+  "torchflower": {
+    "textures": "torchflower",
+    "sound": "grass"
+  },
+  "sniffer_egg": {
+    "textures": {
+      "up": "sniffer_egg_top",
+      "down": "sniffer_egg_bottom",
+      "north": "sniffer_egg_north",
+      "south": "sniffer_egg_south",
+      "east": "sniffer_egg_east",
+      "west": "sniffer_egg_west"
+    },
+    "carried_textures": "sniffer_egg_carried",
+    "sound": "metal"
+  },
+  "white_carpet": {
+    "textures": "wool_colored_white",
+    "sound": "cloth"
+  },
+  "orange_carpet": {
+    "textures": "wool_colored_orange",
+    "sound": "cloth"
+  },
+  "magenta_carpet": {
+    "textures": "wool_colored_magenta",
+    "sound": "cloth"
+  },
+  "light_blue_carpet": {
+    "textures": "wool_colored_light_blue",
+    "sound": "cloth"
+  },
+  "yellow_carpet": {
+    "textures": "wool_colored_yellow",
+    "sound": "cloth"
+  },
+  "lime_carpet": {
+    "textures": "wool_colored_lime",
+    "sound": "cloth"
+  },
+  "pink_carpet": {
+    "textures": "wool_colored_pink",
+    "sound": "cloth"
+  },
+  "gray_carpet": {
+    "textures": "wool_colored_gray",
+    "sound": "cloth"
+  },
+  "light_gray_carpet": {
+    "textures": "wool_colored_silver",
+    "sound": "cloth"
+  },
+  "cyan_carpet": {
+    "textures": "wool_colored_cyan",
+    "sound": "cloth"
+  },
+  "purple_carpet": {
+    "textures": "wool_colored_purple",
+    "sound": "cloth"
+  },
+  "blue_carpet": {
+    "textures": "wool_colored_blue",
+    "sound": "cloth"
+  },
+  "brown_carpet": {
+    "textures": "wool_colored_brown",
+    "sound": "cloth"
+  },
+  "green_carpet": {
+    "textures": "wool_colored_green",
+    "sound": "cloth"
+  },
+  "red_carpet": {
+    "textures": "wool_colored_red",
+    "sound": "cloth"
+  },
+  "black_carpet": {
+    "textures": "wool_colored_black",
+    "sound": "cloth"
+  },
+  "oak_hanging_sign": {
+    "textures": "sign",
+    "sound": "hanging_sign"
+  },
+  "spruce_hanging_sign": {
+    "textures": "spruce_sign",
+    "sound": "hanging_sign"
+  },
+  "birch_hanging_sign": {
+    "textures": "birch_sign",
+    "sound": "hanging_sign"
+  },
+  "jungle_hanging_sign": {
+    "textures": "jungle_sign",
+    "sound": "hanging_sign"
+  },
+  "acacia_hanging_sign": {
+    "textures": "acacia_sign",
+    "sound": "hanging_sign"
+  },
+  "dark_oak_hanging_sign": {
+    "textures": "darkoak_sign",
+    "sound": "hanging_sign"
+  },
+  "crimson_hanging_sign": {
+    "textures": "crimson_sign",
+    "sound": "nether_wood_hanging_sign"
+  },
+  "warped_hanging_sign": {
+    "textures": "warped_sign",
+    "sound": "nether_wood_hanging_sign"
+  },
+  "mangrove_hanging_sign": {
+    "textures": "mangrove_sign",
+    "sound": "hanging_sign"
+  },
+  "bamboo_hanging_sign": {
+    "textures": "bamboo_sign",
+    "sound": "bamboo_wood_hanging_sign"
+  },
+  "bamboo_mosaic": {
+    "textures": "bamboo_mosaic",
+    "sound": "bamboo_wood"
+  },
+  "bamboo_mosaic_stairs": {
+    "textures": "bamboo_mosaic",
+    "sound": "bamboo_wood"
+  },
+  "bamboo_mosaic_slab": {
+    "textures": "bamboo_mosaic",
+    "sound": "bamboo_wood"
+  },
+  "bamboo_mosaic_double_slab": {
+    "textures": "bamboo_mosaic",
+    "sound": "bamboo_wood"
+  },
+  "bamboo_block": {
+    "textures": {
+      "up": "bamboo_block_top",
+      "down": "bamboo_block_top",
+      "side": "bamboo_block"
+    },
+    "sound": "bamboo_wood"
+  },
+  "stripped_bamboo_block": {
+    "textures": {
+      "up": "stripped_bamboo_block_top",
+      "down": "stripped_bamboo_block_top",
+      "side": "stripped_bamboo_block"
+    },
+    "sound": "bamboo_wood"
+  },
+  "bamboo_planks": {
+    "textures": "bamboo_planks",
+    "sound": "bamboo_wood"
+  },
+  "bamboo_button": {
+    "textures": "bamboo_planks",
+    "sound": "bamboo_wood"
+  },
+  "bamboo_stairs": {
+    "textures": "bamboo_planks",
+    "sound": "bamboo_wood"
+  },
+  "bamboo_slab": {
+    "textures": "bamboo_planks",
+    "sound": "bamboo_wood"
+  },
+  "bamboo_pressure_plate": {
+    "textures": "bamboo_planks",
+    "sound": "bamboo_wood"
+  },
+  "bamboo_fence": {
+    "textures": "bamboo_fence",
+    "sound": "bamboo_wood"
+  },
+  "bamboo_fence_gate": {
+    "textures": "bamboo_fence_gate",
+    "sound": "bamboo_wood"
+  },
+  "bamboo_door": {
+    "textures": {
+      "up": "bamboo_door_bottom",
+      "down": "bamboo_door_bottom",
+      "side": "bamboo_door_top"
+    },
+    "sound": "bamboo_wood"
+  },
+  "bamboo_standing_sign": {
+    "textures": "bamboo_sign",
+    "sound": "bamboo_wood"
+  },
+  "bamboo_wall_sign": {
+    "textures": "bamboo_sign",
+    "sound": "bamboo_wood"
+  },
+  "bamboo_trapdoor": {
+    "textures": "bamboo_trapdoor",
+    "sound": "bamboo_wood"
+  },
+  "bamboo_double_slab": {
+    "textures": "bamboo_planks",
+    "sound": "bamboo_wood"
+  },
+  "chiseled_bookshelf": {
+    "textures": {
+      "up": "chiseled_bookshelf_top",
+      "down": "chiseled_bookshelf_top",
+      "north": "chiseled_bookshelf_front",
+      "south": "chiseled_bookshelf_side",
+      "east": "chiseled_bookshelf_side",
+      "west": "chiseled_bookshelf_side"
+    },
+    "sound": "chiseled_bookshelf"
+  },
+  "suspicious_sand": {
+    "textures": "suspicious_sand",
+    "sound": "suspicious_sand",
+    "ambient_occlusion_exponent": 0.55
+  },
+  "suspicious_gravel": {
+    "textures": "suspicious_gravel",
+    "sound": "suspicious_gravel"
+  },
+  "decorated_pot": {
+    "textures": "decorated_pot",
+    "sound": "decorated_pot"
+  },
+  "cherry_button": {
+    "textures": "cherry_planks",
+    "sound": "cherry_wood"
+  },
+  "cherry_door": {
+    "textures": {
+      "up": "cherry_door_bottom",
+      "down": "cherry_door_bottom",
+      "side": "cherry_door_top"
+    },
+    "sound": "cherry_wood"
+  },
+  "cherry_double_slab": {
+    "textures": "cherry_planks",
+    "sound": "cherry_wood"
+  },
+  "cherry_fence": {
+    "textures": "cherry_planks",
+    "sound": "cherry_wood"
+  },
+  "cherry_fence_gate": {
+    "textures": "cherry_planks",
+    "sound": "cherry_wood"
+  },
+  "cherry_hanging_sign": {
+    // This block is drawn as an entity but it still needs a texture for destruction particles.
+    // For block autocomplete lists in commands, this block actually uses its item texture.
+    "textures": "cherry_planks",
+    "sound": "cherry_wood_hanging_sign"
+  },
+  "cherry_log": {
+    "textures": {
+      "up": "cherry_log_top",
+      "down": "cherry_log_top",
+      "side": "cherry_log_side"
+    },
+    "sound": "cherry_wood"
+  },
+  "cherry_planks": {
+    "textures": "cherry_planks",
+    "sound": "cherry_wood"
+  },
+  "cherry_pressure_plate": {
+    "textures": "cherry_planks",
+    "sound": "cherry_wood"
+  },
+  "cherry_slab": {
+    "textures": "cherry_planks",
+    "sound": "cherry_wood"
+  },
+  "cherry_stairs": {
+    "textures": "cherry_planks",
+    "sound": "cherry_wood"
+  },
+  "cherry_standing_sign": {
+    // This block is drawn as an entity but it still needs a texture for destruction particles and block autocomplete lists in commands.
+    "textures": "cherry_planks",
+    "sound": "cherry_wood"
+  },
+  "cherry_trapdoor": {
+    "textures": "cherry_trapdoor",
+    "sound": "cherry_wood"
+  },
+  "cherry_wall_sign": {
+    // This block is drawn as an entity but it still needs a texture for destruction particles and block autocomplete lists in commands.
+    "textures": "cherry_planks",
+    "sound": "cherry_wood"
+  },
+  "cherry_wood": {
+    "textures": "cherry_log_side",
+    "sound": "cherry_wood"
+  },
+  "stripped_cherry_log": {
+    "textures": {
+      "up": "stripped_cherry_log_top",
+      "down": "stripped_cherry_log_top",
+      "side": "stripped_cherry_log_side"
+    },
+    "sound": "cherry_wood"
+  },
+  "stripped_cherry_wood": {
+    "textures": "stripped_cherry_log_side",
+    "sound": "cherry_wood"
+  },
+  "cherry_sapling": {
+    "textures": "cherry_sapling",
+    "sound": "bamboo_sapling"
+  },
+  "cherry_leaves": {
+    "textures": "cherry_leaves",
+    "sound": "cherry_leaves",
+    "ambient_occlusion_exponent": 0.8
+  },
+  "pink_petals": {
+    "textures": "pink_petals",
+    "sound": "pink_petals",
+    "carried_textures": "pink_petals_carried"
+  },
+  "calibrated_sculk_sensor": {
+    "textures": {
+      "up": "calibrated_sculk_sensor_top",
+      "down": "sculk_sensor_bottom",
+      "north": "sculk_sensor_side",
+      "east": "sculk_sensor_side",
+      "west": "sculk_sensor_side",
+      "south": "calibrated_sculk_sensor_input_side"
+    },
+    "carried_textures": {
+      "up": "sculk_sensor_tendril_inactive",
+      "down": "sculk_sensor_tendril_inactive",
+      "east": "sculk_sensor_tendril_active",
+      "west": "sculk_sensor_tendril_active",
+      "north": "sculk_sensor_tendril_active",
+      "south": "calibrated_sculk_sensor_amethyst"
+    },
+    "sound": "sculk_sensor"
+  }
+}

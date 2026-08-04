@@ -1,0 +1,109 @@
+{
+  "result": {
+    "pageId": "DressingRoom_Capes_Offline",
+    "addToRecentlyViewed": false,
+    "pageRefresh": false,
+    "sidebarLayoutType": "Persona",
+    "layout": [
+      {
+        "sectionName": "rows",
+        "rows": [
+          {
+            "controlId": "Layout",
+            "components": [
+              {
+                "type": "personaOfferInteractionComp",
+                "$type": "PersonaOfferInteractionComponent"
+              },
+              {
+                "type": "appearanceInteractionComp",
+                "$type": "AppearanceInteractionComponent"
+              },
+              {
+                "type": "openExpandedAppearanceViewComp",
+                "$type": "OpenExpandedAppearanceViewComponent"
+              }
+            ]
+          },
+          {
+            "controlId": "GridList",
+            "components": [
+              {
+                "text": {
+                  "value": "dr.categories.capes",
+                  "style": {
+                    "highlightColor": [],
+                    "alignment": "Left",
+                    "textColor": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ],
+                    "font": "MinecraftTen",
+                    "showBackground": false,
+                    "showOutline": false,
+                    "indent": 0.0,
+                    "buttonWidth": 0.0,
+                    "color": [],
+                    "offerControlIdType": "None"
+                  },
+                  "replacements": []
+                },
+                "type": "headerComp",
+                "$type": "HeaderComponent"
+              },
+              {
+                "items": [],
+                "totalItems": 400,
+                "customStoreRowConfiguration": {
+                  "seeAllVisible": false,
+                  "maxOffers": 400,
+                  "arrowsVisible": false,
+                  "visibleOffersPerRow": 0
+                },
+                "offline": {
+                  "pieceType": "persona_capes"
+                },
+                "type": "itemListComp",
+                "$type": "ItemListComponent"
+              },
+              {
+                "type": "dispPreviewPieceComp",
+                "$type": "DisplayPreviewedPieceOfferComponent"
+              }
+            ]
+          },
+          {
+            "controlId": "VerticalLineDivider",
+            "components": [
+              {
+                "textureImage": {
+                  "type": "Unknown",
+                  "style": {
+                    "highlightColor": [],
+                    "alignment": "Left",
+                    "textColor": [],
+                    "font": "default",
+                    "showBackground": false,
+                    "showOutline": false,
+                    "indent": 0.0,
+                    "buttonWidth": 0.0,
+                    "color": [
+                      0.70196,
+                      0.8392,
+                      0.8588,
+                      0.2
+                    ],
+                    "offerControlIdType": "None"
+                  }
+                },
+                "type": "textureComp",
+                "$type": "TextureComponent"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

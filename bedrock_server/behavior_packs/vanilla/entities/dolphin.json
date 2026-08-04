@@ -211,10 +211,7 @@
           ]
         },
         "minecraft:experience_reward": {
-          "on_death": {
-            "expression": "query.last_hit_by_player ? Math.Random(1,4) : 0",
-            "version": 0
-          }
+          "on_death": "query.last_hit_by_player ? Math.Random(1,4) : 0"
         },
         "minecraft:loot": {
           "table": "loot_tables/entities/dolphin.json"

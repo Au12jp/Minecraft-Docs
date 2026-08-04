@@ -1,0 +1,110 @@
+{
+  "format_version": [ 1, 1, 0 ],
+  "warped_standing_sign": {
+    "textures": "warped_sign",
+    "sound": "nether_wood"
+  },
+  "crimson_standing_sign": {
+    "textures": "crimson_sign",
+    "sound": "nether_wood"
+  },
+  "warped_wall_sign": {
+    "textures": "warped_sign",
+    "sound": "nether_wood"
+  },
+  "crimson_wall_sign": {
+    "textures": "crimson_sign",
+    "sound": "nether_wood"
+  },
+  "crimson_door": {
+    "textures": {
+      "up": "crimson_door_lower",
+      "down": "crimson_door_lower",
+      "side": "crimson_door_top"
+    },
+    "sound": "nether_wood"
+  },
+  "warped_door": {
+    "textures": {
+      "up": "warped_door_lower",
+      "down": "warped_door_lower",
+      "side": "warped_door_top"
+    },
+    "sound": "nether_wood"
+  },
+  "crimson_planks": {
+    "textures": "crimson_planks",
+    "sound": "nether_wood"
+  },
+  "warped_planks": {
+    "textures": "warped_planks",
+    "sound": "nether_wood"
+  },
+  "crimson_trapdoor": {
+    "textures": "crimson_trapdoor",
+    "sound": "nether_wood"
+  },
+  "warped_trapdoor": {
+    "textures": "warped_trapdoor",
+    "sound": "nether_wood"
+  },
+  "crimson_fence": {
+    "textures": "crimson_planks",
+    "sound": "nether_wood"
+  },
+  "warped_fence": {
+    "textures": "warped_planks",
+    "sound": "nether_wood"
+  },
+  "crimson_fence_gate": {
+    "textures": "crimson_planks",
+    "sound": "nether_wood"
+  },
+  "warped_fence_gate": {
+    "textures": "warped_planks",
+    "sound": "nether_wood"
+  },
+  "crimson_double_slab": {
+    "textures": "crimson_planks",
+    "sound": "nether_wood"
+  },
+  "crimson_slab": {
+    "textures": "crimson_planks",
+    "sound": "nether_wood"
+  },
+  "warped_double_slab": {
+    "textures": "warped_planks",
+    "sound": "nether_wood"
+  },
+  "warped_slab": {
+    "textures": "warped_planks",
+    "sound": "nether_wood"
+  },
+  "crimson_stairs": {
+    "textures": "crimson_planks",
+    "sound": "nether_wood"
+  },
+  "warped_stairs": {
+    "textures": "warped_planks",
+    "sound": "nether_wood"
+  },
+  "crimson_button": {
+    "textures": "crimson_planks",
+    "sound": "nether_wood"
+  },
+  "warped_button": {
+    "textures": "warped_planks",
+    "sound": "nether_wood"
+  },
+  "crimson_pressure_plate": {
+    "textures": "crimson_planks",
+    "sound": "nether_wood"
+  },
+  "warped_pressure_plate": {
+    "textures": "warped_planks",
+    "sound": "nether_wood"
+  },
+  "lever": {
+    "sound": "lever"
+  }
+}
