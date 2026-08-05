@@ -303,5 +303,197 @@
   },
   "straw_bed": {
     "sound": "straw_bed"
+  },
+  "yellow_concrete_stairs": {
+    "textures": "yellow_concrete",
+    "sound": "stone"
+  },
+  "white_concrete_stairs": {
+    "textures": "white_concrete",
+    "sound": "stone"
+  },
+  "white_concrete_slab": {
+    "textures": "white_concrete",
+    "sound": "stone"
+  },
+  "white_concrete_double_slab": {
+    "textures": "white_concrete",
+    "sound": "stone"
+  },
+  "light_gray_concrete_stairs": {
+    "textures": "light_gray_concrete",
+    "sound": "stone"
+  },
+  "light_gray_concrete_slab": {
+    "textures": "light_gray_concrete",
+    "sound": "stone"
+  },
+  "light_gray_concrete_double_slab": {
+    "textures": "light_gray_concrete",
+    "sound": "stone"
+  },
+  "gray_concrete_stairs": {
+    "textures": "gray_concrete",
+    "sound": "stone"
+  },
+  "gray_concrete_slab": {
+    "textures": "gray_concrete",
+    "sound": "stone"
+  },
+  "gray_concrete_double_slab": {
+    "textures": "gray_concrete",
+    "sound": "stone"
+  },
+  "black_concrete_stairs": {
+    "textures": "black_concrete",
+    "sound": "stone"
+  },
+  "black_concrete_slab": {
+    "textures": "black_concrete",
+    "sound": "stone"
+  },
+  "black_concrete_double_slab": {
+    "textures": "black_concrete",
+    "sound": "stone"
+  },
+  "brown_concrete_stairs": {
+    "textures": "brown_concrete",
+    "sound": "stone"
+  },
+  "brown_concrete_slab": {
+    "textures": "brown_concrete",
+    "sound": "stone"
+  },
+  "brown_concrete_double_slab": {
+    "textures": "brown_concrete",
+    "sound": "stone"
+  },
+  "red_concrete_stairs": {
+    "textures": "red_concrete",
+    "sound": "stone"
+  },
+  "red_concrete_slab": {
+    "textures": "red_concrete",
+    "sound": "stone"
+  },
+  "red_concrete_double_slab": {
+    "textures": "red_concrete",
+    "sound": "stone"
+  },
+  "orange_concrete_stairs": {
+    "textures": "orange_concrete",
+    "sound": "stone"
+  },
+  "orange_concrete_slab": {
+    "textures": "orange_concrete",
+    "sound": "stone"
+  },
+  "orange_concrete_double_slab": {
+    "textures": "orange_concrete",
+    "sound": "stone"
+  },
+  "yellow_concrete_slab": {
+    "textures": "yellow_concrete",
+    "sound": "stone"
+  },
+  "yellow_concrete_double_slab": {
+    "textures": "yellow_concrete",
+    "sound": "stone"
+  },
+  "lime_concrete_stairs": {
+    "textures": "lime_concrete",
+    "sound": "stone"
+  },
+  "lime_concrete_slab": {
+    "textures": "lime_concrete",
+    "sound": "stone"
+  },
+  "lime_concrete_double_slab": {
+    "textures": "lime_concrete",
+    "sound": "stone"
+  },
+  "green_concrete_stairs": {
+    "textures": "green_concrete",
+    "sound": "stone"
+  },
+  "green_concrete_slab": {
+    "textures": "green_concrete",
+    "sound": "stone"
+  },
+  "green_concrete_double_slab": {
+    "textures": "green_concrete",
+    "sound": "stone"
+  },
+  "cyan_concrete_stairs": {
+    "textures": "cyan_concrete",
+    "sound": "stone"
+  },
+  "cyan_concrete_slab": {
+    "textures": "cyan_concrete",
+    "sound": "stone"
+  },
+  "cyan_concrete_double_slab": {
+    "textures": "cyan_concrete",
+    "sound": "stone"
+  },
+  "light_blue_concrete_stairs": {
+    "textures": "light_blue_concrete",
+    "sound": "stone"
+  },
+  "light_blue_concrete_slab": {
+    "textures": "light_blue_concrete",
+    "sound": "stone"
+  },
+  "light_blue_concrete_double_slab": {
+    "textures": "light_blue_concrete",
+    "sound": "stone"
+  },
+  "blue_concrete_stairs": {
+    "textures": "blue_concrete",
+    "sound": "stone"
+  },
+  "blue_concrete_slab": {
+    "textures": "blue_concrete",
+    "sound": "stone"
+  },
+  "blue_concrete_double_slab": {
+    "textures": "blue_concrete",
+    "sound": "stone"
+  },
+  "purple_concrete_stairs": {
+    "textures": "purple_concrete",
+    "sound": "stone"
+  },
+  "purple_concrete_slab": {
+    "textures": "purple_concrete",
+    "sound": "stone"
+  },
+  "purple_concrete_double_slab": {
+    "textures": "purple_concrete",
+    "sound": "stone"
+  },
+  "magenta_concrete_stairs": {
+    "textures": "magenta_concrete",
+    "sound": "stone"
+  },
+  "magenta_concrete_slab": {
+    "textures": "magenta_concrete",
+    "sound": "stone"
+  },
+  "magenta_concrete_double_slab": {
+    "textures": "magenta_concrete",
+    "sound": "stone"
+  },
+  "pink_concrete_stairs": {
+    "textures": "pink_concrete",
+    "sound": "stone"
+  },
+  "pink_concrete_slab": {
+    "textures": "pink_concrete",
+    "sound": "stone"
+  },
+  "pink_concrete_double_slab": {
+    "textures": "pink_concrete",
+    "sound": "stone"
   }
 }
