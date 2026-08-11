@@ -1,5 +1,5 @@
 {
-  "format_version": "1.21.110",
+  "format_version": "1.26.50",
   "minecraft:biome": {
     "description": {
       "identifier": "minecraft:extreme_hills_plus_trees"
@@ -7,7 +7,10 @@
     "components": {
       "minecraft:climate": {
         "downfall": 0.3,
-        "snow_accumulation": [ 0.0, 0.125 ],
+        "snow_accumulation": [
+          0.0,
+          0.125
+        ],
         "temperature": 0.2
       },
       "minecraft:overworld_height": {
@@ -27,7 +30,6 @@
       "minecraft:overworld_generation_rules": {
         "mutate_transformation": "minecraft:extreme_hills_plus_trees_mutated"
       },
-
       "minecraft:tags": {
         "tags": [
           "animal",
@@ -36,7 +38,8 @@
           "monster",
           "mountain",
           "overworld",
-          "spawns_cold_variant_farm_animals"
+          "spawns_cold_variant_farm_animals",
+          "has_structure_abandoned_camp"
         ]
       }
     }

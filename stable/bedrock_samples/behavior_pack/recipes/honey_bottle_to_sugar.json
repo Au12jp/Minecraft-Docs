@@ -4,7 +4,9 @@
     "description": {
       "identifier": "minecraft:honey_bottle_to_sugar"
     },
-    "tags": [ "crafting_table" ],
+    "tags": [
+      "crafting_table"
+    ],
     "pattern": [
       "#"
     ],
@@ -13,14 +15,20 @@
         "item": "minecraft:honey_bottle"
       }
     },
-	"unlock": [
+    "unlock": [
       {
         "item": "minecraft:honey_bottle"
       }
     ],
     "result": [
-      { "item": "minecraft:sugar", "count": 3 },
-      { "item": "minecraft:glass_bottle", "count": 1 }
+      {
+        "item": "minecraft:sugar",
+        "count": 3
+      },
+      {
+        "item": "minecraft:glass_bottle",
+        "count": 1
+      }
     ]
   }
 }

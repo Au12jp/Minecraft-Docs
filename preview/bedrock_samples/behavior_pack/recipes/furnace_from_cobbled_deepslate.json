@@ -4,7 +4,9 @@
     "description": {
       "identifier": "minecraft:furnace_from_cobbled_deepslate"
     },
-    "tags": [ "crafting_table" ],
+    "tags": [
+      "crafting_table"
+    ],
     "pattern": [
       "###",
       "# #",
@@ -15,7 +17,7 @@
         "item": "minecraft:cobbled_deepslate"
       }
     },
-	"unlock": [
+    "unlock": [
       {
         "item": "minecraft:cobbled_deepslate"
       }

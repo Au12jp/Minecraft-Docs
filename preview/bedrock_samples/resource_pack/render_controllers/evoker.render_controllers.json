@@ -3,14 +3,28 @@
   "render_controllers": {
     "controller.render.evoker": {
       "geometry": "Geometry.default",
-      "materials": [ { "*": "Material.default" } ],
-      "part_visibility": [
-        { "*": true },
-        { "arms": "!(query.is_casting || query.is_celebrating)" },
-        { "leftarm": "query.is_casting || query.is_celebrating" },
-        { "rightarm": "query.is_casting || query.is_celebrating" }
+      "materials": [
+        {
+          "*": "Material.default"
+        }
       ],
-      "textures": [ "Texture.default" ]
+      "part_visibility": [
+        {
+          "*": true
+        },
+        {
+          "arms": "!(query.is_casting || query.is_celebrating)"
+        },
+        {
+          "leftarm": "query.is_casting || query.is_celebrating"
+        },
+        {
+          "rightarm": "query.is_casting || query.is_celebrating"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ]
     }
   }
 }

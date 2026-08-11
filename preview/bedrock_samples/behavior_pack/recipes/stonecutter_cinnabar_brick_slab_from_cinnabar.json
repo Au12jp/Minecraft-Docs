@@ -4,7 +4,9 @@
     "description": {
       "identifier": "minecraft:stonecutter_cinnabar_brick_slab_from_cinnabar"
     },
-    "tags": ["stonecutter"],
+    "tags": [
+      "stonecutter"
+    ],
     "priority": 0,
     "ingredients": [
       {

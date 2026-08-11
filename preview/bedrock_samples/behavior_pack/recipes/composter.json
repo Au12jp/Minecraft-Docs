@@ -3,8 +3,10 @@
   "minecraft:recipe_shaped": {
     "description": {
       "identifier": "minecraft:composter"
-    },   
-    "tags": [ "crafting_table" ],
+    },
+    "tags": [
+      "crafting_table"
+    ],
     "pattern": [
       "# #",
       "# #",
@@ -12,10 +14,10 @@
     ],
     "key": {
       "#": {
-          "tag": "minecraft:wooden_slabs"
+        "tag": "minecraft:wooden_slabs"
       }
     },
-	"unlock": [
+    "unlock": [
       {
         "tag": "minecraft:wooden_slabs"
       }

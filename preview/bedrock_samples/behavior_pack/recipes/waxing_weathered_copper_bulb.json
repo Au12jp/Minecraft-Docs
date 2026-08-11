@@ -4,7 +4,9 @@
     "description": {
       "identifier": "minecraft:waxing_weathered_copper_bulb"
     },
-    "tags": [ "crafting_table" ],
+    "tags": [
+      "crafting_table"
+    ],
     "ingredients": [
       {
         "item": "minecraft:weathered_copper_bulb"

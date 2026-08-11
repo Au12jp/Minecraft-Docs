@@ -7,7 +7,10 @@
     "components": {
       "minecraft:climate": {
         "downfall": 0.5,
-        "snow_accumulation": [ 0.0, 0.125 ],
+        "snow_accumulation": [
+          0.0,
+          0.125
+        ],
         "temperature": 0.5
       },
       "minecraft:overworld_height": {
@@ -33,7 +36,8 @@
           "warm",
           "spawns_warm_variant_farm_animals",
           "fast_fishing",
-          "high_seas"
+          "high_seas",
+          "temperate_ocean"
         ]
       }
     }

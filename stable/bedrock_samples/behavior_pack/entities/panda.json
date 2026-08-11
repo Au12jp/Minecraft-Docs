@@ -1,5 +1,5 @@
 {
-  "format_version": "1.26.20",
+  "format_version": "1.26.50",
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:panda",
@@ -16,8 +16,12 @@
         "minecraft:ageable": {
           "duration": 1200,
           "feed_items": "bamboo",
-          "pause_growth_items": [ "golden_dandelion" ],
-          "reset_growth_items": [ "golden_dandelion" ],
+          "pause_growth_items": [
+            "golden_dandelion"
+          ],
+          "reset_growth_items": [
+            "golden_dandelion"
+          ],
           "grow_up": {
             "event": "minecraft:ageable_grow_up",
             "target": "self"
@@ -50,14 +54,22 @@
                     "operator": "!=",
                     "value": "minecraft:is_baby"
                   },
-                  { "test": "is_family", "subject": "other", "value": "panda" },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "panda"
+                  },
                   {
                     "test": "in_water",
                     "subject": "other",
                     "operator": "!=",
                     "value": true
                   },
-                  { "test": "on_ground", "operator": "==", "value": true }
+                  {
+                    "test": "on_ground",
+                    "operator": "==",
+                    "value": true
+                  }
                 ]
               },
               "max_dist": 10
@@ -71,9 +83,15 @@
         },
         "minecraft:rideable": {
           "seat_count": 1,
-          "family_types": [ "baby_undead" ],
+          "family_types": [
+            "baby_undead"
+          ],
           "seats": {
-            "position": [ 0.0, 0.75, -0.2 ]
+            "position": [
+              0.0,
+              0.75,
+              -0.2
+            ]
           }
         }
       },
@@ -96,7 +114,9 @@
             "count": 8,
             "radius": 5
           },
-          "breed_items": ["bamboo"],
+          "breed_items": [
+            "bamboo"
+          ],
           "breeds_with": {
             "minecraft:panda": {}
           }
@@ -119,9 +139,15 @@
         },
         "minecraft:rideable": {
           "seat_count": 1,
-          "family_types": [ "baby_undead" ],
+          "family_types": [
+            "baby_undead"
+          ],
           "seats": {
-            "position": [ 0.0, 1.025, 0.0 ]
+            "position": [
+              0.0,
+              1.025,
+              0.0
+            ]
           }
         }
       },
@@ -146,13 +172,20 @@
           "snacking_cooldown": 17.5,
           "snacking_cooldown_min": 10,
           "snacking_stop_chance": 0.0011,
-          "items": ["bamboo", "cake"]
+          "items": [
+            {
+              "name": "minecraft:bamboo"
+            },
+            {
+              "name": "minecraft:cake"
+            }
+          ]
         },
         "minecraft:behavior.panic": {
           "priority": 1,
-          // Lazy panda's move half the speed, so double their multiplier when they panic
-          // Otherwise, they don't actually look like they're panicking
-          "speed_multiplier": 2.5
+          //Lazypanda'smovehalfthespeed,
+          sodoubletheirmultiplierwhentheypanic//Otherwise,
+          theydon'tactuallylooklikethey'repanicking"speed_multiplier": 2.5
         },
         "minecraft:movement": {
           "value": 0.07
@@ -163,8 +196,7 @@
           "value": 2
         },
         "minecraft:behavior.scared": {
-          "priority": 1,
-          "sound_interval": 20
+          "priority": 1
         },
         "minecraft:behavior.avoid_mob_type": {
           "priority": 5,
@@ -253,7 +285,11 @@
       },
       "minecraft:panda_aggressive": {
         "minecraft:type_family": {
-          "family": ["panda", "panda_aggressive", "mob"]
+          "family": [
+            "panda",
+            "panda_aggressive",
+            "mob"
+          ]
         },
         "minecraft:variant": {
           "value": 6
@@ -320,8 +356,18 @@
         }
       }
     },
-
     "components": {
+      "minecraft:ambient_sound_interval": {
+        "event_name": "ambient",
+        "event_names": [
+          {
+            "condition": "query.is_baby",
+            "event_name": "ambient.baby"
+          }
+        ],
+        "range": 16.0,
+        "value": 6.0
+      },
       "minecraft:offspring": {
         "blend_attributes": false,
         "offspring_pairs": {
@@ -334,7 +380,9 @@
       "minecraft:spawn_egg_interaction": {},
       "minecraft:is_hidden_when_invisible": {},
       "minecraft:type_family": {
-        "family": ["panda"]
+        "family": [
+          "panda"
+        ]
       },
       "minecraft:breathable": {
         "total_supply": 15,
@@ -343,7 +391,8 @@
       "minecraft:navigation.walk": {
         "can_float": true,
         "avoid_water": true,
-        "avoid_damage_blocks": true
+        "avoid_damage_blocks": true,
+        "using_door_annotation": true
       },
       "minecraft:movement.basic": {},
       "minecraft:scale": {
@@ -355,7 +404,10 @@
       "minecraft:giveable": {
         "triggers": {
           "cooldown": 3.0,
-          "items": ["bamboo", "cake"],
+          "items": [
+            "bamboo",
+            "cake"
+          ],
           "on_give": {
             "event": "minecraft:on_calm",
             "target": "self"
@@ -415,7 +467,14 @@
         "snacking_cooldown": 22.5,
         "snacking_cooldown_min": 20,
         "snacking_stop_chance": 0.001334,
-        "items": ["bamboo", "cake"]
+        "items": [
+          {
+            "name": "minecraft:bamboo"
+          },
+          {
+            "name": "minecraft:cake"
+          }
+        ]
       },
       "minecraft:behavior.mount_pathing": {
         "priority": 5,
@@ -430,7 +489,9 @@
       "minecraft:behavior.tempt": {
         "priority": 4,
         "speed_multiplier": 1.25,
-        "items": ["bamboo"]
+        "items": [
+          "bamboo"
+        ]
       },
       "minecraft:behavior.random_stroll": {
         "priority": 14,
@@ -450,10 +511,8 @@
       },
       "minecraft:balloonable": {},
       "minecraft:physics": {},
-      "minecraft:pushable_by_entity": {
-      },
-      "minecraft:pushable_by_block": {
-      },
+      "minecraft:pushable_by_entity": {},
+      "minecraft:pushable_by_block": {},
       "minecraft:variant": {
         "value": 0
       },
@@ -521,41 +580,48 @@
         ]
       }
     },
-
     "events": {
       "minecraft:entity_spawned": {
         "randomize": [
           {
             "weight": 95,
             "add": {
-              "component_groups": ["minecraft:panda_adult"]
+              "component_groups": [
+                "minecraft:panda_adult"
+              ]
             }
           },
           {
             "weight": 5,
             "add": {
-              "component_groups": ["minecraft:panda_baby"]
+              "component_groups": [
+                "minecraft:panda_baby"
+              ]
             }
           }
         ]
       },
-
       "minecraft:entity_born": {
         "add": {
-          "component_groups": ["minecraft:panda_baby"]
+          "component_groups": [
+            "minecraft:panda_baby"
+          ]
         }
       },
-
       "minecraft:ageable_grow_up": {
         "sequence": [
           {
             "remove": {
-              "component_groups": ["minecraft:panda_baby"]
+              "component_groups": [
+                "minecraft:panda_baby"
+              ]
             }
           },
           {
             "add": {
-              "component_groups": ["minecraft:panda_adult"]
+              "component_groups": [
+                "minecraft:panda_adult"
+              ]
             }
           },
           {
@@ -566,7 +632,9 @@
               "value": 3
             },
             "add": {
-              "component_groups": ["minecraft:panda_playful"]
+              "component_groups": [
+                "minecraft:panda_playful"
+              ]
             }
           },
           {
@@ -577,36 +645,48 @@
               "value": 6
             },
             "add": {
-              "component_groups": ["minecraft:panda_aggressive"]
+              "component_groups": [
+                "minecraft:panda_aggressive"
+              ]
             }
           }
         ]
       },
       "minecraft:panda_lazy": {
         "add": {
-          "component_groups": ["minecraft:panda_lazy"]
+          "component_groups": [
+            "minecraft:panda_lazy"
+          ]
         }
       },
       "minecraft:panda_worried": {
         "add": {
-          "component_groups": ["minecraft:panda_worried"]
+          "component_groups": [
+            "minecraft:panda_worried"
+          ]
         }
       },
       "minecraft:panda_playful": {
         "add": {
-          "component_groups": ["minecraft:panda_playful"]
+          "component_groups": [
+            "minecraft:panda_playful"
+          ]
         }
       },
       "minecraft:panda_brown": {
         "add": {
-          "component_groups": ["minecraft:panda_brown"]
+          "component_groups": [
+            "minecraft:panda_brown"
+          ]
         }
       },
       "minecraft:panda_weak": {
         "sequence": [
           {
             "add": {
-              "component_groups": ["minecraft:panda_weak"]
+              "component_groups": [
+                "minecraft:panda_weak"
+              ]
             }
           },
           {
@@ -616,34 +696,46 @@
               "value": "minecraft:is_baby"
             },
             "add": {
-              "component_groups": ["minecraft:panda_sneezing"]
+              "component_groups": [
+                "minecraft:panda_sneezing"
+              ]
             }
           }
         ]
       },
       "minecraft:panda_aggressive": {
         "add": {
-          "component_groups": ["minecraft:panda_aggressive"]
+          "component_groups": [
+            "minecraft:panda_aggressive"
+          ]
         }
       },
       "minecraft:on_scared": {
         "add": {
-          "component_groups": ["minecraft:baby_scared"]
+          "component_groups": [
+            "minecraft:baby_scared"
+          ]
         }
       },
       "minecraft:baby_on_calm": {
         "remove": {
-          "component_groups": ["minecraft:baby_scared"]
+          "component_groups": [
+            "minecraft:baby_scared"
+          ]
         }
       },
       "minecraft:become_angry": {
         "add": {
-          "component_groups": ["minecraft:panda_angry"]
+          "component_groups": [
+            "minecraft:panda_angry"
+          ]
         }
       },
       "minecraft:on_calm": {
         "remove": {
-          "component_groups": ["minecraft:panda_angry"]
+          "component_groups": [
+            "minecraft:panda_angry"
+          ]
         }
       }
     }

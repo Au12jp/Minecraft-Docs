@@ -28,7 +28,9 @@
           "default_controller"
         ]
       },
-      "render_controllers": [ "controller.render.armor" ]
+      "render_controllers": [
+        "controller.render.armor.player"
+      ]
     }
   }
 }

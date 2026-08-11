@@ -20,8 +20,12 @@
         "minecraft:ageable": {
           "duration": 1200,
           "feed_items": "wheat",
-          "pause_growth_items": [ "golden_dandelion" ],
-          "reset_growth_items": [ "golden_dandelion" ],
+          "pause_growth_items": [
+            "golden_dandelion"
+          ],
+          "reset_growth_items": [
+            "golden_dandelion"
+          ],
           "grow_up": {
             "event": "minecraft:ageable_grow_up",
             "target": "self"
@@ -46,7 +50,9 @@
         },
         "minecraft:breedable": {
           "require_tame": false,
-          "breed_items": ["wheat"],
+          "breed_items": [
+            "wheat"
+          ],
           "breeds_with": {
             "minecraft:goat": {}
           }
@@ -185,7 +191,10 @@
       },
       "attack_cooldown": {
         "minecraft:attack_cooldown": {
-          "attack_cooldown_time": [30, 40],
+          "attack_cooldown_time": [
+            30,
+            40
+          ],
           "attack_cooldown_complete_event": {
             "event": "attack_cooldown_complete_event",
             "target": "self"
@@ -202,7 +211,10 @@
         "minimum_path_length": 8,
         "minimum_distance": 1,
         "scale_factor": 0.6,
-        "cooldown_range": [30, 60]
+        "cooldown_range": [
+          30,
+          60
+        ]
       },
       "minecraft:genetics": {
         "mutation_rate": 0.02,
@@ -240,7 +252,10 @@
         ]
       },
       "minecraft:type_family": {
-        "family": ["goat", "animal"]
+        "family": [
+          "goat",
+          "animal"
+        ]
       },
       "minecraft:breathable": {
         "total_supply": 15,
@@ -305,7 +320,9 @@
       "minecraft:behavior.tempt": {
         "priority": 4,
         "speed_multiplier": 0.75,
-        "items": ["wheat"]
+        "items": [
+          "wheat"
+        ]
       },
       "minecraft:behavior.nearest_attackable_target": {
         "priority": 6,
@@ -355,10 +372,8 @@
       "minecraft:leashable": {},
       "minecraft:balloonable": {},
       "minecraft:physics": {},
-      "minecraft:pushable_by_entity": {
-      },
-      "minecraft:pushable_by_block": {
-      }
+      "minecraft:pushable_by_entity": {},
+      "minecraft:pushable_by_block": {}
     },
     "events": {
       "minecraft:entity_spawned": {
@@ -366,20 +381,26 @@
           {
             "weight": 95,
             "add": {
-              "component_groups": ["goat_adult"]
+              "component_groups": [
+                "goat_adult"
+              ]
             }
           },
           {
             "weight": 5,
             "add": {
-              "component_groups": ["goat_baby"]
+              "component_groups": [
+                "goat_baby"
+              ]
             }
           }
         ]
       },
       "minecraft:entity_born": {
         "add": {
-          "component_groups": ["goat_baby"]
+          "component_groups": [
+            "goat_baby"
+          ]
         }
       },
       "minecraft:born_default": {
@@ -402,20 +423,28 @@
       },
       "minecraft:ageable_grow_up": {
         "remove": {
-          "component_groups": ["goat_baby"]
+          "component_groups": [
+            "goat_baby"
+          ]
         },
         "add": {
-          "component_groups": ["goat_adult"]
+          "component_groups": [
+            "goat_adult"
+          ]
         }
       },
       "start_event": {
         "add": {
-          "component_groups": ["attack_cooldown"]
+          "component_groups": [
+            "attack_cooldown"
+          ]
         }
       },
       "attack_cooldown_complete_event": {
         "remove": {
-          "component_groups": ["attack_cooldown"]
+          "component_groups": [
+            "attack_cooldown"
+          ]
         }
       }
     }

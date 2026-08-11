@@ -1,5 +1,5 @@
 {
-  "format_version": "1.21.110",
+  "format_version": "1.26.50",
   "minecraft:biome": {
     "description": {
       "identifier": "minecraft:mega_taiga"
@@ -7,7 +7,10 @@
     "components": {
       "minecraft:climate": {
         "downfall": 0.80,
-        "snow_accumulation": [ 0.0, 0.125 ],
+        "snow_accumulation": [
+          0.0,
+          0.125
+        ],
         "temperature": 0.3
       },
       "minecraft:overworld_height": {
@@ -36,14 +39,20 @@
               }
             },
             "noise_frequency_scale": 0.0625,
-            "noise_range": [ 0.212, 1.0 ]
+            "noise_range": [
+              0.212,
+              1.0
+            ]
           },
           {
             "materials": {
               "top_material": "minecraft:podzol"
             },
             "noise_frequency_scale": 0.0625,
-            "noise_range": [ -0.115, 0.212 ]
+            "noise_range": [
+              -0.115,
+              0.212
+            ]
           }
         ]
       },
@@ -51,10 +60,12 @@
         "hills_transformation": "minecraft:mega_taiga_hills",
         "mutate_transformation": "minecraft:redwood_taiga_mutated",
         "generate_for_climates": [
-          [ "cold", 1 ]
+          [
+            "cold",
+            1
+          ]
         ]
       },
-
       "minecraft:tags": {
         "tags": [
           "animal",
@@ -65,7 +76,8 @@
           "rare",
           "taiga",
           "has_structure_trail_ruins",
-          "spawns_cold_variant_farm_animals"
+          "spawns_cold_variant_farm_animals",
+          "has_structure_abandoned_camp"
         ]
       }
     }

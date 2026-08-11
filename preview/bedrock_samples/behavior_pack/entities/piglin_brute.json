@@ -204,7 +204,7 @@
           "broadcast_range": 16,
           "duration": 30,
           "broadcast_targets": [
-            "piglin" // we want to broadcast to both normal piglins and piglin_brute
+            "piglin"//wewanttobroadcasttobothnormalpiglinsandpiglin_brute
           ],
           "filters": {
             "all_of": [

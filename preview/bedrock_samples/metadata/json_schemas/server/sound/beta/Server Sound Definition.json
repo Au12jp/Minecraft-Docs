@@ -1,103 +1,42 @@
 {
-  "$id": "4283276213",
+  "$id": "/server/sound/beta/Server%20Sound%20Definition.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "definitions": {
-    "2036701363": {
-      "oneOf": [
-        {
-          "items": {
-            "pattern": "^\\S+$",
-            "type": "string"
-          },
-          "type": "array"
-        },
-        {
-          "pattern": "^\\S+$",
-          "type": "string"
-        }
-      ],
-      "title": "Server Sound Tag Value List"
-    },
-    "2103472662": {
-      "description": "Server-authoritative duration metadata. When present, the server tracks the sound's lifetime.",
-      "properties": {
-        "mode": {
-          "description": "How the duration drains: \"game_time\" decrements by tick, \"real_time\" decrements by wall-clock time.",
-          "enum": [
-            "game_time",
-            "real_time"
-          ],
-          "title": "Server Sound Duration Mode",
-          "type": "string"
-        },
-        "seconds": {
-          "description": "Duration in seconds.",
-          "type": "number"
-        }
-      },
-      "required": [
-        "mode",
-        "seconds"
-      ],
-      "title": "Server Sound Duration Info",
-      "type": "object"
-    },
-    "507846529": {
-      "description": "Optional music metadata describing the sound.",
-      "properties": {
-        "artist": {
-          "description": "Artist name. Authored either as literal display text or as a translation key.",
-          "type": "string"
-        },
-        "genres": {
-          "description": "Free-form genre labels.",
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
-        },
-        "moods": {
-          "description": "Free-form mood labels.",
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
-        },
-        "title": {
-          "description": "Display title for the track. Authored either as literal display text or as a translation key.",
-          "type": "string"
-        }
-      },
-      "title": "Server Sound Music Info",
-      "type": "object"
-    }
-  },
   "description": "A single server-authoritative sound definition.",
   "properties": {
+    "broadcast_range": {
+      "description": "Optional range in blocks. When set, a broadcast play sound is delivered to players within this range of the sound. The effective range is capped by the player's view distance: players who are not within the sound's range and do not have the surrounding chunks loaded will not hear it, regardless of how large this value is.",
+      "type": "number",
+      "x-ordinal-index": 4,
+      "x-underlying-type": "float"
+    },
     "duration_info": {
-      "$ref": "#/definitions/2103472662",
-      "description": "Optional server-authoritative duration metadata."
+      "$ref": "./Server%20Sound%20Duration%20Info.json",
+      "description": "Optional server-authoritative duration metadata.",
+      "x-ordinal-index": 1
     },
     "music_info": {
-      "$ref": "#/definitions/507846529",
-      "description": "Optional music metadata."
+      "$ref": "./Server%20Sound%20Music%20Info.json",
+      "description": "Optional music metadata.",
+      "x-ordinal-index": 2
     },
     "sound_event_name": {
       "description": "The namespaced sound event ID used to play this sound.",
       "pattern": "^\\S+$",
       "type": "string",
+      "x-ordinal-index": 0,
       "x-regex-flags": "ECMAScript,icase"
     },
     "tags": {
       "additionalProperties": {
-        "$ref": "#/definitions/2036701363"
+        "$ref": "./Server%20Sound%20Tag%20Value%20List.json"
       },
       "description": "Optional pack-defined key-value tags. Each value may be a single string or an array of strings.",
       "propertyNames": {
         "pattern": "^\\S+$",
         "type": "string"
       },
-      "type": "object"
+      "type": "object",
+      "x-ordinal-index": 3
     }
   },
   "required": [

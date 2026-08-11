@@ -138,7 +138,7 @@
                 }
               ]
             },
-            "id": 7 // Short invisibility
+            "id": 7//Shortinvisibility
           },
           {
             "chance": 1,
@@ -175,7 +175,7 @@
                 }
               ]
             },
-            "id": 8 // Long invisibility
+            "id": 8//Longinvisibility
           }
         ],
         "priority": 1,

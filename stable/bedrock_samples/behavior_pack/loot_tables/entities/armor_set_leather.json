@@ -35,7 +35,6 @@
                       "chance": 0.25
                     }
                   ],
-
                   "pools": [
                     {
                       "conditions": [
@@ -58,7 +57,6 @@
                               "chance": 0.25
                             }
                           ],
-
                           "pools": [
                             {
                               "conditions": [

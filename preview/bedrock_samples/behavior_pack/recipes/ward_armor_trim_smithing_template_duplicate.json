@@ -4,7 +4,9 @@
     "description": {
       "identifier": "minecraft:ward_armor_trim_smithing_template_duplicate"
     },
-    "tags": [ "crafting_table" ],
+    "tags": [
+      "crafting_table"
+    ],
     "pattern": [
       "#S#",
       "#C#",

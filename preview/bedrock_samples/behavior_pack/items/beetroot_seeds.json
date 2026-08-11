@@ -4,7 +4,6 @@
     "description": {
       "identifier": "minecraft:beetroot_seeds"
     },
-
     "components": {
       "minecraft:seed": {
         "crop_result": "beetroot"

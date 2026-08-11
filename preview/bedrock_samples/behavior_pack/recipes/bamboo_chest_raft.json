@@ -4,7 +4,9 @@
     "description": {
       "identifier": "minecraft:bamboo_chest_raft"
     },
-    "tags": [ "crafting_table" ],
+    "tags": [
+      "crafting_table"
+    ],
     "ingredients": [
       {
         "item": "minecraft:chest"

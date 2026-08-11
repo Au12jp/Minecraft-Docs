@@ -4,7 +4,9 @@
     "description": {
       "identifier": "minecraft:smithing_armor_trim"
     },
-    "tags": [ "smithing_table" ],
+    "tags": [
+      "smithing_table"
+    ],
     "template": {
       "tag": "minecraft:trim_templates"
     },

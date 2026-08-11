@@ -8,7 +8,6 @@
     "conditions": [
       {
         "minecraft:spawns_underground": {},
-
         "minecraft:spawns_on_block_prevented_filter": [
           "minecraft:nether_wart_block",
           "minecraft:shroomlight"
@@ -17,16 +16,13 @@
           "min": "peaceful",
           "max": "hard"
         },
-
         "minecraft:weight": {
           "default": 5
         },
-
         "minecraft:herd": {
           "min_size": 2,
           "max_size": 4
         },
-
         "minecraft:biome_filter": {
           "test": "has_biome_tag",
           "operator": "==",
@@ -35,7 +31,6 @@
       },
       {
         "minecraft:spawns_underground": {},
-
         "minecraft:spawns_on_block_prevented_filter": [
           "minecraft:nether_wart_block",
           "minecraft:shroomlight"
@@ -44,23 +39,19 @@
           "min": "peaceful",
           "max": "hard"
         },
-
         "minecraft:weight": {
           "default": 15
         },
-
         "minecraft:herd": {
           "min_size": 4,
           "max_size": 4
         },
-
         "minecraft:biome_filter": {
           "test": "has_biome_tag",
           "operator": "==",
           "value": "spawn_few_piglins"
         }
       }
-
     ]
   }
 }

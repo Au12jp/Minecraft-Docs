@@ -12,8 +12,14 @@
         }
       },
       "geometry": "Geometry.default",
-      "materials": [ { "*": "Material.default" } ],
-      "textures": [ "Array.textures[v.index]" ],
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.textures[v.index]"
+      ],
       "filter_lighting": true
     }
   }

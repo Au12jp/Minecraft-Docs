@@ -4,7 +4,9 @@
     "description": {
       "identifier": "minecraft:cherry_planks_from_stripped_log"
     },
-    "tags": [ "crafting_table" ],
+    "tags": [
+      "crafting_table"
+    ],
     "group": "planks",
     "pattern": [
       "#"

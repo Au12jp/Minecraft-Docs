@@ -7,7 +7,10 @@
     "components": {
       "minecraft:climate": {
         "downfall": 0.3,
-        "snow_accumulation": [ 0.0, 0.25 ],
+        "snow_accumulation": [
+          0.0,
+          0.25
+        ],
         "temperature": 0.2
       },
       "minecraft:overworld_height": {
@@ -32,11 +35,13 @@
               "top_material": "minecraft:gravel"
             },
             "noise_frequency_scale": 0.03175,
-            "noise_range": [ -0.05, 0.05 ]
+            "noise_range": [
+              -0.05,
+              0.05
+            ]
           }
         ]
       },
-
       "minecraft:tags": {
         "tags": [
           "beach",

@@ -26,8 +26,7 @@
         "look_distance": 6,
         "priority": 10
       },
-      // Zombie_villager Behaviors
-      "minecraft:behavior.melee_box_attack": {
+      //Zombie_villagerBehaviors"minecraft:behavior.melee_box_attack": {
         "can_spread_on_fire": true,
         "priority": 6
       },
@@ -179,8 +178,7 @@
       "minecraft:interact": {
         "interactions": {
           "interact_text": "action.interact.cure",
-          // Curing the villager
-          "on_interact": {
+          //Curingthevillager"on_interact": {
             "event": "villager_converted",
             "filters": {
               "all_of": [
@@ -210,8 +208,7 @@
       },
       "minecraft:movement.basic": {},
       "minecraft:nameable": {},
-      // Zombie_villager Components
-      "minecraft:navigation.walk": {
+      //Zombie_villagerComponents"minecraft:navigation.walk": {
         "avoid_sun": false,
         "can_break_doors": true,
         "is_amphibious": true,
@@ -1050,8 +1047,7 @@
           "value": "minecraft:variant"
         },
         "sequence": [
-          // Transform baby villager to baby zombie
-          {
+          //Transformbabyvillagertobabyzombie{
             "filters": {
               "subject": "other",
               "test": "has_component",
@@ -1063,8 +1059,7 @@
               ]
             }
           },
-          // Transform adult villager to adult zombie
-          {
+          //Transformadultvillagertoadultzombie{
             "filters": {
               "test": "has_component",
               "operator": "!=",
@@ -1077,8 +1072,7 @@
               ]
             }
           },
-          // Transform farmer zombie to farmer villager
-          {
+          //Transformfarmerzombietofarmervillager{
             "filters": {
               "subject": "other",
               "test": "is_family",
@@ -1090,8 +1084,7 @@
               ]
             }
           },
-          // Transform fisherman zombie to fisherman villager
-          {
+          //Transformfishermanzombietofishermanvillager{
             "filters": {
               "subject": "other",
               "test": "is_family",
@@ -1103,8 +1096,7 @@
               ]
             }
           },
-          // Transform shepherd zombie to shepherd villager
-          {
+          //Transformshepherdzombietoshepherdvillager{
             "filters": {
               "subject": "other",
               "test": "is_family",
@@ -1116,8 +1108,7 @@
               ]
             }
           },
-          // Transform fletcher zombie to fletcher villager
-          {
+          //Transformfletcherzombietofletchervillager{
             "filters": {
               "subject": "other",
               "test": "is_family",
@@ -1129,8 +1120,7 @@
               ]
             }
           },
-          // Transform librarian zombie to librarian villager
-          {
+          //Transformlibrarianzombietolibrarianvillager{
             "filters": {
               "subject": "other",
               "test": "is_family",
@@ -1142,8 +1132,7 @@
               ]
             }
           },
-          // Transform cartographer zombie to cartographer villager
-          {
+          //Transformcartographerzombietocartographervillager{
             "filters": {
               "subject": "other",
               "test": "is_family",
@@ -1155,8 +1144,7 @@
               ]
             }
           },
-          // Transform cleric zombie to cleric villager
-          {
+          //Transformclericzombietoclericvillager{
             "filters": {
               "subject": "other",
               "test": "is_family",
@@ -1168,8 +1156,7 @@
               ]
             }
           },
-          // Transform armorer zombie to armorer villager
-          {
+          //Transformarmorerzombietoarmorervillager{
             "filters": {
               "subject": "other",
               "test": "is_family",
@@ -1181,8 +1168,7 @@
               ]
             }
           },
-          // Transform weaponsmith zombie to weaponsmith villager
-          {
+          //Transformweaponsmithzombietoweaponsmithvillager{
             "filters": {
               "subject": "other",
               "test": "is_family",
@@ -1194,8 +1180,7 @@
               ]
             }
           },
-          // Transform toolsmith zombie to toolsmith villager
-          {
+          //Transformtoolsmithzombietotoolsmithvillager{
             "filters": {
               "subject": "other",
               "test": "is_family",
@@ -1207,8 +1192,7 @@
               ]
             }
           },
-          // Transform butcher zombie to butcher villager
-          {
+          //Transformbutcherzombietobutchervillager{
             "filters": {
               "subject": "other",
               "test": "is_family",
@@ -1220,8 +1204,7 @@
               ]
             }
           },
-          // Transform leatherworker zombie to leatherworker villager
-          {
+          //Transformleatherworkerzombietoleatherworkervillager{
             "filters": {
               "subject": "other",
               "test": "is_family",

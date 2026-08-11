@@ -1,5 +1,5 @@
 {
-  "format_version": "1.26.0",
+  "format_version": "1.26.50",
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:wither_skull",
@@ -7,6 +7,12 @@
       "is_spawnable": false
     },
     "components": {
+      "minecraft:type_family": {
+        "family": [
+          "projectile",
+          "wither_skull"
+        ]
+      },
       "minecraft:collision_box": {
         "height": 0.15,
         "width": 0.15
@@ -21,7 +27,7 @@
       "minecraft:dimension_bound": {},
       "minecraft:physics": {},
       "minecraft:projectile": {
-        "anchor": 1,
+        "anchor": "eye_height",
         "gravity": 0.0,
         "power": 1.2,
         "hit_sound": "bow.hit",
@@ -35,13 +41,16 @@
               "target": "self"
             }
           },
-          "impact_damage": null,
           "mob_effect": {
-            "amplifier": 1,
-            "durationhard": 800,
-            "effect": "wither",
-            "durationeasy": 0,
-            "durationnormal": 200
+            "effects": [
+              {
+                "amplifier": 1,
+                "durationhard": 800,
+                "effect": "wither",
+                "durationeasy": 0,
+                "durationnormal": 200
+              }
+            ]
           }
         },
         "offset": [
@@ -54,10 +63,8 @@
         "uncertainty_base": 7.5,
         "uncertainty_multiplier": 1
       },
-      "minecraft:pushable": {
-        "is_pushable": true,
-        "is_pushable_by_piston": true
-      }
+      "minecraft:pushable_by_entity": {},
+      "minecraft:pushable_by_block": {}
     },
     "component_groups": {
       "minecraft:exploding": {

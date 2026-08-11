@@ -4,7 +4,9 @@
     "description": {
       "identifier": "minecraft:cherry_boat"
     },
-    "tags": [ "crafting_table" ],
+    "tags": [
+      "crafting_table"
+    ],
     "pattern": [
       "# #",
       "###"
@@ -15,7 +17,7 @@
       }
     },
     "unlock": {
-        "context": "PlayerInWater"
+      "context": "PlayerInWater"
     },
     "result": {
       "item": "minecraft:cherry_boat"

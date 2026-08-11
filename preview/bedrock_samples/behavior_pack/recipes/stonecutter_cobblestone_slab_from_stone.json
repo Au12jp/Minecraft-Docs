@@ -4,7 +4,9 @@
     "description": {
       "identifier": "minecraft:stonecutter_cobblestone_slab_from_stone"
     },
-    "tags": [ "stonecutter" ],
+    "tags": [
+      "stonecutter"
+    ],
     "priority": 0,
     "ingredients": [
       {

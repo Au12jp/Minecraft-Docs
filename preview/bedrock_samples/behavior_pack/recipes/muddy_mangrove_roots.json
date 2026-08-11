@@ -2,9 +2,11 @@
   "format_version": "1.20.10",
   "minecraft:recipe_shapeless": {
     "description": {
-    "identifier": "minecraft:muddy_mangrove_roots"
+      "identifier": "minecraft:muddy_mangrove_roots"
     },
-    "tags": [ "crafting_table" ],
+    "tags": [
+      "crafting_table"
+    ],
     "ingredients": [
       {
         "item": "minecraft:mangrove_roots"
@@ -13,7 +15,7 @@
         "item": "minecraft:mud"
       }
     ],
-	"unlock": [
+    "unlock": [
       {
         "item": "minecraft:mangrove_roots"
       }

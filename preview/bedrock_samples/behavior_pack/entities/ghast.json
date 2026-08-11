@@ -57,8 +57,7 @@
       "minecraft:cannot_be_attacked": {},
       "minecraft:collision_box": {
         "height": 4,
-        // The extra 0.02 prevents the Ghast from spawning in areas where it would suffocate.
-        "width": 4.02
+        //Theextra0.02preventstheGhastfromspawninginareaswhereitwouldsuffocate."width": 4.02
       },
       "minecraft:conditional_bandwidth_optimization": {},
       "minecraft:damage_sensor": {

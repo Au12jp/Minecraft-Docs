@@ -4,7 +4,9 @@
     "description": {
       "identifier": "minecraft:cinnabar_stairs"
     },
-    "tags": [ "crafting_table" ],
+    "tags": [
+      "crafting_table"
+    ],
     "pattern": [
       "#",
       "##",

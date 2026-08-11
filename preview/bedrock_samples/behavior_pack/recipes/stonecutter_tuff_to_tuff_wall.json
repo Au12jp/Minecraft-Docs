@@ -4,7 +4,9 @@
     "description": {
       "identifier": "minecraft:stonecutter_tuff_to_tuff_wall"
     },
-    "tags": [ "stonecutter" ],
+    "tags": [
+      "stonecutter"
+    ],
     "priority": 0,
     "ingredients": [
       {

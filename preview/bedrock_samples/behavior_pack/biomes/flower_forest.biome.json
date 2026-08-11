@@ -1,5 +1,5 @@
 {
-  "format_version": "1.21.110",
+  "format_version": "1.26.50",
   "minecraft:biome": {
     "description": {
       "identifier": "minecraft:flower_forest"
@@ -7,11 +7,17 @@
     "components": {
       "minecraft:climate": {
         "downfall": 0.80,
-        "snow_accumulation": [ 0.0, 0.125 ],
+        "snow_accumulation": [
+          0.0,
+          0.125
+        ],
         "temperature": 0.7
       },
       "minecraft:overworld_height": {
-        "noise_params": [ 0.1, 0.4 ]
+        "noise_params": [
+          0.1,
+          0.4
+        ]
       },
       "minecraft:surface_builder": {
         "builder": {
@@ -24,7 +30,6 @@
           "sea_material": "minecraft:water"
         }
       },
-
       "minecraft:tags": {
         "tags": [
           "animal",
@@ -32,7 +37,8 @@
           "monster",
           "mutated",
           "overworld",
-          "bee_habitat"
+          "bee_habitat",
+          "has_structure_abandoned_camp"
         ]
       }
     }

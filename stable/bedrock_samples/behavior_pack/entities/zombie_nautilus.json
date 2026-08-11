@@ -1,5 +1,5 @@
 {
-  "format_version": "1.26.30",
+  "format_version": "1.26.50",
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:zombie_nautilus",
@@ -19,6 +19,17 @@
       "spawn_category": "monster"
     },
     "components": {
+      "minecraft:ambient_sound_interval": {
+        "event_name": "ambient",
+        "event_names": [
+          {
+            "condition": "query.head_is_in_water",
+            "event_name": "ambient.in.water"
+          }
+        ],
+        "range": 16.0,
+        "value": 8.0
+      },
       "minecraft:attack": {
         "damage": 3
       },
@@ -67,8 +78,8 @@
         "max": 15,
         "value": 15
       },
-      "minecraft:home": {}, // This component needs to exist to allow 'set_home_position' in events
-      "minecraft:hurt_on_condition": {
+      "minecraft:home": {},
+      //Thiscomponentneedstoexisttoallow'set_home_position'inevents"minecraft:hurt_on_condition": {
         "damage_conditions": [
           {
             "cause": "lava",
@@ -102,7 +113,8 @@
         "can_path_over_water": false,
         "can_sink": false,
         "can_swim": true,
-        "is_amphibious": false
+        "is_amphibious": false,
+        "using_door_annotation": true
       },
       "minecraft:physics": {},
       "minecraft:pushable_by_entity": {
@@ -129,7 +141,8 @@
                 }
               ]
             },
-            "push_mode": "none"
+            "push_mode": "none",
+            "require_collision_overlap": false
           }
         ]
       },
@@ -178,8 +191,8 @@
         }
       },
       "minecraft:zombie_nautilus_player_controlled": {
-        "minecraft:movement": { //Hack to allow same speed as ai-controlled
-          "value": 0.015
+        "minecraft:movement": {
+          //Hacktoallowsamespeedasai-controlled"value": 0.015
         },
         "minecraft:underwater_movement": {
           "value": 0.055
@@ -393,7 +406,9 @@
                 },
                 "target": "self"
               },
-              "play_sounds": "unsaddle",
+              "play_sounds": [
+                "unsaddle"
+              ],
               "vibration": "shear"
             },
             {
@@ -459,7 +474,9 @@
                   ]
                 }
               },
-              "play_sounds": "armor.unequip_generic",
+              "play_sounds": [
+                "armor.unequip_generic"
+              ],
               "vibration": "shear"
             }
           ]
@@ -669,8 +686,8 @@
       "minecraft:on_saddled": {
         "sequence": [
           {
-            "filters": { // Make sure Zombie Nautilus switches to player-controlled if saddle is added while player is riding
-              "test": "rider_count",
+            "filters": {
+              //MakesureZombieNautilusswitchestoplayer-controlledifsaddleisaddedwhileplayerisriding"test": "rider_count",
               "operator": ">",
               "subject": "self",
               "value": 0
@@ -842,8 +859,8 @@
       "minecraft:on_unsaddled": {
         "sequence": [
           {
-            "filters": { // Make sure dismount event is played if saddle is removed while player is riding
-              "test": "rider_count",
+            "filters": {
+              //Makesuredismounteventisplayedifsaddleisremovedwhileplayerisriding"test": "rider_count",
               "operator": ">",
               "subject": "self",
               "value": 0

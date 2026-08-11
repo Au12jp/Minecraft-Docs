@@ -4,7 +4,9 @@
     "description": {
       "identifier": "minecraft:pale_oak_stairs"
     },
-    "tags": [ "crafting_table" ],
+    "tags": [
+      "crafting_table"
+    ],
     "group": "wooden_stairs",
     "pattern": [
       "#  ",

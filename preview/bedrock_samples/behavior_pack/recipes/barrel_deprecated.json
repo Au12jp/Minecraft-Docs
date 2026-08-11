@@ -3,8 +3,10 @@
   "minecraft:recipe_shaped": {
     "description": {
       "identifier": "minecraft:barrel"
-    },   
-    "tags": [ "deprecated" ],
+    },
+    "tags": [
+      "deprecated"
+    ],
     "pattern": [
       "#-#",
       "# #",

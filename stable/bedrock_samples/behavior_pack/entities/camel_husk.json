@@ -58,8 +58,8 @@
         "total_supply": 15
       },
       "minecraft:can_climb": {},
-      // This component prevents Camel Husk from spawning in spaces it doesn't fit. Without it, the correct collision box wont be set until the sitting/standing events are triggered.
-      "minecraft:collision_box": {
+      //ThiscomponentpreventsCamelHuskfromspawninginspacesitdoesn'tfit.Withoutit,
+      thecorrectcollisionboxwontbesetuntilthesitting/standingeventsaretriggered."minecraft:collision_box": {
         "height": 2.375,
         "width": 1.7
       },
@@ -313,11 +313,9 @@
                 }
               }
             },
-            // Removing the Saddle while the Camel is standing. Keep consistent with the next interaction.
-            {
+            //RemovingtheSaddlewhiletheCamelisstanding.Keepconsistentwiththenextinteraction.{
               "drop_item_slot": "0",
-              // Bigger offset when the Camel is standing.
-              "drop_item_y_offset": 2,
+              //BiggeroffsetwhentheCamelisstanding."drop_item_y_offset": 2,
               "hurt_item": 1,
               "interact_text": "action.interact.removesaddle",
               "on_interact": {
@@ -357,11 +355,9 @@
               "play_sounds": "unsaddle",
               "vibration": "shear"
             },
-            // Removing the Saddle while the Camel is sitting. Keep consistent with the previous interaction.
-            {
+            //RemovingtheSaddlewhiletheCamelissitting.Keepconsistentwiththepreviousinteraction.{
               "drop_item_slot": "0",
-              // Smaller offset when the Camel is sitting.
-              "drop_item_y_offset": 1,
+              //SmalleroffsetwhentheCamelissitting."drop_item_y_offset": 1,
               "hurt_item": 1,
               "interact_text": "action.interact.removesaddle",
               "on_interact": {

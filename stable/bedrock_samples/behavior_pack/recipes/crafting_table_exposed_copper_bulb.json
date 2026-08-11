@@ -4,8 +4,9 @@
     "description": {
       "identifier": "minecraft:exposed_copper_bulb"
     },
-
-    "tags": [ "crafting_table" ],
+    "tags": [
+      "crafting_table"
+    ],
     "pattern": [
       " # ",
       "#B#",

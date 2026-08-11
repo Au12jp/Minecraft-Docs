@@ -1,5 +1,5 @@
 {
-  "format_version": "1.21.110",
+  "format_version": "1.26.50",
   "minecraft:biome": {
     "description": {
       "identifier": "minecraft:forest"
@@ -7,7 +7,10 @@
     "components": {
       "minecraft:climate": {
         "downfall": 0.8,
-        "snow_accumulation": [ 0.0, 0.125 ],
+        "snow_accumulation": [
+          0.0,
+          0.125
+        ],
         "temperature": 0.7
       },
       "minecraft:multinoise_generation_rules": {
@@ -35,18 +38,25 @@
         "hills_transformation": "minecraft:forest_hills",
         "mutate_transformation": "minecraft:flower_forest",
         "generate_for_climates": [
-          [ "medium", 1 ],
-          [ "cold", 1 ]
+          [
+            "medium",
+            1
+          ],
+          [
+            "cold",
+            1
+          ]
         ]
       },
-
       "minecraft:tags": {
         "tags": [
           "animal",
           "forest",
           "monster",
           "overworld",
-          "bee_habitat"
+          "bee_habitat",
+          "has_structure_abandoned_camp",
+          "oak_forest"
         ]
       }
     }
