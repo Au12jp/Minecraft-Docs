@@ -58,8 +58,7 @@
         "max_lifetime": "2 / ((Math.Random(0.0, 1.0) * 0.8 + 0.2) * 5)"
       },
       "minecraft:particle_motion_dynamic": {
-        // upwards force
-        "linear_acceleration": [
+        //upwardsforce"linear_acceleration": [
           0,
           0.8,
           0

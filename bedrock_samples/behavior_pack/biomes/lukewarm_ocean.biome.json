@@ -7,7 +7,10 @@
     "components": {
       "minecraft:climate": {
         "downfall": 0.5,
-        "snow_accumulation": [ 0.0, 0.125 ],
+        "snow_accumulation": [
+          0.0,
+          0.125
+        ],
         "temperature": 0.5
       },
       "minecraft:overworld_height": {
@@ -26,7 +29,10 @@
       },
       "minecraft:overworld_generation_rules": {
         "generate_for_climates": [
-          [ "lukewarm", 1 ]
+          [
+            "lukewarm",
+            1
+          ]
         ]
       },
       "minecraft:tags": {
@@ -37,7 +43,8 @@
           "overworld",
           "spawns_warm_variant_farm_animals",
           "fast_fishing",
-          "high_seas"
+          "high_seas",
+          "temperate_ocean"
         ]
       }
     }

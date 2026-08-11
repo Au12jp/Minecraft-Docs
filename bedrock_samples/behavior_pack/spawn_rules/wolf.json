@@ -7,8 +7,8 @@
     },
     "conditions": [
       {
-        // Pale Wolf: every non-cold Taiga, except Old Growth Pine Taiga and Old Growth Spruce Taiga.
-        "minecraft:spawns_on_surface": {},
+        //PaleWolf: everynon-coldTaiga,
+        exceptOldGrowthPineTaigaandOldGrowthSpruceTaiga."minecraft:spawns_on_surface": {},
         "minecraft:spawns_on_block_filter": "minecraft:grass_block",
         "minecraft:brightness_filter": {
           "min": 7,
@@ -24,16 +24,30 @@
         },
         "minecraft:biome_filter": {
           "all_of": [
-            { "test": "has_biome_tag", "value": "taiga" },
-            { "test": "has_biome_tag", "operator": "not", "value": "cold" },
-            { "test": "has_biome_tag", "operator": "not", "value": "mega" },
-            { "test": "has_biome_tag", "operator": "not", "value": "mutated" }
+            {
+              "test": "has_biome_tag",
+              "value": "taiga"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "not",
+              "value": "cold"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "not",
+              "value": "mega"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "not",
+              "value": "mutated"
+            }
           ]
         }
       },
       {
-        // Ashen Wolf: every cold Taiga.
-        "minecraft:spawns_on_surface": {},
+        //AshenWolf: everycoldTaiga."minecraft:spawns_on_surface": {},
         "minecraft:spawns_on_block_filter": [
           "minecraft:grass_block",
           "minecraft:snow",
@@ -53,18 +67,29 @@
         },
         "minecraft:biome_filter": {
           "all_of": [
-            { "test": "has_biome_tag", "value": "taiga" },
-            { "test": "has_biome_tag", "value": "cold" }
+            {
+              "test": "has_biome_tag",
+              "value": "taiga"
+            },
+            {
+              "test": "has_biome_tag",
+              "value": "cold"
+            }
           ]
         }
       },
       {
-        // Black Wolf: Old Growth Pine Taiga only.
-        "minecraft:spawns_on_surface": {},
+        //BlackWolf: OldGrowthPineTaigaonly."minecraft:spawns_on_surface": {},
         "minecraft:spawns_on_block_filter": [
-          { "name": "minecraft:podzol" },
-          { "name": "minecraft:grass_block" },
-          { "name": "minecraft:coarse_dirt" }
+          {
+            "name": "minecraft:podzol"
+          },
+          {
+            "name": "minecraft:grass_block"
+          },
+          {
+            "name": "minecraft:coarse_dirt"
+          }
         ],
         "minecraft:brightness_filter": {
           "min": 7,
@@ -80,20 +105,38 @@
         },
         "minecraft:biome_filter": {
           "all_of": [
-            { "test": "has_biome_tag", "value": "mega" },
-            { "test": "has_biome_tag", "value": "taiga" },
-            { "test": "has_biome_tag", "value": "forest" },
-            { "test": "has_biome_tag", "operator": "not", "value": "mutated" }
+            {
+              "test": "has_biome_tag",
+              "value": "mega"
+            },
+            {
+              "test": "has_biome_tag",
+              "value": "taiga"
+            },
+            {
+              "test": "has_biome_tag",
+              "value": "forest"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "not",
+              "value": "mutated"
+            }
           ]
         }
       },
       {
-        // Chestnut Wolf: Old Growth Spruce Taiga only.
-        "minecraft:spawns_on_surface": {},
+        //ChestnutWolf: OldGrowthSpruceTaigaonly."minecraft:spawns_on_surface": {},
         "minecraft:spawns_on_block_filter": [
-          { "name": "minecraft:podzol" },
-          { "name": "minecraft:grass_block" },
-          { "name": "minecraft:coarse_dirt" }
+          {
+            "name": "minecraft:podzol"
+          },
+          {
+            "name": "minecraft:grass_block"
+          },
+          {
+            "name": "minecraft:coarse_dirt"
+          }
         ],
         "minecraft:brightness_filter": {
           "min": 7,
@@ -109,16 +152,27 @@
         },
         "minecraft:biome_filter": {
           "all_of": [
-            { "test": "has_biome_tag", "value": "mega" },
-            { "test": "has_biome_tag", "value": "taiga" },
-            { "test": "has_biome_tag", "value": "forest" },
-            { "test": "has_biome_tag", "value": "mutated" }
+            {
+              "test": "has_biome_tag",
+              "value": "mega"
+            },
+            {
+              "test": "has_biome_tag",
+              "value": "taiga"
+            },
+            {
+              "test": "has_biome_tag",
+              "value": "forest"
+            },
+            {
+              "test": "has_biome_tag",
+              "value": "mutated"
+            }
           ]
         }
       },
       {
-        // Rusty Wolf: Jungle Edge only.
-        "minecraft:spawns_on_surface": {},
+        //RustyWolf: JungleEdgeonly."minecraft:spawns_on_surface": {},
         "minecraft:spawns_on_block_filter": "minecraft:grass_block",
         "minecraft:brightness_filter": {
           "min": 7,
@@ -134,14 +188,19 @@
         },
         "minecraft:biome_filter": {
           "all_of": [
-            { "test": "has_biome_tag", "value": "edge" },
-            { "test": "has_biome_tag", "value": "jungle" }
+            {
+              "test": "has_biome_tag",
+              "value": "edge"
+            },
+            {
+              "test": "has_biome_tag",
+              "value": "jungle"
+            }
           ]
         }
       },
       {
-        // Snowy Wolf: Grove only.
-        "minecraft:spawns_on_surface": {},
+        //SnowyWolf: Groveonly."minecraft:spawns_on_surface": {},
         "minecraft:spawns_on_block_filter": [
           "minecraft:grass_block",
           "minecraft:snow",
@@ -160,12 +219,12 @@
           "max_size": 1
         },
         "minecraft:biome_filter": {
-          "test": "has_biome_tag", "value": "grove"
+          "test": "has_biome_tag",
+          "value": "grove"
         }
       },
       {
-        // Spotted Wolf: Savanna Plateau only.
-        "minecraft:spawns_on_surface": {},
+        //SpottedWolf: SavannaPlateauonly."minecraft:spawns_on_surface": {},
         "minecraft:spawns_on_block_filter": "minecraft:grass_block",
         "minecraft:brightness_filter": {
           "min": 7,
@@ -181,17 +240,26 @@
         },
         "minecraft:biome_filter": {
           "all_of": [
-            { "test": "has_biome_tag", "value": "savanna" },
-            { "test": "has_biome_tag", "value": "plateau" }
+            {
+              "test": "has_biome_tag",
+              "value": "savanna"
+            },
+            {
+              "test": "has_biome_tag",
+              "value": "plateau"
+            }
           ]
         }
       },
       {
-        // Striped Wolf: Wooded Badlands only.
-        "minecraft:spawns_on_surface": {},
+        //StripedWolf: WoodedBadlandsonly."minecraft:spawns_on_surface": {},
         "minecraft:spawns_on_block_filter": [
-          { "name": "minecraft:grass_block" },
-          { "name": "minecraft:coarse_dirt" }
+          {
+            "name": "minecraft:grass_block"
+          },
+          {
+            "name": "minecraft:coarse_dirt"
+          }
         ],
         "minecraft:brightness_filter": {
           "min": 7,
@@ -200,7 +268,7 @@
         },
         "minecraft:weight": {
           "default": 2,
-          "rarity": 2 // Close enough to Java's 40% chance.
+          "rarity": 2//CloseenoughtoJava's40%chance.
         },
         "minecraft:herd": {
           "min_size": 4,
@@ -208,15 +276,23 @@
         },
         "minecraft:biome_filter": {
           "all_of": [
-            { "test": "has_biome_tag", "value": "mesa" },
-            { "test": "has_biome_tag", "value": "plateau" },
-            { "test": "has_biome_tag", "value": "stone" }
+            {
+              "test": "has_biome_tag",
+              "value": "mesa"
+            },
+            {
+              "test": "has_biome_tag",
+              "value": "plateau"
+            },
+            {
+              "test": "has_biome_tag",
+              "value": "stone"
+            }
           ]
         }
       },
       {
-        // Woods Wolf: Forest only.
-        "minecraft:spawns_on_surface": {},
+        //WoodsWolf: Forestonly."minecraft:spawns_on_surface": {},
         "minecraft:spawns_on_block_filter": "minecraft:grass_block",
         "minecraft:brightness_filter": {
           "min": 7,
@@ -232,12 +308,40 @@
         },
         "minecraft:biome_filter": {
           "all_of": [
-            { "test": "has_biome_tag", "value": "forest" },
-            { "test": "has_biome_tag", "operator": "not", "value": "birch" },
-            { "test": "has_biome_tag", "operator": "not", "value": "taiga" },
-            { "test": "has_biome_tag", "operator": "not", "value": "roofed" },
-            { "test": "has_biome_tag", "operator": "not", "value": "mutated" },
-            { "test": "has_biome_tag", "operator": "not", "value": "mountain" }
+            {
+              "test": "has_biome_tag",
+              "value": "forest"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "not",
+              "value": "birch"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "not",
+              "value": "taiga"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "not",
+              "value": "roofed"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "not",
+              "value": "mutated"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "not",
+              "value": "mountain"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "not",
+              "value": "dappled_forest"
+            }
           ]
         }
       }

@@ -3,8 +3,15 @@
   "render_controllers": {
     "controller.render.item_default": {
       "geometry": "geometry.default",
-      "materials": [ { "*": "variable.is_enchanted ? material.enchanted : material.default" } ],
-      "textures": [ "texture.default", "texture.enchanted" ]
+      "materials": [
+        {
+          "*": "variable.is_enchanted ? material.enchanted : material.default"
+        }
+      ],
+      "textures": [
+        "texture.default",
+        "texture.enchanted"
+      ]
     }
   }
 }

@@ -4,7 +4,9 @@
     "description": {
       "identifier": "minecraft:calibrated_sculk_sensor"
     },
-    "tags": [ "crafting_table" ],
+    "tags": [
+      "crafting_table"
+    ],
     "pattern": [
       " X ",
       "X#X"

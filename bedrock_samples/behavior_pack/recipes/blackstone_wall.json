@@ -4,7 +4,9 @@
     "description": {
       "identifier": "minecraft:blackstone_wall"
     },
-    "tags": [ "crafting_table" ],
+    "tags": [
+      "crafting_table"
+    ],
     "pattern": [
       "###",
       "###"
@@ -14,11 +16,11 @@
         "item": "minecraft:blackstone"
       }
     },
-	"unlock": [
-          {
-            "item": "minecraft:blackstone"
-          }
-        ],
+    "unlock": [
+      {
+        "item": "minecraft:blackstone"
+      }
+    ],
     "result": {
       "item": "minecraft:blackstone_wall",
       "count": 6

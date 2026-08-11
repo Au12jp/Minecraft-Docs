@@ -4,7 +4,9 @@
     "description": {
       "identifier": "minecraft:chest_minecart"
     },
-    "tags": [ "crafting_table" ],
+    "tags": [
+      "crafting_table"
+    ],
     "ingredients": [
       {
         "item": "minecraft:chest"
@@ -13,7 +15,7 @@
         "item": "minecraft:minecart"
       }
     ],
-	"unlock": [
+    "unlock": [
       {
         "item": "minecraft:minecart"
       }

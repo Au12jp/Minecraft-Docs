@@ -82,8 +82,14 @@
           "jacket": true
         }
       ],
-      "materials": [ { "*": "Material.default" } ],
-      "textures": [ "Array.skins[query.variant]" ]
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.skins[query.variant]"
+      ]
     }
   }
 }

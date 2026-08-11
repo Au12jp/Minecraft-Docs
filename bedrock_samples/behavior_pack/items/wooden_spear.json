@@ -4,7 +4,6 @@
     "description": {
       "identifier": "minecraft:wooden_spear"
     },
-
     "components": {
       "minecraft:icon": {
         "textures": {
@@ -15,7 +14,10 @@
         "value": "item.wooden_spear.name"
       },
       "minecraft:tags": {
-        "tags": [ "minecraft:wooden_tier", "minecraft:is_spear" ]
+        "tags": [
+          "minecraft:wooden_tier",
+          "minecraft:is_spear"
+        ]
       },
       "minecraft:max_stack_size": 1,
       "minecraft:durability": {
@@ -28,11 +30,17 @@
       "minecraft:repairable": {
         "repair_items": [
           {
-            "items": [ "minecraft:wooden_spear" ],
+            "items": [
+              "minecraft:wooden_spear"
+            ],
             "repair_amount": "context.other->query.remaining_durability"
           },
           {
-            "items": [ { "tags": "q.all_tags('minecraft:planks')" } ],
+            "items": [
+              {
+                "tags": "q.all_tags('minecraft:planks')"
+              }
+            ],
             "repair_amount": "query.max_durability * 0.25"
           }
         ]
@@ -52,13 +60,11 @@
       },
       "minecraft:cooldown": {
         "category": "spear",
-        // Should match "swing_duration"'s "value".
-        "duration": 0.65,
+        //Shouldmatch"swing_duration"'s"value"."duration": 0.65,
         "type": "attack"
       },
       "minecraft:swing_duration": {
-        // Should match "cooldown"'s "duration".
-        "value": 0.65
+        //Shouldmatch"cooldown"'s"duration"."value": 0.65
       },
       "minecraft:swing_sounds": {
         "attack_miss": "item.wooden_spear.attack_miss",

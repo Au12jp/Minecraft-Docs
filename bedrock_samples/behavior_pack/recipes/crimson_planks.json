@@ -4,7 +4,9 @@
     "description": {
       "identifier": "minecraft:crimson_planks"
     },
-    "tags": [ "crafting_table" ],
+    "tags": [
+      "crafting_table"
+    ],
     "group": "planks",
     "pattern": [
       "#"
@@ -14,10 +16,10 @@
         "item": "minecraft:crimson_stem"
       }
     },
-	"unlock": [
-        {
-            "item": "minecraft:crimson_stem"
-        }
+    "unlock": [
+      {
+        "item": "minecraft:crimson_stem"
+      }
     ],
     "result": {
       "item": "minecraft:crimson_planks",

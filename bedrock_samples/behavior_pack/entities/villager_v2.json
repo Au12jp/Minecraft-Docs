@@ -231,7 +231,7 @@
       "minecraft:is_hidden_when_invisible": {},
       "minecraft:jump.static": {},
       "minecraft:mark_variant": {
-        "value": 0 // Villagers have the Plains biome skin by default
+        "value": 0//VillagershavethePlainsbiomeskinbydefault
       },
       "minecraft:movement": {
         "value": 0.5
@@ -251,10 +251,8 @@
       },
       "minecraft:persistent": {},
       "minecraft:physics": {},
-      "minecraft:pushable_by_entity": {
-      },
-      "minecraft:pushable_by_block": {
-      },
+      "minecraft:pushable_by_entity": {},
+      "minecraft:pushable_by_block": {},
       "minecraft:spawn_egg_interaction": {},
       "minecraft:type_family": {
         "family": [
@@ -849,8 +847,8 @@
           "value": 0.5
         },
         "minecraft:collision_box": {
-          "height": 1.96, // 0.98/0.5
-          "width": 0.98   // 0.49/0.5
+          "height": 1.96,
+          //0.98/0.5"width": 0.98//0.49/0.5
         }
       },
       "make_and_receive_love": {
@@ -1685,9 +1683,8 @@
         }
       },
       "home_schedule_villager": {},
-      // Every goal that has to do with villagers working should go here (work goals, secondary goals)
-      // so they can be successfuly removed on schedule change
-      "job_specific_goals": {
+      //Everygoalthathastodowithvillagersworkingshouldgohere(workgoals,
+      secondarygoals)//sotheycanbesuccessfulyremovedonschedulechange"job_specific_goals": {
         "minecraft:behavior.explore_outskirts": {},
         "minecraft:behavior.harvest_farm_block": {},
         "minecraft:behavior.inspect_bookshelf": {},
@@ -2200,10 +2197,8 @@
           "value": 10
         }
       },
-      // A grouping of components that should never be added
-      // however, they are here to flush out any artifact component groups
-      // that might linger between villager job switches
-      "trade_components": {
+      //Agroupingofcomponentsthatshouldneverbeadded//however,
+      theyareheretoflushoutanyartifactcomponentgroups//thatmightlingerbetweenvillagerjobswitches"trade_components": {
         "minecraft:behavior.trade_interest": {},
         "minecraft:economy_trade_table": {}
       },
@@ -2348,8 +2343,7 @@
         }
       },
       "minecraft:start_celebrating": {
-        // Event must be called exactly this for village to fire it when a raid is won
-        "add": {
+        //Eventmustbecalledexactlythisforvillagetofireitwhenaraidiswon"add": {
           "component_groups": [
             "minecraft:celebrate"
           ]
@@ -2585,8 +2579,7 @@
       },
       "minecraft:entity_transformed": {
         "sequence": [
-          // Transform to baby villager
-          {
+          //Transformtobabyvillager{
             "filters": {
               "test": "has_component",
               "operator": "==",
@@ -2601,16 +2594,14 @@
             }
           },
           {
-            // Transform to adult villager
-            "filters": {
+            //Transformtoadultvillager"filters": {
               "test": "has_component",
               "operator": "!=",
               "subject": "other",
               "value": "minecraft:is_baby"
             },
             "sequence": [
-              // Transform to adult villager
-              {
+              //Transformtoadultvillager{
                 "add": {
                   "component_groups": [
                     "adult",
@@ -2618,8 +2609,7 @@
                   ]
                 }
               },
-              // Transform to farmer villager
-              {
+              //Transformtofarmervillager{
                 "filters": {
                   "subject": "other",
                   "test": "is_family",
@@ -2633,8 +2623,7 @@
                   ]
                 }
               },
-              // Transform to fisherman villager
-              {
+              //Transformtofishermanvillager{
                 "filters": {
                   "subject": "other",
                   "test": "is_family",
@@ -2648,8 +2637,7 @@
                   ]
                 }
               },
-              // Transform to shepherd villager
-              {
+              //Transformtoshepherdvillager{
                 "filters": {
                   "subject": "other",
                   "test": "is_family",
@@ -2663,8 +2651,7 @@
                   ]
                 }
               },
-              // Transform to fletcher villager
-              {
+              //Transformtofletchervillager{
                 "filters": {
                   "subject": "other",
                   "test": "is_family",
@@ -2678,8 +2665,7 @@
                   ]
                 }
               },
-              // Transform to librarian villager
-              {
+              //Transformtolibrarianvillager{
                 "filters": {
                   "subject": "other",
                   "test": "is_family",
@@ -2693,8 +2679,7 @@
                   ]
                 }
               },
-              // Transform to cartographer villager
-              {
+              //Transformtocartographervillager{
                 "filters": {
                   "subject": "other",
                   "test": "is_family",
@@ -2708,8 +2693,7 @@
                   ]
                 }
               },
-              // Transform to cleric villager
-              {
+              //Transformtoclericvillager{
                 "filters": {
                   "subject": "other",
                   "test": "is_family",
@@ -2723,8 +2707,7 @@
                   ]
                 }
               },
-              // Transform to armorer villager
-              {
+              //Transformtoarmorervillager{
                 "filters": {
                   "subject": "other",
                   "test": "is_family",
@@ -2738,8 +2721,7 @@
                   ]
                 }
               },
-              // Transform to weaponsmith villager
-              {
+              //Transformtoweaponsmithvillager{
                 "filters": {
                   "subject": "other",
                   "test": "is_family",
@@ -2753,8 +2735,7 @@
                   ]
                 }
               },
-              // Transform to toolsmith villager
-              {
+              //Transformtotoolsmithvillager{
                 "filters": {
                   "subject": "other",
                   "test": "is_family",
@@ -2768,8 +2749,7 @@
                   ]
                 }
               },
-              // Transform to butcher villager
-              {
+              //Transformtobutchervillager{
                 "filters": {
                   "subject": "other",
                   "test": "is_family",
@@ -2783,8 +2763,7 @@
                   ]
                 }
               },
-              // Transform to leatherworker villager
-              {
+              //Transformtoleatherworkervillager{
                 "filters": {
                   "subject": "other",
                   "test": "is_family",
@@ -2798,8 +2777,7 @@
                   ]
                 }
               },
-              // Transform to mason villager
-              {
+              //Transformtomasonvillager{
                 "filters": {
                   "subject": "other",
                   "test": "is_family",
@@ -2816,8 +2794,7 @@
             ]
           },
           {
-            // Transform from zombie to correct villager skin (mark var already set)
-            "filters": {
+            //Transformfromzombietocorrectvillagerskin(markvaralreadyset)"filters": {
               "test": "is_family",
               "operator": "==",
               "subject": "other",
@@ -2971,8 +2948,7 @@
             ]
           },
           {
-            // Transform from v1 - > v2 to correct villager skin (mark var not set so test biome)
-            "filters": {
+            //Transformfromv1->v2tocorrectvillagerskin(markvarnotsetsotestbiome)"filters": {
               "test": "is_family",
               "operator": "==",
               "subject": "other",

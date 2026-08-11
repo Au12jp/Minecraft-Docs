@@ -619,8 +619,7 @@
       },
       "minecraft:entity_transformed": {
         "sequence": [
-          // Transform baby zombie to baby villager
-          {
+          //Transformbabyzombietobabyvillager{
             "filters": {
               "subject": "other",
               "test": "has_component",
@@ -632,8 +631,7 @@
               ]
             }
           },
-          // Transform adult zombie to adult villager
-          {
+          //Transformadultzombietoadultvillager{
             "filters": {
               "test": "has_component",
               "operator": "!=",
@@ -646,8 +644,7 @@
               ]
             }
           },
-          // Transform farmer zombie to farmer villager
-          {
+          //Transformfarmerzombietofarmervillager{
             "filters": {
               "subject": "other",
               "test": "is_family",
@@ -660,8 +657,7 @@
               ]
             }
           },
-          // Transform fisherman zombie to fisherman villager
-          {
+          //Transformfishermanzombietofishermanvillager{
             "filters": {
               "subject": "other",
               "test": "is_family",
@@ -674,8 +670,7 @@
               ]
             }
           },
-          // Transform shepherd zombie to shepherd villager
-          {
+          //Transformshepherdzombietoshepherdvillager{
             "filters": {
               "subject": "other",
               "test": "is_family",
@@ -688,8 +683,7 @@
               ]
             }
           },
-          // Transform fletcher zombie to fletcher villager
-          {
+          //Transformfletcherzombietofletchervillager{
             "filters": {
               "subject": "other",
               "test": "is_family",
@@ -702,8 +696,7 @@
               ]
             }
           },
-          // Transform librarian zombie to librarian villager
-          {
+          //Transformlibrarianzombietolibrarianvillager{
             "filters": {
               "subject": "other",
               "test": "is_family",
@@ -716,8 +709,7 @@
               ]
             }
           },
-          // Transform cartographer zombie to cartographer villager
-          {
+          //Transformcartographerzombietocartographervillager{
             "filters": {
               "subject": "other",
               "test": "is_family",
@@ -730,8 +722,7 @@
               ]
             }
           },
-          // Transform cleric zombie to cleric villager
-          {
+          //Transformclericzombietoclericvillager{
             "filters": {
               "subject": "other",
               "test": "is_family",
@@ -744,8 +735,7 @@
               ]
             }
           },
-          // Transform armorer zombie to armorer villager
-          {
+          //Transformarmorerzombietoarmorervillager{
             "filters": {
               "subject": "other",
               "test": "is_family",
@@ -758,8 +748,7 @@
               ]
             }
           },
-          // Transform weaponsmith zombie to weaponsmith villager
-          {
+          //Transformweaponsmithzombietoweaponsmithvillager{
             "filters": {
               "subject": "other",
               "test": "is_family",
@@ -772,8 +761,7 @@
               ]
             }
           },
-          // Transform toolsmith zombie to toolsmith villager
-          {
+          //Transformtoolsmithzombietotoolsmithvillager{
             "filters": {
               "subject": "other",
               "test": "is_family",
@@ -786,8 +774,7 @@
               ]
             }
           },
-          // Transform butcher zombie to butcher villager
-          {
+          //Transformbutcherzombietobutchervillager{
             "filters": {
               "subject": "other",
               "test": "is_family",
@@ -800,8 +787,7 @@
               ]
             }
           },
-          // Transform leatherworker zombie to leatherworker villager
-          {
+          //Transformleatherworkerzombietoleatherworkervillager{
             "filters": {
               "subject": "other",
               "test": "is_family",
@@ -1343,8 +1329,8 @@
           }
         ]
       },
-      "minecraft:start_celebrating": { // Event must be called exactly this for village to fire it when a raid is won
-        "add": {
+      "minecraft:start_celebrating": {
+        //Eventmustbecalledexactlythisforvillagetofireitwhenaraidiswon"add": {
           "component_groups": [
             "minecraft:celebrate"
           ]

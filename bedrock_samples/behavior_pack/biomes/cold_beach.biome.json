@@ -7,7 +7,10 @@
     "components": {
       "minecraft:climate": {
         "downfall": 0.3,
-        "snow_accumulation": [ 0.125, 0.25 ],
+        "snow_accumulation": [
+          0.125,
+          0.25
+        ],
         "temperature": 0.05
       },
       "minecraft:overworld_height": {
@@ -24,7 +27,6 @@
           "sea_material": "minecraft:water"
         }
       },
-
       "minecraft:tags": {
         "tags": [
           "beach",

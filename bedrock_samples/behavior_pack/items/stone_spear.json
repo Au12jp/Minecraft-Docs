@@ -4,7 +4,6 @@
     "description": {
       "identifier": "minecraft:stone_spear"
     },
-
     "components": {
       "minecraft:icon": {
         "textures": {
@@ -15,7 +14,10 @@
         "value": "item.stone_spear.name"
       },
       "minecraft:tags": {
-        "tags": [ "minecraft:stone_tier", "minecraft:is_spear" ]
+        "tags": [
+          "minecraft:stone_tier",
+          "minecraft:is_spear"
+        ]
       },
       "minecraft:max_stack_size": 1,
       "minecraft:durability": {
@@ -28,11 +30,17 @@
       "minecraft:repairable": {
         "repair_items": [
           {
-            "items": [ "minecraft:stone_spear" ],
+            "items": [
+              "minecraft:stone_spear"
+            ],
             "repair_amount": "context.other->query.remaining_durability"
           },
           {
-            "items": [ { "tags": "q.all_tags('minecraft:stone_tool_materials')" } ],
+            "items": [
+              {
+                "tags": "q.all_tags('minecraft:stone_tool_materials')"
+              }
+            ],
             "repair_amount": "query.max_durability * 0.25"
           }
         ]
@@ -52,13 +60,11 @@
       },
       "minecraft:cooldown": {
         "category": "spear",
-        // Should match "swing_duration"'s "value".
-        "duration": 0.75,
+        //Shouldmatch"swing_duration"'s"value"."duration": 0.75,
         "type": "attack"
       },
       "minecraft:swing_duration": {
-        // Should match "cooldown"'s "duration".
-        "value": 0.75
+        //Shouldmatch"cooldown"'s"duration"."value": 0.75
       },
       "minecraft:swing_sounds": {
         "attack_miss": "item.stone_spear.attack_miss",

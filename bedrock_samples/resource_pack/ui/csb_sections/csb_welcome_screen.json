@@ -1,6 +1,5 @@
 {
   "namespace": "csb_welcome",
-
   "csb_welcome_screen@common.base_screen": {
     "$screen_content": "csb_welcome.welcome_screen_content",
     "force_render_below": true,
@@ -13,7 +12,6 @@
       }
     ]
   },
-
   "welcome_screen_content": {
     "type": "panel",
     "controls": [
@@ -27,16 +25,21 @@
       }
     ]
   },
-
   "welcome_modal_main_panel": {
     "type": "stack_panel",
     "orientation": "horizontal",
-    "size": [ "100% - 10px", "100% - 10px" ],
+    "size": [
+      "100% - 10px",
+      "100% - 10px"
+    ],
     "controls": [
       {
         "art_panel": {
           "type": "panel",
-          "size": [ "33% - 2px", "100%" ],
+          "size": [
+            "33% - 2px",
+            "100%"
+          ],
           "controls": [
             {
               "art": {
@@ -51,18 +54,27 @@
       {
         "padding": {
           "type": "panel",
-          "size": [ "4px", "100%" ]
+          "size": [
+            "4px",
+            "100%"
+          ]
         }
       },
       {
         "text_panel": {
           "type": "panel",
-          "size": [ "67% - 2px", "100%" ],
+          "size": [
+            "67% - 2px",
+            "100%"
+          ],
           "controls": [
             {
               "text": {
                 "type": "label",
-                "size": [ "100%", "100%" ],
+                "size": [
+                  "100%",
+                  "100%"
+                ],
                 "font_type": "smooth",
                 "text": "store.csb.welcomeDialog.body",
                 "color": "$store_white_text_color"
@@ -73,7 +85,6 @@
       }
     ]
   },
-
   "welcome_modal_continue_button@common_buttons.light_text_button": {
     "$pressed_button_name": "button.startBrowsing",
     "$button_text": "store.csb.welcomeDialog.continue"

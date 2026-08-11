@@ -41,12 +41,17 @@
           "arguments": [
             {
               "details": null,
-              "name": "player",
+              "name": "playerDetails",
               "type": {
                 "is_bind_type": false,
                 "is_errorable": false,
                 "name": "variant",
                 "variant_types": [
+                  {
+                    "is_bind_type": true,
+                    "is_errorable": false,
+                    "name": "AllowListEntryNameInfo"
+                  },
                   {
                     "from_module": {
                       "name": "@minecraft/server-bindings",
@@ -56,13 +61,19 @@
                     "is_bind_type": true,
                     "is_errorable": false,
                     "name": "Player"
-                  },
-                  {
-                    "is_bind_type": false,
-                    "is_errorable": false,
-                    "name": "string"
                   }
                 ]
+              }
+            },
+            {
+              "details": {
+                "default_value": false
+              },
+              "name": "ignorePlayerLimit",
+              "type": {
+                "is_bind_type": false,
+                "is_errorable": false,
+                "name": "boolean"
               }
             }
           ],
@@ -80,6 +91,16 @@
                 "is_bind_type": true,
                 "is_errorable": false,
                 "name": "AllowListModificationError"
+              },
+              {
+                "from_module": {
+                  "name": "@minecraft/common",
+                  "uuid": "77ec12b4-1b2b-4c98-8d34-d1cd63f849d5",
+                  "version": "1.2.0"
+                },
+                "is_bind_type": true,
+                "is_errorable": false,
+                "name": "InvalidArgumentError"
               },
               {
                 "from_module": {
@@ -118,12 +139,17 @@
           "arguments": [
             {
               "details": null,
-              "name": "player",
+              "name": "playerDetails",
               "type": {
                 "is_bind_type": false,
                 "is_errorable": false,
                 "name": "variant",
                 "variant_types": [
+                  {
+                    "is_bind_type": true,
+                    "is_errorable": false,
+                    "name": "AllowListEntryNameInfo"
+                  },
                   {
                     "from_module": {
                       "name": "@minecraft/server-bindings",
@@ -133,11 +159,6 @@
                     "is_bind_type": true,
                     "is_errorable": false,
                     "name": "Player"
-                  },
-                  {
-                    "is_bind_type": false,
-                    "is_errorable": false,
-                    "name": "string"
                   }
                 ]
               }
@@ -153,6 +174,16 @@
           "name": "contains",
           "return_type": {
             "error_types": [
+              {
+                "from_module": {
+                  "name": "@minecraft/common",
+                  "uuid": "77ec12b4-1b2b-4c98-8d34-d1cd63f849d5",
+                  "version": "1.2.0"
+                },
+                "is_bind_type": true,
+                "is_errorable": false,
+                "name": "InvalidArgumentError"
+              },
               {
                 "from_module": {
                   "name": "@minecraft/server-bindings",
@@ -197,12 +228,17 @@
           "arguments": [
             {
               "details": null,
-              "name": "player",
+              "name": "playerDetails",
               "type": {
                 "is_bind_type": false,
                 "is_errorable": false,
                 "name": "variant",
                 "variant_types": [
+                  {
+                    "is_bind_type": true,
+                    "is_errorable": false,
+                    "name": "AllowListEntryNameInfo"
+                  },
                   {
                     "from_module": {
                       "name": "@minecraft/server-bindings",
@@ -212,11 +248,6 @@
                     "is_bind_type": true,
                     "is_errorable": false,
                     "name": "Player"
-                  },
-                  {
-                    "is_bind_type": false,
-                    "is_errorable": false,
-                    "name": "string"
                   }
                 ]
               }
@@ -236,6 +267,16 @@
                 "is_bind_type": true,
                 "is_errorable": false,
                 "name": "AllowListModificationError"
+              },
+              {
+                "from_module": {
+                  "name": "@minecraft/common",
+                  "uuid": "77ec12b4-1b2b-4c98-8d34-d1cd63f849d5",
+                  "version": "1.2.0"
+                },
+                "is_bind_type": true,
+                "is_errorable": false,
+                "name": "InvalidArgumentError"
               },
               {
                 "from_module": {
@@ -274,6 +315,26 @@
             "is_bind_type": false,
             "is_errorable": false,
             "name": "boolean"
+          }
+        },
+        {
+          "get_privilege": [
+            {
+              "name": "restricted_execution"
+            }
+          ],
+          "is_baked": false,
+          "is_read_only": true,
+          "name": "entries",
+          "type": {
+            "element_type": {
+              "is_bind_type": true,
+              "is_errorable": false,
+              "name": "AllowListEntry"
+            },
+            "is_bind_type": false,
+            "is_errorable": false,
+            "name": "array"
           }
         }
       ],
@@ -1433,6 +1494,100 @@
     }
   ],
   "interfaces": [
+    {
+      "base_types": [
+      ],
+      "name": "AllowListEntry",
+      "properties": [
+        {
+          "is_baked": false,
+          "is_read_only": false,
+          "name": "ignoresPlayerLimit",
+          "type": {
+            "is_bind_type": false,
+            "is_errorable": false,
+            "name": "boolean"
+          }
+        },
+        {
+          "is_baked": false,
+          "is_read_only": false,
+          "name": "name",
+          "type": {
+            "is_bind_type": false,
+            "is_errorable": false,
+            "name": "optional",
+            "optional_type": {
+              "is_bind_type": false,
+              "is_errorable": false,
+              "name": "string"
+            }
+          }
+        },
+        {
+          "is_baked": false,
+          "is_read_only": false,
+          "name": "xuid",
+          "type": {
+            "is_bind_type": false,
+            "is_errorable": false,
+            "name": "optional",
+            "optional_type": {
+              "is_bind_type": false,
+              "is_errorable": false,
+              "name": "string"
+            }
+          }
+        }
+      ],
+      "type": {
+        "is_bind_type": true,
+        "is_errorable": false,
+        "name": "AllowListEntry"
+      }
+    },
+    {
+      "base_types": [
+      ],
+      "name": "AllowListEntryNameInfo",
+      "properties": [
+        {
+          "is_baked": false,
+          "is_read_only": false,
+          "name": "name",
+          "type": {
+            "is_bind_type": false,
+            "is_errorable": false,
+            "name": "optional",
+            "optional_type": {
+              "is_bind_type": false,
+              "is_errorable": false,
+              "name": "string"
+            }
+          }
+        },
+        {
+          "is_baked": false,
+          "is_read_only": false,
+          "name": "xuid",
+          "type": {
+            "is_bind_type": false,
+            "is_errorable": false,
+            "name": "optional",
+            "optional_type": {
+              "is_bind_type": false,
+              "is_errorable": false,
+              "name": "string"
+            }
+          }
+        }
+      ],
+      "type": {
+        "is_bind_type": true,
+        "is_errorable": false,
+        "name": "AllowListEntryNameInfo"
+      }
+    },
     {
       "base_types": [
       ],
