@@ -1,5 +1,5 @@
 {
-  "format_version": "1.26.20",
+  "format_version": "1.26.50",
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:zombie",
@@ -153,13 +153,12 @@
       "minecraft:environment_sensor": {
         "triggers": [
           {
-            "event": "minecraft:start_transforming",
+            "event": "minecraft:start_transforming_into_drowned",
             "filters": {
               "test": "is_underwater"
             }
           },
-          // Keep these the same for each "minecraft:environment_sensor".
-          {
+          //Keepthesethesameforeach"minecraft:environment_sensor".{
             "event": "minecraft:on_start_riding_zombie_horse",
             "filters": {
               "all_of": [
@@ -231,10 +230,8 @@
         }
       },
       "minecraft:physics": {},
-      "minecraft:pushable_by_entity": {
-      },
-      "minecraft:pushable_by_block": {
-      },
+      "minecraft:pushable_by_entity": {},
+      "minecraft:pushable_by_block": {},
       "minecraft:rotation_locked_to_vehicle": {},
       "minecraft:shareables": {
         "items": [
@@ -528,171 +525,12 @@
       }
     },
     "component_groups": {
-      "minecraft:not_on_zombie_horse": {
-        "minecraft:behavior.use_kinetic_weapon": {
-          "approach_distance": 10,
-          "reposition_distance": {
-            "min": 6,
-            "max": 7
-          },
-          "cooldown_distance": {
-            "min": 9,
-            "max": 11
-          },
-          "weapon_reach_multiplier": 0.5,
-          "weapon_min_speed_multiplier": 0.2,
-          "hijack_mount_navigation": true,
-          "track_target": true,
-          "priority": 3
-        }
-      },
       "minecraft:can_break_doors": {
         "minecraft:annotation.break_door": {}
-      },
-      "minecraft:on_zombie_horse": {
-        "minecraft:behavior.use_kinetic_weapon": {
-          "approach_distance": 12,
-          "reposition_distance": {
-            "min": 8,
-            "max": 9
-          },
-          "reposition_speed_multiplier": 1.4,
-          "cooldown_distance": {
-            "min": 11,
-            "max": 13
-          },
-          "cooldown_speed_multiplier": 1.4,
-          "weapon_reach_multiplier": 0.5,
-          "weapon_min_speed_multiplier": 0.2,
-          "hijack_mount_navigation": true,
-          "speed_multiplier": 1.4,
-          "track_target": true,
-          "priority": 3
-        }
       },
       "minecraft:can_have_equipment": {
         "minecraft:equipment": {
           "table": "loot_tables/entities/zombie_equipment.json"
-        }
-      },
-      "minecraft:convert_to_baby_drowned": {
-        "minecraft:is_shaking": {},
-        "minecraft:transformation": {
-          "delay": {
-            "value": 15
-          },
-          "drop_equipment": true,
-          "into": "minecraft:drowned<minecraft:as_baby>",
-          "transformation_sound": "convert_to_drowned"
-        }
-      },
-      "minecraft:look_to_start_drowned_transformation": {
-        "minecraft:environment_sensor": {
-          "triggers": [
-            {
-              "event": "minecraft:start_transforming",
-              "filters": {
-                "test": "is_underwater"
-              }
-            },
-            // Keep these the same for each "minecraft:environment_sensor".
-            {
-              "event": "minecraft:on_start_riding_zombie_horse",
-              "filters": {
-                "all_of": [
-                  {
-                    "test": "is_vehicle_family",
-                    "value": "zombiehorse"
-                  },
-                  {
-                    "domain": "minecraft:is_riding_zombie_horse",
-                    "test": "bool_property",
-                    "value": false
-                  }
-                ]
-              }
-            },
-            {
-              "event": "minecraft:on_stop_riding_zombie_horse",
-              "filters": {
-                "all_of": [
-                  {
-                    "operator": "not",
-                    "test": "is_vehicle_family",
-                    "value": "zombiehorse"
-                  },
-                  {
-                    "domain": "minecraft:is_riding_zombie_horse",
-                    "test": "bool_property"
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      },
-      "minecraft:convert_to_drowned": {
-        "minecraft:is_shaking": {},
-        "minecraft:transformation": {
-          "delay": {
-            "value": 15
-          },
-          "drop_equipment": true,
-          "into": "minecraft:drowned<minecraft:as_adult>",
-          "transformation_sound": "convert_to_drowned"
-        }
-      },
-      "minecraft:start_drowned_transformation": {
-        "minecraft:environment_sensor": {
-          "triggers": [
-            {
-              "event": "minecraft:stop_transforming",
-              "filters": {
-                "test": "is_underwater",
-                "value": false
-              }
-            },
-            // Keep these the same for each "minecraft:environment_sensor".
-            {
-              "event": "minecraft:on_start_riding_zombie_horse",
-              "filters": {
-                "all_of": [
-                  {
-                    "test": "is_vehicle_family",
-                    "value": "zombiehorse"
-                  },
-                  {
-                    "domain": "minecraft:is_riding_zombie_horse",
-                    "test": "bool_property",
-                    "value": false
-                  }
-                ]
-              }
-            },
-            {
-              "event": "minecraft:on_stop_riding_zombie_horse",
-              "filters": {
-                "all_of": [
-                  {
-                    "operator": "not",
-                    "test": "is_vehicle_family",
-                    "value": "zombiehorse"
-                  },
-                  {
-                    "domain": "minecraft:is_riding_zombie_horse",
-                    "test": "bool_property"
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        "minecraft:timer": {
-          "looping": false,
-          "time": 30,
-          "time_down_event": {
-            "event": "minecraft:convert_to_drowned"
-          }
         }
       },
       "minecraft:zombie_adult": {
@@ -739,8 +577,8 @@
           "value": 0.5
         },
         "minecraft:collision_box": {
-          "height": 1.96, // 0.98/0.5
-          "width": 0.98   // 0.49/0.5
+          "height": 1.96,
+          //0.98/0.5"width": 0.98//0.49/0.5
         },
         "minecraft:type_family": {
           "family": [
@@ -784,40 +622,203 @@
             "mob"
           ]
         }
+      },
+      //Riding"minecraft:on_zombie_horse": {
+        "minecraft:behavior.use_kinetic_weapon": {
+          "approach_distance": 12,
+          "reposition_distance": {
+            "min": 8,
+            "max": 9
+          },
+          "reposition_speed_multiplier": 1.4,
+          "cooldown_distance": {
+            "min": 11,
+            "max": 13
+          },
+          "cooldown_speed_multiplier": 1.4,
+          "weapon_reach_multiplier": 0.5,
+          "weapon_min_speed_multiplier": 0.2,
+          "hijack_mount_navigation": true,
+          "speed_multiplier": 1.4,
+          "track_target": true,
+          "priority": 3
+        }
+      },
+      "minecraft:not_on_zombie_horse": {
+        "minecraft:behavior.use_kinetic_weapon": {
+          "approach_distance": 10,
+          "reposition_distance": {
+            "min": 6,
+            "max": 7
+          },
+          "cooldown_distance": {
+            "min": 9,
+            "max": 11
+          },
+          "weapon_reach_multiplier": 0.5,
+          "weapon_min_speed_multiplier": 0.2,
+          "hijack_mount_navigation": true,
+          "track_target": true,
+          "priority": 3
+        }
+      },
+      //Transformations"minecraft:look_to_start_transformations": {
+        "minecraft:environment_sensor": {
+          "triggers": [
+            {
+              "event": "minecraft:start_transforming_into_drowned",
+              "filters": {
+                "test": "is_underwater"
+              }
+            },
+            //Keepthesethesameforeach"minecraft:environment_sensor".{
+              "event": "minecraft:on_start_riding_zombie_horse",
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_vehicle_family",
+                    "value": "zombiehorse"
+                  },
+                  {
+                    "domain": "minecraft:is_riding_zombie_horse",
+                    "test": "bool_property",
+                    "value": false
+                  }
+                ]
+              }
+            },
+            {
+              "event": "minecraft:on_stop_riding_zombie_horse",
+              "filters": {
+                "all_of": [
+                  {
+                    "operator": "not",
+                    "test": "is_vehicle_family",
+                    "value": "zombiehorse"
+                  },
+                  {
+                    "domain": "minecraft:is_riding_zombie_horse",
+                    "test": "bool_property"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "minecraft:start_drowned_transformation": {
+        "minecraft:environment_sensor": {
+          "triggers": [
+            {
+              "event": "minecraft:stop_transforming",
+              "filters": {
+                "test": "is_underwater",
+                "value": false
+              }
+            },
+            //Keepthesethesameforeach"minecraft:environment_sensor".{
+              "event": "minecraft:on_start_riding_zombie_horse",
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_vehicle_family",
+                    "value": "zombiehorse"
+                  },
+                  {
+                    "domain": "minecraft:is_riding_zombie_horse",
+                    "test": "bool_property",
+                    "value": false
+                  }
+                ]
+              }
+            },
+            {
+              "event": "minecraft:on_stop_riding_zombie_horse",
+              "filters": {
+                "all_of": [
+                  {
+                    "operator": "not",
+                    "test": "is_vehicle_family",
+                    "value": "zombiehorse"
+                  },
+                  {
+                    "domain": "minecraft:is_riding_zombie_horse",
+                    "test": "bool_property"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "minecraft:timer": {
+          "looping": false,
+          "time": 30,
+          "time_down_event": {
+            "event": "minecraft:convert_to_drowned"
+          }
+        }
+      },
+      "minecraft:convert_to_drowned": {
+        "minecraft:is_shaking": {},
+        "minecraft:transformation": {
+          "delay": {
+            "value": 15
+          },
+          "drop_equipment": true,
+          "into": "minecraft:drowned<minecraft:as_adult>",
+          "transformation_sound": "convert_to_drowned"
+        }
+      },
+      "minecraft:convert_to_baby_drowned": {
+        "minecraft:is_shaking": {},
+        "minecraft:transformation": {
+          "delay": {
+            "value": 15
+          },
+          "drop_equipment": true,
+          "into": "minecraft:drowned<minecraft:as_baby>",
+          "transformation_sound": "convert_to_drowned"
+        }
       }
     },
     "events": {
-      "minecraft:entity_born": {
+      //Spawning"minecraft:entity_born": {
         "trigger": "minecraft:as_baby"
       },
-      "minecraft:on_stop_riding_zombie_horse": {
-        "add": {
-          "component_groups": [
-            "minecraft:not_on_zombie_horse"
-          ]
-        },
-        "set_property": {
-          "minecraft:is_riding_zombie_horse": false
-        },
-        "remove": {
-          "component_groups": [
-            "minecraft:on_zombie_horse"
-          ]
-        }
-      },
-      "minecraft:spawn_as_rider": {
-        "add": {
-          "component_groups": [
-            "minecraft:zombie_adult",
-            "minecraft:zombie_rider",
-            // On Vanilla riders always spawn on Zombie Horses, but if
-            // it is not the case this will fix itself next tick.
-            "minecraft:on_zombie_horse"
-          ]
-        },
-        "set_property": {
-          "minecraft:is_riding_zombie_horse": true
-        }
+      "minecraft:entity_spawned": {
+        "sequence": [
+          {
+            "randomize": [
+              {
+                "trigger": "minecraft:as_adult",
+                "weight": 9500
+              },
+              {
+                "trigger": "minecraft:as_baby",
+                "weight": 425
+              },
+              {
+                "trigger": "minecraft:as_baby_jockey",
+                "weight": 75
+              }
+            ]
+          },
+          {
+            "randomize": [
+              {
+                "add": {
+                  "component_groups": [
+                    "minecraft:can_break_doors"
+                  ]
+                },
+                "weight": 10
+              },
+              {
+                "weight": 90
+              }
+            ]
+          }
+        ]
       },
       "minecraft:as_adult": {
         "add": {
@@ -848,6 +849,73 @@
             "minecraft:on_foot",
             "minecraft:not_on_zombie_horse",
             "minecraft:can_have_equipment"
+          ]
+        }
+      },
+      "minecraft:spawn_as_rider": {
+        "add": {
+          "component_groups": [
+            "minecraft:zombie_adult",
+            "minecraft:zombie_rider",
+            //OnVanillaridersalwaysspawnonZombieHorses,
+            butif//itisnotthecasethiswillfixitselfnexttick."minecraft:on_zombie_horse"
+          ]
+        },
+        "set_property": {
+          "minecraft:is_riding_zombie_horse": true
+        }
+      },
+      //Riding"minecraft:on_start_riding_zombie_horse": {
+        "add": {
+          "component_groups": [
+            "minecraft:on_zombie_horse"
+          ]
+        },
+        "set_property": {
+          "minecraft:is_riding_zombie_horse": true
+        },
+        "remove": {
+          "component_groups": [
+            "minecraft:not_on_zombie_horse"
+          ]
+        }
+      },
+      "minecraft:on_stop_riding_zombie_horse": {
+        "add": {
+          "component_groups": [
+            "minecraft:not_on_zombie_horse"
+          ]
+        },
+        "set_property": {
+          "minecraft:is_riding_zombie_horse": false
+        },
+        "remove": {
+          "component_groups": [
+            "minecraft:on_zombie_horse"
+          ]
+        }
+      },
+      //Transformations"minecraft:start_transforming_into_drowned": {
+        "add": {
+          "component_groups": [
+            "minecraft:start_drowned_transformation"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "minecraft:look_to_start_transformations"
+          ]
+        }
+      },
+      "minecraft:stop_transforming": {
+        "add": {
+          "component_groups": [
+            "minecraft:look_to_start_transformations"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "minecraft:start_drowned_transformation"
           ]
         }
       },
@@ -887,80 +955,6 @@
             }
           }
         ]
-      },
-      "minecraft:entity_spawned": {
-        "sequence": [
-          {
-            "randomize": [
-              {
-                "trigger": "minecraft:as_adult",
-                "weight": 9500
-              },
-              {
-                "trigger": "minecraft:as_baby",
-                "weight": 425
-              },
-              {
-                "trigger": "minecraft:as_baby_jockey",
-                "weight": 75
-              }
-            ]
-          },
-          {
-            "randomize": [
-              {
-                "add": {
-                  "component_groups": [
-                    "minecraft:can_break_doors"
-                  ]
-                },
-                "weight": 10
-              },
-              {
-                "weight": 90
-              }
-            ]
-          }
-        ]
-      },
-      "minecraft:on_start_riding_zombie_horse": {
-        "add": {
-          "component_groups": [
-            "minecraft:on_zombie_horse"
-          ]
-        },
-        "set_property": {
-          "minecraft:is_riding_zombie_horse": true
-        },
-        "remove": {
-          "component_groups": [
-            "minecraft:not_on_zombie_horse"
-          ]
-        }
-      },
-      "minecraft:start_transforming": {
-        "add": {
-          "component_groups": [
-            "minecraft:start_drowned_transformation"
-          ]
-        },
-        "remove": {
-          "component_groups": [
-            "minecraft:look_to_start_drowned_transformation"
-          ]
-        }
-      },
-      "minecraft:stop_transforming": {
-        "add": {
-          "component_groups": [
-            "minecraft:look_to_start_drowned_transformation"
-          ]
-        },
-        "remove": {
-          "component_groups": [
-            "minecraft:start_drowned_transformation"
-          ]
-        }
       }
     }
   }

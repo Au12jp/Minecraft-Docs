@@ -198,8 +198,7 @@
       },
       "minecraft:interact": {
         "interactions": [
-          // Wax on
-          {
+          //Waxon{
             "interact_text": "action.interact.wax_on",
             "on_interact": {
               "event": "minecraft:wax_on",
@@ -230,8 +229,7 @@
             "use_item": true,
             "swing": true
           },
-          // Scrape
-          {
+          //Scrape{
             "hurt_item": 1,
             "interact_text": "action.interact.scrape",
             "on_interact": {
@@ -268,8 +266,7 @@
             },
             "swing": true
           },
-          // Wax off
-          {
+          //Waxoff{
             "hurt_item": 1,
             "interact_text": "action.interact.wax_off",
             "on_interact": {
@@ -300,8 +297,7 @@
             },
             "swing": true
           },
-          // Drop item
-          {
+          //Dropitem{
             "drop_item_slot": "slot.weapon.mainhand",
             "interact_text": "action.interact.drop_item",
             "on_interact": {
@@ -327,8 +323,7 @@
             },
             "swing": true
           },
-          // Shear flower
-          {
+          //Shearflower{
             "play_sounds": "shear",
             "cooldown": 2.5,
             "hurt_item": 1,
@@ -419,8 +414,7 @@
           "affected_by_griefing_rule": false,
           "randomly_placeable_blocks": [
             {
-              // North
-              "block": {
+              //North"block": {
                 "name": "minecraft:oxidized_copper_golem_statue",
                 "states": {
                   "minecraft:cardinal_direction": "north"
@@ -460,8 +454,7 @@
               }
             },
             {
-              // East
-              "block": {
+              //East"block": {
                 "name": "minecraft:oxidized_copper_golem_statue",
                 "states": {
                   "minecraft:cardinal_direction": "east"
@@ -483,8 +476,7 @@
               }
             },
             {
-              // South
-              "block": {
+              //South"block": {
                 "name": "minecraft:oxidized_copper_golem_statue",
                 "states": {
                   "minecraft:cardinal_direction": "south"
@@ -506,8 +498,7 @@
               }
             },
             {
-              // West
-              "block": {
+              //West"block": {
                 "name": "minecraft:oxidized_copper_golem_statue",
                 "states": {
                   "minecraft:cardinal_direction": "west"
@@ -547,8 +538,8 @@
       "minecraft:copper_oxidizing": {
         "minecraft:timer": {
           "looping": true,
-          // 420-460 minutes, 440 average
-          "time": [
+          //420-460minutes,
+          440average"time": [
             25200,
             27600
           ],
@@ -691,8 +682,7 @@
       "minecraft:remove_oxidation_layer": {
         "sequence": [
           {
-            // We restart the timer since it could be half way through oxidizing and that is annoying
-            "trigger": "minecraft:restart_oxidation_timer"
+            //Werestartthetimersinceitcouldbehalfwaythroughoxidizingandthatisannoying"trigger": "minecraft:restart_oxidation_timer"
           },
           {
             "first_valid": [

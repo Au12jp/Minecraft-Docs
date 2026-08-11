@@ -1,5 +1,5 @@
 {
-  "format_version": "1.21.110",
+  "format_version": "1.26.50",
   "minecraft:biome": {
     "description": {
       "identifier": "minecraft:jungle_edge"
@@ -7,7 +7,10 @@
     "components": {
       "minecraft:climate": {
         "downfall": 0.8,
-        "snow_accumulation": [ 0.0, 0.125 ],
+        "snow_accumulation": [
+          0.0,
+          0.125
+        ],
         "temperature": 0.95
       },
       "minecraft:overworld_height": {
@@ -27,7 +30,6 @@
       "minecraft:overworld_generation_rules": {
         "mutate_transformation": "minecraft:jungle_edge_mutated"
       },
-
       "minecraft:tags": {
         "tags": [
           "animal",
@@ -36,7 +38,8 @@
           "monster",
           "overworld",
           "spawns_jungle_mobs",
-          "spawns_warm_variant_farm_animals"
+          "spawns_warm_variant_farm_animals",
+          "has_structure_abandoned_camp"
         ]
       }
     }

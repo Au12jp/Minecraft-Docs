@@ -4,7 +4,9 @@
     "description": {
       "identifier": "minecraft:fletching_table"
     },
-    "tags": [ "crafting_table" ],
+    "tags": [
+      "crafting_table"
+    ],
     "pattern": [
       "||",
       "##",
@@ -18,13 +20,15 @@
         "tag": "minecraft:planks"
       }
     },
-	"unlock": [
+    "unlock": [
       {
         "item": "minecraft:flint"
       }
     ],
     "result": [
-      { "item": "minecraft:fletching_table" }
+      {
+        "item": "minecraft:fletching_table"
+      }
     ],
     "priority": -1
   }

@@ -1,6 +1,5 @@
 {
-  // Alphabetical order please :)
-  "ui_defs": [
+  //Alphabeticalorderplease: )"ui_defs": [
     "ui/achievement_screen.json",
     "ui/add_external_server_screen.json",
     "ui/adhoc_inprogess_screen.json",
@@ -71,7 +70,6 @@
     "ui/game_tip_screen.json",
     "ui/gamepad_disconnected.json",
     "ui/gameplay_common.json",
-    "ui/gathering_info_screen.json",
     "ui/global_pause_screen.json",
     "ui/grindstone_screen.json",
     "ui/grindstone_screen_pocket.json",
@@ -151,8 +149,7 @@
     "ui/sidebar_navigation.json",
     "ui/sign_screen.json",
     "ui/simple_inprogress_screen.json",
-    "ui/skin_pack_purchase_screen.json",
-    "ui/skin_picker_screen.json",
+    "ui/skin_pack_pdp.json",
     "ui/smithing_table_screen.json",
     "ui/smithing_table_2_screen.json",
     "ui/smithing_table_screen_pocket.json",

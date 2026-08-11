@@ -4,7 +4,9 @@
     "description": {
       "identifier": "minecraft:soul_torch"
     },
-    "tags": [ "crafting_table" ],
+    "tags": [
+      "crafting_table"
+    ],
     "pattern": [
       ".",
       "|",
@@ -21,7 +23,7 @@
         "tag": "minecraft:soul_fire_base_blocks"
       }
     },
-	"unlock": [
+    "unlock": [
       {
         "tag": "minecraft:soul_fire_base_blocks"
       }

@@ -6,15 +6,23 @@
       "states": {
         "default": {
           "transitions": [
-            { "idling": "!query.is_sitting" },
-            { "sitting": "query.is_sitting" }
+            {
+              "idling": "!query.is_sitting"
+            },
+            {
+              "sitting": "query.is_sitting"
+            }
           ],
           "blend_transition": 0.0
         },
         "idling": {
           "transitions": [
-            { "moving": "variable.moving" },
-            { "sit_down": "query.is_sitting" },
+            {
+              "moving": "variable.moving"
+            },
+            {
+              "sit_down": "query.is_sitting"
+            },
             {
               "dashing": "query.has_dash_cooldown && !query.is_on_ground && !query.is_in_water && !query.is_in_lava && !query.is_riding"
             }
@@ -29,8 +37,12 @@
             }
           ],
           "transitions": [
-            { "idling": "!variable.moving" },
-            { "sit_down": "query.is_sitting" },
+            {
+              "idling": "!variable.moving"
+            },
+            {
+              "sit_down": "query.is_sitting"
+            },
             {
               "dashing": "query.has_dash_cooldown && !query.is_on_ground && !query.is_in_water && !query.is_in_lava && !query.is_riding"
             }
@@ -44,7 +56,11 @@
               "baby_sitting": "query.is_baby"
             }
           ],
-          "transitions": [{ "stand_up": "!query.is_sitting" }],
+          "transitions": [
+            {
+              "stand_up": "!query.is_sitting"
+            }
+          ],
           "blend_transition": 0.5
         },
         "sit_down": {
@@ -54,7 +70,11 @@
               "baby_sit_down": "query.is_baby"
             }
           ],
-          "transitions": [{ "stand_up": "!query.is_sitting" }],
+          "transitions": [
+            {
+              "stand_up": "!query.is_sitting"
+            }
+          ],
           "blend_transition": 0.5
         },
         "stand_up": {
@@ -65,9 +85,15 @@
             }
           ],
           "transitions": [
-            { "sit_down": "query.is_sitting" },
-            { "idling": "query.any_animation_finished" },
-            { "moving": "variable.moving" }
+            {
+              "sit_down": "query.is_sitting"
+            },
+            {
+              "idling": "query.any_animation_finished"
+            },
+            {
+              "moving": "variable.moving"
+            }
           ],
           "blend_transition": 0.5
         },

@@ -1,17 +1,10 @@
-/********************************************************
-+*   (c) Mojang. All rights reserved                       *
-+*   (c) Microsoft. All rights reserved.                   *
-+*********************************************************/
-
-{
+/********************************************************+*(c)Mojang.Allrightsreserved*+*(c)Microsoft.Allrightsreserved.*+*********************************************************/{
   "namespace": "settings",
-
   "settings_screen_base@settings_common.screen_base": {
     "$selector_stack_panel": "settings.selector_stack_panel",
     "$section_content_panels": "settings.section_content_panels",
     "$section_header_panels": "settings.section_header_panels",
     "$section_footer_panels": "settings.section_footer_panels",
-
     "$is_world_create": false,
     "$is_template_create": false,
     "$is_world_edit": false,
@@ -25,13 +18,11 @@
     "$realm_no_world_edit|default": false,
     "$include_realm_invite_link_settings|default": false
   },
-
   "settings_screen_base_fullscreen@settings_common.screen_base_fullscreen": {
     "$selector_stack_panel": "settings.selector_stack_panel",
     "$section_content_panels": "settings.section_content_panels",
     "$section_header_panels": "settings.section_header_panels",
     "$section_footer_panels": "settings.section_footer_panels",
-
     "$is_world_create": false,
     "$is_template_create": false,
     "$is_world_edit": false,
@@ -45,78 +36,64 @@
     "$realm_no_world_edit|default": false,
     "$include_realm_invite_link_settings|default": false
   },
-
   "screen_world_create@settings_screen_base": {
     "$is_world_create": true,
     "$is_template_create": false,
     "$is_world_edit": false,
     "$_include_world_section": true
   },
-
   "screen_template_create@settings_screen_base": {
     "$is_world_create": false,
     "$is_template_create": true,
     "$is_world_edit": false,
     "$_include_world_section": true
   },
-
   "screen_world_edit@settings_screen_base": {
     "$is_world_create": false,
     "$is_template_create": false,
     "$is_world_edit": true,
     "$_include_world_section": true
   },
-
   "screen_controls_and_settings@settings_screen_base": {
     "$include_controls_and_settings_sections": true
   },
-
   "screen_controls_and_settings_fullscreen@settings_screen_base_fullscreen": {
     "$include_controls_and_settings_sections": true
   },
-
   "screen_world_controls_and_settings@settings_screen_base": {
     "$_include_world_section": true,
     "$include_controls_and_settings_sections": true
   },
-
   "screen_world_controls_and_settings_fullscreen@settings_screen_base_fullscreen": {
     "$_include_world_section": true,
     "$include_controls_and_settings_sections": true
   },
-
   "screen_realm_controls_and_settings@settings_screen_base": {
     "$include_realm_section": true,
     "$include_controls_and_settings_sections": true
   },
-
   "screen_realm_controls_and_settings_fullscreen@settings_screen_base_fullscreen": {
     "$include_realm_section": true,
     "$include_controls_and_settings_sections": true
   },
-
   "screen_realm_member_controls_and_settings@settings_screen_base": {
     "$include_realm_section": false,
     "$include_controls_and_settings_sections": true,
-      "$include_addon_section": true
+    "$include_addon_section": true
   },
-
   "screen_realm_member_controls_and_settings_fullscreen@settings_screen_base_fullscreen": {
     "$include_realm_section": false,
     "$include_controls_and_settings_sections": true,
     "$include_addon_section": true
   },
-
   "screen_realm_settings@settings_screen_base": {
     "$include_realm_section": true
   },
-
   "screen_world_slot_edit@settings_screen_base": {
     "$include_realm_section": true,
     "$is_realm_slot": true,
     "$_include_world_section": false
   },
-
   "screen_realm_manage@settings_screen_base": {
     "$include_realm_section": true,
     "$realm_no_world_edit": true,
@@ -124,7 +101,6 @@
     "$include_controls_and_settings_sections": false,
     "$realms_pack_feature_enabled": false
   },
-
   "screen_realm_invite_link_settings@settings_screen_base": {
     "$include_realm_section": false,
     "$realm_no_world_edit": false,
@@ -133,22 +109,26 @@
     "$realms_pack_feature_enabled": false,
     "$include_realm_invite_link_settings": true
   },
-
   "selector_stack_panel": {
     "type": "stack_panel",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "orientation": "vertical",
     "$default_selector_toggle_index": 0,
-    "$spatialPatternsPadding": [ "100%", 25 ],
+    "$spatialPatternsPadding": [
+      "100%",
+      25
+    ],
     "ttsSectionContainer": true,
     "controls": [
-
       {
         "spacer_0": {
           "ignored": "(not $include_world_section)",
           "type": "panel",
-          "size": [ 2, 2 ]
+          "size": [
+            2,
+            2
+          ]
         }
       },
       {
@@ -157,9 +137,21 @@
           "ignored": "(not $include_controls_and_settings_sections)"
         }
       },
-
-      // the list of selection toggle buttons, add yours here...
       {
+        "spacer_1": {
+          "ignored": "(not $settings_spatial_pattern_fix_enabled or not $education_edition)",
+          "type": "panel",
+          "size": "$spatialPatternsPadding"
+        }
+      },
+      {
+        "how_to_play_button@general_section.how_to_play_button": {
+          "$toggle_group_forced_index": "$how_to_play_index",
+          "ignored": "(not $include_controls_and_settings_sections or not $education_edition)"
+        }
+      },
+      //thelistofselectiontogglebuttons,
+      addyourshere...{
         "spacer_01": {
           "type": "panel",
           "size": "$spatialPatternsPadding",
@@ -192,11 +184,12 @@
           "$social_section_header": "options.social",
           "$general_section_header": "stat.generalButton",
           "$debug_section_header": "options.debug",
-          "$spatialPatternsPadding": [ "100%", 25 ],
+          "$spatialPatternsPadding": [
+            "100%",
+            25
+          ],
           "controls": [
-
-            // Controls Section //
-            {
+            //ControlsSection//{
               "spacer_1": {
                 "ignored": "(not $settings_spatial_pattern_fix_enabled)",
                 "type": "panel",
@@ -207,7 +200,10 @@
               "spacer_1_no_spatial": {
                 "ignored": "$settings_spatial_pattern_fix_enabled",
                 "type": "panel",
-                "size": [ 2, 8 ]
+                "size": [
+                  2,
+                  8
+                ]
               }
             },
             {
@@ -266,8 +262,7 @@
                 "$tts_section_header": "$controls_section_header"
               }
             },
-            // Social Section //
-            {
+            //SocialSection//{
               "spacer_04": {
                 "type": "panel",
                 "size": "$spatialPatternsPadding",
@@ -278,7 +273,10 @@
               "spacer_04_no_spatial": {
                 "ignored": "($education_edition or not $party_settings_enabled or $settings_spatial_pattern_fix_enabled)",
                 "type": "panel",
-                "size": [ 2, 8 ]
+                "size": [
+                  2,
+                  8
+                ]
               }
             },
             {
@@ -294,8 +292,7 @@
                 "$tts_section_header": "$social_section_header"
               }
             },
-            // General Section //
-            {
+            //GeneralSection//{
               "spacer_05": {
                 "type": "panel",
                 "size": "$spatialPatternsPadding",
@@ -305,7 +302,10 @@
             {
               "spacer_05_no_spatial": {
                 "type": "panel",
-                "size": [ 2, 8 ],
+                "size": [
+                  2,
+                  8
+                ],
                 "ignored": "$settings_spatial_pattern_fix_enabled"
               }
             },
@@ -469,9 +469,7 @@
                 "$tts_section_header": "$general_section_header"
               }
             },
-
-            // Debug Section //
-            {
+            //DebugSection//{
               "spacer_4": {
                 "ignored": "($is_publish or not $settings_spatial_pattern_fix_enabled)",
                 "type": "panel",
@@ -482,7 +480,10 @@
               "spacer_4_no_spatial": {
                 "ignored": "($is_publish or $settings_spatial_pattern_fix_enabled)",
                 "type": "panel",
-                "size": [ 2, 8 ]
+                "size": [
+                  2,
+                  8
+                ]
               }
             },
             {
@@ -562,20 +563,6 @@
               }
             },
             {
-              "gatherings_debug_button@general_section.gatherings_debug_button": {
-                "ignored": "(not $debug_settings)",
-                "$toggle_group_forced_index": "$gatherings_debug_forced_index",
-                "$tts_section_header": "$general_section_header"
-              }
-            },
-            {
-              "spacer_21": {
-                "ignored": "(not $debug_settings or not $settings_spatial_pattern_fix_enabled)",
-                "type": "panel",
-                "size": "$spatialPatternsPadding"
-              }
-            },
-            {
               "flighting_debug_button@general_section.flighting_debug_button": {
                 "ignored": "(not $debug_settings)",
                 "$toggle_group_forced_index": "$flighting_debug_forced_index",
@@ -636,16 +623,21 @@
       }
     ]
   },
-
   "section_content_panels": {
     "type": "panel",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
-    "size": [ "100% - 4px", "100%c + 4px" ],
-    "offset": [ 2, 0 ],
+    "size": [
+      "100% - 4px",
+      "100%c + 4px"
+    ],
+    "offset": [
+      2,
+      0
+    ],
     "controls": [
-      // the list of section panels, add yours here...
-      {
+      //thelistofsectionpanels,
+      addyourshere...{
         "realm_invite_link_settings_content_panels@realms_invite_link_settings.section_content_panels": {
           "ignored": "(not $include_realm_invite_link_settings)"
         }
@@ -655,20 +647,37 @@
           "type": "stack_panel",
           "ignored": "(not $include_world_section)",
           "controls": [
-            { "game_section@world_section.game_section": {} },
+            {
+              "game_section@world_section.game_section": {}
+            },
             {
               "classroom_section_panel": {
                 "type": "panel",
                 "ignored": "(not $education_edition)",
-                "size": [ "100%", "100%c" ],
+                "size": [
+                  "100%",
+                  "100%c"
+                ],
                 "controls": [
-                  { "classroom_section@classroom_settings.classroom_section": {} }
+                  {
+                    "classroom_section@classroom_settings.classroom_section": {}
+                  }
                 ]
               }
             },
-            { "server_section@world_section.server_section": {} },
-            { "multiplayer_section@world_section.multiplayer_section": { "visible": false } },
-            { "edu_cloud_section@world_section.edu_cloud_section": { "ignored": "(not $education_edition or not $edu_save_to_cloud_on or not $edu_save_to_cloud_general_toggle_on or $is_multiplayer_client)" } },
+            {
+              "server_section@world_section.server_section": {}
+            },
+            {
+              "multiplayer_section@world_section.multiplayer_section": {
+                "visible": false
+              }
+            },
+            {
+              "edu_cloud_section@world_section.edu_cloud_section": {
+                "ignored": "(not $education_edition or not $edu_save_to_cloud_on or not $edu_save_to_cloud_general_toggle_on or $is_multiplayer_client)"
+              }
+            },
             {
               "debug_section@world_section.debug_section": {
                 "ignored": "(not $debug_settings)",
@@ -683,8 +692,12 @@
           "type": "stack_panel",
           "ignored": "(not ($include_addon_section or ($include_realm_section and $realms_pack_feature_enabled)))",
           "controls": [
-            { "level_texture_pack_section@world_section.level_texture_pack_section": {} },
-            { "addon_section@world_section.addon_section": {} }
+            {
+              "level_texture_pack_section@world_section.level_texture_pack_section": {}
+            },
+            {
+              "addon_section@world_section.addon_section": {}
+            }
           ]
         }
       },
@@ -698,7 +711,11 @@
           "type": "stack_panel",
           "ignored": "(not $include_controls_and_settings_sections)",
           "controls": [
-            { "accessibility_section@general_section.accessibility_section": { "visible": false } },
+            {
+              "accessibility_section@general_section.accessibility_section": {
+                "visible": false
+              }
+            },
             {
               "keyboard_and_mouse_section@controls_section.keyboard_and_mouse_section": {
                 "ignored": "(not $keyboard_and_mouse_supported)",
@@ -723,8 +740,16 @@
                 "visible": false
               }
             },
-            { "general_tab_section@general_section.general_tab_section": { "visible": false } },
-            { "account_section@general_section.account_section": { "visible": false } },
+            {
+              "general_tab_section@general_section.general_tab_section": {
+                "visible": false
+              }
+            },
+            {
+              "account_section@general_section.account_section": {
+                "visible": false
+              }
+            },
             {
               "global_texture_pack_section@general_section.global_texture_pack_section": {
                 "visible": false,
@@ -749,8 +774,16 @@
                 "ignored": "(not $education_edition or not $edu_save_to_cloud_on)"
               }
             },
-            { "creator_section@general_section.creator_section": { "visible": false } },
-            { "video_section@general_section.video_section": { "visible": false } },
+            {
+              "creator_section@general_section.creator_section": {
+                "visible": false
+              }
+            },
+            {
+              "video_section@general_section.video_section": {
+                "visible": false
+              }
+            },
             {
               "view_subscriptions_prerelease_section@general_section.view_subscriptions_prerelease_section": {
                 "ignored": "($education_edition or $is_editor_mode_enabled or not $pre_release)",
@@ -763,7 +796,11 @@
                 "visible": false
               }
             },
-            { "sound_section@general_section.sound_section": { "visible": false } },
+            {
+              "sound_section@general_section.sound_section": {
+                "visible": false
+              }
+            },
             {
               "language_section@general_section.language_section": {
                 "ignored": "(not $is_pregame)",
@@ -801,12 +838,6 @@
               }
             },
             {
-              "gatherings_debug_section@general_section.gatherings_debug_section": {
-                "ignored": "(not $debug_settings)",
-                "visible": false
-              }
-            },
-            {
               "flighting_debug_section@general_section.flighting_debug_section": {
                 "ignored": "(not $debug_settings)",
                 "visible": false
@@ -829,61 +860,80 @@
                 "ignored": "$is_publish",
                 "visible": false
               }
+            },
+            {
+              "how_to_play_section@general_section.how_to_play_section": {
+                "ignored": "(not $education_edition)",
+                "visible": false
+              }
             }
           ]
         }
       }
     ]
   },
-
   "section_header_panels": {
     "type": "panel",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
-    "size": [ "100%", "100%c" ],
-    "offset": [ 2, 0 ],
+    "size": [
+      "100%",
+      "100%c"
+    ],
+    "offset": [
+      2,
+      0
+    ],
     "controls": [
-      // the list of header panels, add yours here...
-      {
+      //thelistofheaderpanels,
+      addyourshere...{
         "world_sections": {
           "type": "stack_panel",
           "ignored": "(not $include_world_section)",
-          "controls": [
-          ]
+          "controls": []
         }
       },
       {
         "general_and_controls_sections": {
           "type": "stack_panel",
-          "size": [ "100%", "100%c" ],
+          "size": [
+            "100%",
+            "100%c"
+          ],
           "ignored": "(not $include_controls_and_settings_sections)",
-          "controls": [
-          ]
+          "controls": []
         }
       }
     ]
   },
-
   "section_footer_panels": {
     "type": "panel",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
-    "size": [ "100%", "100%c" ],
-    "offset": [ 2, 0 ],
+    "size": [
+      "100%",
+      "100%c"
+    ],
+    "offset": [
+      2,
+      0
+    ],
     "controls": [
-      // the list of header panels, add yours here...
-      {
+      //thelistofheaderpanels,
+      addyourshere...{
         "world_sections": {
           "type": "stack_panel",
           "ignored": "(not $include_world_section)",
-          "controls": [
-          ]
+          "controls": []
         }
       },
       {
         "general_and_controls_sections": {
           "type": "stack_panel",
-          "size": [ "100%", "100%c" ],
+          "size": [
+            "100%",
+            "100%c"
+          ],
           "ignored": "(not $include_controls_and_settings_sections)",
           "controls": [
             {
@@ -896,5 +946,4 @@
       }
     ]
   }
-
 }

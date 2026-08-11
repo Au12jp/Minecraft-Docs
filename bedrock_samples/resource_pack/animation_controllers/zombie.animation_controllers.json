@@ -39,7 +39,9 @@
           ]
         },
         "is_swimming": {
-          "animations": ["swimming"],
+          "animations": [
+            "swimming"
+          ],
           "transitions": [
             {
               "default": "variable.swim_amount <= 0.0"

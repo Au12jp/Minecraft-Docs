@@ -17,7 +17,9 @@
       "initial_state": "default",
       "states": {
         "default": {
-          "animations": ["look_at_target"]
+          "animations": [
+            "look_at_target"
+          ]
         }
       }
     },
@@ -73,7 +75,9 @@
           ]
         },
         "sneaking": {
-          "animations": ["sneak"],
+          "animations": [
+            "sneak"
+          ],
           "transitions": [
             {
               "sprinting": "variable.state == 1"
@@ -90,7 +94,9 @@
           ]
         },
         "sprinting": {
-          "animations": ["sprint"],
+          "animations": [
+            "sprint"
+          ],
           "transitions": [
             {
               "sneaking": "variable.state == 0"
@@ -107,7 +113,9 @@
           ]
         },
         "walking": {
-          "animations": ["walk"],
+          "animations": [
+            "walk"
+          ],
           "transitions": [
             {
               "sneaking": "variable.state == 0"
