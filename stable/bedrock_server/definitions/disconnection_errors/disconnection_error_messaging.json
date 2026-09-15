@@ -446,6 +446,12 @@
             },
             {
                 "FailReason": "HostAcceptsNoTypeOfAuth"
+            },
+            {
+                "FailReason": "MissingStructureData",
+                "OverrideStrings": {
+                    "Body": "disconnectionScreen.missingStructureData"
+                }
             }
         ]
     },
