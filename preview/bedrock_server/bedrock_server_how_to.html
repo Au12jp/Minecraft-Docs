@@ -249,6 +249,27 @@
                 <td>The world will be ticked this many chunks away from any player. <b>Higher values have performance impact.</b></td>
             </tr>
             <tr>
+                <td>persistent-ticking-area-max-count</td>
+                <td>A positive integer no greater than 2147483647, or unlimited</td>
+                <td>10</td>
+                <td>Always</td>
+                <td>The maximum number of persistent ticking areas allowed when adding a new area across all dimensions. Existing saved areas are not removed when this value is lowered. <b>Higher values and unlimited can affect server performance and memory use.</b> Unlimited removes this configured limit, but system resource and data representation limits still apply.</td>
+            </tr>
+            <tr>
+                <td>persistent-ticking-area-max-chunks</td>
+                <td>A positive integer no greater than 2147483647, or unlimited</td>
+                <td>100</td>
+                <td>Always</td>
+                <td>The maximum number of chunks allowed when adding a new persistent ticking area. Existing saved areas are not removed when this value is lowered. <b>Higher values and unlimited can affect server performance and memory use.</b> Unlimited removes this configured limit, but system resource and data representation limits still apply.</td>
+            </tr>
+            <tr>
+                <td>transient-ticking-area-max-chunks</td>
+                <td>A positive integer no greater than 2147483647, or unlimited</td>
+                <td>300</td>
+                <td>Always</td>
+                <td>The maximum aggregate number of unique chunks in transient ticking areas for each behavior pack. <b>Higher values and unlimited can affect server performance and memory use.</b> Unlimited removes this configured limit, but system resource and data representation limits still apply.</td>
+            </tr>
+            <tr>
                 <td>default-player-permission-level</td>
                 <td>visitor, member, operator</td>
                 <td>member</td>
