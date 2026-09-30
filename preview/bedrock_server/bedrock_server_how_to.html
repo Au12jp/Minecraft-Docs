@@ -328,6 +328,27 @@
                 <td>If true, will be more strict toward the Entity interactions. This will impact Players interacting with each other in higher latency situations.</td>
             </tr>
             <tr>
+                <td>server-authoritative-entity-attack-request-validation</td>
+                <td>disabled, observe, enforce</td>
+                <td>disabled</td>
+                <td>Always</td>
+                <td>Controls validation that the attack request type matches the authoritative item behavior.</td>
+            </tr>
+            <tr>
+                <td>server-authoritative-entity-attack-range-validation</td>
+                <td>disabled, observe, enforce</td>
+                <td>disabled</td>
+                <td>Always</td>
+                <td>Controls server validation of targeted-actor attack range.</td>
+            </tr>
+            <tr>
+                <td>server-authoritative-entity-attack-range-tolerance</td>
+                <td>Any finite non-negative float</td>
+                <td>0.5</td>
+                <td>When entity attack range validation is observe or enforce</td>
+                <td>Additional block distance accepted beyond the normal targeted-actor gameplay range.</td>
+            </tr>
+            <tr>
                 <td>player-position-acceptance-threshold</td>
                 <td>Any positive float</td>
                 <td>0.5</td>
