@@ -1,0 +1,25 @@
+{
+  "format_version": "1.21.40",
+  "ice_crystal": {
+    "sound": "ice_crystal"
+  },
+  "ice": {
+    "textures": "ice",
+    "sound": "ice"
+  },
+  "icicle": {
+    "sound": "icicle"
+  },
+  "brittle_ice": {
+    "textures": "brittle_ice",
+    "sound": "brittle_ice"
+  },
+  "jukebox": {
+    "textures": {
+      "up": "jukebox_top",
+      "down": "jukebox_bottom",
+      "side": "jukebox_side"
+    },
+    "sound": "wood"
+  }
+}

@@ -52,16 +52,6 @@
           }
         },
         {
-          "FailReason": "SessionNotFound",
-          "OverrideStrings": {
-            "Codeword": "Goat",
-            "Title": "disconnectionScreen.cantConnect",
-            "Body": "disconnectionScreen.body.worldNoLongerAvailable",
-            "WebUrl": "https://aka.ms/mcbedrock-help-error-goat",
-            "IsReconnectable": false
-          }
-        },
-        {
           "FailReason": "LevelNewerThanExeVersion",
           "OverrideStrings": {
             "Codeword": "Breeze",
@@ -204,6 +194,45 @@
           }
         }
       ]
+    },
+    {
+        "ThemeName": "SessionJoin",
+        "DefaultStrings": {
+            "Codeword": "Goat",
+            "Title": "disconnectionScreen.cantConnect",
+            "Body": "disconnectionScreen.body.worldNoLongerAvailable",
+            "WebUrl": "https://aka.ms/mcbedrock-help-error-goat",
+            "IsReconnectable": false
+        },
+        "Errors": [
+            {
+                "FailReason": "SessionNotFound"
+            },
+            {
+                "FailReason": "SessionRuntimeError"
+            },
+            {
+                "FailReason": "SessionInvalidResponse"
+            },
+            {
+                "FailReason": "SessionNetworkError"
+            },
+            {
+                "FailReason": "SessionServiceError"
+            },
+            {
+                "FailReason": "SessionServiceUnavailable"
+            },
+            {
+                "FailReason": "SessionThrottled"
+            },
+            {
+                "FailReason": "SessionRequestRejected"
+            },
+            {
+                "FailReason": "SessionUnknownError"
+            }
+        ]
     },
     {
         "ThemeName": "OneOffGeneral",
