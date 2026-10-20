@@ -21,5 +21,39 @@
       "side": "jukebox_side"
     },
     "sound": "wood"
+  },
+  "packed_ice_bricks": {
+    "sound": "packed_ice"
+  },
+  "packed_ice": {
+  "textures": "ice_packed",
+  "sound": "packed_ice"
+  },
+  "blue_ice": {
+    "textures": "blue_ice",
+    "sound": "blue_ice"
+  },
+  "frosted_ice": {
+    "textures": "frosted_ice",
+    "sound": "frosted_ice"
+  },
+  "packed_ice_bricks_slab": {
+    "textures": "packed_ice_bricks",
+    "sound": "ice"
+  },
+  "packed_ice_bricks_double_slab": {
+    "textures": "packed_ice_bricks",
+    "sound": "ice"
+  },
+  "packed_ice_bricks_stairs": {
+    "textures": "packed_ice_bricks",
+    "sound": "ice"
+  },
+  "packed_ice_bricks_chiseled": {
+    "sound": "ice"
+  },
+  "packed_ice_bricks_wall": {
+    "textures": "packed_ice_bricks",
+    "sound": "ice"
   }
 }
