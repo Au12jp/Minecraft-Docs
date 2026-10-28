@@ -26,8 +26,8 @@
     "sound": "packed_ice"
   },
   "packed_ice": {
-  "textures": "ice_packed",
-  "sound": "packed_ice"
+    "textures": "ice_packed",
+    "sound": "packed_ice"
   },
   "blue_ice": {
     "textures": "blue_ice",
@@ -37,23 +37,42 @@
     "textures": "frosted_ice",
     "sound": "frosted_ice"
   },
-  "packed_ice_bricks_slab": {
+  "packed_ice_brick_slab": {
     "textures": "packed_ice_bricks",
     "sound": "ice"
   },
-  "packed_ice_bricks_double_slab": {
+  "packed_ice_brick_double_slab": {
     "textures": "packed_ice_bricks",
     "sound": "ice"
   },
-  "packed_ice_bricks_stairs": {
+  "packed_ice_brick_stairs": {
     "textures": "packed_ice_bricks",
     "sound": "ice"
   },
-  "packed_ice_bricks_chiseled": {
+  "chiseled_packed_ice": {
     "sound": "ice"
   },
-  "packed_ice_bricks_wall": {
+  "packed_ice_brick_wall": {
     "textures": "packed_ice_bricks",
     "sound": "ice"
+  },
+  "snow_bricks": {
+    "sound": "snow"
+  },
+  "snow_brick_slab": {
+    "textures": "snow_bricks",
+    "sound": "snow"
+  },
+  "snow_brick_double_slab": {
+    "textures": "snow_bricks",
+    "sound": "snow"
+  },
+  "snow_brick_stairs": {
+    "textures": "snow_bricks",
+    "sound": "snow"
+  },
+  "snow_brick_wall": {
+    "textures": "snow_bricks",
+    "sound": "snow"
   }
 }
