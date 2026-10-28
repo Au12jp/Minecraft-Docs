@@ -572,9 +572,6 @@
     "dismount",
     "straw_bed.break_leave",
     "ice_ball.break",
-    "convert_to_frostbite",
-    "convert_to_zombie",
-    "crack",
     "undefined"
   ],
   "title": "LevelSoundEvent",
@@ -1150,10 +1147,7 @@
     612,
     613,
     614,
-    615,
-    616,
-    617,
-    618
+    615
   ],
   "x-format-version": "1.20.50",
   "x-underlying-type": "uint32"
