@@ -1,4 +1,5 @@
 <h1>ENTITIES DOCUMENTATION </h1>
+This is documentation for a preview release of Minecraft. New features, components, and capabilities in this release are not final and might change without notice before the final release.<br/>Be sure to check the documentation once the release is out of preview if your add-on isn't working properly. Resource and Behavior Packs created for the preview are not guaranteed to work on the final release.<br/>
 <h2><p id="Index">Index</p></h2>
 <table border="1">
 <tr> <th><a href="#Client Entity Documentation">Client Entity Documentation</a></th> </tr>
@@ -930,10 +931,6 @@ Tests that an actor has an item equipped with a given enchantment.</br><h2></h2>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
 </tr>
 <tr>
-<td style="border-style:solid; border-width:2; padding:8px">interaction_hand</td>
-<td style="border-style:solid; border-width:2; padding:8px"></td>
-</tr>
-<tr>
 <td style="border-style:solid; border-width:2; padding:8px">inventory</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
 </tr>
@@ -1285,10 +1282,6 @@ Returns true when the designated equipment location for the subject entity is co
 <td style="border-style:solid; border-width:2; padding:8px"></td>
 </tr>
 <tr>
-<td style="border-style:solid; border-width:2; padding:8px">interaction_hand</td>
-<td style="border-style:solid; border-width:2; padding:8px"></td>
-</tr>
-<tr>
 <td style="border-style:solid; border-width:2; padding:8px">inventory</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
 </tr>
@@ -1437,10 +1430,6 @@ Returns true when the designated equipment location for the subject entity has a
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">head</td>
-<td style="border-style:solid; border-width:2; padding:8px"></td>
-</tr>
-<tr>
-<td style="border-style:solid; border-width:2; padding:8px">interaction_hand</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
 </tr>
 <tr>
@@ -2765,10 +2754,6 @@ Tests for the presence of a damaged named item in the designated slot of the sub
 <td style="border-style:solid; border-width:2; padding:8px"></td>
 </tr>
 <tr>
-<td style="border-style:solid; border-width:2; padding:8px">interaction_hand</td>
-<td style="border-style:solid; border-width:2; padding:8px"></td>
-</tr>
-<tr>
 <td style="border-style:solid; border-width:2; padding:8px">inventory</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
 </tr>
@@ -2926,10 +2911,6 @@ Tests for the presence of a named item in the designated slot of the subject ent
 <td style="border-style:solid; border-width:2; padding:8px"></td>
 </tr>
 <tr>
-<td style="border-style:solid; border-width:2; padding:8px">interaction_hand</td>
-<td style="border-style:solid; border-width:2; padding:8px"></td>
-</tr>
-<tr>
 <td style="border-style:solid; border-width:2; padding:8px">inventory</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
 </tr>
@@ -3084,10 +3065,6 @@ Tests for the presence of an item with the named tag in the designated slot of t
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">head</td>
-<td style="border-style:solid; border-width:2; padding:8px"></td>
-</tr>
-<tr>
-<td style="border-style:solid; border-width:2; padding:8px">interaction_hand</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
 </tr>
 <tr>
@@ -3785,10 +3762,6 @@ Returns whether the subject entity has the same item equipped in the specified s
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">head</td>
-<td style="border-style:solid; border-width:2; padding:8px"></td>
-</tr>
-<tr>
-<td style="border-style:solid; border-width:2; padding:8px">interaction_hand</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
 </tr>
 <tr>
@@ -20397,72 +20370,7 @@ Allows the NPC to use the composter POI to convert excess seeds into bone meal.<
 
 <h1><p id="Attributes">Attributes</p></h1>
 
-<h2></h2>
-
-<h2><p id="minecraft:attack">minecraft:attack</p></h2>
-
-Defines an entity's melee attack and any additional effects on it.</br><h3></h3>
-
-<table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Default Value</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
-<tr>
-<td style="border-style:solid; border-width:2; padding:8px">damage</td>
-<td style="border-style:solid; border-width:2; padding:8px">Range [a, b]</td>
-<td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Range of the random amount of damage the melee attack deals. A negative value can heal the entity instead of hurting it</br></td>
-</tr>
-<tr>
-<td style="border-style:solid; border-width:2; padding:8px">effect_amplifier</td>
-<td style="border-style:solid; border-width:2; padding:8px">Integer</td>
-<td style="border-style:solid; border-width:2; padding:8px">0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Amplifier level (potion tier) of the status ailment applied to the damaged entity. Higher values increase the strength of the effect.</br></td>
-</tr>
-<tr>
-<td style="border-style:solid; border-width:2; padding:8px">effect_duration</td>
-<td style="border-style:solid; border-width:2; padding:8px">Decimal</td>
-<td style="border-style:solid; border-width:2; padding:8px">0.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Duration in seconds of the status ailment applied to the damaged entity. Can also be "infinite"</br></td>
-</tr>
-<tr>
-<td style="border-style:solid; border-width:2; padding:8px">effect_name</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
-<td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Identifier of the status ailment to apply to an entity attacked by this entity's melee attack</br></td>
-</tr>
-</table>
 <a href="#Index">Back to top</a><br><br>
-
-<h2><p id="minecraft:spell_effects">minecraft:spell_effects</p></h2>
-
-Defines what mob effects to add and remove to the entity when adding this component.</br><h3></h3>
-
-<table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Default Value</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
-<tr>
-<td style="border-style:solid; border-width:2; padding:8px">add_effects</td>
-<td style="border-style:solid; border-width:2; padding:8px">List</td>
-<td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">List of effects to add to this entity after adding this component</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
-<tr> <th style="border-style:solid; border-width:1;">Name</th> <th style="border-style:solid; border-width:1;">Type</th> <th style="border-style:solid; border-width:1;">Default Value</th> <th style="border-style:solid; border-width:1;">Description</th> </tr>
-<tr>
-<td style="border-style:solid; border-width:1; padding:9px">effect</td>
-<td style="border-style:solid; border-width:1; padding:9px">String</td>
-<td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">Effect to add to this entity. Includes 'duration' in seconds, 'amplifier' level, 'ambient' if it is to be considered an ambient effect, and 'visible' if the effect should be visible</br></td>
-</tr>
-</table>
-</td>
-</tr>
-<tr>
-<td style="border-style:solid; border-width:2; padding:8px">remove_effects</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
-<td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">List of identifiers of effects to be removed from this entity after adding this component</br></td>
-</tr>
-</table>
-<a href="#Index">Back to top</a><br><br>
-
-<br><br>
 
 <h1><p id="Built-in Events">Built-in Events</p></h1>
 
@@ -20671,27 +20579,6 @@ Defines the entity's 'angry' state using a timer.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">Range [a, b]</td>
 <td style="border-style:solid; border-width:2; padding:8px">0</td>
 <td style="border-style:solid; border-width:2; padding:8px">The range of time in seconds to randomly wait before playing the sound again</br></td>
-</tr>
-</table>
-<a href="#Index">Back to top</a><br><br>
-
-<h2><p id="minecraft:annotation.break_door">minecraft:annotation.break_door</p></h2>
-
-Allows the actor to break doors assuming that that flags set up for the component to use in navigation</br><h3></h3>
-
-<table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Default Value</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
-<tr>
-<td style="border-style:solid; border-width:2; padding:8px">break_time</td>
-<td style="border-style:solid; border-width:2; padding:8px">Decimal</td>
-<td style="border-style:solid; border-width:2; padding:8px">12.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The time in seconds required to break through doors.</br></td>
-</tr>
-<tr>
-<td style="border-style:solid; border-width:2; padding:8px">min_difficulty</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
-<td style="border-style:solid; border-width:2; padding:8px">hard</td>
-<td style="border-style:solid; border-width:2; padding:8px">The minimum difficulty that the world must be on for this entity to break doors.</br></td>
 </tr>
 </table>
 <a href="#Index">Back to top</a><br><br>
@@ -22478,51 +22365,6 @@ Will offset the particle this amount in the y direction.</br><a href="#Index">Ba
 <td style="border-style:solid; border-width:2; padding:8px">String</td>
 <td style="border-style:solid; border-width:2; padding:8px">entity_interact</td>
 <td style="border-style:solid; border-width:2; padding:8px">Vibration to emit when the interaction occurs. Admitted values are none (no vibration emitted), shear, entity_die, entity_act, entity_interact.</br></td>
-</tr>
-</table>
-<a href="#Index">Back to top</a><br><br>
-
-<h2><p id="minecraft:inventory">minecraft:inventory</p></h2>
-
-Defines this entity's inventory properties.</br><h3></h3>
-
-<table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Default Value</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
-<tr>
-<td style="border-style:solid; border-width:2; padding:8px">additional_slots_per_strength</td>
-<td style="border-style:solid; border-width:2; padding:8px">Integer</td>
-<td style="border-style:solid; border-width:2; padding:8px">0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Number of slots that this entity can gain per extra strength</br></td>
-</tr>
-<tr>
-<td style="border-style:solid; border-width:2; padding:8px">can_be_siphoned_from</td>
-<td style="border-style:solid; border-width:2; padding:8px">Boolean</td>
-<td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, the contents of this inventory can be removed by a hopper</br></td>
-</tr>
-<tr>
-<td style="border-style:solid; border-width:2; padding:8px">container_type</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
-<td style="border-style:solid; border-width:2; padding:8px">none</td>
-<td style="border-style:solid; border-width:2; padding:8px">Type of container this entity has. Can be horse, minecart_chest, chest_boat, minecart_hopper, inventory, container or hopper</br></td>
-</tr>
-<tr>
-<td style="border-style:solid; border-width:2; padding:8px">inventory_size</td>
-<td style="border-style:solid; border-width:2; padding:8px">Integer</td>
-<td style="border-style:solid; border-width:2; padding:8px">5</td>
-<td style="border-style:solid; border-width:2; padding:8px">Number of slots the container has</br></td>
-</tr>
-<tr>
-<td style="border-style:solid; border-width:2; padding:8px">private</td>
-<td style="border-style:solid; border-width:2; padding:8px">Boolean</td>
-<td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, the entity will not drop its inventory on death</br></td>
-</tr>
-<tr>
-<td style="border-style:solid; border-width:2; padding:8px">restrict_to_owner</td>
-<td style="border-style:solid; border-width:2; padding:8px">Boolean</td>
-<td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, the entity's inventory can only be accessed by its owner or itself</br></td>
 </tr>
 </table>
 <a href="#Index">Back to top</a><br><br>
@@ -25534,19 +25376,6 @@ Sets the mapping of internal animation controller references to actual animation
 
 <h2><p id="Attributes">Attributes</p></h2>
 
-<h3></h3>
-
-<table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">JSON Name</th> <th style="border-style:solid; border-width:2;">ID</th> </tr>
-<tr>
-<td style="border-style:solid; border-width:2; padding:8px">minecraft:attack</td>
-<td style="border-style:solid; border-width:2; padding:8px">1651346034</br></td>
-</tr>
-<tr>
-<td style="border-style:solid; border-width:2; padding:8px">minecraft:spell_effects</td>
-<td style="border-style:solid; border-width:2; padding:8px">523264365</br></td>
-</tr>
-</table>
 <a href="#Index">Back to top</a><br><br>
 
 <h2><p id="Components">Components</p></h2>
@@ -25574,10 +25403,6 @@ Sets the mapping of internal animation controller references to actual animation
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">minecraft:angry</td>
 <td style="border-style:solid; border-width:2; padding:8px">725411499</br></td>
-</tr>
-<tr>
-<td style="border-style:solid; border-width:2; padding:8px">minecraft:annotation.break_door</td>
-<td style="border-style:solid; border-width:2; padding:8px">2116838963</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">minecraft:area_attack</td>
@@ -25758,10 +25583,6 @@ Sets the mapping of internal animation controller references to actual animation
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">minecraft:interact</td>
 <td style="border-style:solid; border-width:2; padding:8px">-1996861528</br></td>
-</tr>
-<tr>
-<td style="border-style:solid; border-width:2; padding:8px">minecraft:inventory</td>
-<td style="border-style:solid; border-width:2; padding:8px">1941951218</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">minecraft:item_hopper</td>
@@ -26014,6 +25835,10 @@ Sets the mapping of internal animation controller references to actual animation
 <td style="border-style:solid; border-width:2; padding:8px">500775548</br></td>
 </tr>
 <tr>
+<td style="border-style:solid; border-width:2; padding:8px">minecraft:annotation.break_door</td>
+<td style="border-style:solid; border-width:2; padding:8px">2116838963</br></td>
+</tr>
+<tr>
 <td style="border-style:solid; border-width:2; padding:8px">minecraft:barter</td>
 <td style="border-style:solid; border-width:2; padding:8px">-1660828566</br></td>
 </tr>
@@ -26092,6 +25917,10 @@ Sets the mapping of internal animation controller references to actual animation
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">minecraft:input_ground_controlled</td>
 <td style="border-style:solid; border-width:2; padding:8px">-646415617</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:2; padding:8px">minecraft:inventory</td>
+<td style="border-style:solid; border-width:2; padding:8px">1941951218</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">minecraft:is_baby</td>
@@ -26356,6 +26185,27 @@ The sound to play.</br><a href="#Index">Back to top</a><br><br>
 <td style="border-style:solid; border-width:2; padding:8px">Boolean</td>
 <td style="border-style:solid; border-width:2; padding:8px">1</td>
 <td style="border-style:solid; border-width:2; padding:8px">Defines if the mob should remove target if it falls below 'angry' threshold.</br></td>
+</tr>
+</table>
+<a href="#Index">Back to top</a><br><br>
+
+<h2><p id="minecraft:annotation.break_door">minecraft:annotation.break_door</p></h2>
+
+Allows the actor to break doors assuming that that flags set up for the component to use in navigation</br><h3></h3>
+
+<table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
+<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Default Value</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<tr>
+<td style="border-style:solid; border-width:2; padding:8px">break_time</td>
+<td style="border-style:solid; border-width:2; padding:8px">Decimal</td>
+<td style="border-style:solid; border-width:2; padding:8px">12.0</td>
+<td style="border-style:solid; border-width:2; padding:8px">The time in seconds required to break through doors.</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:2; padding:8px">min_difficulty</td>
+<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">hard</td>
+<td style="border-style:solid; border-width:2; padding:8px">The minimum difficulty that the world must be on for this entity to break doors.</br></td>
 </tr>
 </table>
 <a href="#Index">Back to top</a><br><br>
@@ -26746,6 +26596,51 @@ Allows the owner entity to ignore the "minecraft:cannot_be_attacked" component o
 <h2><p id="minecraft:input_ground_controlled">minecraft:input_ground_controlled</p></h2>
 
 When configured as a rideable entity, the entity will be controlled using WASD controls. Beginning with 1.19.50 the default auto step height for rideable entities is half a block. Consider adding the "minecraft:variable_max_auto_step" component to increase it.</br><a href="#Index">Back to top</a><br><br>
+
+<h2><p id="minecraft:inventory">minecraft:inventory</p></h2>
+
+Defines this entity's inventory properties.</br><h3></h3>
+
+<table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
+<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Default Value</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<tr>
+<td style="border-style:solid; border-width:2; padding:8px">additional_slots_per_strength</td>
+<td style="border-style:solid; border-width:2; padding:8px">Integer</td>
+<td style="border-style:solid; border-width:2; padding:8px">0</td>
+<td style="border-style:solid; border-width:2; padding:8px">Number of slots that this entity can gain per extra strength.</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:2; padding:8px">can_be_siphoned_from</td>
+<td style="border-style:solid; border-width:2; padding:8px">Boolean</td>
+<td style="border-style:solid; border-width:2; padding:8px">false</td>
+<td style="border-style:solid; border-width:2; padding:8px">If true, the contents of this inventory can be removed by a hopper.</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:2; padding:8px">container_type</td>
+<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">none</td>
+<td style="border-style:solid; border-width:2; padding:8px">Type of container this entity has. Can be horse, minecart_chest, chest_boat, minecart_hopper, inventory, container or hopper.</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:2; padding:8px">inventory_size</td>
+<td style="border-style:solid; border-width:2; padding:8px">Integer</td>
+<td style="border-style:solid; border-width:2; padding:8px">5</td>
+<td style="border-style:solid; border-width:2; padding:8px">Number of slots the container has.</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:2; padding:8px">private</td>
+<td style="border-style:solid; border-width:2; padding:8px">Boolean</td>
+<td style="border-style:solid; border-width:2; padding:8px">false</td>
+<td style="border-style:solid; border-width:2; padding:8px">If true, the entity will not drop its inventory on death.</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:2; padding:8px">restrict_to_owner</td>
+<td style="border-style:solid; border-width:2; padding:8px">Boolean</td>
+<td style="border-style:solid; border-width:2; padding:8px">false</td>
+<td style="border-style:solid; border-width:2; padding:8px">If true, the entity's inventory can only be accessed by its owner or itself.</br></td>
+</tr>
+</table>
+<a href="#Index">Back to top</a><br><br>
 
 <h2><p id="minecraft:is_baby">minecraft:is_baby</p></h2>
 
