@@ -54,32 +54,44 @@
               "name": "minecraft:collision_box",
               "nodes": [
                 {
-                  "default": "[16.0, 24.0, 16.0]",
                   "description": [
-                    "Maximum position of the bounds of the collision box. \"max\" is specified as [x, y, z] and must be in the range (0, 0, 0) to (16, 24, 16), inclusive."
+                    "An array of boxes that define the area of the block that collides with entities."
                   ],
                   "header_level": 4,
-                  "name": "max",
-                  "show_in_index": true,
-                  "type": "Vector [a, b, c]"
-                },
-                {
-                  "default": "[0.0, 0.0, 0.0]",
-                  "description": [
-                    "Minimal position of the bounds of the collision box. \"min\" is specified as [x, y, z] and must be in the range (0, 0, 0) to (16, 24, 16), inclusive."
+                  "name": "Using custom boxes",
+                  "nodes": [
+                    {
+                      "default": "[16.0, 24.0, 16.0]",
+                      "description": [
+                        "Maximum position of the bounds of the collision box. \"max\" is specified as [x, y, z] and must be in the range (0, 0, 0) to (16, 24, 16), inclusive."
+                      ],
+                      "header_level": 5,
+                      "name": "max",
+                      "show_in_index": true,
+                      "type": "Vector [a, b, c]"
+                    },
+                    {
+                      "default": "[0.0, 0.0, 0.0]",
+                      "description": [
+                        "Minimal position of the bounds of the collision box. \"min\" is specified as [x, y, z] and must be in the range (0, 0, 0) to (16, 24, 16), inclusive."
+                      ],
+                      "header_level": 5,
+                      "name": "min",
+                      "show_in_index": true,
+                      "type": "Vector [a, b, c]"
+                    }
                   ],
-                  "header_level": 4,
-                  "name": "min",
+                  "nodes_as_table": true,
                   "show_in_index": true,
-                  "type": "Vector [a, b, c]"
+                  "table_default_title": "Default Value",
+                  "table_description_title": "Description",
+                  "table_name_title": "Name",
+                  "table_type_title": "Type",
+                  "type": "Array"
                 }
               ],
-              "nodes_as_table": true,
+              "nodes_as_table": false,
               "show_in_index": true,
-              "table_default_title": "Default Value",
-              "table_description_title": "Description",
-              "table_name_title": "Name",
-              "table_type_title": "Type",
               "type": "Boolean / JSON Object"
             },
             {
@@ -206,6 +218,16 @@
               "name": "minecraft:destructible_by_mining",
               "nodes": [
                 {
+                  "default": "0.0",
+                  "description": [
+                    "Sets the number of server simulation ticks it takes to mine the block with base equipment. Greater numbers result in greater mining times. A negative number means the block can't be mined."
+                  ],
+                  "header_level": 4,
+                  "name": "base_time_to_destroy",
+                  "show_in_index": true,
+                  "type": "Decimal"
+                },
+                {
                   "description": [
                     "Optional array of objects to describe item specific block destroy speeds, each object contains an 'item' ItemDescriptor and a 'destroy_speed' float. This array currently requires UpcomingFeatures experiment to be enabled."
                   ],
@@ -215,7 +237,7 @@
                       "text": [
                         "{",
                         "\t\"minecraft:destructible_by_mining\": {",
-                        "\t\t\"seconds_to_destroy\": 10,",
+                        "\t\t\"base_time_to_destroy\": 10,",
                         "\t\t\"item_specific_speeds\": [",
                         "\t\t\t{",
                         "\t\t\t\t\"item\": { \"tags\": \"q.any_tag('minecraft:is_pickaxe', 'minecraft:is_tool') \" },",
@@ -231,7 +253,7 @@
                       "text": [
                         "{",
                         "\t\"minecraft:destructible_by_mining\": {",
-                        "\t\t\"seconds_to_destroy\": 10,",
+                        "\t\t\"base_time_to_destroy\": 10,",
                         "\t\t\"item_specific_speeds\": [",
                         "\t\t\t{",
                         "\t\t\t\t\"item\": \"minecraft:iron_pickaxe\",",
@@ -275,16 +297,6 @@
                   "nodes_as_table": false,
                   "show_in_index": true,
                   "type": "Array"
-                },
-                {
-                  "default": "0.0",
-                  "description": [
-                    "Sets the number of seconds it takes to destroy the block with base equipment. Greater numbers result in greater mining times."
-                  ],
-                  "header_level": 4,
-                  "name": "seconds_to_destroy",
-                  "show_in_index": true,
-                  "type": "Decimal"
                 }
               ],
               "nodes_as_table": true,
