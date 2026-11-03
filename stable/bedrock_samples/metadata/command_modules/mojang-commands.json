@@ -856,6 +856,12 @@
           "value": "purple_concrete_stairs"
         },
         {
+          "value": "minecraft:packed_ice_brick_wall"
+        },
+        {
+          "value": "packed_ice_brick_wall"
+        },
+        {
           "value": "minecraft:dead_brain_coral_fan"
         },
         {
@@ -1114,6 +1120,12 @@
           "value": "muddy_mangrove_roots"
         },
         {
+          "value": "minecraft:snow_bricks"
+        },
+        {
+          "value": "snow_bricks"
+        },
+        {
           "value": "minecraft:pale_oak_pressure_plate"
         },
         {
@@ -1166,6 +1178,12 @@
         },
         {
           "value": "sandstone_slab"
+        },
+        {
+          "value": "minecraft:chiseled_packed_ice"
+        },
+        {
+          "value": "chiseled_packed_ice"
         },
         {
           "value": "minecraft:mossy_stone_brick_slab"
@@ -2042,6 +2060,12 @@
         },
         {
           "value": "spruce_shelf"
+        },
+        {
+          "value": "minecraft:snow_brick_wall"
+        },
+        {
+          "value": "snow_brick_wall"
         },
         {
           "value": "minecraft:oxidized_copper"
@@ -2962,6 +2986,12 @@
           "value": "prismarine_slab"
         },
         {
+          "value": "minecraft:snow_brick_slab"
+        },
+        {
+          "value": "snow_brick_slab"
+        },
+        {
           "value": "minecraft:cherry_door"
         },
         {
@@ -3688,6 +3718,12 @@
           "value": "red_concrete_slab"
         },
         {
+          "value": "minecraft:snow_brick_stairs"
+        },
+        {
+          "value": "snow_brick_stairs"
+        },
+        {
           "value": "minecraft:jukebox"
         },
         {
@@ -4184,6 +4220,12 @@
         },
         {
           "value": "purpur_pillar"
+        },
+        {
+          "value": "minecraft:packed_ice_brick_stairs"
+        },
+        {
+          "value": "packed_ice_brick_stairs"
         },
         {
           "value": "minecraft:twisting_vines"
@@ -6625,6 +6667,12 @@
           "value": "purple_carpet"
         },
         {
+          "value": "minecraft:packed_ice_brick_slab"
+        },
+        {
+          "value": "packed_ice_brick_slab"
+        },
+        {
           "value": "minecraft:red_poplar_leaves"
         },
         {
@@ -6875,6 +6923,12 @@
         },
         {
           "value": "damaged_anvil"
+        },
+        {
+          "value": "minecraft:packed_ice_bricks"
+        },
+        {
+          "value": "packed_ice_bricks"
         },
         {
           "value": "minecraft:white_concrete"
@@ -11205,6 +11259,12 @@
           "value": "purple_concrete_stairs"
         },
         {
+          "value": "minecraft:packed_ice_brick_wall"
+        },
+        {
+          "value": "packed_ice_brick_wall"
+        },
+        {
           "value": "minecraft:dead_brain_coral_fan"
         },
         {
@@ -11493,6 +11553,12 @@
           "value": "muddy_mangrove_roots"
         },
         {
+          "value": "minecraft:snow_bricks"
+        },
+        {
+          "value": "snow_bricks"
+        },
+        {
           "value": "minecraft:pale_oak_pressure_plate"
         },
         {
@@ -11551,6 +11617,12 @@
         },
         {
           "value": "sandstone_slab"
+        },
+        {
+          "value": "minecraft:chiseled_packed_ice"
+        },
+        {
+          "value": "chiseled_packed_ice"
         },
         {
           "value": "minecraft:mossy_stone_brick_slab"
@@ -12571,6 +12643,12 @@
         },
         {
           "value": "resin_brick_double_slab"
+        },
+        {
+          "value": "minecraft:snow_brick_wall"
+        },
+        {
+          "value": "snow_brick_wall"
         },
         {
           "value": "minecraft:oxidized_copper"
@@ -13611,6 +13689,12 @@
           "value": "prismarine_double_slab"
         },
         {
+          "value": "minecraft:snow_brick_slab"
+        },
+        {
+          "value": "snow_brick_slab"
+        },
+        {
           "value": "minecraft:cherry_door"
         },
         {
@@ -14445,6 +14529,12 @@
           "value": "red_concrete_slab"
         },
         {
+          "value": "minecraft:snow_brick_stairs"
+        },
+        {
+          "value": "snow_brick_stairs"
+        },
+        {
           "value": "minecraft:wall_sign"
         },
         {
@@ -15019,6 +15109,12 @@
         },
         {
           "value": "wall_banner"
+        },
+        {
+          "value": "minecraft:packed_ice_brick_stairs"
+        },
+        {
+          "value": "packed_ice_brick_stairs"
         },
         {
           "value": "minecraft:twisting_vines"
@@ -17829,6 +17925,12 @@
           "value": "purple_carpet"
         },
         {
+          "value": "minecraft:packed_ice_brick_slab"
+        },
+        {
+          "value": "packed_ice_brick_slab"
+        },
+        {
           "value": "minecraft:red_poplar_leaves"
         },
         {
@@ -18127,6 +18229,12 @@
         },
         {
           "value": "birch_double_slab"
+        },
+        {
+          "value": "minecraft:packed_ice_bricks"
+        },
+        {
+          "value": "packed_ice_bricks"
         },
         {
           "value": "minecraft:white_concrete"
@@ -19421,6 +19529,9 @@
         },
         {
           "value": "minecraft:become_clownfish"
+        },
+        {
+          "value": "minecraft:become_cold"
         },
         {
           "value": "minecraft:become_dog_fish"
@@ -21015,16 +21126,16 @@
       ]
     },
     {
-      "name": "GameTestTag",
-      "values": [
-      ]
-    },
-    {
       "name": "GameTestModeRunSetUntilFail",
       "values": [
         {
           "value": "runsetuntilfail"
         }
+      ]
+    },
+    {
+      "name": "GameTestTag",
+      "values": [
       ]
     },
     {
@@ -23418,10 +23529,13 @@
           "value": "minecraft:powder_snow_bucket"
         },
         {
-          "value": "minecraft:evoker_spawn_egg"
+          "value": "minecraft:music_disc_11"
         },
         {
-          "value": "minecraft:music_disc_11"
+          "value": "minecraft:snow_brick_double_slab"
+        },
+        {
+          "value": "minecraft:evoker_spawn_egg"
         },
         {
           "value": "minecraft:wolf_spawn_egg"
@@ -24489,13 +24603,16 @@
           "value": "minecraft:exposed_chiseled_copper"
         },
         {
+          "value": "minecraft:colored_torch_bp"
+        },
+        {
+          "value": "minecraft:snow_brick_wall"
+        },
+        {
           "value": "minecraft:firework_star"
         },
         {
           "value": "minecraft:element_102"
-        },
-        {
-          "value": "minecraft:colored_torch_bp"
         },
         {
           "value": "minecraft:totem_of_undying"
@@ -24549,13 +24666,13 @@
           "value": "minecraft:music_disc_mellohi"
         },
         {
+          "value": "minecraft:info_update2"
+        },
+        {
           "value": "minecraft:lead"
         },
         {
           "value": "minecraft:prismarine_crystals"
-        },
-        {
-          "value": "minecraft:info_update2"
         },
         {
           "value": "minecraft:acacia_sign"
@@ -25240,6 +25357,9 @@
         },
         {
           "value": "minecraft:gray_terracotta"
+        },
+        {
+          "value": "minecraft:packed_ice_brick_wall"
         },
         {
           "value": "minecraft:copper_horse_armor"
@@ -25953,6 +26073,9 @@
           "value": "minecraft:poplar_shelf"
         },
         {
+          "value": "minecraft:packed_ice_brick_stairs"
+        },
+        {
           "value": "minecraft:orange_concrete_double_slab"
         },
         {
@@ -26490,6 +26613,9 @@
           "value": "minecraft:hard_green_stained_glass"
         },
         {
+          "value": "minecraft:snow_brick_slab"
+        },
+        {
           "value": "minecraft:hard_white_stained_glass_pane"
         },
         {
@@ -26529,10 +26655,10 @@
           "value": "minecraft:colored_torch_red"
         },
         {
-          "value": "minecraft:colored_torch_green"
+          "value": "minecraft:chiseled_tuff"
         },
         {
-          "value": "minecraft:chiseled_tuff"
+          "value": "minecraft:colored_torch_green"
         },
         {
           "value": "minecraft:light_block_1"
@@ -26634,10 +26760,10 @@
           "value": "minecraft:red_candle"
         },
         {
-          "value": "minecraft:yellow_wool_slab"
+          "value": "minecraft:polished_deepslate_wall"
         },
         {
-          "value": "minecraft:polished_deepslate_wall"
+          "value": "minecraft:yellow_wool_slab"
         },
         {
           "value": "minecraft:black_candle"
@@ -26841,6 +26967,9 @@
           "value": "minecraft:dark_oak_button"
         },
         {
+          "value": "minecraft:packed_ice_brick_double_slab"
+        },
+        {
           "value": "minecraft:pink_concrete_slab"
         },
         {
@@ -26970,6 +27099,9 @@
           "value": "minecraft:iron_trapdoor"
         },
         {
+          "value": "minecraft:snow_bricks"
+        },
+        {
           "value": "minecraft:deadbush"
         },
         {
@@ -26983,6 +27115,9 @@
         },
         {
           "value": "minecraft:mangrove_log"
+        },
+        {
+          "value": "minecraft:chiseled_packed_ice"
         },
         {
           "value": "minecraft:copper_grate"
@@ -27573,6 +27708,9 @@
           "value": "minecraft:waxed_oxidized_copper_trapdoor"
         },
         {
+          "value": "minecraft:snow_brick_stairs"
+        },
+        {
           "value": "minecraft:wall_sign"
         },
         {
@@ -27951,9 +28089,6 @@
           "value": "minecraft:bedrock"
         },
         {
-          "value": "minecraft:dried_kelp_block"
-        },
-        {
           "value": "minecraft:blackstone_stairs"
         },
         {
@@ -28062,6 +28197,9 @@
           "value": "minecraft:yellow_poplar_leaves"
         },
         {
+          "value": "minecraft:packed_ice_brick_slab"
+        },
+        {
           "value": "minecraft:cherry_planks"
         },
         {
@@ -28081,6 +28219,9 @@
         },
         {
           "value": "minecraft:waxed_chiseled_copper"
+        },
+        {
+          "value": "minecraft:dried_kelp_block"
         },
         {
           "value": "minecraft:poplar_log"
@@ -28108,6 +28249,9 @@
         },
         {
           "value": "minecraft:birch_double_slab"
+        },
+        {
+          "value": "minecraft:packed_ice_bricks"
         },
         {
           "value": "minecraft:trial_spawner"
@@ -37606,6 +37750,33 @@
         },
         {
           "value": "decorated_pot_base_recipeId"
+        },
+        {
+          "value": "minecraft:chiseled_packed_ice"
+        },
+        {
+          "value": "minecraft:packed_ice_brick_slab"
+        },
+        {
+          "value": "minecraft:packed_ice_brick_stairs"
+        },
+        {
+          "value": "minecraft:packed_ice_brick_wall"
+        },
+        {
+          "value": "minecraft:packed_ice_bricks"
+        },
+        {
+          "value": "minecraft:snow_brick_slab"
+        },
+        {
+          "value": "minecraft:snow_brick_stairs"
+        },
+        {
+          "value": "minecraft:snow_brick_wall"
+        },
+        {
+          "value": "minecraft:snow_bricks"
         },
         {
           "value": "minecraft:black_concrete_slab"
@@ -48594,7 +48765,7 @@
           ]
         },
         {
-          "name": "4",
+          "name": "5",
           "params": [
             {
               "is_optional": false,
@@ -48604,23 +48775,16 @@
               }
             },
             {
-              "is_optional": true,
-              "name": "tag",
+              "is_optional": false,
+              "name": "tag list (optional flags 'withoutTags' and 'rotationSteps')",
               "type": {
-                "name": "GAMETESTTAG"
-              }
-            },
-            {
-              "is_optional": true,
-              "name": "rotationSteps",
-              "type": {
-                "name": "INT"
+                "name": "MESSAGE_ROOT"
               }
             }
           ]
         },
         {
-          "name": "5",
+          "name": "6",
           "params": [
             {
               "is_optional": false,
@@ -48646,7 +48810,7 @@
           ]
         },
         {
-          "name": "6",
+          "name": "7",
           "params": [
             {
               "is_optional": false,
@@ -48658,7 +48822,7 @@
           ]
         },
         {
-          "name": "7",
+          "name": "8",
           "params": [
             {
               "is_optional": false,
@@ -48670,7 +48834,7 @@
           ]
         },
         {
-          "name": "8",
+          "name": "9",
           "params": [
             {
               "is_optional": false,
@@ -48710,7 +48874,7 @@
           ]
         },
         {
-          "name": "9",
+          "name": "10",
           "params": [
             {
               "is_optional": false,
@@ -48722,7 +48886,7 @@
           ]
         },
         {
-          "name": "10",
+          "name": "11",
           "params": [
             {
               "is_optional": false,

@@ -14,7 +14,7 @@
                   "linkType": "openProfileScreen",
                   "displayType": "store_layout.skin_selector_screen",
                   "screenTitle": {
-                    "value": "Classic Skins - Offline",
+                    "value": "sidebar.classicSkins",
                     "replacements": []
                   }
                 },
@@ -23,7 +23,7 @@
                   "linkType": "openProfileScreen",
                   "displayType": "store_layout.character_creator_screen",
                   "screenTitle": {
-                    "value": "Character Creator - Offline",
+                    "value": "sidebar.characterCreator",
                     "replacements": []
                   }
                 },
@@ -34,7 +34,7 @@
         ]
       }
     ],
-    "sidebarLayoutType": "none",
+    "sidebarLayoutType": "Persona",
     "inventoryVersion": "",
     "pageRefresh": false
   }

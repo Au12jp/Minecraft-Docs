@@ -6695,6 +6695,188 @@
     },
     {
       "base_types": [
+        {
+          "is_bind_type": true,
+          "is_errorable": false,
+          "name": "BlockComponent"
+        }
+      ],
+      "constants": [
+        {
+          "is_read_only": true,
+          "is_static": true,
+          "name": "componentId",
+          "type": {
+            "is_bind_type": false,
+            "is_errorable": false,
+            "name": "string"
+          },
+          "value": "minecraft:item_frame"
+        }
+      ],
+      "functions": [
+        {
+          "arguments": [
+          ],
+          "call_privilege": [
+            {
+              "name": "default"
+            }
+          ],
+          "is_constructor": false,
+          "is_static": false,
+          "name": "dropFramedItem",
+          "return_type": {
+            "error_types": [
+              {
+                "is_bind_type": true,
+                "is_errorable": false,
+                "name": "InvalidBlockComponentError"
+              }
+            ],
+            "is_bind_type": false,
+            "is_errorable": true,
+            "name": "undefined"
+          }
+        },
+        {
+          "arguments": [
+          ],
+          "call_privilege": [
+            {
+              "name": "restricted_execution"
+            }
+          ],
+          "is_constructor": false,
+          "is_static": false,
+          "name": "getFramedItem",
+          "return_type": {
+            "error_types": [
+              {
+                "is_bind_type": true,
+                "is_errorable": false,
+                "name": "InvalidBlockComponentError"
+              }
+            ],
+            "is_bind_type": false,
+            "is_errorable": true,
+            "name": "optional",
+            "optional_type": {
+              "is_bind_type": true,
+              "is_errorable": false,
+              "name": "ItemStack"
+            }
+          }
+        },
+        {
+          "arguments": [
+          ],
+          "call_privilege": [
+            {
+              "name": "restricted_execution"
+            }
+          ],
+          "is_constructor": false,
+          "is_static": false,
+          "name": "getRotation",
+          "return_type": {
+            "error_types": [
+              {
+                "is_bind_type": true,
+                "is_errorable": false,
+                "name": "InvalidBlockComponentError"
+              }
+            ],
+            "is_bind_type": true,
+            "is_errorable": true,
+            "name": "ItemFrameRotation"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "details": {
+                "default_value": "null"
+              },
+              "name": "itemStack",
+              "type": {
+                "is_bind_type": false,
+                "is_errorable": false,
+                "name": "optional",
+                "optional_type": {
+                  "is_bind_type": true,
+                  "is_errorable": false,
+                  "name": "ItemStack"
+                }
+              }
+            }
+          ],
+          "call_privilege": [
+            {
+              "name": "default"
+            }
+          ],
+          "is_constructor": false,
+          "is_static": false,
+          "name": "setFramedItem",
+          "return_type": {
+            "error_types": [
+              {
+                "is_bind_type": true,
+                "is_errorable": false,
+                "name": "InvalidBlockComponentError"
+              }
+            ],
+            "is_bind_type": false,
+            "is_errorable": true,
+            "name": "undefined"
+          }
+        },
+        {
+          "arguments": [
+            {
+              "details": null,
+              "name": "rotation",
+              "type": {
+                "is_bind_type": true,
+                "is_errorable": false,
+                "name": "ItemFrameRotation"
+              }
+            }
+          ],
+          "call_privilege": [
+            {
+              "name": "default"
+            }
+          ],
+          "is_constructor": false,
+          "is_static": false,
+          "name": "setRotation",
+          "return_type": {
+            "error_types": [
+              {
+                "is_bind_type": true,
+                "is_errorable": false,
+                "name": "InvalidBlockComponentError"
+              }
+            ],
+            "is_bind_type": false,
+            "is_errorable": true,
+            "name": "undefined"
+          }
+        }
+      ],
+      "name": "BlockItemFrameComponent",
+      "properties": [
+      ],
+      "type": {
+        "is_bind_type": true,
+        "is_errorable": false,
+        "name": "BlockItemFrameComponent"
+      }
+    },
+    {
+      "base_types": [
       ],
       "constants": [
       ],
@@ -13555,7 +13737,7 @@
                 "optional_type": {
                   "is_bind_type": true,
                   "is_errorable": false,
-                  "name": "BlockRaycastOptions"
+                  "name": "BlockSearchOptions"
                 }
               }
             }
@@ -13602,7 +13784,7 @@
                 "optional_type": {
                   "is_bind_type": true,
                   "is_errorable": false,
-                  "name": "BlockRaycastOptions"
+                  "name": "BlockSearchOptions"
                 }
               }
             }
@@ -30660,7 +30842,7 @@
             "is_errorable": false,
             "name": "string"
           },
-          "value": "minecraft:block_actor_dynamic_properties"
+          "value": "minecraft:block_dynamic_properties"
         }
       ],
       "functions": [
@@ -60945,6 +61127,17 @@
         {
           "is_read_only": true,
           "is_static": true,
+          "name": "ItemFrame",
+          "type": {
+            "is_bind_type": false,
+            "is_errorable": false,
+            "name": "string"
+          },
+          "value": "minecraft:item_frame"
+        },
+        {
+          "is_read_only": true,
+          "is_static": true,
           "name": "MapColor",
           "type": {
             "is_bind_type": false,
@@ -65063,6 +65256,17 @@
         {
           "is_read_only": true,
           "is_static": true,
+          "name": "GamepadAndMouse",
+          "type": {
+            "is_bind_type": false,
+            "is_errorable": false,
+            "name": "string"
+          },
+          "value": "GamepadAndMouse"
+        },
+        {
+          "is_read_only": true,
+          "is_static": true,
           "name": "KeyboardAndMouse",
           "type": {
             "is_bind_type": false,
@@ -65233,7 +65437,7 @@
             "is_errorable": false,
             "name": "string"
           },
-          "value": "minecraft:block_actor_dynamic_properties"
+          "value": "minecraft:block_dynamic_properties"
         },
         {
           "is_read_only": true,
@@ -65347,6 +65551,99 @@
         }
       ],
       "name": "ItemComponentTypes"
+    },
+    {
+      "constants": [
+        {
+          "is_read_only": true,
+          "is_static": true,
+          "name": "Clockwise135",
+          "type": {
+            "is_bind_type": false,
+            "is_errorable": false,
+            "name": "string"
+          },
+          "value": "Clockwise135"
+        },
+        {
+          "is_read_only": true,
+          "is_static": true,
+          "name": "Clockwise180",
+          "type": {
+            "is_bind_type": false,
+            "is_errorable": false,
+            "name": "string"
+          },
+          "value": "Clockwise180"
+        },
+        {
+          "is_read_only": true,
+          "is_static": true,
+          "name": "Clockwise225",
+          "type": {
+            "is_bind_type": false,
+            "is_errorable": false,
+            "name": "string"
+          },
+          "value": "Clockwise225"
+        },
+        {
+          "is_read_only": true,
+          "is_static": true,
+          "name": "Clockwise270",
+          "type": {
+            "is_bind_type": false,
+            "is_errorable": false,
+            "name": "string"
+          },
+          "value": "Clockwise270"
+        },
+        {
+          "is_read_only": true,
+          "is_static": true,
+          "name": "Clockwise315",
+          "type": {
+            "is_bind_type": false,
+            "is_errorable": false,
+            "name": "string"
+          },
+          "value": "Clockwise315"
+        },
+        {
+          "is_read_only": true,
+          "is_static": true,
+          "name": "Clockwise45",
+          "type": {
+            "is_bind_type": false,
+            "is_errorable": false,
+            "name": "string"
+          },
+          "value": "Clockwise45"
+        },
+        {
+          "is_read_only": true,
+          "is_static": true,
+          "name": "Clockwise90",
+          "type": {
+            "is_bind_type": false,
+            "is_errorable": false,
+            "name": "string"
+          },
+          "value": "Clockwise90"
+        },
+        {
+          "is_read_only": true,
+          "is_static": true,
+          "name": "None",
+          "type": {
+            "is_bind_type": false,
+            "is_errorable": false,
+            "name": "string"
+          },
+          "value": "None"
+        }
+      ],
+      "name": "ItemFrameRotation"
     },
     {
       "constants": [
@@ -68957,6 +69254,89 @@
         {
           "is_baked": false,
           "is_read_only": false,
+          "max_value": 2147483647,
+          "min_value": -2147483648,
+          "name": "maxDistance",
+          "type": {
+            "is_bind_type": false,
+            "is_errorable": false,
+            "name": "optional",
+            "optional_type": {
+              "is_bind_type": false,
+              "is_errorable": false,
+              "name": "double",
+              "valid_range": {
+                "max": 2147483647,
+                "min": -2147483648
+              }
+            }
+          }
+        },
+        {
+          "is_baked": false,
+          "is_read_only": false,
+          "name": "usePreciseRaycast",
+          "type": {
+            "is_bind_type": false,
+            "is_errorable": false,
+            "name": "optional",
+            "optional_type": {
+              "is_bind_type": false,
+              "is_errorable": false,
+              "name": "boolean"
+            }
+          }
+        }
+      ],
+      "type": {
+        "is_bind_type": true,
+        "is_errorable": false,
+        "name": "BlockRaycastOptions"
+      }
+    },
+    {
+      "base_types": [
+        {
+          "is_bind_type": true,
+          "is_errorable": false,
+          "name": "BlockFilter"
+        }
+      ],
+      "name": "BlockSearchOptions",
+      "properties": [
+        {
+          "is_baked": false,
+          "is_read_only": false,
+          "name": "includeLiquidBlocks",
+          "type": {
+            "is_bind_type": false,
+            "is_errorable": false,
+            "name": "optional",
+            "optional_type": {
+              "is_bind_type": false,
+              "is_errorable": false,
+              "name": "boolean"
+            }
+          }
+        },
+        {
+          "is_baked": false,
+          "is_read_only": false,
+          "name": "includePassableBlocks",
+          "type": {
+            "is_bind_type": false,
+            "is_errorable": false,
+            "name": "optional",
+            "optional_type": {
+              "is_bind_type": false,
+              "is_errorable": false,
+              "name": "boolean"
+            }
+          }
+        },
+        {
+          "is_baked": false,
+          "is_read_only": false,
           "name": "maxDistance",
           "type": {
             "is_bind_type": false,
@@ -68977,7 +69357,7 @@
       "type": {
         "is_bind_type": true,
         "is_errorable": false,
-        "name": "BlockRaycastOptions"
+        "name": "BlockSearchOptions"
       }
     },
     {
@@ -71435,6 +71815,8 @@
         {
           "is_baked": false,
           "is_read_only": false,
+          "max_value": 2147483647,
+          "min_value": -2147483648,
           "name": "maxDistance",
           "type": {
             "is_bind_type": false,
@@ -71443,11 +71825,26 @@
             "optional_type": {
               "is_bind_type": false,
               "is_errorable": false,
-              "name": "int32",
+              "name": "double",
               "valid_range": {
                 "max": 2147483647,
                 "min": -2147483648
               }
+            }
+          }
+        },
+        {
+          "is_baked": false,
+          "is_read_only": false,
+          "name": "usePreciseRaycast",
+          "type": {
+            "is_bind_type": false,
+            "is_errorable": false,
+            "name": "optional",
+            "optional_type": {
+              "is_bind_type": false,
+              "is_errorable": false,
+              "name": "boolean"
             }
           }
         }
@@ -75265,6 +75662,10 @@
           "value": "BlockInventoryComponent"
         },
         {
+          "name": "minecraft:item_frame",
+          "value": "BlockItemFrameComponent"
+        },
+        {
           "name": "minecraft:map_color",
           "value": "BlockMapColorComponent"
         },
@@ -75603,7 +76004,7 @@
       "alias_type": "type_map",
       "mappings": [
         {
-          "name": "minecraft:block_actor_dynamic_properties",
+          "name": "minecraft:block_dynamic_properties",
           "value": "ItemBlockDynamicPropertiesComponent"
         },
         {

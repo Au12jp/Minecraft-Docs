@@ -39,22 +39,22 @@
   },
   "packed_ice_brick_slab": {
     "textures": "packed_ice_bricks",
-    "sound": "ice"
+    "sound": "packed_ice"
   },
   "packed_ice_brick_double_slab": {
     "textures": "packed_ice_bricks",
-    "sound": "ice"
+    "sound": "packed_ice"
   },
   "packed_ice_brick_stairs": {
     "textures": "packed_ice_bricks",
-    "sound": "ice"
+    "sound": "packed_ice"
   },
   "chiseled_packed_ice": {
-    "sound": "ice"
+    "sound": "packed_ice"
   },
   "packed_ice_brick_wall": {
     "textures": "packed_ice_bricks",
-    "sound": "ice"
+    "sound": "packed_ice"
   },
   "snow_bricks": {
     "sound": "snow"
@@ -74,5 +74,78 @@
   "snow_brick_wall": {
     "textures": "snow_bricks",
     "sound": "snow"
+  },
+  "calcite_slab": {
+    "textures": "calcite",
+    "sound": "calcite"
+  },
+  "calcite_double_slab": {
+    "textures": "calcite",
+    "sound": "calcite"
+  },
+  "calcite_wall": {
+    "textures": "calcite",
+    "sound": "calcite"
+  },
+  "calcite_stairs": {
+    "textures": "calcite",
+    "sound": "calcite"
+  },
+  "calcite_pillar": {
+    "textures": {
+      "side": "calcite_pillar_side",
+      "up": "calcite_pillar_top",
+      "down": "calcite_pillar_top"
+    },
+    "sound": "calcite"
+  },
+  "polished_calcite_slab": {
+    "textures": {
+      "side": "polished_calcite_side",
+      "up": "polished_calcite",
+      "down": "polished_calcite"
+    },
+    "sound": "calcite"
+  },
+  "polished_calcite_double_slab": {
+    "textures": {
+      "side": "polished_calcite_side",
+      "up": "polished_calcite",
+      "down": "polished_calcite"
+    },
+    "sound": "calcite"
+  },
+  "polished_calcite_wall": {
+    "textures": "polished_calcite",
+    "sound": "calcite"
+  },
+  "polished_calcite_stairs": {
+    "textures": "polished_calcite",
+    "sound": "calcite"
+  },
+  "polished_calcite_brick_slab": {
+    "textures": "polished_calcite_bricks",
+    "sound": "calcite"
+  },
+  "polished_calcite_brick_double_slab": {
+    "textures": "polished_calcite_bricks",
+    "sound": "calcite"
+  },
+  "polished_calcite_brick_wall": {
+    "textures": "polished_calcite_bricks",
+    "sound": "calcite"
+  },
+  "polished_calcite_brick_stairs": {
+    "textures": "polished_calcite_bricks",
+    "sound": "calcite"
+  },
+  "polished_calcite": {
+    "sound": "calcite"
+  },
+  "polished_calcite_bricks": {
+    "sound": "calcite"
+  },
+  "chiseled_soulshale": {
+    "sound": "chiseled_soulshale"
   }
 }

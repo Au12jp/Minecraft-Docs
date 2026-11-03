@@ -435,6 +435,27 @@
          "pitch" : 1.0,
          "volume" : 1.0
       },
+      "blue_ice" : {
+         "events" : {
+            "break" : {
+               "pitch" : 1.0,
+               "sound" : "block.blue_ice.break",
+               "volume" : 0.80
+            },
+            "default" : "",
+            "hit" : {
+               "pitch" : 0.50,
+               "sound" : "block.blue_ice.hit",
+               "volume" : 0.250
+            },
+            "place" : {
+               "pitch" : 0.80,
+               "sound" : "block.blue_ice.place"
+            }
+         },
+         "pitch" : 1.0,
+         "volume" : 1.0
+      },
       "bone_block" : {
          "events" : {
             "break" : {
@@ -1383,6 +1404,27 @@
          },
          "pitch" : 1.0
       },
+      "frosted_ice" : {
+         "events" : {
+            "break" : {
+               "pitch" : 1.0,
+               "sound" : "block.frosted_ice.break",
+               "volume" : 0.80
+            },
+            "default" : "",
+            "hit" : {
+               "pitch" : 0.50,
+               "sound" : "block.frosted_ice.hit",
+               "volume" : 0.250
+            },
+            "place" : {
+               "pitch" : 0.80,
+               "sound" : "block.frosted_ice.place"
+            }
+         },
+         "pitch" : 1.0,
+         "volume" : 1.0
+      },
       "fungus" : {
          "events" : {
             "break" : {
@@ -1665,6 +1707,7 @@
       },
       "ice" : {
          "events" : {
+            "ambient" : "block.ice.ambient",
             "break" : {
                "pitch" : 1.0,
                "sound" : "block.ice.break",
@@ -1686,6 +1729,7 @@
       },
       "ice_crystal" : {
          "events" : {
+            "ambient" : "block.ice_crystal.ambient",
             "break" : {
                "pitch" : 1.0,
                "sound" : "block.ice_crystal.break",
@@ -2640,6 +2684,27 @@
             "power.on" : {
                "pitch" : 0.60,
                "sound" : "block.click"
+            }
+         },
+         "pitch" : 1.0,
+         "volume" : 1.0
+      },
+      "packed_ice" : {
+         "events" : {
+            "break" : {
+               "pitch" : 1.0,
+               "sound" : "block.packed_ice.break",
+               "volume" : 0.80
+            },
+            "default" : "",
+            "hit" : {
+               "pitch" : 0.50,
+               "sound" : "block.packed_ice.hit",
+               "volume" : 0.250
+            },
+            "place" : {
+               "pitch" : 0.80,
+               "sound" : "block.packed_ice.place"
             }
          },
          "pitch" : 1.0,
@@ -4717,6 +4782,11 @@
             "events" : {
                "ambient" : "mob.drowned.say",
                "ambient.in.water" : "mob.drowned.say_water",
+               "convert_to_zombie" : {
+                  "pitch" : [ 0.80, 1.20 ],
+                  "sound" : "mob.drowned.converted_to_zombie",
+                  "volume" : 1.0
+               },
                "death" : "mob.drowned.death",
                "death.in.water" : "mob.drowned.death_water",
                "hurt" : "mob.drowned.hurt",
@@ -4797,6 +4867,11 @@
                   "pitch" : 1.0,
                   "sound" : "mob.endermen.stare",
                   "volume" : 1.0
+               },
+               "teleport" : {
+                  "pitch" : 1.0,
+                  "sound" : "mob.enderman.portal",
+                  "volume" : 1.0
                }
             },
             "pitch" : [ 0.80, 1.20 ],
@@ -4844,6 +4919,11 @@
          },
          "eye_of_ender_signal" : {
             "events" : {
+               "death" : {
+                  "pitch" : 1.0,
+                  "sound" : "entity.ender_eye.death",
+                  "volume" : 1.0
+               },
                "swim" : {
                   "pitch" : [ 0.60, 1.40 ],
                   "sound" : "entity.generic.splash"
@@ -4907,6 +4987,11 @@
          "frostbite" : {
             "events" : {
                "ambient" : "mob.frostbite.ambient",
+               "convert_to_zombie" : {
+                  "pitch" : 1.0,
+                  "sound" : "mob.frostbite.converted_to_zombie",
+                  "volume" : 1.0
+               },
                "death" : "mob.frostbite.death",
                "hurt" : "mob.frostbite.hurt",
                "step" : {
@@ -5163,6 +5248,15 @@
             "pitch" : [ 0.80, 1.20 ],
             "volume" : 1.0
          },
+         "ice_ball" : {
+            "events" : {
+               "land" : {
+                  "pitch" : 1.0,
+                  "sound" : "entity.ice_ball.break",
+                  "volume" : 1.0
+               }
+            }
+         },
          "ice_bomb" : {
             "events" : {
                "throw" : {
@@ -5219,6 +5313,11 @@
          },
          "lingering_potion" : {
             "events" : {
+               "land" : {
+                  "pitch" : 1.0,
+                  "sound" : "entity.splash_potion.break",
+                  "volume" : 1.0
+               },
                "swim" : {
                   "pitch" : [ 0.60, 1.40 ],
                   "sound" : "entity.generic.splash"
@@ -6212,6 +6311,11 @@
          },
          "splash_potion" : {
             "events" : {
+               "land" : {
+                  "pitch" : 1.0,
+                  "sound" : "entity.splash_potion.break",
+                  "volume" : 1.0
+               },
                "swim" : {
                   "pitch" : [ 0.60, 1.40 ],
                   "sound" : "entity.generic.splash"
@@ -6848,6 +6952,15 @@
             "pitch" : [ 0.80, 1.20 ],
             "volume" : 1.0
          },
+         "wind_charge_projectile" : {
+            "events" : {
+               "throw" : {
+                  "pitch" : [ 0.3330, 0.50 ],
+                  "sound" : "entity.wind_charge.throw",
+                  "volume" : 0.50
+               }
+            }
+         },
          "witch" : {
             "events" : {
                "ambient" : "mob.witch.ambient",
@@ -7072,6 +7185,11 @@
          },
          "xp_bottle" : {
             "events" : {
+               "land" : {
+                  "pitch" : 1.0,
+                  "sound" : "entity.splash_potion.break",
+                  "volume" : 1.0
+               },
                "swim" : {
                   "pitch" : [ 0.60, 1.40 ],
                   "sound" : "entity.generic.splash"
@@ -7939,11 +8057,6 @@
             "sound" : "mob.skeleton.convert_to_stray",
             "volume" : 1.0
          },
-         "convert_to_zombie" : {
-            "pitch" : 1.0,
-            "sound" : "mob.frostbite.converted_to_zombie",
-            "volume" : 1.0
-         },
          "converted_to_zombified" : {
             "pitch" : [ 0.90, 1.10 ],
             "sound" : "mob.piglin.converted_to_zombified",
@@ -8148,11 +8261,6 @@
             "pitch" : 1.0,
             "sound" : "horn.call.7",
             "volume" : 16.0
-         },
-         "ice_ball.break" : {
-            "pitch" : 1.0,
-            "sound" : "entity.ice_ball.break",
-            "volume" : 1.0
          },
          "ignite" : {
             "pitch" : [ 0.80, 1.20 ],
@@ -8869,7 +8977,7 @@
          },
          "teleport" : {
             "pitch" : 1.0,
-            "sound" : "mob.shulker.teleport",
+            "sound" : "entity.generic.teleport",
             "volume" : 1.0
          },
          "thorns" : {
@@ -9374,6 +9482,32 @@
                "step" : {
                   "sound" : "step.big_dripleaf",
                   "volume" : 0.170
+               }
+            },
+            "pitch" : 1.0,
+            "volume" : 1.0
+         },
+         "blue_ice" : {
+            "events" : {
+               "fall" : {
+                  "pitch" : 0.750,
+                  "sound" : "block.blue_ice.fall",
+                  "volume" : 0.50
+               },
+               "jump" : {
+                  "pitch" : 1.0,
+                  "sound" : "block.blue_ice.jump",
+                  "volume" : 0.150
+               },
+               "land" : {
+                  "pitch" : 1.0,
+                  "sound" : "block.blue_ice.land",
+                  "volume" : 0.150
+               },
+               "step" : {
+                  "pitch" : 1.0,
+                  "sound" : "block.blue_ice.step",
+                  "volume" : 0.150
                }
             },
             "pitch" : 1.0,
@@ -10003,6 +10137,32 @@
                "step" : {
                   "sound" : "step.froglight",
                   "volume" : 0.170
+               }
+            },
+            "pitch" : 1.0,
+            "volume" : 1.0
+         },
+         "frosted_ice" : {
+            "events" : {
+               "fall" : {
+                  "pitch" : 0.750,
+                  "sound" : "block.frosted_ice.fall",
+                  "volume" : 0.50
+               },
+               "jump" : {
+                  "pitch" : 1.0,
+                  "sound" : "block.frosted_ice.jump",
+                  "volume" : 0.150
+               },
+               "land" : {
+                  "pitch" : 1.0,
+                  "sound" : "block.frosted_ice.land",
+                  "volume" : 0.150
+               },
+               "step" : {
+                  "pitch" : 1.0,
+                  "sound" : "block.frosted_ice.step",
+                  "volume" : 0.150
                }
             },
             "pitch" : 1.0,
@@ -10886,6 +11046,32 @@
                },
                "step" : {
                   "sound" : "step.nylium",
+                  "volume" : 0.150
+               }
+            },
+            "pitch" : 1.0,
+            "volume" : 1.0
+         },
+         "packed_ice" : {
+            "events" : {
+               "fall" : {
+                  "pitch" : 0.750,
+                  "sound" : "block.packed_ice.fall",
+                  "volume" : 0.50
+               },
+               "jump" : {
+                  "pitch" : 1.0,
+                  "sound" : "block.packed_ice.jump",
+                  "volume" : 0.150
+               },
+               "land" : {
+                  "pitch" : 1.0,
+                  "sound" : "block.packed_ice.land",
+                  "volume" : 0.150
+               },
+               "step" : {
+                  "pitch" : 1.0,
+                  "sound" : "block.packed_ice.step",
                   "volume" : 0.150
                }
             },

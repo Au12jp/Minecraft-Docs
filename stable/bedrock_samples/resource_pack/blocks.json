@@ -620,7 +620,7 @@
       "textures" : "blue_glazed_terracotta"
    },
    "blue_ice" : {
-      "sound" : "glass",
+      "sound" : "blue_ice",
       "textures" : "blue_ice"
    },
    "blue_orchid" : {
@@ -1172,6 +1172,9 @@
    "chiseled_nether_bricks" : {
       "sound" : "nether_brick",
       "textures" : "chiseled_nether_bricks"
+   },
+   "chiseled_packed_ice" : {
+      "sound" : "ice"
    },
    "chiseled_polished_blackstone" : {
       "sound" : "stone",
@@ -2658,7 +2661,7 @@
       "textures" : "frog_spawn"
    },
    "frosted_ice" : {
-      "sound" : "glass",
+      "sound" : "frosted_ice",
       "textures" : "frosted_ice"
    },
    "furnace" : {
@@ -4420,8 +4423,27 @@
       "textures" : "oxidized_lightning_rod"
    },
    "packed_ice" : {
-      "sound" : "glass",
+      "sound" : "packed_ice",
       "textures" : "ice_packed"
+   },
+   "packed_ice_brick_double_slab" : {
+      "sound" : "ice",
+      "textures" : "packed_ice_bricks"
+   },
+   "packed_ice_brick_slab" : {
+      "sound" : "ice",
+      "textures" : "packed_ice_bricks"
+   },
+   "packed_ice_brick_stairs" : {
+      "sound" : "ice",
+      "textures" : "packed_ice_bricks"
+   },
+   "packed_ice_brick_wall" : {
+      "sound" : "ice",
+      "textures" : "packed_ice_bricks"
+   },
+   "packed_ice_bricks" : {
+      "sound" : "packed_ice"
    },
    "packed_mud" : {
       "sound" : "packed_mud",
@@ -5826,6 +5848,25 @@
       "isotropic" : true,
       "sound" : "snow",
       "textures" : "snow"
+   },
+   "snow_brick_double_slab" : {
+      "sound" : "snow",
+      "textures" : "snow_bricks"
+   },
+   "snow_brick_slab" : {
+      "sound" : "snow",
+      "textures" : "snow_bricks"
+   },
+   "snow_brick_stairs" : {
+      "sound" : "snow",
+      "textures" : "snow_bricks"
+   },
+   "snow_brick_wall" : {
+      "sound" : "snow",
+      "textures" : "snow_bricks"
+   },
+   "snow_bricks" : {
+      "sound" : "snow"
    },
    "snow_layer" : {
       "ambient_occlusion_exponent" : 1.0,
