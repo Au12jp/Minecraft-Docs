@@ -1,1 +1,1 @@
-{"pools":[{"rolls":1,"entries":[{"type":"item","name":"minecraft:chiseled_packed_ice"}]}]}
+{"pools":[{"rolls":1,"entries":[{"type":"item","name":"minecraft:chiseled_packed_ice","functions":[{"function":"explosion_decay"}]}]}]}

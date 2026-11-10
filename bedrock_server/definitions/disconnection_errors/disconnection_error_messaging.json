@@ -688,6 +688,12 @@
                 "OverrideStrings": {
                     "IsReconnectable": false
                 }
+            },
+            {
+                "FailReason": "BrokenData",
+                "OverrideStrings": {
+                    "IsReconnectable": false
+                }
             }
         ]
     },
