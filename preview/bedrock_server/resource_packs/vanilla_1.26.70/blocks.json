@@ -25,6 +25,14 @@
   "packed_ice_bricks": {
     "sound": "packed_ice"
   },
+  "nether_brick_double_slab": {
+    "sound": "nether_brick",
+    "textures": "nether_brick_slab"
+  },
+  "red_nether_brick_double_slab": {
+    "sound": "nether_brick",
+    "textures": "red_nether_brick_slab"
+  },
   "packed_ice": {
     "textures": "ice_packed",
     "sound": "packed_ice"
